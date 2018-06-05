@@ -1,0 +1,95 @@
+.topnav
+  display block
+  color #fff
+  height 45px
+  margin-top 30px
+  width 100%
+  padding-bottom 20px
+  &:after
+    content ""
+    display table
+    width 100%
+    font 0/0 'a'  
+  a 
+    color #fff
+    transition-property all
+    transition-duration $speed
+    &:hover
+      color #BCBFC6
+      text-decoration none  
+  &__logo
+    float left
+    will-change width
+    position relative
+    overflow hidden
+    width 232px
+    transition-property all
+    transition-duration $speed
+    +a($d)
+      margin-left -46px
+    +b($d)
+      margin-left 0
+    /*+b($t)
+      width 0  */    
+  &__menu
+    float right
+    height 45px
+    line-height 45px
+    transition-property float
+    transition-duration $speed
+    position relative
+    font-size 0
+    &:after
+      content ""
+      width 100%
+      background-color rgba(99, 104, 112, 0.3)
+      height 2px
+      display block
+      position absolute
+      bottom 0
+      left 0
+      border-radius 10px
+      z-index 1
+    /*+b($t)
+      float left*/
+    #magic-line 
+      width 100px
+      background-color #F78200
+      height 2px
+      display block
+      position absolute
+      bottom 0
+      left 0
+      border-radius 10px
+      z-index 2
+    &-item
+      display inline-block
+      margin-right 40px
+      vertical-align middle
+      position relative
+      font-size 18px
+      line-height 45px
+      font-weight bold
+      cursor pointer
+      /*&.active
+        &:after
+          content ""
+          width 100%
+          background-color #F78200
+          height 2px
+          display block
+          position absolute
+          bottom 0
+          left 0
+          border-radius 10px
+          z-index 2*/
+      &:nth-child(5)
+        margin-right 0  
+      a 
+        color #fff
+        transition-property all
+        transition-duration $speed
+        &:hover
+          color #BCBFC6
+          text-decoration none  
+    

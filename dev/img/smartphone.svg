@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="45px" viewBox="0 0 47 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 305 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3.-Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-639.000000, -35.000000)">
+            <g id="Group-7">
+                <g id="Group-6" transform="translate(639.000000, 31.000000)">
+                    <g id="Group-305-Copy" transform="translate(0.000000, 4.000000)">
+                        <g id="Group-303">
+                            <path d="M4,44 L39,44 L39,6 C39,3.23857625 36.7614237,1 34,1 L9,1 C6.23857625,1 4,3.23857625 4,6 L4,44 Z" id="Rectangle-17" stroke="#000000" stroke-width="2" fill="#3C507E"></path>
+                            <rect id="Rectangle-25" fill="#000000" x="0" y="43" width="47" height="2" rx="1"></rect>
+                            <rect id="Rectangle-24" fill="#FFFFFF" x="19" y="3" width="5" height="2" rx="1"></rect>
+                            <path d="M9,44 L34,44 L34,10 C34,8.8954305 33.1045695,8 32,8 L11,8 C9.8954305,8 9,8.8954305 9,10 L9,44 Z" id="Rectangle-19" stroke="#000000" stroke-width="2" fill="#3B7EFF"></path>
+                            <rect id="Rectangle-29" fill="#FFFFFF" x="12" y="11" width="19" height="2" rx="1"></rect>
+                        </g>
+                        <g id="Group-304" transform="translate(22.000000, 25.000000)">
+                            <path d="M4,2 L16.0742188,2 C18.2833577,2 20.0742188,3.790861 20.0742188,6 L20.0742188,20 L-7.10542736e-15,20 L-7.10542736e-15,6 C-7.37596886e-15,3.790861 1.790861,2 4,2 Z" id="Rectangle-23" fill="#1F2637" opacity="0.400000006" style="mix-blend-mode: multiply;"></path>
+                            <g id="Group-296" transform="translate(2.000000, 0.000000)">
+                                <rect id="Rectangle-23" stroke="#000000" stroke-width="2" fill="#50A643" x="1" y="1" width="18" height="18" rx="4"></rect>
+                                <path d="M9.85723402,10.9141598 C11.838911,10.9141598 12.3998162,10.3791875 12.3998162,9.05761031 C12.3998162,8.49454833 12.5740212,8.21305175 12.8857462,8.21305175 L14.4643872,8.21305175 C14.7651765,8.21305175 14.9425342,8.49457127 14.9964603,9.05761031 C14.9964603,11.6855551 13.3454799,12.5009684 9.85723402,12.5034652 L9.81268785,12.5034652 C6.32444202,12.5009684 4.67346153,11.6928527 4.67346153,9.06490793 C4.72738766,8.50186889 4.90474539,8.22034937 5.20553472,8.22034937 L6.78417572,8.22034937 C7.09590071,8.22034937 7.27010564,8.50184596 7.27010564,9.06490793 C7.27010564,10.286749 7.83101088,10.9141598 9.81268785,10.9141598 L9.85723402,10.9141598 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(9.834961, 10.358258) rotate(-300.000000) translate(-9.834961, -10.358258) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+         url('../fonts/ProximaNova-Regular.woff') format('woff'),
+         url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+         url('../fonts/ProximaNova-Bold.woff') format('woff'),
+         url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Rounds';
+    src: url('../fonts/TTRounds-Bold.eot');
+    src: url('../fonts/TTRounds-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTRounds-Bold.woff2') format('woff2'),
+         url('../fonts/TTRounds-Bold.woff') format('woff'),
+         url('../fonts/TTRounds-Bold.ttf') format('truetype'),
+         url('../fonts/TTRounds-Bold.svg#TTRounds-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Rounds';
+    src: url('../fonts/TTRounds-Regular.eot');
+    src: url('../fonts/TTRounds-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTRounds-Regular.woff2') format('woff2'),
+         url('../fonts/TTRounds-Regular.woff') format('woff'),
+         url('../fonts/TTRounds-Regular.ttf') format('truetype'),
+         url('../fonts/TTRounds-Regular.svg#TTRounds-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+html,
+body
+  background-color #fff
+  
+html
+  touch-action: manipulation
+  visibility visible !important
+  opacity 1 !important
+  -webkit-text-size-adjust none
+  +a($d)
+    font-size 1px
+  +btw($t, $d)
+    font-size (100 / 1024)vw
+  +btw($m, $t)
+    font-size (100 / 768)vw
+  +b($m)
+    font-size (100 / 320)vw
+  &.has-menu
+    &,
+    body
+      // overflow hidden 
+    .topnav
+      transform translateX(0)
+    .topbar
+      position relative
+      +btw($m, $t)
+        margin-top 60px
+      +b($m)
+        margin-top 48px
+      +b($t)
+        &:before
+          content "" 
+          display block
+          position absolute
+          z-index 2
+          top 0
+          left 0
+          width 100% 
+          height 100% 
+          background-color rgba(#000, 0.6) 
+      ~ .header
+        +b($t)
+          position fixed
+    .locator
+      +b($t)
+        opacity 0
+        visibility hidden
+    .header
+      border-bottom-color transparent 
+      &__burger
+        i
+          &:nth-child(1)
+            transform rotate(45deg) translate(-1px, 0)
+          &:nth-child(2)
+            opacity 0
+          &:nth-child(3)
+            transform rotate(-45deg) translate(-1px, 0)
+    .topbar,
+    .content
+      +btw($m, $t)
+        transform translateX(384px)
+      +b($m)
+        transform translateX(286px)
+    .content
+      overflow hidden
+      +b($t)
+        margin-top 0
+      &__fader
+        opacity 1
+        visibility visible
+  &.-dragged
+    user-select none
+    pointer-events none
+  &:before,
+  &:after
+    display none !important
+
+body
+  font 14px/1.571429em "TT Rounds", Helvetica, Arial, sans-serif
+  color #fff
+  
+button
+  font-family "TT Rounds", Helvetica, Arial, sans-serif
+    
+svg
+  transition-duration $speed
+  transition-property fill, stroke, color
+  &:not(:root)
+    overflow hidden
+
+svg:not(.-no-restyle)
+  fill currentcolor 
+  [fill]
+    fill currentcolor
+  [stroke]
+    stroke currentcolor
+  
+a
+  color $blue
+  transition-duration $speed
+  transition-property color  
+  svg
+    transition none
+  &:link
+    text-decoration none
+  &:hover
+    text-decoration underline
+  &:visited
+    text-decoration none
+  &:active
+    text-decoration none
+  &[href*="tel:"]
+    white-space nowrap
+
+.wrapper
+  width 100% 
+  overflow hidden
+  position relative
+  
+.container
+  margin auto
+  max-width 1140px
+  position relative  
+  background-color #1F2D4F
+  +a($d)
+    width 100%
+  +btw($t, $d)
+    width 93.75%
+  +btw($m, $t)
+    width 94.010417%  
+  +b($m)
+    width 100%
+    
+hr
+  display block
+  padding 0
+  margin 0
+  border none
+  background-color $bluee5
+  height 1px  
+  &.-bold
+    height 6px
+    border-radius 3px
+    background-color $blue3e 
+    +b($m)
+      margin 0 -3px 
+      
+img
+  &.-grayscale,
+  &.-grayscale-hoverable
+    filter grayscale(100%)
+  &.-grayscale-hoverable
+    transition filter $speed
+    &:hover
+      filter none
+
+.hidden
+  display none !important
+.hidden-below-d
+  +b($d)
+    display none !important
+.hidden-below-1160
+  +b(1200px)
+    display none !important
+.hidden-above-d
+  +a($d)
+    display none !important
+.hidden-below-t
+  +b($t)
+    display none !important
+.hidden-below-830
+  +b(830px)
+    display none !important
+.hidden-above-t
+  +a($t)
+    display none !important
+.hidden-below-m
+  +b($m)
+    display none !important
+.hidden-above-m
+  +a($m)
+    display none !important
+.hidden-between-m-t
+  +btw($m, $t)
+    display none !important
+.hidden-above-600
+  +a(600px)
+    display none !important
+.hidden-below-600
+  +b(600px)
+    display none !important
+.hidden-above-320
+  +a(320px)
+    display none !important
+.hidden-below-320
+  +b(320px)
+    display none !important
+    
+.nobr
+  white-space nowrap
+  
+.text-warning
+  color $redf4 
+  
+.js-tooltip
+  display inline-block
+  font-size 0
+  line-height 0
+  html.no-mobile &
+    cursor help
+  html.mobile &
+    cursor pointer
+.new-site-hidden
+  display none !important
