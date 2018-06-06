@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
         duration: 1200,
         once: true
     });
-    if ($(document).width() > 767)
+    //if ($(document).width() > 767)
         $(function() {
             var $el,
                 leftPos,
@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
                 });
             });
         });
-    else
+    //else
         $(function() {
             var pull = $("#pull"),
             menu = $(".topnav__menu.-mobile"),
@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
                     {
                         left: "0px"
                     },
-                    200
+                    600, "easeOutCubic"
                 );
                 setTimeout(function() { menu.addClass('active'); }, 500);
             });
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
                     {
                         left: "-100%"
                     },
-                    200
+                    600, "easeOutCubic"
                 );
                 setTimeout(function() { menu.removeClass("active"); }, 500);                
             });

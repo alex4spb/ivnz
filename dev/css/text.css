@@ -40,10 +40,6 @@ h5,
 h6 {
   margin: 0;
 }
-h1,
-.h1 {
-  letter-spacing: -0.03em;
-}
 @media only screen and (min-width: 768px) {
   h1,
   .h1 {
@@ -251,16 +247,16 @@ h6,
   }
 }
 .text__collapsed-content:not(.-above-m):not(.-below-m) {
-  -webkit-transition: max-height 150ms;
-  transition: max-height 150ms;
+  -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
+  transition: max-height 0.2s, 0.2s, 0.2s;
   max-height: 0;
   overflow: hidden;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
   .text__collapsed-content.-above-m {
-    -webkit-transition: max-height 150ms;
-    transition: max-height 150ms;
+    -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
+    transition: max-height 0.2s, 0.2s, 0.2s;
     max-height: 0;
     overflow: hidden;
     position: relative;
@@ -268,8 +264,8 @@ h6,
 }
 @media only screen and (max-width: 767px) {
   .text__collapsed-content.-below-m {
-    -webkit-transition: max-height 150ms;
-    transition: max-height 150ms;
+    -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
+    transition: max-height 0.2s, 0.2s, 0.2s;
     max-height: 0;
     overflow: hidden;
     position: relative;
@@ -286,8 +282,8 @@ h6,
   cursor: pointer;
   font-weight: bold;
   padding-bottom: 2px;
-  -webkit-transition: color 150ms;
-  transition: color 150ms;
+  -webkit-transition: color 0.2s, 0.2s, 0.2s;
+  transition: color 0.2s, 0.2s, 0.2s;
 }
 @media only screen and (min-width: 1199px) {
   .text__collapsed-handler {
