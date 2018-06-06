@@ -62,9 +62,9 @@ jQuery(document).ready(function($) {
         });
     else
         $(function() {
-            var pull = $("#pull");
-            menu = $(".topnav__menu.-mobile");
-            menuHeight = menu.height();
+            var pull = $("#pull"),
+            menu = $(".topnav__menu.-mobile"),
+            menuHeight = menu.height(),
             close = $(".topnav__menu-close img");
 
             $(pull).on("click", function(e) {
