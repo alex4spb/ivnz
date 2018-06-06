@@ -1,4 +1,3 @@
-include /mixins
 include /input
 
 doctype html
@@ -25,12 +24,33 @@ doctype html
     script(src="js/script.js")
     title Ivaschenko Nizamov
   body
+    .topnav__menu.-mobile
+      .topnav__menu-close
+        img(src="img/close.svg")
+        span IVASCHENKO NIZAMOV
+      .topnav__menu-itembox
+        .topnav__menu-item
+          a(href="#") О нас
+        .topnav__menu-item.active
+          a(href="cases.html") Кейсы
+        .topnav__menu-item
+          a(href="jobs.html") Вакансии
+        .topnav__menu-item
+          a(href="contacts.html") Контакты
+        .topnav__menu-item
+          a(href="blog.html") Блог
+      .topnav__menu-telephone
+        .topnav__menu-telephone-box
+          img(src="img/smartphone_m.svg")
+          span +7 812 244-71-48 
     .wrapper
       .container
         .topnav(data-aos="fade-in" data-aos-delay="600")
+          .topnav__hamburger#pull     
+            img(src="img/hamburger.svg")
           a.topnav__logo(href="index.html")           
             img(src="img/logo.svg")
-          .topnav__menu
+          .topnav__menu#magic
             .topnav__menu-item
               a(href="#") О нас
             .topnav__menu-item.active
@@ -42,7 +62,9 @@ doctype html
             .topnav__menu-item
               a(href="blog.html") Блог
           a.topnav__mail(href="mailto:support@ivnz.ru")
-            +svg("mail")
+            img(src="img/mail.svg")
+          a.topnav__phone(href="tel:+7812244-71-48")
+            img(src="img/phone.svg")  
       .content
         block main
         .footer

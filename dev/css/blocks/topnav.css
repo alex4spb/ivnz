@@ -21,10 +21,21 @@
 .topnav {
   display: block;
   color: #fff;
-  height: 45px;
-  margin-top: 30px;
   width: 100%;
   padding-bottom: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .topnav {
+    height: 45px;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav {
+    height: 71px;
+    margin-top: 0;
+  }
 }
 .topnav:after {
   content: "";
@@ -44,21 +55,21 @@
   text-decoration: none;
 }
 .topnav__logo {
-  float: left;
   will-change: width;
   position: relative;
-  overflow: hidden;
-  width: 232px;
+  width: 158px;
+  height: 48px;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
           transition-duration: 0.2s, 0.2s, 0.2s;
+  display: block;
 /*+b($t)
       width 0  */
 }
 @media only screen and (min-width: 1199px) {
   .topnav__logo {
-    margin-left: -46px;
+    margin-left: -53px;
   }
 }
 @media only screen and (max-width: 1198px) {
@@ -66,30 +77,244 @@
     margin-left: 0;
   }
 }
+@media only screen and (min-width: 768px) {
+  .topnav__logo {
+    float: left;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__logo {
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+}
 .topnav__menu {
-  float: right;
-  height: 45px;
-  line-height: 45px;
-  -webkit-transition-property: float;
-  transition-property: float;
+  display: inline-block;
+  -webkit-transition-property: all;
+  transition-property: all;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
           transition-duration: 0.2s, 0.2s, 0.2s;
-  position: relative;
   font-size: 0;
-/*+b($t)
-      float left*/
+  vertical-align: top;
+}
+@media only screen and (min-width: 768px) {
+  .topnav__menu {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__menu {
+    display: none;
+    background-color: #1f273d;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
 }
 .topnav__menu:after {
   content: "";
   width: 100%;
   background-color: rgba(99,104,112,0.3);
   height: 2px;
-  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   border-radius: 10px;
   z-index: 1;
+}
+@media only screen and (min-width: 768px) {
+  .topnav__menu:after {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__menu:after {
+    display: none;
+  }
+}
+.topnav__menu.-mobile {
+  text-align: center;
+  left: -100%;
+}
+@media only screen and (min-width: 768px) {
+  .topnav__menu.-mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__menu.-mobile {
+    display: block;
+  }
+}
+.topnav__menu.-mobile.active:before {
+  height: 120px;
+}
+.topnav__menu.-mobile.active:after {
+  opacity: 1;
+}
+.topnav__menu.-mobile.active .topnav__menu-close:before {
+  opacity: 1;
+}
+.topnav__menu.-mobile.active .topnav__menu-close:after {
+  height: 30px;
+}
+.topnav__menu.-mobile.active .topnav__menu-telephone:after {
+  height: 120px;
+}
+.topnav__menu.-mobile:before {
+  content: "";
+  width: 2px;
+  background-color: rgba(216,216,216,0.1);
+  height: 0px;
+  display: block;
+  position: absolute;
+  top: 224px;
+  left: 20px;
+  border-radius: 10px;
+  z-index: 5;
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+          transition-duration: 1.5s, 1.5s, 1.5s;
+/*height прописать до и после появления topnav__menu*/
+}
+.topnav__menu.-mobile:after {
+  content: "";
+  width: 42px;
+  background-color: rgba(216,216,216,0.1);
+  height: 321px;
+  background: url("/img/back-menu.svg");
+  display: block;
+  position: absolute;
+  top: 112px;
+  left: calc(100% - 41px);
+  border-radius: 10px;
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+          transition-duration: 1.5s, 1.5s, 1.5s;
+/*opacity прописать до и после появления topnav__menu*/
+}
+.topnav__menu-itembox {
+  display: block;
+  width: 130px;
+  margin: 64px auto 0;
+}
+.topnav__menu-close {
+  width: 100%;
+  position: relative;
+  height: 32px;
+  margin-top: 20px;
+  text-align: center;
+}
+.topnav__menu-close:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -49px;
+  left: -35px;
+  border-radius: 110px;
+  width: 108px;
+  height: 108px;
+  z-index: 5;
+  opacity: 0;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+          transition-duration: 1.5s, 1.5s, 1.5s;
+  background-color: #182136;
+/*opacity прописать до и после появления topnav__menu*/
+}
+.topnav__menu-close:after {
+  content: "";
+  width: 2px;
+  background-color: #3c7fff;
+  height: 0;
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  border-radius: 10px;
+  z-index: 5;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+          transition-duration: 1.5s, 1.5s, 1.5s;
+/*height прописать до и после появления topnav__menu*/
+}
+.topnav__menu-close img {
+  position: absolute;
+  top: 5px;
+  left: 22px;
+  z-index: 10;
+}
+.topnav__menu-close span {
+  display: inline-block;
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  width: 130px;
+  font-weight: bold;
+}
+.topnav__menu-telephone {
+  text-align: left;
+  height: 30px;
+  vertical-align: top;
+  line-height: 0;
+  font-size: 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-top: 91px;
+}
+.topnav__menu-telephone:after {
+  content: "";
+  width: 2px;
+  background-color: rgba(216,216,216,0.1);
+  height: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  border-radius: 10px;
+  z-index: 5;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+          transition-duration: 1.5s, 1.5s, 1.5s;
+/*height прописать до и после появления topnav__menu*/
+}
+.topnav__menu-telephone-box {
+  width: 130px;
+  white-space: nowrap;
+  margin: 0 auto;
+  position: relative;
+}
+.topnav__menu-telephone img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -50px;
+  top: 0;
+}
+.topnav__menu-telephone span {
+  margin-top: 9px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  display: inline-block;
 }
 .topnav__menu #magic-line {
   width: 100px;
@@ -102,30 +327,87 @@
   border-radius: 10px;
   z-index: 2;
 }
+@media only screen and (max-width: 767px) {
+  .topnav__menu #magic-line {
+    display: none;
+  }
+}
 .topnav__menu-item {
-  display: inline-block;
-  margin-right: 40px;
   vertical-align: middle;
   position: relative;
-  font-size: 18px;
-  line-height: 45px;
   font-weight: bold;
   cursor: pointer;
-/*&.active
-        &:after
-          content ""
-          width 100%
-          background-color #F78200
-          height 2px
-          display block
-          position absolute
-          bottom 0
-          left 0
-          border-radius 10px
-          z-index 2*/
+}
+@media only screen and (min-width: 768px) {
+  .topnav__menu-item {
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 18px;
+    line-height: 45px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__menu-item {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+    line-height: 60px;
+    text-transform: uppercase;
+  }
+  .topnav__menu-item a {
+    position: relative;
+  }
+  .topnav__menu-item a:after {
+    content: "";
+    width: 0;
+    background-color: #f78200;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+            transition-duration: 0.2s, 0.2s, 0.2s;
+  }
+  .topnav__menu-item.active a:after {
+    width: 100%;
+  }
 }
 .topnav__menu-item:nth-child(5) {
   margin-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .topnav__menu-item:nth-child(5):before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    border: 2px solid #3c7fff;
+    border-radius: 10px;
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__menu-item:nth-child(5) a {
+    position: relative;
+  }
+  .topnav__menu-item:nth-child(5) a:before {
+    content: "";
+    width: 4.6px;
+    height: 4.6px;
+    position: absolute;
+    top: -7px;
+    right: -12px;
+    border: 2.7px solid #3c7fff;
+    border-radius: 10px;
+    display: block;
+  }
 }
 .topnav__menu-item a {
   color: #fff;
@@ -137,4 +419,80 @@
 .topnav__menu-item a:hover {
   color: #bcbfc6;
   text-decoration: none;
+}
+.topnav__mail {
+  float: right;
+  display: block;
+  will-change: width;
+  position: relative;
+  overflow: hidden;
+  width: 27px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  height: 17px;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
+  text-align: left;
+  vertical-align: top;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 1199px) {
+  .topnav__mail {
+    margin-right: -13px;
+  }
+}
+@media only screen and (max-width: 1198px) {
+  .topnav__mail {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__mail {
+    display: none;
+  }
+}
+.topnav__phone {
+  display: block;
+  will-change: width;
+  position: absolute;
+  overflow: hidden;
+  width: 18.81px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  height: 23.37px;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
+  text-align: left;
+  vertical-align: top;
+  top: 24px;
+  right: 20.19px;
+}
+@media only screen and (min-width: 768px) {
+  .topnav__phone {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__phone {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .topnav__hamburger {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .topnav__hamburger {
+    display: block;
+    position: absolute;
+    width: 20px;
+    -webkit-transition-property: all;
+    transition-property: all;
+    height: 16px;
+    -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+            transition-duration: 0.2s, 0.2s, 0.2s;
+    top: 28px;
+    left: 20px;
+  }
 }

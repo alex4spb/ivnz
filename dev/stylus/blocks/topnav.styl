@@ -1,10 +1,15 @@
 .topnav
   display block
   color #fff
-  height 45px
-  margin-top 30px
   width 100%
-  padding-bottom 20px
+  padding-bottom 20px//
+  text-align center
+  +a($m)  
+    height 45px
+    margin-top 30px
+  +b($m)
+    height 71px
+    margin-top 0
   &:after
     content ""
     display table
@@ -18,40 +23,205 @@
       color #BCBFC6
       text-decoration none  
   &__logo
-    float left
     will-change width
     position relative
-    overflow hidden
-    width 232px
+    width 158px
+    height 48px
     transition-property all
     transition-duration $speed
+    display block
     +a($d)
-      margin-left -46px
+      margin-left -53px
     +b($d)
       margin-left 0
+    +a($m)    
+      float left
+      margin-top 10px
+    +b($m)
+      margin 0 auto
+      padding-top 20px
+      
     /*+b($t)
       width 0  */    
   &__menu
-    float right
-    height 45px
-    line-height 45px
-    transition-property float
+    display inline-block 
+    transition-property all
     transition-duration $speed
-    position relative
     font-size 0
+    vertical-align top
+    +a($m)   
+      height 45px
+      line-height 45px  
+      position relative    
+    +b($m) 
+      display none
+      background-color #1F273D      
+      position fixed      
+      overflow auto
+      width 100%
+      height 100%
+      top 0
+      bottom 0
+      right 0
+      left 0
+      z-index 10
     &:after
       content ""
       width 100%
       background-color rgba(99, 104, 112, 0.3)
       height 2px
-      display block
       position absolute
       bottom 0
       left 0
       border-radius 10px
       z-index 1
-    /*+b($t)
-      float left*/
+      +a($m)  
+        display block
+      +b($m)
+        display none
+    &.-mobile
+      text-align center
+      left -100%
+      +a($m) 
+        display none
+      +b($m)
+        display block
+      &.active
+        &:before
+          height 120px
+        &:after
+          opacity 1
+        .topnav__menu-close
+          &:before
+            opacity 1
+          &:after 
+            height 30px
+        .topnav__menu-telephone
+          &:after
+           height 120px 
+      &:before
+        content ""
+        width 2px
+        background-color rgba(216, 216, 216, 0.1)
+        height 0px
+        display block
+        position absolute
+        top 224px
+        left 20px
+        border-radius 10px
+        z-index 5
+        transition-property height
+        transition-duration 1.5s, 1.5s, 1.5s 
+        /*height прописать до и после появления topnav__menu*/
+      &:after
+        content ""
+        width 42px
+        background-color rgba(216, 216, 216, 0.1)
+        height 321px
+        background url(/img/back-menu.svg)
+        display block
+        position absolute
+        top 112px
+        left calc(100% - 41px)
+        border-radius 10px
+        z-index 5
+        opacity 0
+        transition-property all
+        transition-duration 1.5s, 1.5s, 1.5s  
+        /*opacity прописать до и после появления topnav__menu*/
+    &-itembox
+      display block
+      width 130px
+      margin 64px auto 0      
+    &-close
+      width 100%
+      position relative
+      height 32px
+      margin-top 20px
+      text-align center
+      &:before
+        content ""
+        display block
+        position absolute
+        top -49px
+        left -35px
+        border-radius 110px
+        width 108px
+        height 108px
+        z-index 5 
+        opacity 0
+        transition-property all
+        transition-duration 1.5s, 1.5s, 1.5s  
+        background-color #182136
+        /*opacity прописать до и после появления topnav__menu*/ 
+      &:after
+        content ""
+        width 2px
+        background-color #3C7FFF
+        height 0
+        display block
+        position absolute
+        top -20px
+        right 20px
+        border-radius 10px
+        z-index 5
+        transition-property all
+        transition-duration 1.5s, 1.5s, 1.5s 
+        /*height прописать до и после появления topnav__menu*/  
+      img
+        position absolute
+        top 5px
+        left 22px
+        z-index 10        
+      span
+        display inline-block  
+        text-align left  
+        font-size 14px
+        line-height 16px 
+        width 130px
+        font-weight bold 
+    &-telephone
+      text-align left
+      height 30px
+      vertical-align top
+      line-height 0
+      font-size 0
+      width 100%
+      position relative
+      text-align center
+      margin-top 91px    
+      &:after
+        content ""
+        width 2px
+        background-color rgba(216, 216, 216, 0.1)
+        height 0
+        display block
+        position absolute
+        top 0
+        right 20px
+        border-radius 10px
+        z-index 5
+        transition-property all
+        transition-duration 1.5s, 1.5s, 1.5s
+        /*height прописать до и после появления topnav__menu*/ 
+      &-box
+        width 130px 
+        white-space nowrap
+        margin 0 auto
+        position relative
+      img
+        display inline-block
+        width 30px
+        height 30px
+        position absolute
+        left -50px
+        top 0
+      span
+        margin-top 9px
+        font-size 15px
+        line-height 18px
+        font-weight bold
+        display inline-block
     #magic-line 
       width 100px
       background-color #F78200
@@ -62,29 +232,68 @@
       left 0
       border-radius 10px
       z-index 2
+      +b($m)
+        display none
     &-item
-      display inline-block
-      margin-right 40px
       vertical-align middle
       position relative
-      font-size 18px
-      line-height 45px
       font-weight bold
       cursor pointer
-      /*&.active
-        &:after
-          content ""
-          width 100%
-          background-color #F78200
-          height 2px
-          display block
-          position absolute
-          bottom 0
-          left 0
-          border-radius 10px
-          z-index 2*/
+      +a($m)  
+        display inline-block
+        margin-right 40px    
+        font-size 18px
+        line-height 45px    
+      +b($m)
+        display block
+        text-align left   
+        font-size 22px
+        line-height 60px 
+        text-transform uppercase
+        a 
+          position relative
+          &:after
+            content ""
+            width 0
+            background-color #F78200
+            height 2px
+            display block
+            position absolute
+            bottom 0
+            left 0
+            border-radius 10px
+            z-index 2
+            transition-property all
+            transition-duration $speed      
+        &.active
+          a:after
+            width 100%
       &:nth-child(5)
         margin-right 0  
+        +a($m)
+          &:before
+            content ""
+            width 4px
+            height 4px
+            position absolute
+            top -4px
+            right -10px
+            border 2px solid #3C7FFF
+            border-radius 10px 
+            display block 
+        +b($m)
+          a
+            position relative
+            &:before
+              content ""
+              width 4.6px
+              height 4.6px
+              position absolute
+              top -7px
+              right -12px
+              border 2.7px solid #3C7FFF
+              border-radius 10px 
+              display block
       a 
         color #fff
         transition-property all
@@ -92,4 +301,52 @@
         &:hover
           color #BCBFC6
           text-decoration none  
+  &__mail
+    float right
+    display block
+    will-change width
+    position relative
+    overflow hidden
+    width 27px
+    transition-property all
+    height 17px
+    transition-duration $speed
+    text-align left
+    vertical-align top
+    margin-top 10px
+    +a($d)
+      margin-right -13px
+    +b($d)
+      margin-right 0  
+    +b($m)
+      display none     
+  &__phone
+    display block
+    will-change width
+    position absolute
+    overflow hidden
+    width 18.81px
+    transition-property all
+    height 23.37px
+    transition-duration $speed
+    text-align left
+    vertical-align top
+    top 24px
+    right 20.19px
+    +a($m)
+      display none   
+    +b($m)
+      display block 
+  &__hamburger
+    +a($m)
+      display none
+    +b($m)    
+      display block
+      position absolute
+      width 20px
+      transition-property all
+      height 16px
+      transition-duration $speed      
+      top 28px
+      left 20px
     

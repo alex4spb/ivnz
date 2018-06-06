@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Hamburger</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3.-Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header-mobile" transform="translate(-20.000000, -28.000000)" fill="#FFFFFF">
+            <path d="M21,28 L39,28 C39.5522847,28 40,28.4477153 40,29 C40,29.5522847 39.5522847,30 39,30 L21,30 C20.4477153,30 20,29.5522847 20,29 C20,28.4477153 20.4477153,28 21,28 Z M21,35 L39,35 C39.5522847,35 40,35.4477153 40,36 C40,36.5522847 39.5522847,37 39,37 L21,37 C20.4477153,37 20,36.5522847 20,36 C20,35.4477153 20.4477153,35 21,35 Z M21,42 L39,42 C39.5522847,42 40,42.4477153 40,43 C40,43.5522847 39.5522847,44 39,44 L21,44 C20.4477153,44 20,43.5522847 20,43 C20,42.4477153 20.4477153,42 21,42 Z" id="Hamburger"></path>
+        </g>
+    </g>
+</svg>
