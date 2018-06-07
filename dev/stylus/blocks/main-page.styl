@@ -6,8 +6,180 @@
     background-color #ffffff
     +a($m)
       min-height 900px
+    +b($m)
+      min-height 568px
+      padding 0 20px
     &__content
       max-width 772px
       text-align left
-      text-transform uppercase
-      padding-top 273px
+      +a($m)
+        padding-top 273px
+      +b($m)
+        padding-top 185px
+      h1
+        text-transform uppercase        
+    &__button      
+      border 2px solid #F78200
+      border-radius 2px
+      color #ffffff
+      font-weight bold
+      text-align center      
+      font-family "Proxima Nova"
+      display inline-block
+      +a($m)
+        font-size 18px
+        line-height 76px
+        height 76px
+        padding 0 40px
+      +b($m)
+        width 100%
+        box-sizing border-box  
+        font-size 15px
+        line-height 46px
+        height 50px
+      &:hover
+        background-color #F78200
+        text-decoration none
+    .greyline
+      position absolute
+      right 0
+      +a($m)
+        top 110px 
+      +b($m)
+        top 102px 
+      &.active    
+        height 120px
+  .project
+    +b($m)
+      padding 0 20px
+    .blueline
+      position absolute
+      left 0
+      +a($m)
+        top -50px 
+      +b($m)
+        top -25px 
+      &.active
+        +a($m)    
+          height 100px
+        +b($m)
+          height 60px
+    .greyline
+      position absolute
+      left 50% 
+      +a($m)
+        top -173px
+      +b($m)
+        top -82px 
+      &.active
+        +a($m)     
+          height 476px
+        +b($m)
+          height 100px
+    .orangecircle
+      position absolute
+      right 0
+      +a($m)
+        top -171px
+      +b($m)
+        top -63px  
+      &.active
+        +a($m)     
+          height 204px
+        +b($m)
+          height 100px
+    &__content
+      color #000000
+      font-size 0
+      +a($m)
+        padding-top 121px
+      +b($m)
+        padding-top 40px
+      h2
+        text-transform uppercase
+        +b($m)
+          text-align center
+      &-left,
+      &-right
+        display inline-block
+        vertical-align top
+        +a($m)
+          width 50%
+        +b($m)
+          width 100%
+        h3
+          text-transform uppercase
+          +b($m)
+            text-align center 
+            margin-bottom 40px     
+        ul
+          padding 0
+          li
+            vertical-align middle
+            display block
+            font-weight bold
+            position relative
+            box-sizing border-box
+            +a($m)              
+              padding 20px 0 0 105px
+              line-height 72px
+              height 88px
+              font-size 16px
+              margin-bottom 20px
+            +b($m)
+              padding 0
+              text-align center
+              font-size 14px
+              margin-bottom 40px
+            img 
+              display inline-block
+              +a($m)
+                position absolute
+                bottom 0
+                left 0
+              +b($m)
+                position relative  
+                text-align center              
+            span
+              line-height 22px
+              display inline-block
+              vertical-align middle
+              +b($m)
+                width 100%
+      &-left 
+        +a($m)
+          margin-top 80px          
+          li:nth-child(3)
+            padding-top 28px
+            height 96px
+          li:nth-child(4)
+            padding-top 22px
+            height 87px
+        +b($m)
+          margin-top 40px
+        h3 
+          margin-bottom 35px
+      &-right       
+        box-sizing border-box
+        +a($m)
+          margin-top 32px
+          padding-left 32px
+          ul
+            li 
+              padding-left 111px
+              &:nth-child(1)
+                img
+                  left -5px 
+              &:nth-child(3) 
+                height 94px
+                padding-top 27px 
+              &:nth-child(4) 
+                height 97px
+                padding-top 32px 
+        +b($m)
+          margin-top 20px
+        h3 
+          margin-bottom 12px
+          
+        
+        

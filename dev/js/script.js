@@ -23,69 +23,87 @@ jQuery(document).ready(function($) {
         once: true
     });
     //if ($(document).width() > 767)
-        $(function() {
-            var $el,
-                leftPos,
-                newWidth,
-                $mainNav = $(".topnav__menu#magic");
+    $(function() {
+        var $el,
+            leftPos,
+            newWidth,
+            $mainNav = $(".topnav__menu#magic");
 
-            $mainNav.append("<div id='magic-line'></div>");
-            var $magicLine = $("#magic-line");
+        $mainNav.append("<div id='magic-line'></div>");
+        var $magicLine = $("#magic-line");
 
-            $magicLine
-                .width(
-                    $(".topnav__menu#magic .topnav__menu-item.active").width()
-                )
-                .css(
-                    "left",
-                    $(
-                        ".topnav__menu#magic .topnav__menu-item.active"
-                    ).position().left
-                )
-                .data("origLeft", $magicLine.position().left)
-                .data("origWidth", $magicLine.width());
-            $(".topnav__menu#magic .topnav__menu-item a").focusin(function() {
-                $el = $(this);
-                leftPos = $el.parent().position().left;
-                newWidth = $el.parent().width();
-                $magicLine.stop().animate({
-                    left: leftPos,
-                    width: newWidth
-                });
-            });
-            $(".topnav__menu#magic .topnav__menu-item a").focusout(function() {
-                $magicLine.stop().animate({
-                    left: $magicLine.data("origLeft"),
-                    width: $magicLine.data("origWidth")
-                });
+        $magicLine
+            .width($(".topnav__menu#magic .topnav__menu-item.active").width())
+            .css(
+                "left",
+                $(".topnav__menu#magic .topnav__menu-item.active").position()
+                    .left
+            )
+            .data("origLeft", $magicLine.position().left)
+            .data("origWidth", $magicLine.width());
+        $(".topnav__menu#magic .topnav__menu-item a").focusin(function() {
+            $el = $(this);
+            leftPos = $el.parent().position().left;
+            newWidth = $el.parent().width();
+            $magicLine.stop().animate({
+                left: leftPos,
+                width: newWidth
             });
         });
+        $(".topnav__menu#magic .topnav__menu-item a").focusout(function() {
+            $magicLine.stop().animate({
+                left: $magicLine.data("origLeft"),
+                width: $magicLine.data("origWidth")
+            });
+        });
+    });
     //else
-        $(function() {
-            var pull = $("#pull"),
+    $(function() {
+        var pull = $("#pull"),
             menu = $(".topnav__menu.-mobile"),
             menuHeight = menu.height(),
             close = $(".topnav__menu-close img");
 
-            $(pull).on("click", function(e) {
-                e.preventDefault();
-                menu.animate(
-                    {
-                        left: "0px"
-                    },
-                    600, "easeOutCubic"
-                );
-                setTimeout(function() { menu.addClass('active'); }, 500);
-            });
-            $(close).on("click", function(e) {
-                e.preventDefault();
-                menu.animate(
-                    {
-                        left: "-100%"
-                    },
-                    600, "easeOutCubic"
-                );
-                setTimeout(function() { menu.removeClass("active"); }, 500);                
-            });
+        $(pull).on("click", function(e) {
+            e.preventDefault();
+            menu.animate(
+                {
+                    left: "0px"
+                },
+                600,
+                "easeOutCubic"
+            );
+            setTimeout(function() {
+                menu.addClass("active");
+            }, 500);
         });
+        $(close).on("click", function(e) {
+            e.preventDefault();
+            menu.animate(
+                {
+                    left: "-100%"
+                },
+                600,
+                "easeOutCubic"
+            );
+            setTimeout(function() {
+                menu.removeClass("active");
+            }, 500);
+        });
+    });
+    $(function() {
+        var line = [$(".greyline"), $(".blueline"), $(".orangecircle")];
+        line.forEach(function(element, index) {
+            checkForChanges()
+            function checkForChanges()
+                {
+                    if (element.hasClass("aos-animate"))
+                        setTimeout(function() {
+                            element.stop().addClass("active");
+                        }, 100);
+                    else
+                      setTimeout(checkForChanges, 100);
+                }
+        });
+    });
 });

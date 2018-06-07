@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="88px" viewBox="0 0 80 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 141</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-508.000000, -156.000000)" stroke-width="2">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-214" transform="translate(5.000000, 0.000000)">
+                    <g id="Group-141" transform="translate(398.000000, 65.000000)">
+                        <g id="Group-140">
+                            <g id="Group-137" transform="translate(0.000000, 25.000000)" stroke="#000000">
+                                <rect id="Rectangle-34" fill="#EEDAC7" x="1" y="4" width="78" height="58" rx="6"></rect>
+                                <rect id="Rectangle-34" fill="#FFFBF7" x="1" y="1" width="78" height="53" rx="6"></rect>
+                            </g>
+                            <path d="M21,33.381966 L27.763932,30 L41,30 C41.5522847,30 42,29.5522847 42,29 L42,2 C42,1.44771525 41.5522847,1 41,1 L17,1 C16.4477153,1 16,1.44771525 16,2 L16,29 C16,29.5522847 16.4477153,30 17,30 L20,30 L21,30 L21,33.381966 Z" id="Combined-Shape" stroke="#000000" fill="#3B7EFF"></path>
+                            <path d="M52,51.469555 L52,50 L57,50 C57.5522847,50 58,49.5522847 58,49 L58,38 C58,37.4477153 57.5522847,37 57,37 L36,37 C35.4477153,37 35,37.4477153 35,38 L35,49 C35,49.5522847 35.4477153,50 36,50 L47.9615549,50 L50.3174234,52.2003691 C50.7210409,52.5773457 51.3538375,52.555749 51.7308141,52.1521315 C51.9037888,51.9669327 52,51.7229694 52,51.469555 Z" id="Combined-Shape" stroke="#000000" fill="#F78200"></path>
+                            <g id="Group-138" transform="translate(1.000000, 48.000000)">
+                                <path d="M0.791015625,19.9482422 C4.75683594,16.5680339 7.96061198,14.8779297 10.4023438,14.8779297 C14.0649414,14.8779297 18.9135742,18.3530273 21.0307617,23.027832 C22.4422201,26.1443685 23.1743164,28.7416992 23.2270508,30.8198242" id="Path-18" stroke="#000000"></path>
+                                <ellipse id="Oval-13" stroke="#222222" fill="#3B7EFF" cx="10.5" cy="8.5" rx="6.5" ry="7.5"></ellipse>
+                                <ellipse id="Oval-13" stroke="#000000" fill="#FFFBF7" cx="12.5" cy="8.5" rx="4.5" ry="5.5"></ellipse>
+                            </g>
+                            <path d="M6.43164062,64.8183594 C9.62890625,67.8447266 13.2822266,67.8447266 17.3916016,64.8183594" id="Path-19" stroke="#000000"></path>
+                            <path d="M21,5 L37,5" id="Path-15" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M39,41 L53,41" id="Path-15" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <g id="Group-139" transform="translate(55.000000, 48.000000)" stroke="#000000">
+                                <g id="Group-138" transform="translate(12.000000, 15.500000) scale(-1, 1) translate(-12.000000, -15.500000) ">
+                                    <path d="M0.791015625,19.9482422 C4.75683594,16.5680339 7.96061198,14.8779297 10.4023438,14.8779297 C14.0649414,14.8779297 18.9135742,18.3530273 21.0307617,23.027832 C22.4422201,26.1443685 23.1743164,28.7416992 23.2270508,30.8198242" id="Path-18"></path>
+                                    <ellipse id="Oval-13" fill="#F78200" cx="10.5" cy="8.5" rx="6.5" ry="7.5"></ellipse>
+                                    <ellipse id="Oval-13" fill="#FFFBF7" cx="12.5" cy="8.5" rx="4.5" ry="5.5"></ellipse>
+                                </g>
+                                <path d="M9.93066406,30.8041992 C8.41764323,27.6222331 9.03483073,22.6193034 11.7822266,15.7954102" id="Path-20"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
