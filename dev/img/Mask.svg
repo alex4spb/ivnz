@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="309px" viewBox="0 0 299 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,166 L0,130 C-1.41093417e-12,79.1178482 28.7238831,33.1039789 74,11 C119.49496,-11.1340676 174.249285,0.862675903 206,40 L275,124 C306.15333,161.763058 307.048281,216.173393 277,255 C247.719487,293.614306 199.897083,313.323329 151,307 L119,302 C50.5455422,292.875116 2.96296176e-12,234.818408 0,166 Z" id="path-1"></path>
+    </defs>
+    <g id="1.-Design-👀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-Ivnz.-About-us" transform="translate(-441.000000, -2907.000000)">
+            <g id="Group-46" transform="translate(390.000000, 2797.000000)">
+                <g id="Group-42" transform="translate(51.000000, 110.000000)">
+                    <g id="Group-18">
+                        <g id="Group-6">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#FFFFFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
