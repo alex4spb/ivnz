@@ -311,6 +311,55 @@
             margin-left -20px 
           +b($t) 
             margin-left 0
+  .working
+    position relative
+    .greyline
+      position absolute      
+      z-index 2
+      +a($m)
+        top -85px 
+        left 0px
+      +b($m)
+        top -30px
+        left 20px
+      &.active
+        +a($m)    
+          height 200px
+        +b($m)
+          height 60px 
+    .orangeline
+      position absolute      
+      z-index 2
+      +a($m)
+        top -50px 
+        left calc(50% + 15px)
+      +b($m)
+        display none
+      &.active
+        +a($m)    
+          height 100px
+    .orangecircle
+      position absolute      
+      z-index 2
+      +a($m)
+        top -61px 
+        right 0px
+      +b($m)
+        top -42px
+        right 20px
+      &:before
+        +a($m)          
+          bottom auto
+          top -16px
+        +b($m)          
+          bottom auto
+          top -10px
+      &.active
+        +a($m)    
+          height 400px
+        +b($m)
+          height 100px 
+    
         
         
         

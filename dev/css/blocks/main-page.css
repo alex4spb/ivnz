@@ -73,6 +73,16 @@
     left: -4px;
   }
 }
+.orangeline {
+  width: 2px;
+  height: 0px;
+  background-color: #fd933b;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
 .main-page .header {
   background-image: url("../img/main-page-header.png");
   background-size: cover;
@@ -630,7 +640,90 @@
     margin-left: 0;
   }
 }
-.main-page svg {
-  display: inline-block;
-  vertical-align: middle;
+.main-page .working {
+  position: relative;
+}
+.main-page .working .greyline {
+  position: absolute;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .greyline {
+    top: -85px;
+    left: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .greyline {
+    top: -30px;
+    left: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .greyline.active {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .greyline.active {
+    height: 60px;
+  }
+}
+.main-page .working .orangeline {
+  position: absolute;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .orangeline {
+    top: -50px;
+    left: calc(50% + 15px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .orangeline {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .orangeline.active {
+    height: 100px;
+  }
+}
+.main-page .working .orangecircle {
+  position: absolute;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .orangecircle {
+    top: -61px;
+    right: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .orangecircle {
+    top: -42px;
+    right: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .orangecircle:before {
+    bottom: auto;
+    top: -16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .orangecircle:before {
+    bottom: auto;
+    top: -10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .orangecircle.active {
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .orangecircle.active {
+    height: 100px;
+  }
 }

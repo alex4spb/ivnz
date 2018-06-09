@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
         });
     });
     $(function() {
-        var line = [$(".greyline"), $(".blueline"), $(".orangecircle")];
+        var line = [$(".greyline"), $(".blueline"), $(".orangecircle"), $(".orangeline")];
         line.forEach(function(element, index) {
             checkForChanges()
             function checkForChanges()

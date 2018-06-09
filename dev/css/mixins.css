@@ -73,6 +73,16 @@
     left: -4px;
   }
 }
+.orangeline {
+  width: 2px;
+  height: 0px;
+  background-color: #fd933b;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
 .greyline {
   width: 2px;
   height: 0px;
@@ -127,4 +137,14 @@
     bottom: -10px;
     left: -4px;
   }
+}
+.orangeline {
+  width: 2px;
+  height: 0px;
+  background-color: #fd933b;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
 }
