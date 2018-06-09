@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="95px" viewBox="0 0 86 95" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 133</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-378.000000, -149.000000)">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-214" transform="translate(5.000000, 0.000000)">
+                    <g id="Group-133" transform="translate(268.000000, 58.000000)">
+                        <g id="Group-135">
+                            <rect id="Rectangle-34" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="1" y="36" width="78" height="58" rx="6"></rect>
+                            <rect id="Rectangle-34" stroke="#000000" stroke-width="2" fill="#FFFBF7" x="1" y="33" width="78" height="53" rx="6"></rect>
+                            <rect id="Rectangle-47" fill="#B09981" opacity="0.200000003" x="2" y="49" width="76" height="2"></rect>
+                            <rect id="Rectangle-47" fill="#B09981" opacity="0.200000003" x="2" y="68" width="76" height="2"></rect>
+                            <path d="M44.4408421,49 L32,55.2888024" id="Path-17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M44.4408421,68 L32,74.2888024" id="Path-17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(38.220421, 71.144401) scale(1, -1) translate(-38.220421, -71.144401) "></path>
+                            <g id="Group-134" transform="translate(3.000000, 19.000000)">
+                                <ellipse id="Oval-10" fill="#B09981" cx="9.5" cy="42" rx="9.5" ry="4"></ellipse>
+                                <g id="Group-127" transform="translate(4.000000, 0.000000)" stroke-width="2">
+                                    <g id="Group-121-Copy">
+                                        <path d="M1,39 L1,38 L0,39 L1,39 Z M15,39 L16,39 L15,38 L15,39 Z M15,41 L15,42 L16,42 L16,41 L15,41 Z M1,41 L0,41 L0,42 L1,42 L1,41 Z" id="Combined-Shape" stroke="#000000" fill="#A95E0C"></path>
+                                        <ellipse id="Oval-10" stroke="#000000" fill="#F78200" cx="8" cy="39" rx="7" ry="3"></ellipse>
+                                        <path d="M12,38.5714286 C12,38.2558373 10.209139,38 8,38 C5.790861,38 4,38.2558373 4,38.5714286" id="Oval-10-Copy" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <g id="Group-116-Copy-2" transform="translate(4.000000, 0.000000)">
+                                            <g id="Group-115">
+                                                <g id="Group-112" transform="translate(-0.000000, 0.000000)">
+                                                    <g id="Group-111">
+                                                        <path d="M4,36 L4,8" id="Path-13" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M4,10 L4,25 L25,25 L19.7417225,17.9889633 L25.9553606,10 L4,10 Z" id="Path-14" stroke="#000000" fill="#F78200" fill-rule="nonzero"></path>
+                                                        <circle id="Oval-11" stroke="#222222" fill="#F78200" cx="4" cy="4" r="3"></circle>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <path d="M13,13 L22,13" id="Path-15" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <g id="Group-134-Copy" transform="translate(51.000000, 0.000000)">
+                                <ellipse id="Oval-10" fill="#B09981" cx="9.5" cy="42" rx="9.5" ry="4"></ellipse>
+                                <g id="Group-127" transform="translate(4.000000, 0.000000)" stroke-width="2">
+                                    <g id="Group-121-Copy">
+                                        <path d="M1,39 L1,38 L0,39 L1,39 Z M15,39 L16,39 L15,38 L15,39 Z M15,41 L15,42 L16,42 L16,41 L15,41 Z M1,41 L0,41 L0,42 L1,42 L1,41 Z" id="Combined-Shape" stroke="#222222" fill="#3B7EFF"></path>
+                                        <ellipse id="Oval-10" stroke="#222222" fill="#3B7EFF" cx="8" cy="39" rx="7" ry="3"></ellipse>
+                                        <path d="M12,38.5714286 C12,38.2558373 10.209139,38 8,38 C5.790861,38 4,38.2558373 4,38.5714286" id="Oval-10-Copy" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <g id="Group-116-Copy-2" transform="translate(4.000000, 0.000000)" stroke="#000000">
+                                            <g id="Group-115">
+                                                <g id="Group-112" transform="translate(-0.000000, 0.000000)">
+                                                    <g id="Group-111">
+                                                        <path d="M4,36 L4,8" id="Path-13" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        <path d="M4,10 L4,25 L25,25 L19.7417225,17.9889633 L25.9553606,10 L4,10 Z" id="Path-14" fill="#3B7EFF" fill-rule="nonzero"></path>
+                                                        <circle id="Oval-11" fill="#3B7EFF" cx="4" cy="4" r="3"></circle>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <path d="M13,13 L22,13" id="Path-15" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <path d="M63,86.1621094 L63,60" id="Path-13" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M63,62 L63,77 L84,77 L78.7417225,69.9889633 L84.9553606,62 L63,62 Z" id="Path-14" stroke="#000000" stroke-width="2" fill="#3B7EFF" fill-rule="nonzero"></path>
+                            <circle id="Oval-11" stroke="#000000" stroke-width="2" fill="#3B7EFF" cx="63" cy="56" r="3"></circle>
+                            <path d="M68,65 L77,65" id="Path-15" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

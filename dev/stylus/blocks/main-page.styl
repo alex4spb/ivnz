@@ -313,6 +313,9 @@
             margin-left 0
   .working
     position relative
+    .container
+      padding 120px 0
+      box-sizing border-box
     .greyline
       position absolute      
       z-index 2
@@ -358,9 +361,102 @@
         +a($m)    
           height 400px
         +b($m)
-          height 100px 
-    
-        
-        
-        
+          height 100px
+    h2 
+      text-transform uppercase
+      color #000000
+    &__tabs
+      margin-top 60px
+      &-titles        
+        position relative
+        display inline-block
+        &:after
+          width 100%
+          content ""
+          height 2px
+          position absolute
+          bottom 0
+          left 0
+          background-color rgba(99, 104, 112, 0.7)
+          z-index 1
+          border-radius 10px
+        &-item
+          position relative
+          font-size 24px
+          font-weight bold
+          line-height 38px
+          color rgba(99, 104, 112, 0.7)
+          height 38px
+          display inline-block
+          &.active
+            color #3C7FFF
+            &:after
+              width 100%
+              content ""
+              height 2px
+              position absolute
+              bottom 0
+              left 0
+              border-radius 10px
+              background-color #3C7FFF
+              z-index 2          
+          & + .working__tabs-titles-item
+            margin-left 30px
+      &-slider
+        width 853px
+        height 688px
+  $time = 500ms
+  $delay = $time/2
+  $mode = cubic-bezier(.17, .67, .55, 1.43)
+  .swiper-slide-active
+    background-color red
+  .swiper-wrapper {
+    .swiper-slide {      
+      transition: z-index 0ms $delay;
+      img {
+        position: relative;
+        transition: $time $mode;
+        transform: scale(0);
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+      }
+      &.swiper-slide-prev {
+        z-index: 1;
+        img {
+          opacity: .3;
+          transform: translateX(-25%) scale(.8);
+        }
+        .slider-single-download {
+          transform: translateX(-150px);
+        }
+      }
+      &.swiper-slide-next {
+        z-index: 1;
+        img {
+          opacity: .3;
+          transform: translateX(25%) scale(.8);
+        }
+        .slider-single-download {
+          transform: translateX(150px);
+        }
+      }
+      &.swiper-slide-active {
+        z-index: 2;
+        img {
+          opacity: 1;
+          transform: translateX(0%) scale(1);
+        }
+        .slider-single-download {
+          opacity: 1;
+          transition-delay: 100ms;
+          transform: translateX(0px);
+        }
+        .span {
+          opacity: 1;
+          transition-delay: 200ms;
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
         

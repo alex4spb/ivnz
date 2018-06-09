@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
         duration: 1200,
         once: true
     });
-    //if ($(document).width() > 767)
+    /*Магическая линия для верхнего меню*/
     $(function() {
         var $el,
             leftPos,
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
             });
         });
     });
-    //else
+    /*Анимация для мобильного меню*/
     $(function() {
         var pull = $("#pull"),
             menu = $(".topnav__menu.-mobile"),
@@ -91,6 +91,7 @@ jQuery(document).ready(function($) {
             }, 500);
         });
     });
+    /*Поддержка анимации для полосок*/
     $(function() {
         var line = [$(".greyline"), $(".blueline"), $(".orangecircle"), $(".orangeline")];
         line.forEach(function(element, index) {
@@ -106,4 +107,17 @@ jQuery(document).ready(function($) {
                 }
         });
     });
+    /*Слайдер на главной*/
+    var mySwiper = new Swiper ('.working__tabs-slider', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,        
+        centeredSlides: true,
+        loopedSlides: 2,
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    })
 });

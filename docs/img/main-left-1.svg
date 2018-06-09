@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="87px" viewBox="0 0 80 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 131</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-117.000000, -157.000000)">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-214" transform="translate(5.000000, 0.000000)">
+                    <g id="Group-131" transform="translate(7.000000, 66.000000)">
+                        <rect id="Rectangle-34" stroke="#222222" stroke-width="2" fill="#EEDAC7" x="1" y="28" width="78" height="58" rx="6"></rect>
+                        <rect id="Rectangle-34" stroke="#222222" stroke-width="2" fill="#FFFBF7" x="1" y="25" width="78" height="53" rx="6"></rect>
+                        <rect id="Rectangle-47" fill="#B09981" opacity="0.200000003" x="2" y="41" width="76" height="2"></rect>
+                        <rect id="Rectangle-47" fill="#B09981" opacity="0.200000003" x="2" y="60" width="76" height="2"></rect>
+                        <polygon id="Path-10-Copy" fill="#734B1E" opacity="0.300000012" points="49.8148148 68.6146025 55.5412959 64.5882353 55.5412959 70.1884766 53.6712601 71.1434972"></polygon>
+                        <polygon id="Path-10-Copy" fill="#734B1E" opacity="0.300000012" transform="translate(66.529907, 67.865866) scale(-1, 1) translate(-66.529907, -67.865866) " points="63.6666667 68.6146025 69.3931478 64.5882353 69.3931478 70.1884766 67.523112 71.1434972"></polygon>
+                        <polygon id="Combined-Shape" fill="#F78200" points="64.8764212 64.6085656 70.8870081 68.6327981 65.3428571 72 59.2899471 68.3478261 53.842328 72 49 68.6327981 54.4121668 64.6085656 49 61.0434783 53.842328 58 59.2899471 61.6521739 65.3428571 58 70.1851852 61.0434783"></polygon>
+                        <polygon id="Path-10" fill-opacity="0.699999988" fill="#B96F19" style="mix-blend-mode: multiply;" points="54.023763 58.7111772 50.5366026 60.8995626 53.7437494 62.984218 53.0625362 61.4058048 54.023763 60.5321117 57.1207954 62.984218 59.4210032 62.984218"></polygon>
+                        <polygon id="Path-10" fill-opacity="0.699999988" fill="#B96F19" style="mix-blend-mode: multiply;" transform="translate(63.941766, 60.847698) scale(-1, 1) translate(-63.941766, -60.847698) " points="62.986726 58.7111772 59.4995656 60.8995626 62.7067124 62.984218 62.0254991 61.4058048 62.986726 60.5321117 66.0837583 62.984218 68.3839662 62.984218"></polygon>
+                        <polygon id="Path-11" fill-opacity="0.699999988" fill="#B96F19" style="mix-blend-mode: multiply;" points="57.2324942 62.9630917 58.7930953 62.1496151 60.2925999 62.1496151 61.9801432 62.9630917 59.6063187 64.5655159"></polygon>
+                        <polygon id="Combined-Shape" stroke="#000000" stroke-width="2" points="64.8764212 64.6085656 70.8870081 68.6327981 65.3428571 72 59.2899471 68.3478261 53.842328 72 49 68.6327981 54.4121668 64.6085656 49 61.0434783 53.842328 58 59.2899471 61.6521739 65.3428571 58 70.1851852 61.0434783"></polygon>
+                        <path d="M45.203125,48 L34,55.0810547" id="Path-17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(39.601562, 51.540527) scale(-1, 1) translate(-39.601562, -51.540527) "></path>
+                        <ellipse id="Oval-10" fill="#B09981" cx="19" cy="38" rx="13" ry="5"></ellipse>
+                        <path d="M21.6666667,14.6666667 L31,38.6666667 C31,40.4688795 26.5228475,42 21,42 C15.4771525,42 11,40.4688795 11,38.6666667 C11,38.4269165 14.1111111,30.4269165 20.3333333,14.6666667 L21.6666667,14.6666667 Z" id="Combined-Shape" stroke="#222222" stroke-width="2" fill="#3B7EFF"></path>
+                        <path d="M21,22 L26.4208984,37.4238281" id="Path-9" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <circle id="Oval-12" stroke="#222222" stroke-width="2" fill="#3B7EFF" cx="21" cy="7" r="6"></circle>
+                        <path d="M24.3333332,7.03333329 C24.3333332,5.21079364 22.8558729,3.73333333 21.0333333,3.73333333 C19.2107936,3.73333333 17.7333333,5.21079364 17.7333333,7.03333329" id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
