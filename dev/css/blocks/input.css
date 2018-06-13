@@ -1,0 +1,294 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.greyline {
+  width: 2px;
+  height: 0px;
+  background-color: rgba(216,216,216,0.1);
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
+.blueline {
+  width: 2px;
+  height: 0px;
+  background-color: #3b7eff;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
+.orangecircle {
+  width: 2px;
+  height: 0px;
+  background-color: #fd933b;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
+.orangecircle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #fd933b;
+  border-radius: 16px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+@media only screen and (min-width: 768px) {
+  .orangecircle:before {
+    width: 12px;
+    height: 12px;
+    bottom: -16px;
+    left: -6.5px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .orangecircle:before {
+    width: 6px;
+    height: 6px;
+    bottom: -10px;
+    left: -4px;
+  }
+}
+.orangeline {
+  width: 2px;
+  height: 0px;
+  background-color: #fd933b;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
+.input {
+  border: none;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 60px;
+  display: block;
+  position: relative;
+  -webkit-transition: border-color 0.2s, 0.2s, 0.2s;
+  transition: border-color 0.2s, 0.2s, 0.2s;
+  background-color: #fff;
+}
+.input + .input {
+  margin-top: 15px;
+}
+.input input,
+.input textarea {
+  display: block;
+  border: none;
+  background: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: calc(100% + 4px);
+  position: absolute;
+  z-index: 1;
+  outline: none;
+  padding: 0 17px;
+  left: -2px;
+}
+@media only screen and (min-width: 768px) {
+  .input input,
+  .input textarea {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input input,
+  .input textarea {
+    font-size: 16px;
+  }
+}
+.input input::-ms-clear,
+.input textarea::-ms-clear {
+  display: none;
+}
+.input input {
+  height: 64px;
+  border-radius: 4px;
+  padding-top: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 24px;
+  top: -2px;
+  z-index: 2;
+}
+.input input:-webkit-autofill {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  background: none;
+}
+.input input:focus {
+  border: 2px solid #f78200;
+  padding-left: 15px;
+}
+.input input:focus ~ .input__placeholder {
+  top: 11px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.input textarea {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  resize: vertical;
+  max-height: 600px;
+}
+.input textarea[rows="1"] {
+  resize: none;
+}
+@media only screen and (min-width: 768px) {
+  .input textarea[rows="1"] {
+    white-space: nowrap;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input textarea[rows="1"] {
+    height: 84px;
+  }
+}
+.input__placeholder {
+  font-family: 'Proxima Nova';
+  font-size: 18px;
+  color: #999;
+  line-height: 24px;
+  position: absolute;
+  -webkit-transition: all 0.2s, 0.2s, 0.2s;
+  transition: all 0.2s, 0.2s, 0.2s;
+  top: 18px;
+  left: 15px;
+  z-index: 1;
+}
+.input__placeholder.active {
+  top: 11px;
+  font-size: 14px;
+  line-height: 14px;
+  z-index: 2;
+}
+.input__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  white-space: nowrap;
+  text-align: center;
+  z-index: 3;
+  color: #3e3f55;
+}
+.input__icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.input__icon .ico.-input__name {
+  width: 33px;
+  height: 18px;
+}
+.input__icon .ico.-input__phone {
+  width: 18px;
+  height: 17px;
+}
+.input__icon .ico.-input__email {
+  width: 17px;
+  height: 12px;
+}
+.input__icon .ico.-input__location {
+  width: 11px;
+  height: 17px;
+}
+.input__icon .ico.-input__time {
+  width: 19px;
+  height: 19px;
+  opacity: 0.75;
+}
+.input__icon .ico.-input__skype {
+  width: 18px;
+  height: 19px;
+  opacity: 0.75;
+}
+.input__icon ~ input {
+  padding-left: 41px;
+}
+.input__status .ico,
+.input__error {
+  display: none;
+}
+.input__status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.input__status .ico {
+  width: 22px;
+  height: 22px;
+}
+.input__status .ico.-input__success {
+  color: #00a161;
+}
+.input__status .ico.-input__error {
+  color: #d0011b;
+}
+.input__error {
+  color: #d0011b;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.input.-error input,
+.input.-success input,
+.input.-error textarea,
+.input.-success textarea {
+  padding-right: 40px;
+}
+.input.-error .ico.-input__error {
+  display: block;
+}
+.input.-error .input__error {
+  display: block;
+}
+.input.-success .ico.-input__success {
+  display: block;
+}
+.input:hover,
+.input.-focus {
+  border-color: #3e3f55;
+}
+.input.-disabled {
+  pointer-events: none;
+  background-color: #f5f5f5;
+}

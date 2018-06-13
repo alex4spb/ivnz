@@ -93,31 +93,90 @@ jQuery(document).ready(function($) {
     });
     /*Поддержка анимации для полосок*/
     $(function() {
-        var line = [$(".greyline"), $(".blueline"), $(".orangecircle"), $(".orangeline")];
+        var line = [
+            $(".greyline"),
+            $(".blueline"),
+            $(".orangecircle"),
+            $(".orangeline")
+        ];
         line.forEach(function(element, index) {
-            checkForChanges()
-            function checkForChanges()
-                {
-                    if (element.hasClass("aos-animate"))
-                        setTimeout(function() {
-                            element.stop().addClass("active");
-                        }, 100);
-                    else
-                      setTimeout(checkForChanges, 100);
-                }
+            checkForChanges();
+            function checkForChanges() {
+                if (element.hasClass("aos-animate"))
+                    setTimeout(function() {
+                        element.stop().addClass("active");
+                    }, 100);
+                else setTimeout(checkForChanges, 100);
+            }
         });
     });
     /*Слайдер на главной*/
-    var mySwiper = new Swiper ('.working__tabs-slider', {
+    var slider = $(".working__tabs-content-item.active .working__tabs-slider");
+    new Swiper(slider, {
         // Optional parameters
-        direction: 'horizontal',
-        loop: true,        
+        direction: "horizontal",
+        loop: true,
         centeredSlides: true,
         loopedSlides: 2,
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    });
+    $(".working__tabs-titles").on(
+        "click",
+        ".working__tabs-titles-item:not(.active)",
+        function() {
+            $(this)
+                .addClass("active")
+                .siblings()
+                .removeClass("active")
+                .closest(".working__tabs")
+                .find(".working__tabs-content-item")
+                .removeClass("active")
+                .eq($(this).index())
+                .addClass("active") 
+            new Swiper(
+                $(this)
+                    .closest(".working__tabs")
+                    .find(".working__tabs-content-item")
+                    .eq($(this).index())
+                    .find(".working__tabs-slider"),
+                {
+                    // Optional parameters
+                    direction: "horizontal",
+                    loop: true,
+                    centeredSlides: true,
+                    loopedSlides: 2,
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev"
+                    }
+                }
+            );
+        }
+    );
+    /*Динамика placeholder в форме*/
+    $(function() {
+        $('input').each(function() {
+            if ($(this).val().length > 0)
+                $(this).parent('.input').find('.input__placeholder').addClass('active')
+               else  
+                $(this).parent('.input').find('.input__placeholder').removeClass('active')
+            $(this).on("click", function(e) {
+               if ($(this).val().length > 0)
+                $(this).parent('.input').find('.input__placeholder').addClass('active')
+               else  
+                $(this).parent('.input').find('.input__placeholder').removeClass('active')
+            })
+            $(this).focusout(function(e) {
+               if ($(this).val().length > 0)
+                $(this).parent('.input').find('.input__placeholder').addClass('active')
+               else  
+                $(this).parent('.input').find('.input__placeholder').removeClass('active')
+            })
+        })
     })
 });

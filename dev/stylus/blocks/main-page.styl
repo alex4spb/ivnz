@@ -218,11 +218,9 @@
         transform translateX(-50%) 
       img
         width 100%
-        height 100%  
-        
+        height 100%
         position:absolute;
         clip-path:url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='355px' height='367px' viewBox='0 0 355 367' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EPath 7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='2.-Graphics' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M1,197.123417 L1,154.811728 C1,94.7023919 34.8693355,40.2298524 88.4316521,14.0490746 C142.275557,-12.1783966 207.050372,2.05822047 244.599187,48.3982236 L325.597847,147.123867 C362.493193,191.90099 363.498578,256.369422 327.971084,302.331067 C293.39327,347.986136 236.908577,371.31646 179.106311,363.832179 L141.563366,357.958784 C60.8246607,347.183485 1,278.627646 1,197.123417 Z' id='Path-7' stroke='%233C7FFF' stroke-width='2' fill-rule='nonzero' transform='translate(177.478541, 183.106761) scale(-1, -1) translate(-177.478541, -183.106761) '%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-
     &__content
       width 100%      
       color #ffffff
@@ -370,6 +368,7 @@
       &-titles        
         position relative
         display inline-block
+        margin-bottom 60px
         &:after
           width 100%
           content ""
@@ -385,78 +384,138 @@
           font-size 24px
           font-weight bold
           line-height 38px
-          color rgba(99, 104, 112, 0.7)
+          opacity 0.7
+          color #636870
           height 38px
           display inline-block
+          cursor pointer          
+          transition-duration 0.2s, 0.2s, 0.2s 
+          transition-property all
+          &:after
+            width 100%
+            opacity 0
+            content ""
+            height 2px
+            position absolute
+            bottom 0
+            left 0
+            border-radius 10px
+            background-color #3C7FFF
+            z-index 2  
+            transition-duration 0.2s 0.2s 0.2s 
+            transition-property all
+          &:hover
+            opacity 1
           &.active
             color #3C7FFF
+            opacity 1
+            cursor default
             &:after
-              width 100%
-              content ""
-              height 2px
-              position absolute
-              bottom 0
-              left 0
-              border-radius 10px
-              background-color #3C7FFF
-              z-index 2          
+              opacity 1                       
           & + .working__tabs-titles-item
             margin-left 30px
+      &-content
+        box-sizing border-box
+        +a($m)
+          padding 0 12.63%
+        +b($m)
+          padding 0 20px 
+        &-item
+          display none
+          opacity 0
+          height 0
+          transition opacity 2s 
+          &.active
+            opacity 1 
+            display block
+            height auto 
       &-slider
-        width 853px
-        height 688px
+        width 100%
+        position relative
   $time = 500ms
   $delay = $time/2
   $mode = cubic-bezier(.17, .67, .55, 1.43)
-  .swiper-slide-active
-    background-color red
-  .swiper-wrapper {
-    .swiper-slide {      
+  .swiper-wrapper 
+    .swiper-slide   
       transition: z-index 0ms $delay;
-      img {
-        position: relative;
-        transition: $time $mode;
-        transform: scale(0);
-        opacity: 0;
-        transform: translateX(-50%) scale(0);
-      }
-      &.swiper-slide-prev {
+      img 
+        position relative
+        transition $time $mode
+        //transform scale(1)
+        opacity 0
+        //transform translateX(-50%) scale(0)
+        box-sizing border-box
+        +a($m)
+          border 16px solid #F3F6FB
+          border-radius 10px
+          width 100%
+        +b($m)
+          border 4px solid #F3F6FB  
+          border-radius 6px    
+          width calc(100% - 20px)    
+      span 
+        display none
+        font-size 18px
+        font-family "Proxima Nova"
+        color #636870
+        line-height 24px
+        padding-top 20px
+        margin-top 35px
+        border-top 1px solid #F3F3F3
+      &.swiper-slide-prev 
         z-index: 1;
-        img {
-          opacity: .3;
-          transform: translateX(-25%) scale(.8);
-        }
-        .slider-single-download {
+        img 
+          opacity: .5;
+          transform: translateX(8%) scale(.56);
+        .slider-single-download 
           transform: translateX(-150px);
-        }
-      }
-      &.swiper-slide-next {
-        z-index: 1;
-        img {
-          opacity: .3;
-          transform: translateX(25%) scale(.8);
-        }
-        .slider-single-download {
+      &.swiper-slide-next 
+        z-index 1
+        img 
+          opacity .5
+          +a($m)
+            transform translateX(-8%) scale(.56)
+          +b($m)
+            transform translateX(-8%) scale(.846) translateY(3%)
+        .slider-single-download 
           transform: translateX(150px);
-        }
-      }
-      &.swiper-slide-active {
-        z-index: 2;
-        img {
-          opacity: 1;
-          transform: translateX(0%) scale(1);
-        }
-        .slider-single-download {
+      &.swiper-slide-active 
+        z-index 2
+        img 
+          opacity 1
+          transform translateX(0%) scale(1)
+        span 
+          display block       
+        .slider-single-download 
           opacity: 1;
           transition-delay: 100ms;
           transform: translateX(0px);
-        }
-        .span {
-          opacity: 1;
-          transition-delay: 200ms;
-          transform: translateX(0px);
-        }
-      }
-    }
-  }
+  .swiper-buttons
+    width 100%
+    padding-top 100%
+    position absolute
+    top 0
+    left 0
+    +b($m)
+      display none
+  .swiper-button-prev,
+  .swiper-button-next
+    background-image url("data:image/svg+xml;charset=utf8,%3C?xml version='1.0' encoding='UTF-8'?%3E%3Csvg width='11px' height='24px' viewBox='0 0 11 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3ERectangle 11%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%3Cg id='1.-Design-👀' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='1.-Ivnz.-Main' transform='translate(-1442.000000, -3185.000000)' stroke='%23000000' stroke-width='2'%3E%3Cg id='Group-65' transform='translate(-65.000000, 2907.000000)'%3E%3Cg id='Group-63'%3E%3Cg id='Group-61'%3E%3Cg id='Group-59' transform='translate(507.000000, 260.000000)'%3E%3Cg id='Group-344' transform='translate(1004.000000, 30.000000) scale(-1, 1) translate(-1004.000000, -30.000000) translate(974.000000, 0.000000)'%3E%3Cg id='Group-52'%3E%3Cpath d='M33,40.1695772 L24.9438381,32.1134153 C23.6853873,30.8549645 23.6853873,28.8146127 24.9438381,27.5561619 L33,19.5' id='Rectangle-11'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+    background-size 11px
+    background-position center
+    background-color #fff
+    width 60px
+    height 60px
+    border 2px solid #DCE0E6
+    border-radius 60px
+    box-sizing border-box
+    top 33.5%   
+    right -90px
+    &:hover
+      border-color #000
+  .swiper-button-prev
+    transform rotate(180deg)
+    left -90px 
+  .audit-form
+    background-color #1F2637
         

@@ -1,0 +1,159 @@
+.input
+  border none
+  border-radius 2px
+  box-sizing border-box
+  height 60px
+  display block
+  position relative
+  transition border-color $speed
+  background-color #fff
+  & + &
+    margin-top 15px
+  input,
+  textarea
+    display block
+    border none
+    background none
+    box-sizing border-box
+    width calc(100% + 4px) 
+    position absolute
+    z-index 1
+    outline none
+    padding 0 17px
+    left -2px
+    +a($m)
+      font-size 18px
+    +b($m)
+      font-size 16px
+    &::-ms-clear
+      display none
+  input
+    height 64px    
+    border-radius 4px
+    padding-top 25px
+    box-sizing border-box
+    line-height 24px
+    top -2px
+    z-index 2
+    &:-webkit-autofill
+      -webkit-text-fill-color #000
+      -webkit-box-shadow 0 0 0px 1000px transparent inset
+      transition background-color 5000s ease-in-out 0s
+      background none  
+    &:focus      
+      border 2px solid #F78200      
+      padding-left 15px
+      ~ .input__placeholder
+        top 11px
+        font-size 14px
+        line-height 14px      
+  textarea
+    padding-top 12px
+    padding-bottom 12px
+    resize vertical
+    max-height 600px
+    &[rows="1"]
+      resize none
+      +a($m)
+        white-space nowrap
+      +b($m)
+        height 84px
+  &__placeholder
+    font-family 'Proxima Nova'
+    font-size 18px
+    color #999999
+    line-height 24px
+    position absolute
+    transition all $speed
+    top 18px
+    left 15px    
+    z-index 1
+    &.active
+      top 11px
+      font-size 14px
+      line-height 14px
+      z-index 2
+  &__icon
+    position absolute
+    top 0
+    left 0
+    width 40px
+    height 100%
+    white-space nowrap
+    text-align center
+    z-index 3
+    color $blue3e 
+    &:before
+      content "" 
+      display inline-block
+      vertical-align middle
+      height 100% 
+    .ico
+      &.-input__name
+        width 33px
+        height 18px
+      &.-input__phone
+        width 18px
+        height 17px
+      &.-input__email
+        width 17px
+        height 12px
+      &.-input__location
+        width 11px
+        height 17px
+      &.-input__time
+        width 19px
+        height 19px
+        opacity 0.75 
+      &.-input__skype
+        width 18px
+        height 19px
+        opacity 0.75 
+    ~ input
+      padding-left 41px
+  &__status .ico,
+  &__error
+    display none
+  &__status
+    position absolute
+    top 10px
+    right 10px
+    .ico
+      width 22px
+      height 22px
+      &.-input__success
+        color $green
+      &.-input__error
+        color #D0011B
+  &__error
+    color #D0011B
+    position absolute
+    top 100% 
+    right 0
+    font-size 12px
+    line-height 18px
+    text-align right
+    white-space nowrap
+    overflow hidden
+    max-width 100%
+    text-overflow ellipsis    
+  &.-error,
+  &.-success
+    input,
+    textarea
+      padding-right 40px
+  &.-error
+    .ico.-input__error
+      display block
+  &.-error &
+    &__error
+      display block
+  &.-success
+    .ico.-input__success
+      display block
+  &:hover,
+  &.-focus
+    border-color $blue3e
+  &.-disabled
+    pointer-events none
+    background-color #f5f5f5 

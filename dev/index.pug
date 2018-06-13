@@ -1,5 +1,5 @@
 extends /layout
-include /header
+include /audit-form
 
 block main
   .main-page
@@ -68,13 +68,13 @@ block main
         .greyline(data-aos="fade-in" data-aos-anchor=".working")
         .orangeline(data-aos="fade-in" data-aos-anchor=".working")
         .orangecircle(data-aos="fade-in" data-aos-anchor=".working")
-        h2 Как мы работаем
+        h2(data-aos="fade-in") Как мы работаем
         .working__tabs
-          .working__tabs-titles
+          .working__tabs-titles(data-aos="fade-in")
             .working__tabs-titles-item.active Автоматизация работы
             .working__tabs-titles-item Контроль качества
-          .working__tabs-content
-            .working__tabs-content-item
+          .working__tabs-content(data-aos="fade-in" data-aos-delay="700")
+            .working__tabs-content-item.active
               .working__tabs-slider
                 .swiper-wrapper
                   .swiper-slide 
@@ -82,17 +82,35 @@ block main
                     span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы 
                   .swiper-slide 
                     img(src="temp/slider-img.jpg")
-                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы 
+                    span 222
                   .swiper-slide
                     img(src="temp/slider-img.jpg")
-                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы 
+                    span 333
                   .swiper-slide
                     img(src="temp/slider-img.jpg")
-                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы 
-                .swiper-button-prev
-                .swiper-button-next
+                    span 4444
+                .swiper-buttons
+                  .swiper-button-prev
+                  .swiper-button-next
             .working__tabs-content-item
-
+              .working__tabs-slider
+                .swiper-wrapper
+                  .swiper-slide 
+                    img(src="temp/slider-img.jpg")
+                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы
+                  .swiper-slide 
+                    img(src="temp/slider-img.jpg")
+                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы
+                  .swiper-slide
+                    img(src="temp/slider-img.jpg")
+                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы
+                  .swiper-slide
+                    img(src="temp/slider-img.jpg")
+                    span Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы
+                .swiper-buttons
+                  .swiper-button-prev
+                  .swiper-button-next
+    +audit-form()
 
         
 

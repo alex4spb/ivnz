@@ -13,19 +13,12 @@ mixin input(settings)
       model: undefined
     }, settings);
   .input(class= settings.className)
-    if settings.icon
-      .input__icon
-        +svg(settings.icon)
-    .input__status
-      +svg('input__error')
-      +svg('input__success')
     .input__error
       = settings.errorText
     if settings.tag === 'input'
       input(
         type= settings.type,
-        name= settings.name,
-        placeholder= settings.placeholder,
+        name= settings.name,        
         value= settings.value,
         class= settings.autofocus ? 'js-autofocus' : false,
         data-validate= settings.validate,
@@ -42,3 +35,4 @@ mixin input(settings)
         data-mask= settings.mask,
         v-model= settings.model
       )= settings.value
+    .input__placeholder= settings.placeholder
