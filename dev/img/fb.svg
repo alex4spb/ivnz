@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 310</title>
+    <title>Shape</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="3.-Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Footer" transform="translate(-1371.000000, -40.000000)">
-            <g id="Group-7">
-                <g id="Group-6" transform="translate(639.000000, 31.000000)">
-                    <g id="Group-2" transform="translate(732.000000, 9.000000)">
-                        <g id="Group-313-Copy">
-                            <g id="Group-310">
-                                <g id="Group-306">
-                                    <rect id="Rectangle-27" stroke="#1A202F" stroke-width="2" x="1" y="1" width="38" height="38" rx="6"></rect>
-                                    <g id="Group-302" transform="translate(16.000000, 13.000000)">
-                                        <g id="Group-307"></g>
+    <g id="0.-UI-kit-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Cuts.-Desktop" transform="translate(-1707.000000, -5542.000000)" fill="#FFFFFF">
+            <g id="Group-27" transform="translate(320.000000, 3890.000000)">
+                <g id="Group-82" transform="translate(0.000000, 1600.000000)">
+                    <g id="Group-83">
+                        <g id="Group-7">
+                            <g id="Group-6" transform="translate(639.000000, 31.000000)">
+                                <g id="Group-2" transform="translate(732.000000, 9.000000)">
+                                    <g id="Group-313-Copy">
+                                        <g id="Group-310">
+                                            <path d="M20.8076343,27.4951031 L20.8076343,19.7466444 L22.9465478,19.7466444 L23.23,17.0764826 L20.8076343,17.0764826 L20.8112683,15.7400409 C20.8112683,15.0436216 20.8774374,14.6704642 21.8776967,14.6704642 L23.2148583,14.6704642 L23.2148583,12 L21.075642,12 C18.5060992,12 17.6016867,13.2953157 17.6016867,15.4736295 L17.6016867,17.076785 L16,17.076785 L16,19.7469468 L17.6016867,19.7469468 L17.6016867,27.4951031 L20.8076343,27.4951031 Z" id="Shape"></path>
+                                        </g>
                                     </g>
                                 </g>
-                                <path d="M20.8076343,27.4951031 L20.8076343,19.7466444 L22.9465478,19.7466444 L23.23,17.0764826 L20.8076343,17.0764826 L20.8112683,15.7400409 C20.8112683,15.0436216 20.8774374,14.6704642 21.8776967,14.6704642 L23.2148583,14.6704642 L23.2148583,12 L21.075642,12 C18.5060992,12 17.6016867,13.2953157 17.6016867,15.4736295 L17.6016867,17.076785 L16,17.076785 L16,19.7469468 L17.6016867,19.7469468 L17.6016867,27.4951031 L20.8076343,27.4951031 Z" id="Shape" fill="#FFFFFF"></path>
                             </g>
                         </g>
                     </g>

@@ -1,43 +1,46 @@
 include /input
 
 mixin audit-form(param)
-  section.audit-form
+  section.audit-form(data-aos="fade-in")
     .container
       h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
       .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
-      .audit-form__form
+      .audit-form__form(data-aos="fade-in" data-aos-delay="700")
         .audit-form__form-legend Общие сведения
         form.form.js-form-ajax(action="json/form-success.json", method="post")
           .form__container
-              .form__field.-whole
-                +input({
-                  name: 'url',
-                  placeholder: 'Адрес сайта'
-                })
-                +input({
-                  name: 'name',
-                  placeholder: 'Имя'
-                })
-                +input({
-                  type: 'tel',
-                  name: 'phone',
-                  placeholder: 'Телефон'
-                })
-                +input({                  
-                  type: 'email',
-                  name: 'email',
-                  placeholder: 'E-mail'
-                })
-                +input({
-                  name: 'promocode',
-                  placeholder: 'Промо код'
-                })
-                label.control-label
-                  .control-label__input
-                    .control
-                      input(type='checkbox', name='manager', value='1', checked='checked')
-                      .control__box
-                        img()
-                  .control-label__value
-                    span.control-label__value-text Я согласен с условиями передачи информации
+            .form__field.-whole
+              +input({
+                name: 'url',
+                placeholder: 'Адрес сайта'
+              })
+              +input({
+                name: 'name',
+                placeholder: 'Имя'
+              })
+              +input({
+                type: 'tel',
+                name: 'phone',
+                placeholder: 'Телефон'
+              })
+              +input({                  
+                type: 'email',
+                name: 'email',
+                placeholder: 'E-mail'
+              })
+              +input({
+                name: 'promocode',
+                placeholder: 'Промо код'
+              })
+              label.control-label
+                .control-label__input
+                  .control
+                    input(type='checkbox', name='manager', value='1', checked='checked')
+                    .control__box
+                      img(src="img/checkmark.svg")
+                    .control__value
+                      span.control__value-text Я согласен с условиями передачи информации
+              button.form__button Далее
+
+
     

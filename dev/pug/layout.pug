@@ -1,4 +1,5 @@
 include /input
+include /footer
 
 doctype html
 <!--[if lt IE 7]><html lang="ru" class="ie6 no-js" style="visibility: hidden;"><![endif]-->
@@ -67,22 +68,5 @@ doctype html
             img(src="img/phone.svg")  
       .content
         block main
-        .footer
-          .footer__menu
-            .container(data-aos="fade-in")
-                .footer__menu-item
-                  h2 О мероприятии                
-                  p Инфа
-                .footer__menu-item
-                  a(href="#") купить билет
-                .footer__menu-item
-                  a(href="#") Ссылка сайт 7 жизней
-                .footer__menu-item
-                  a(href="#") Контакты
-                .footer__menu-item
-                  a(href="mos.ru") mos.ru
-          .footer__bottom
-            .container
-                .footer__about
-                  p © Компания Frozen Marr, 2017      
+        +footer()
                 

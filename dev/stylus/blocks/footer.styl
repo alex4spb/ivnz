@@ -1,0 +1,127 @@
+.footer
+  display block
+  background #1F2637
+  width 100%
+  //border-top 1px solid rgba(216, 216, 216, 0.1)
+  padding-top 29px
+  a 
+    color #ffffff
+  &__contacts
+    width 100%
+    font-family "TT Rounds"
+    padding-bottom 40px
+    .container
+      text-align justify     
+      line-height 0
+      &:after 
+        content ""   
+        display inline-block
+        width 100%
+        line-height 0
+        height 0
+    .container > *
+      display inline-block
+      vertical-align top
+    &-logo
+      margin-right 8.7%      
+      transition-property all
+      transition-duration $speed
+      height 49px
+      line-height 49px
+      position relative
+      width 152px
+      &:hover
+        opacity 0.7
+      img
+        width 152px
+        height 36px
+        padding 6.5px 0
+        vertical-align middle
+        position absolute
+        +a($d)
+          left -47px
+        +b($d)
+          left 0
+    &-phone
+      font-size 24px
+      color #fff
+      line-height 49px
+      height 49px
+      vertical-align middle
+      position relative
+      padding-left 60px
+      transition-property all
+      transition-duration $speed
+      margin-right 6.7%
+      &:hover
+        text-decoration none
+        opacity 0.7
+      img
+        width 47px
+        height 45px
+        position absolute
+        bottom 0
+        left 0
+    &-mail
+      font-size 24px
+      color #fff
+      line-height 49px
+      height 49px
+      vertical-align middle
+      position relative
+      margin-left 63px
+      transition-property all
+      transition-duration $speed
+      text-transform uppercase
+      &:after
+        content ''
+        width 100%
+        height 2px
+        background-color #3B7EFF
+        border-radius 10px
+        transition-property all !important
+        transition .4s ease-out !important
+        display block
+        position absolute
+        bottom 4px
+        left 0
+      &:hover
+      	text-decoration none
+      	&:after
+      	  background-color #F78200
+      img
+        width 47px
+        height 45px
+        position absolute
+        top 0
+        left -63px
+    &-social
+      text-align left
+      line-height 49px
+      height 49px      
+      right -4px
+      position relative
+      a
+        display inline-block
+        width 40px
+        height 40px
+        vertical-align bottom
+        border 2px solid #1A202F
+        border-radius 6px
+        line-height 36px
+        text-align center
+        margin-left 20px
+        box-sizing border-box
+        &:hover          
+          border-color #fff  
+        img
+          vertical-align middle
+  &__bottom
+  	border-top 1px solid #1A202F
+  	padding 19px 0 32px        
+
+      
+       
+        
+        
+    
