@@ -3,8 +3,11 @@
   background-position center 315px  
   background-repeat no-repeat
   background-size 875px
-  padding-top 106px
-  padding-bottom 100px
+  .container
+    padding-top 106px
+    padding-bottom 100px
+    box-sizing border-box
+    position relative
   &__title
     text-transform uppercase
     text-align center
@@ -63,4 +66,40 @@
     &:hover
       background-color #FF8E11
       text-decoration none
+  .blueline
+    position absolute
+    left 0
+    +a($m)
+      top -50px 
+    +b($m)
+      top -25px 
+    &.active
+      +a($m)    
+        height 100px
+      +b($m)
+        height 60px
+  .greyline
+    position absolute
+    left 50% 
+    +a($m)
+      top -173px
+    +b($m)
+      top -82px 
+    &.active
+      +a($m)     
+        height 476px
+      +b($m)
+        height 100px
+  .orangecircle
+    position absolute
+    right 0
+    +a($m)
+      top -171px
+    +b($m)
+      top -63px  
+    &.active
+      +a($m)     
+        height 204px
+      +b($m)
+        height 100px
     

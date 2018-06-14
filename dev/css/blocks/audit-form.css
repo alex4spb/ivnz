@@ -88,8 +88,13 @@
   background-position: center 315px;
   background-repeat: no-repeat;
   background-size: 875px;
+}
+.audit-form .container {
   padding-top: 106px;
   padding-bottom: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
 }
 .audit-form__title {
   text-transform: uppercase;
@@ -164,4 +169,76 @@
 .audit-form .form__button:hover {
   background-color: #ff8e11;
   text-decoration: none;
+}
+.audit-form .blueline {
+  position: absolute;
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .blueline {
+    top: -50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .blueline {
+    top: -25px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .blueline.active {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .blueline.active {
+    height: 60px;
+  }
+}
+.audit-form .greyline {
+  position: absolute;
+  left: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .greyline {
+    top: -173px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .greyline {
+    top: -82px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .greyline.active {
+    height: 476px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .greyline.active {
+    height: 100px;
+  }
+}
+.audit-form .orangecircle {
+  position: absolute;
+  right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .orangecircle {
+    top: -171px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .orangecircle {
+    top: -63px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .orangecircle.active {
+    height: 204px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .orangecircle.active {
+    height: 100px;
+  }
 }

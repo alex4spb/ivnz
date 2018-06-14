@@ -3,9 +3,12 @@ include /input
 mixin audit-form(param)
   section.audit-form(data-aos="fade-in")
     .container
+      .blueline(data-aos="fade-in")
+      .greyline(data-aos="fade-in")
+      .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
       h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
       .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
-      .audit-form__form(data-aos="fade-in" data-aos-delay="700")
+      .audit-form__form(data-aos="fade-in" data-aos-delay="800")
         .audit-form__form-legend Общие сведения
         form.form.js-form-ajax(action="json/form-success.json", method="post")
           .form__container
