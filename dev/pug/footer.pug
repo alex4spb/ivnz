@@ -5,11 +5,13 @@ mixin footer()
         a.footer__contacts-logo(href="index.html")           
           img(src="img/logo.svg")
         a.footer__contacts-phone(href="tel:+7812244-71-48")
-          img(src="img/smartphone.svg")
-          | +7 812 244-71-48
+          img.hidden-below-m(src="img/smartphone.svg")
+          img.hidden-above-m(src="img/smartphone_m.svg")
+          span +7 812 244-71-48
         a.footer__contacts-mail(href="mailto:support@ivnz.ru")
-          img(src="img/mail_in.svg")
-          | support@ivnz.ru
+          img.hidden-below-m(src="img/mail_in.svg")
+          img.hidden-above-m(src="img/mail_in_m.svg")
+          span support@ivnz.ru
         .footer__contacts-social
           a(href="#")
             img(src="img/fb.svg")

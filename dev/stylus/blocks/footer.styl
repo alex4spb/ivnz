@@ -3,7 +3,10 @@
   background #1F2637
   width 100%
   //border-top 1px solid rgba(216, 216, 216, 0.1)
-  padding-top 29px
+  +a($m)
+    padding-top 29px
+  +b($m)
+    padding-top 40px
   a 
     color #ffffff
   &__contacts
@@ -13,6 +16,8 @@
     .container
       text-align justify     
       line-height 0
+      +b($m)
+        padding 0 20px
       &:after 
         content ""   
         display inline-block
@@ -20,20 +25,35 @@
         line-height 0
         height 0
     .container > *
-      display inline-block
       vertical-align top
-    &-logo
-      margin-right 8.7%      
+      +a($m)
+        display inline-block
+      +b($m)  
+        display block
+    &-logo    
       transition-property all
       transition-duration $speed
       height 49px
       line-height 49px
       position relative
-      width 152px
+      +a($d)
+        margin-right 8.7% 
+        width 152px
+      +btw($t, $d) 
+        margin-right 6% 
+        width 45px
+        overflow hidden 
+      +btw($m, $t) 
+        margin-right 3% 
+        width 40px
+        overflow hidden
+      +b($m) 
+        width 150px  
+        margin-bottom 13.5px  
       &:hover
         opacity 0.7
       img
-        width 152px
+        width 150px
         height 36px
         padding 6.5px 0
         vertical-align middle
@@ -43,58 +63,106 @@
         +b($d)
           left 0
     &-phone
-      font-size 24px
       color #fff
-      line-height 49px
-      height 49px
       vertical-align middle
       position relative
-      padding-left 60px
       transition-property all
       transition-duration $speed
-      margin-right 6.7%
+      +a($t)  
+        margin-right 6.7%
+        font-size 24px
+        line-height 49px
+        height 49px
+        padding-left 60px
+      +btw($m, $t) 
+        margin-right 3%
+        font-size 18px
+        line-height 49px
+        height 49px
+        padding-left 60px
+      +b($m)
+        line-height 30px
+        height 30px
+        font-size 18px 
+        padding-left 50px  
+        font-weight bold
+        padding-top 6px  
+        border-bottom 1px solid #1A202F
+        padding-bottom 4.5px
+        margin-bottom 11px
       &:hover
         text-decoration none
         opacity 0.7
       img
-        width 47px
-        height 45px
         position absolute
-        bottom 0
-        left 0
+        +a($m)
+          width 47px
+          height 45px
+          bottom 0
+          left 0
+        +b($m)
+          width 30px
+          height 30px
+          top 0
+          left 0
     &-mail
-      font-size 24px
       color #fff
-      line-height 49px
-      height 49px
       vertical-align middle
       position relative
-      margin-left 63px
       transition-property all
       transition-duration $speed
       text-transform uppercase
-      &:after
-        content ''
-        width 100%
-        height 2px
-        background-color #3B7EFF
-        border-radius 10px
-        transition-property all !important
-        transition .4s ease-out !important
-        display block
-        position absolute
-        bottom 4px
-        left 0
+      +a($t)  
+        font-size 24px
+        margin-left 63px
+        line-height 49px
+        height 49px
+      +btw($m, $t) 
+        font-size 18px
+        margin-left 63px
+        line-height 49px
+        height 49px
+      +b($m)
+        margin-left 50px
+        font-weight bold
+        font-size 18px
+        line-height 30px
+        height 30px
+        padding-top 6px 
+      span
+        display inline-block
+        position relative
+        &:after
+          content ''
+          width 100%
+          height 2px
+          background-color #3B7EFF
+          border-radius 10px
+          transition-property all !important
+          transition .4s ease-out !important
+          display block
+          position absolute
+          left 0
+          +a($m)
+            bottom 4px
+          +b($m)
+            bottom 0
       &:hover
       	text-decoration none
-      	&:after
-      	  background-color #F78200
+        span 
+          &:after
+            background-color #F78200
       img
-        width 47px
-        height 45px
         position absolute
         top 0
-        left -63px
+        +a($m)
+          width 47px
+          height 45px
+          left -63px
+        +b($m)
+          width 30px
+          height 30px
+          left -50px
     &-social
       text-align left
       line-height 49px
@@ -119,6 +187,7 @@
   &__bottom
     border-top 1px solid #1A202F
     padding 19px 0 32px
+    font-family "Proxima Nova"
     .container
       text-align justify     
       line-height 0
@@ -134,24 +203,33 @@
       height 24px
       line-height 24px
       vertical-align middle
+      color rgba(255, 255, 255, .3)
+      +a($t)
+        font-size 18px
+      +b($t)
+        font-size 16px
       a
-        color #3B7EFF
+        color #fff
         &:hover
           color #F78200
           text-decoration none
     &-design
-      vertical-align middle
-      line-height 24px
+      vertical-align top
+      line-height 0
+      display inline-block
+      height 24px
       &:after
         content ''
         width 36px
         height 24px
         display inline-block
         background url('../img/design.svg')
-        vertical-align middle
-      &:hover        
-        background url('../img/design.svg')
-        opacity 0.7
+        vertical-align middle        
+        transition-property all
+        transition-duration $speed
+      &:hover
+        &:after    
+          background url('../img/design2.svg')
 
       
        
