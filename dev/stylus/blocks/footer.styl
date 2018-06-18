@@ -165,10 +165,9 @@
           +b($m)
             bottom 0
       &:hover
-      	text-decoration none
-        span 
-          &:after
-            background-color #F78200
+        text-decoration none
+        span:after
+          background-color #F78200
       img
         position absolute
         top 0
@@ -195,7 +194,7 @@
         border-radius 6px*/
         text-align center
         box-sizing border-box
-        position relative
+        position relative        
         +a($m)
           width 40px
           height 40px
@@ -219,7 +218,9 @@
           border-radius 6px
           text-align center
           box-sizing border-box
-          position absolute
+          position absolute                 
+          transition-property all
+          transition-duration $speed 
           +a($m)
             width 40px
             height 40px

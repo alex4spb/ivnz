@@ -342,7 +342,10 @@
     bottom: 0;
   }
 }
-.footer__contacts-mail:hover text-decoration none span:after {
+.footer__contacts-mail:hover {
+  text-decoration: none;
+}
+.footer__contacts-mail:hover span:after {
   background-color: #f78200;
 }
 .footer__contacts-mail img {
@@ -420,6 +423,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
 }
 @media only screen and (min-width: 768px) {
   .footer__contacts-social a:before {
