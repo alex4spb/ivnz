@@ -4,34 +4,57 @@
   background-repeat no-repeat
   background-size 875px
   .container
-    padding-top 106px
-    padding-bottom 100px
     box-sizing border-box
     position relative
+    +a($m)
+      padding-top 106px
+      padding-bottom 100px
+    +b($m)
+      padding 40px 20px 0
   &__title
     text-transform uppercase
-    text-align center
     max-width 675px    
     margin 0 auto
+    +a($m)
+      text-align center
+    +b($m)
+      text-align left
   &__subtitle
     font-family "Proxima Nova"
-    font-size 18px
     color #FFFFFF
     text-align center
-    line-height 28px
-    margin-top 40px
+    +a($m)
+      text-align center
+      font-size 18px
+      line-height 28px
+      margin-top 40px
+    +b($m)
+      text-align left
+      font-size 16px
+      line-height 20px
+      margin-top 20px
   &__form
     display block
     margin 0 auto
-    max-width 590px
+    background-image linear-gradient(-44deg, #144FC0 0%, #2CA7FF 100%)
     margin-top 40px
-    background-image: linear-gradient(44deg, #144FC0 0%, #2CA7FF 100%);
-    border-radius: 10px;
-    padding 34px 0 61px
+    +a($m)
+      max-width 590px
+      border-radius 10px
+      padding 34px 0 61px
+    +b($m)
+      width calc(100% + 40px)
+      margin-left -20px
+      border-radius 0
+      padding 30px 20px 40px
+      box-sizing border-box
     &-legend
     form
-      max-width 380px
       margin 0 auto
+      +a($m)
+        max-width 380px        
+      +b($m)
+        width 100%        
     &-legend
       font-family "Proxima Nova"
       font-size 18px
@@ -39,8 +62,13 @@
       line-height 32px
       font-weight bold
       margin-bottom 25px
+      +b($m)
+        display none
   .control-label
-    margin-top 33px
+    +a($m)
+      margin-top 36px
+    +b($m) 
+      margin-top 20px 
   .form__button   
     border none  
     background-color #F78200
@@ -51,55 +79,46 @@
     font-family "Proxima Nova"
     display inline-block
     width 100%
-    margin-top 35px
     cursor pointer
     +a($m)
       font-size 18px
       line-height 60px
       height 60px
       padding 0 40px
+      margin-top 35px
     +b($m)
       box-sizing border-box  
       font-size 15px
       line-height 46px
       height 50px
+      margin-top 20px
     &:hover
       background-color #FF8E11
       text-decoration none
   .blueline
     position absolute
-    left 0
     +a($m)
-      top -50px 
+      top -37px
+      left 0 
     +b($m)
       top -25px 
+      left 20px 
     &.active
       +a($m)    
         height 100px
       +b($m)
         height 60px
-  .greyline
-    position absolute
-    left 50% 
-    +a($m)
-      top -173px
-    +b($m)
-      top -82px 
-    &.active
-      +a($m)     
-        height 476px
-      +b($m)
-        height 100px
   .orangecircle
     position absolute
-    right 0
     +a($m)
-      top -171px
+      top -186px 
+      right 0
     +b($m)
-      top -63px  
+      top -63px 
+      right 20px 
     &.active
       +a($m)     
-        height 204px
+        height 360px
       +b($m)
         height 100px
     

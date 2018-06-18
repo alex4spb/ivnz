@@ -62,7 +62,7 @@
     width: 12px;
     height: 12px;
     bottom: -16px;
-    left: -6.5px;
+    left: -7px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -88,12 +88,21 @@
   border-radius: 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 60px;
   display: block;
   position: relative;
   -webkit-transition: border-color 0.2s, 0.2s, 0.2s;
   transition: border-color 0.2s, 0.2s, 0.2s;
   background-color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .input {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input {
+    height: 50px;
+  }
 }
 .input + .input {
   margin-top: 15px;
@@ -109,8 +118,8 @@
   position: absolute;
   z-index: 1;
   outline: none;
-  padding: 0 17px;
   left: -2px;
+  padding: 0 17px;
 }
 @media only screen and (min-width: 768px) {
   .input input,
@@ -129,14 +138,25 @@
   display: none;
 }
 .input input {
-  height: 64px;
   border-radius: 4px;
-  padding-top: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  line-height: 24px;
   top: -2px;
   z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .input input {
+    height: 64px;
+    padding-top: 25px;
+    line-height: 24px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input input {
+    height: 54px;
+    padding-top: 21px;
+    line-height: 20px;
+  }
 }
 .input input:-webkit-autofill {
   -webkit-text-fill-color: #000;
@@ -149,10 +169,19 @@
   border: 2px solid #f78200;
   padding-left: 15px;
 }
-.input input:focus ~ .input__placeholder {
-  top: 11px;
-  font-size: 14px;
-  line-height: 14px;
+@media only screen and (min-width: 768px) {
+  .input input:focus ~ .input__placeholder {
+    font-size: 14px;
+    line-height: 14px;
+    top: 11px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input input:focus ~ .input__placeholder {
+    font-size: 13px;
+    line-height: 13px;
+    top: 9px;
+  }
 }
 .input textarea {
   padding-top: 12px;
@@ -175,21 +204,43 @@
 }
 .input__placeholder {
   font-family: 'Proxima Nova';
-  font-size: 18px;
   color: #999;
-  line-height: 24px;
   position: absolute;
   -webkit-transition: all 0.2s, 0.2s, 0.2s;
   transition: all 0.2s, 0.2s, 0.2s;
-  top: 18px;
   left: 15px;
   z-index: 1;
 }
+@media only screen and (min-width: 768px) {
+  .input__placeholder {
+    font-size: 18px;
+    line-height: 24px;
+    top: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input__placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    top: 15px;
+  }
+}
 .input__placeholder.active {
-  top: 11px;
-  font-size: 14px;
-  line-height: 14px;
   z-index: 2;
+}
+@media only screen and (min-width: 768px) {
+  .input__placeholder.active {
+    font-size: 14px;
+    line-height: 14px;
+    top: 11px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input__placeholder.active {
+    font-size: 13px;
+    line-height: 13px;
+    top: 9px;
+  }
 }
 .input__icon {
   position: absolute;

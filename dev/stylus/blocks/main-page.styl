@@ -312,8 +312,11 @@
   .working
     position relative
     .container
-      padding 120px 0
       box-sizing border-box
+      +a($m)
+        padding 120px 0
+      +b($m)
+        padding 40px 20px
     .greyline
       position absolute      
       z-index 2
@@ -364,11 +367,17 @@
       text-transform uppercase
       color #000000
     &__tabs
-      margin-top 60px
+      +a($m)
+        margin-top 60px
+      +b($m)
+        margin-top 15px
       &-titles        
         position relative
         display inline-block
-        margin-bottom 60px
+        +a($m)
+          margin-bottom 60px
+        +b($m)
+          margin-bottom 25px
         &:after
           width 100%
           content ""
@@ -378,7 +387,9 @@
           left 0
           background-color rgba(99, 104, 112, 0.7)
           z-index 1
-          border-radius 10px
+          border-radius 10px          
+          +b($m)
+            display none
         &-item
           position relative
           font-size 24px
@@ -387,10 +398,26 @@
           opacity 0.7
           color #636870
           height 38px
-          display inline-block
           cursor pointer          
           transition-duration 0.2s, 0.2s, 0.2s 
           transition-property all
+          vertical-align top
+          +a($m)
+            display inline-block
+          +b($m)
+            display block
+            padding-left 30px
+            &:before
+              content ''
+              width 11px
+              height 11px
+              display block
+              position absolute
+              border 3px solid #636870
+              border-radius 11px
+              top 50%
+              transform translateY(-50%)
+              left 0
           &:after
             width 100%
             opacity 0
@@ -404,6 +431,8 @@
             z-index 2  
             transition-duration 0.2s 0.2s 0.2s 
             transition-property all
+            +b($m)
+              display none
           &:hover
             opacity 1
           &.active
@@ -411,15 +440,21 @@
             opacity 1
             cursor default
             &:after
-              opacity 1                       
+              opacity 1 
+            +b($m)
+              &:before  
+                border-color #3C7FFF                   
           & + .working__tabs-titles-item
-            margin-left 30px
+            +a($m)
+              margin-left 30px
+            +b($m)
+              margin-left 0
       &-content
         box-sizing border-box
         +a($m)
           padding 0 12.63%
         +b($m)
-          padding 0 20px 
+          padding 0 
         &-item
           display none
           opacity 0
@@ -455,13 +490,18 @@
           width calc(100% - 20px)    
       span 
         display none
-        font-size 18px
         font-family "Proxima Nova"
         color #636870
-        line-height 24px
         padding-top 20px
         margin-top 35px
         border-top 1px solid #F3F3F3
+        opacity 0.7
+        +a($m)
+          line-height 24px
+          font-size 18px
+        +b($m)
+          line-height 20px
+          font-size 16px
       &.swiper-slide-prev 
         z-index: 1;
         img 

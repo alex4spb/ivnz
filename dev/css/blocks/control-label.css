@@ -62,7 +62,7 @@
     width: 12px;
     height: 12px;
     bottom: -16px;
-    left: -6.5px;
+    left: -7px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -84,19 +84,19 @@
   transition: 0.4s ease-out !important;
 }
 .control-label {
-  display: table;
+  display: block;
   cursor: pointer;
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
 .control-label__input,
 .control-label__value {
-  display: table-cell;
   vertical-align: middle;
 }
 .control-label__input {
   padding-right: 10px;
-  width: 0;
+  width: 100%;
 }
 .control-label__value-text,
 .control-label__value-rouble {

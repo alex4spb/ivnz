@@ -2,7 +2,7 @@ document.documentElement.classList.add(isMobile.any ? "mobile" : "no-mobile");
 jQuery(document).ready(function($) {
     /*Плавная прокрутка*/
     $('a[href^="#"]').on("click", function(e) {
-        //e.preventDefault();
+        e.preventDefault();
         var a = $(this),
             hash = a.attr("href"),
             target = $('[id="' + hash.substr(1) + '"]');

@@ -6,16 +6,32 @@
   +a($m)
     padding-top 29px
   +b($m)
-    padding-top 40px
+    padding-top 44px
+    &:before
+      content ''
+      display block
+      width 100%
+      height 9px
+      border 1px solid #121621
+      border-left none
+      border-right none
+      background #1A202F
+      top 0
+      left 0
+      position absolute      
   a 
     color #ffffff
   &__contacts
     width 100%
     font-family "TT Rounds"
-    padding-bottom 40px
+    +a($m)
+      padding-bottom 40px
+    +b($m)
+      padding-bottom 20px
     .container
       text-align justify     
       line-height 0
+      box-sizing border-box
       +b($m)
         padding 0 20px
       &:after 
@@ -128,7 +144,8 @@
         font-size 18px
         line-height 30px
         height 30px
-        padding-top 6px 
+        padding-top 6px         
+        margin-bottom 15px
       span
         display inline-block
         position relative
@@ -165,32 +182,132 @@
           left -50px
     &-social
       text-align left
-      line-height 49px
-      height 49px      
-      right -4px
       position relative
+      +a($m)
+        line-height 49px
+        height 49px      
+        right -4px
+      +b($m)
+        margin-top 20px
       a
-        display inline-block
-        width 40px
-        height 40px
         vertical-align bottom
-        border 2px solid #1A202F
-        border-radius 6px
-        line-height 36px
+        /*border 2px solid #1A202F
+        border-radius 6px*/
         text-align center
-        margin-left 20px
         box-sizing border-box
-        &:hover          
-          border-color #fff  
-        img
+        position relative
+        +a($m)
+          width 40px
+          height 40px
+          line-height 40px
+          display inline-block
+          margin-left 20px
+        +b($m)
+          width 100%
+          height 59px
+          line-height 30px
+          display block
+          box-sizing border-box
+          text-align left
+          padding 15px 0
+          padding-left 50px
+          border-bottom 1px solid #1A202F
+        &:before
+          content ''
+          vertical-align bottom
+          border 2px solid #1A202F
+          border-radius 6px
+          text-align center
+          box-sizing border-box
+          position absolute
+          +a($m)
+            width 40px
+            height 40px
+            top 0 
+            left 0
+          +b($m)
+            width 30px
+            height 30px            
+            top 50%
+            transform translateY(-50%)
+            left 0
+        &:hover  
+          &:before        
+            border-color #fff  
+        &:nth-child(1)
+          img     
+            +b($m)
+              width 5.42px
+              height 11.62px
+              left 12px
+        &:nth-child(2)
+          img     
+            +b($m)
+              width 13.5px
+              height 7.56px
+              left 8.25px
+        &:nth-child(3)
+          border none
+          img     
+            +b($m)
+              width 15px
+              height 15px
+              left 7.5px
+        img     
           vertical-align middle
+          +b($m)
+            display inline-block
+            position absolute
+            top 50%
+            transform translateY(-50%)
+        span
+          +a($m)
+            display none
+          +b($m)
+            display inline-block
+            vertical-align middle  
+            font-size 16px 
+            font-family 'Proxima Nova'
+    .footer__bottom-item
+      +b($m) 
+        line-height 22px
   &__bottom
     border-top 1px solid #1A202F
     padding 19px 0 32px
     font-family "Proxima Nova"
+    position relative
+    +b($m)
+      padding 34px 0
+      &:before
+        content ''
+        display block
+        width 100%
+        height 9px
+        border 1px solid #121621
+        border-left none
+        border-right none
+        background #1A202F
+        top 0
+        left 0
+        position absolute 
+      &:after
+        content ''
+        display block
+        width 100%
+        height 9px
+        border 1px solid #121621
+        border-left none
+        border-right none
+        background #1A202F
+        bottom 0
+        left 0
+        position absolute       
     .container
       text-align justify     
       line-height 0
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
       &:after 
         content ""   
         display inline-block
@@ -200,14 +317,23 @@
     &-item
       display inline-block
       position relative
-      height 24px
-      line-height 24px
       vertical-align middle
-      color rgba(255, 255, 255, .3)
+      color rgba(255, 255, 255, .3)      
+      font-family "Proxima Nova"
       +a($t)
         font-size 18px
-      +b($t)
+        height 24px
+        line-height 24px
+      +btw($m, $t)
         font-size 16px
+        height 24px
+        line-height 24px
+      +b($m)        
+        padding-left 50px
+        font-size 16px
+        line-height 22px
+        text-align left
+        height auto
       a
         color #fff
         &:hover
@@ -217,16 +343,27 @@
       vertical-align top
       line-height 0
       display inline-block
-      height 24px
+      +a($m)
+        height 24px
+      +b($m)
+        height 22px
+        position absolute
+        top 0
+        left 0
       &:after
         content ''
-        width 36px
-        height 24px
         display inline-block
         background url('../img/design.svg')
         vertical-align middle        
         transition-property all
-        transition-duration $speed
+        transition-duration $speed        
+        +a($m)
+          height 24px
+          width 36px
+        +b($m)
+          height 22px
+          width 32px
+          background-size 32px 22px
       &:hover
         &:after    
           background url('../img/design2.svg')

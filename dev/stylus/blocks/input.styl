@@ -2,11 +2,14 @@
   border none
   border-radius 2px
   box-sizing border-box
-  height 60px
   display block
   position relative
   transition border-color $speed
   background-color #fff
+  +a($m)
+    height 60px
+  +b($m)
+    height 50px
   & + &
     margin-top 15px
   input,
@@ -19,34 +22,44 @@
     position absolute
     z-index 1
     outline none
-    padding 0 17px
     left -2px
+    padding 0 17px
     +a($m)
       font-size 18px
     +b($m)
       font-size 16px
     &::-ms-clear
       display none
-  input
-    height 64px    
+  input 
     border-radius 4px
-    padding-top 25px
     box-sizing border-box
-    line-height 24px
     top -2px
     z-index 2
+    +a($m) 
+      height 64px  
+      padding-top 25px 
+      line-height 24px   
+    +b($m)
+      height 54px 
+      padding-top 21px
+      line-height 20px   
     &:-webkit-autofill
       -webkit-text-fill-color #000
       -webkit-box-shadow 0 0 0px 1000px transparent inset
       transition background-color 5000s ease-in-out 0s
       background none  
     &:focus      
-      border 2px solid #F78200      
+      border 2px solid #F78200  
       padding-left 15px
       ~ .input__placeholder
-        top 11px
-        font-size 14px
-        line-height 14px      
+        +a($m)
+          font-size 14px
+          line-height 14px
+          top 11px             
+        +b($m)
+          font-size 13px
+          line-height 13px
+          top 9px          
   textarea
     padding-top 12px
     padding-bottom 12px
@@ -60,19 +73,29 @@
         height 84px
   &__placeholder
     font-family 'Proxima Nova'
-    font-size 18px
     color #999999
-    line-height 24px
     position absolute
     transition all $speed
-    top 18px
     left 15px    
     z-index 1
+    +a($m)
+      font-size 18px
+      line-height 24px
+      top 18px      
+    +b($m)
+      font-size 16px
+      line-height 20px
+      top 15px
     &.active
-      top 11px
-      font-size 14px
-      line-height 14px
       z-index 2
+      +a($m)
+        font-size 14px
+        line-height 14px
+        top 11px             
+      +b($m)
+        font-size 13px
+        line-height 13px
+        top 9px    
   &__icon
     position absolute
     top 0

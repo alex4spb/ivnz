@@ -62,7 +62,7 @@
     width: 12px;
     height: 12px;
     bottom: -16px;
-    left: -6.5px;
+    left: -7px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -644,9 +644,18 @@
   position: relative;
 }
 .main-page .working .container {
-  padding: 120px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working .container {
+    padding: 120px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working .container {
+    padding: 40px 20px;
+  }
 }
 .main-page .working .greyline {
   position: absolute;
@@ -736,13 +745,29 @@
   text-transform: uppercase;
   color: #000;
 }
-.main-page .working__tabs {
-  margin-top: 60px;
+@media only screen and (min-width: 768px) {
+  .main-page .working__tabs {
+    margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs {
+    margin-top: 15px;
+  }
 }
 .main-page .working__tabs-titles {
   position: relative;
   display: inline-block;
-  margin-bottom: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working__tabs-titles {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles {
+    margin-bottom: 25px;
+  }
 }
 .main-page .working__tabs-titles:after {
   width: 100%;
@@ -755,6 +780,11 @@
   z-index: 1;
   border-radius: 10px;
 }
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles:after {
+    display: none;
+  }
+}
 .main-page .working__tabs-titles-item {
   position: relative;
   font-size: 24px;
@@ -763,12 +793,37 @@
   opacity: 0.7;
   color: #636870;
   height: 38px;
-  display: inline-block;
   cursor: pointer;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
           transition-duration: 0.2s, 0.2s, 0.2s;
   -webkit-transition-property: all;
   transition-property: all;
+  vertical-align: top;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working__tabs-titles-item {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles-item {
+    display: block;
+    padding-left: 30px;
+  }
+  .main-page .working__tabs-titles-item:before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    border: 3px solid #636870;
+    border-radius: 11px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+  }
 }
 .main-page .working__tabs-titles-item:after {
   width: 100%;
@@ -786,6 +841,11 @@
   -webkit-transition-property: all;
   transition-property: all;
 }
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles-item:after {
+    display: none;
+  }
+}
 .main-page .working__tabs-titles-item:hover {
   opacity: 1;
 }
@@ -797,8 +857,20 @@
 .main-page .working__tabs-titles-item.active:after {
   opacity: 1;
 }
-.main-page .working__tabs-titles-item + .working__tabs-titles-item {
-  margin-left: 30px;
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles-item.active:before {
+    border-color: #3c7fff;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main-page .working__tabs-titles-item + .working__tabs-titles-item {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .working__tabs-titles-item + .working__tabs-titles-item {
+    margin-left: 0;
+  }
 }
 .main-page .working__tabs-content {
   -webkit-box-sizing: border-box;
@@ -811,7 +883,7 @@
 }
 @media only screen and (max-width: 767px) {
   .main-page .working__tabs-content {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 .main-page .working__tabs-content-item {
@@ -858,13 +930,24 @@
 }
 .main-page .swiper-wrapper .swiper-slide span {
   display: none;
-  font-size: 18px;
   font-family: "Proxima Nova";
   color: #636870;
-  line-height: 24px;
   padding-top: 20px;
   margin-top: 35px;
   border-top: 1px solid #f3f3f3;
+  opacity: 0.7;
+}
+@media only screen and (min-width: 768px) {
+  .main-page .swiper-wrapper .swiper-slide span {
+    line-height: 24px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .main-page .swiper-wrapper .swiper-slide span {
+    line-height: 20px;
+    font-size: 16px;
+  }
 }
 .main-page .swiper-wrapper .swiper-slide.swiper-slide-prev {
   z-index: 1;

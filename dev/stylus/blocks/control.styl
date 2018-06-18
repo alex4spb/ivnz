@@ -3,17 +3,35 @@
   cursor pointer
   font-size 0
   line-height 0
+  width 100%
+  white-space nowrap
+  +b($m)
+    &:after
+      content ''
+      width 67px
+      height 15px
+      right -20px
+      top 5px
+      display block
+      position absolute
+      background-image linear-gradient(90deg, rgba(30,100,211,0.00) 0%, #185BC9 99%)
   &__box
     display inline-block
     position relative
-    width 18px
-    height 18px
     text-align center
     font-size 0
     border-radius 2px
-    line-height 18px
     background-color #fff 
     transition background-color $speed 
+    vertical-align middle
+    +a($m)
+      width 18px
+      height 18px
+      line-height 18px
+    +b($m)
+      width 22px
+      height 22px
+      line-height 22px
   &__image
     position relative
     overflow hidden
@@ -52,7 +70,7 @@
           display inline-block
           vertical-align middle
           width 8px
-          height 8px
+          height 8px 
           border-radius 50%
           background-color $redf4 
           opacity 0
@@ -66,10 +84,14 @@
         img
           display inline-block
           vertical-align middle
-          width 10px
-          height 8px
           opacity 0          
           transition opacity $speed
+          +a($m)
+            width 10px
+            height 8px
+          +b($m)
+            width 12.67px
+            height 10px
       &:hover
         ~ .control__box
           box-shadow 0 0 0 2px #EAEAEA
@@ -96,6 +118,9 @@
     margin-left 8px
     opacity 0.5 
     transition opacity $speed
+    white-space nowrap
+    vertical-align middle
+    position relative
     &-text
       display inline-block
       font-size 14px
