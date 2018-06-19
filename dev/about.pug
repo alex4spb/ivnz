@@ -1,0 +1,152 @@
+extends /layout
+include /audit-form
+
+block main
+  .about
+    section.header(data-aos="fade-in")
+      .container
+        .header__content(data-aos="fade-in" data-aos-delay="700")
+          h1 О нас
+          .header__about
+            .header__about-item 
+              img(src="img/about-item_1.svg")
+              span Мы специализируемся#[br]на поисковом продвижении
+            .header__about-item
+              img(src="img/about-item_2.svg")
+              span В работе мы используем#[br]проектный подход
+            .header__about-item  
+              img(src="img/about-item_3.svg")
+              span На текущий момент #[br.hidden-above-m]более #[br.hidden-below-m]150 проектов в продвижении
+    section.about__people
+      .svg-masks
+        svg.svg(width='299', height='309')
+          defs
+            path#path-1(d='M0,166 L0,130 C-1.41093417e-12,79.1178482 28.7238831,33.1039789 74,11 C119.49496,-11.1340676 174.249285,0.862675903 206,40 L275,124 C306.15333,161.763058 307.048281,216.173393 277,255 C247.719487,293.614306 199.897083,313.323329 151,307 L119,302 C50.5455422,292.875116 2.96296176e-12,234.818408 0,166 Z')
+          
+          mask#mask-1(fill='#ffffff')
+            use(xlink:href='#path-1')
+          mask#mask-2(fill='#ffffff')
+            use(xlink:href='#path-1' transform='translate(149.500000, 154.000000) scale(-1, -1) translate(-149.500000, -154.000000)')
+          mask#mask-3(fill='#ffffff')
+            use(xlink:href='#path-1'  transform="translate(149.500000, 154.000000) scale(-1, 1) translate(-149.500000, -154.000000)")
+
+        svg.svg(width='60', height='62')
+          defs
+            path#path-2(d="M0,33.3110368 L0,26.0869565 C-2.83130603e-13,15.8764913 5.76398991,6.64293892 14.8494983,2.20735786 C23.9789217,-2.23426105 34.9664117,0.173112221 41.3377926,8.02675585 L55.1839465,24.8829431 C61.4354509,32.4608143 61.6150397,43.3792762 55.5852843,51.1705686 C49.7095961,58.9192588 40.1131271,62.8742466 30.3010033,61.6053512 L23.8795987,60.6020067 C10.1429182,58.7709263 5.94574266e-13,47.1207507 0,33.3110368 Z")
+          g
+            mask#mask-4(fill='#ffffff')
+              use(xlink:href='#path-2')
+      .container    
+        .blueline(data-aos="fade-in" data-aos-anchor=".project")
+        .greyline(data-aos="fade-in" data-aos-anchor=".project")
+        .orangecircle(data-aos="fade-in" data-aos-anchor=".project")
+        .about__people-content(data-aos="fade-in")
+          h2 Проектные группы
+          .about__people-list 
+            //.about__people-list-item
+              svg.svg  
+                g(mask='url(#mask-1)')
+                  svg
+                    image(xlink:href='temp/people_1.png' width='299' height='309')
+            //.about__people-list-item
+              svg.svg 
+                g(mask='url(#mask-2)')
+                  svg
+                    image(xlink:href='temp/people_2.png' width='299' height='309')
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_1.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_2.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_3.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_4.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_5.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item  
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_6.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  svg.svg  
+                    g(mask='url(#mask-4)')
+                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            //
+              var c = 1
+              var data = [
+                {name: 'Анна Рублева', job: 'B2B сервисы, Оптовые компании', assistents: 1},
+                {name: 'Владислав Горевой', job: 'Крупные интернет-магазины, Агрегаторы',  assistents: 1},
+                {name: 'Иван Полищук', job: 'Информационные порталы. B2B сервисы', assistents: 2},
+                {name: 'Анна Рублева', job: 'B2B сервисы, Оптовые компании', assistents: 1},
+                {name: 'Владислав Горевой', job: 'Крупные интернет-магазины, Агрегаторы',  assistents: 1},
+                {name: 'Иван Полищук', job: 'Информационные порталы. B2B сервисы', assistents: 2},
+              ]
+                
+          
+  
