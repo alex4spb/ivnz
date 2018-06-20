@@ -37,116 +37,334 @@ block main
             mask#mask-4(fill='#ffffff')
               use(xlink:href='#path-2')
       .container    
-        .blueline(data-aos="fade-in" data-aos-anchor=".project")
-        .greyline(data-aos="fade-in" data-aos-anchor=".project")
-        .orangecircle(data-aos="fade-in" data-aos-anchor=".project")
-        .about__people-content(data-aos="fade-in")
+        .blueline(data-aos="fade-in" data-aos-anchor=".about__people")
+        .greyline(data-aos="fade-in" data-aos-anchor=".about__people")
+        .orangecircle(data-aos="fade-in" data-aos-anchor=".about__people")
+        .about__people-content(data-aos="fade-in"  data-aos-delay="500")
           h2 Проектные группы
           .about__people-list 
-            //.about__people-list-item
-              svg.svg  
-                g(mask='url(#mask-1)')
-                  svg
-                    image(xlink:href='temp/people_1.png' width='299' height='309')
-            //.about__people-list-item
-              svg.svg 
-                g(mask='url(#mask-2)')
-                  svg
-                    image(xlink:href='temp/people_2.png' width='299' height='309')
-            .about__people-list-item  
+            .about__people-list-item(data-aos="fade-in"  data-aos-delay="500")
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-1)')
                     image(xlink:href='temp/people_1.png' width='299' height='309')
               .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
               .about__people-list-item-assistents
                 .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_11.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            .about__people-list-item  
+            .about__people-list-item(data-aos="fade-in"  data-aos-delay="500")  
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-2)')
                     image(xlink:href='temp/people_2.png' width='299' height='309')
-              .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-name Владислав Горевой
+              .about__people-list-item-job Крупные интернет-магазины, #[br]Агрегаторы
               .about__people-list-item-assistents
-                .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                .about__people-list-item-assistents-item.-active
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_12.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            .about__people-list-item  
+                .about__people-list-item-assistents-item.-hidden
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_13.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Михаил Заболецкий
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item(data-aos="fade-in"  data-aos-delay="500")  
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-3)')
                     image(xlink:href='temp/people_3.png' width='299' height='309')
-              .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-name Иван Полищук
+              .about__people-list-item-job Информационные порталы, #[br]B2B сервисы
               .about__people-list-item-assistents
                 .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            .about__people-list-item  
+            .about__people-list-item(data-aos="fade-in")    
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-1)')
                     image(xlink:href='temp/people_4.png' width='299' height='309')
-              .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-name Анастасия Новосартова
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
               .about__people-list-item-assistents
                 .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            .about__people-list-item  
+            .about__people-list-item(data-aos="fade-in")   
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-2)')
                     image(xlink:href='temp/people_5.png' width='299' height='309')
-              .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-name Иннокентий Суворов
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
               .about__people-list-item-assistents
                 .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            .about__people-list-item  
+            .about__people-list-item(data-aos="fade-in")    
               .about__people-list-item-img                            
                 svg.svg
                   g(mask='url(#mask-3)')
                     image(xlink:href='temp/people_6.png' width='299' height='309')
-              .about__people-list-item-name Анна Рублева
-              .about__people-list-item-job B2B сервисы, Оптовые компании
+              .about__people-list-item-name Евгений Фет
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
               .about__people-list-item-assistents
                 .about__people-list-item-assistents-item
-                  svg.svg  
-                    g(mask='url(#mask-4)')
-                      image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
                   .about__people-list-item-assistents-name Егор Кришнидзе
                   .about__people-list-item-assistents-job Ассистент
-            //
-              var c = 1
-              var data = [
-                {name: 'Анна Рублева', job: 'B2B сервисы, Оптовые компании', assistents: 1},
-                {name: 'Владислав Горевой', job: 'Крупные интернет-магазины, Агрегаторы',  assistents: 1},
-                {name: 'Иван Полищук', job: 'Информационные порталы. B2B сервисы', assistents: 2},
-                {name: 'Анна Рублева', job: 'B2B сервисы, Оптовые компании', assistents: 1},
-                {name: 'Владислав Горевой', job: 'Крупные интернет-магазины, Агрегаторы',  assistents: 1},
-                {name: 'Иван Полищук', job: 'Информационные порталы. B2B сервисы', assistents: 2},
-              ]
-                
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_7.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item(data-aos="fade-in")   
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_8.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_9.png' width='299' height='309')
+              .about__people-list-item-name Анна Рублева
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+              .about__people-list-item-assistents
+                .about__people-list-item-assistents-item
+                  .about__people-list-item-assistents-img
+                    svg.svg  
+                      g(mask='url(#mask-4)')
+                        image(xlink:href='temp/people_10.png' width='60' height='61')
+                  .about__people-list-item-assistents-name Егор Кришнидзе
+                  .about__people-list-item-assistents-job Ассистент
+
+          h2 Отдел аналитики и контроля качества
+          .about__people-list 
+            .about__people-list-item(data-aos="fade-in")   
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_5.png' width='299' height='309')
+              .about__people-list-item-name Иннокентий Суворов
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании  
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_4.png' width='299' height='309')
+              .about__people-list-item-name Анастасия Новосартова
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании            
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_6.png' width='299' height='309')
+              .about__people-list-item-name Евгений Фет
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+          h2 Редакция
+          .about__people-list 
+            .about__people-list-item(data-aos="fade-in")   
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_10.png' width='299' height='309')
+              .about__people-list-item-name Иннокентий Суворов
+              .about__people-list-item-job Главный редактор 
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_11.png' width='299' height='309')
+              .about__people-list-item-name Анастасия Новосартова
+              .about__people-list-item-job Корректор 
+          h2 А так же
+          .about__people-list 
+            .about__people-list-item(data-aos="fade-in")   
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_5.png' width='299' height='309')
+              .about__people-list-item-name Иннокентий Суворов
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании  
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_4.png' width='299' height='309')
+              .about__people-list-item-name Анастасия Новосартова
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании            
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_6.png' width='299' height='309')
+              .about__people-list-item-name Евгений Фет
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+            .about__people-list-item(data-aos="fade-in")   
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-1)')
+                    image(xlink:href='temp/people_5.png' width='299' height='309')
+              .about__people-list-item-name Иннокентий Суворов
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании  
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-2)')
+                    image(xlink:href='temp/people_4.png' width='299' height='309')
+              .about__people-list-item-name Анастасия Новосартова
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании            
+            .about__people-list-item(data-aos="fade-in")    
+              .about__people-list-item-img                            
+                svg.svg
+                  g(mask='url(#mask-3)')
+                    image(xlink:href='temp/people_6.png' width='299' height='309')
+              .about__people-list-item-name Евгений Фет
+              .about__people-list-item-job B2B сервисы, #[br]Оптовые компании
+    section.about__history
+      .container
+        .about__history-text         
+          h2(data-aos="fade-in" data-aos-delay="500") История компании
+          .about__history-quotes1(data-aos="fade-in")
+          .about__history-text-block(data-aos="fade-in" data-aos-delay="500")
+            p Здравствуйте. Я — Октавиан Низамов, сооснователь и генеральный директор «Иващенко и Низамов». С 2004 по 2012 годы я организовал несколько собственных бизнесов, прежде чем пришел в интернет-маркетинг. Например, один из моих ключевых проектов — «АйТи Прогресс», успешно работает с 2007 года по сегодняшний день.
+
+            p Будучи заказчиком услуг по продвижению сайта, я понял насколько незрелым является этот рынок. Я потратил много времени и денег на попытки работать с разными подрядчиками, а также на построение собственной inhouse-студии. И хотя было приложено немало усилий, но результаты в этом направлении оставляли желать много лучшего.
+          .about__history-text-block 
+            .greycircle.-top(data-aos="fade-in")
+            .about__history-text-title(data-aos="fade-in")
+              img(src="img/meeting.svg")
+              span Знакомство
+            p(data-aos="fade-in") В какой-то момент мы начали работать с Владом. Его подходы к работе сильно отличались от того, что я встречал на рынке до этого. Его история, как специалиста, началась в 2005 году, когда он запустил свой первый интернет-проект. В 2007 его продал и с головой ушёл в SEO. Он успел поработать и на стороне клиента, и в разных агентствах.
+
+            p(data-aos="fade-in") В итоге он стал работал в одиночку по своим клиентским проектам: с одной стороны, клиентов всегда хватало, так как качество его работ действительно было на высоте, но с другой стороны, он был сильно ограничен собственным временем и просто упёрся в свой «потолок».
+          .about__history-text-block
+            .greycircle.-middle(data-aos="fade-in")
+            .about__history-text-title(data-aos="fade-in")
+              img(src="img/open.svg")
+              span Открытие
+            p(data-aos="fade-in") Идею открытия совместного агентства мы впервые обсуждали за ланчем в KFC у метро «Рыбацкое». Нас обоих захватила идея вместе изменить этот рынок в сторону системности и прозрачности. В феврале 2013 слова перешли в дела и у нас появился первый общий клиент.
+
+            p(data-aos="fade-in") Компанию мы назвали собственными фамилиями, подчеркивая этим нашу открытость и ответственность за свою работу. В мае открыли отдельный офис, вышли на работу первые сотрудники помимо нас двоих. Владислав привёл в компанию всех клиентов, с кем до этого работал лично. Многие из тех проектов до сих пор продвигаются в «Иващенко и Низамов».
+          .about__history-text-block 
+            .about__history-text-title(data-aos="fade-in")
+              img(src="img/crisis.svg")
+              span Кризис
+            p(data-aos="fade-in") Компания стабильно росла до конца 2015 года, когда мы очень отчётливо почувствовали на себе финансовый кризис в стране. Крупные клиенты начали урезать бюджеты. Оказалось, что наши затраты раздуты во все стороны, а процессы не оптимизированы. Пришлось сильно оптимизировать буквально всё: производство, продажи, менеджмент. Тогда только в режиме ручного управления нам удалось удержать компанию на плаву. В таком же режиме мы и продолжили работу.
+
+            p(data-aos="fade-in" data-aos-delay="500") В 2016 году мы столкнулись со следующей проблемой: портфель проектов рос, и в определенный момент мы поняли, что на самом деле не понимаем ситуацию по каждому проекту, мы переросли стадию «лампового» агентства и начинали терять контроль. У нас был главный технический специалист, Александр Свистунов, который, постепенно стал определять стратегию по всем проектам, а специалисты занимались только реализацией и не принимали ответственных решений. Система начала буксовать по двум причинам: во-первых, одному человеку банально не хватало времени, чтобы успеть принять решения по всем проектам, а во-вторых, уровень его погружения всё равно был недостаточным, и в определенных ситуациях это реально мешало успешной реализации проекта.
+          .about__history-text-block
+            .about__history-text-title(data-aos="fade-in")
+              img(src="img/idea.svg")
+              span осознание
+            p(data-aos="fade-in") Тогда мы и пришли к текущей схеме работы, которая, на наш взгляд, даёт лучшие результаты. Специалисты стали не просто исполнителями, а полноценными руководителями проектов. Старший специалист в проектной группе определяет стратегию и план работ по проекту и отвечает за конечные результаты. Задачи он самостоятельно распределяет между сотрудниками своей проектной группы. Естественным образом при такой схеме выделились и специализации: кто-то из специалистов умеет и любит работать с большими интернет-магазинами, а кто-то отлично разбирается в недвижимости. Для контроля каждые две недели проводится большое совещание, где руководитель проектного отдела проверяет ход работы по проекту.
+
+            p(data-aos="fade-in") Внедряя и развивая проектный подход, нам удалось серьёзно улучшить управляемость и результативность проектов. На текущий момент именно индивидуальный проектный подход в SEO – наше главное конкурентное преимущество. Нам удалось сформировать сильную команду, которая умеет работать там, где большинство наших конкурентов могут предложить лишь конвеерный типизированный подход, который никогда не сравнится по результативности с индивидуальным          
+          .greycircle.-bottom(data-aos="fade-in")
+          .about__history-quotes2(data-aos="fade-in" data-aos-delay="500")
+          .about__history-autor(data-aos="fade-in" data-aos-delay="500")
+            .about__history-autor-img
+              img(src='temp/autor.svg')
+            .about__history-autor-name Октавиан Низамов
+            .about__history-autor-job Генеральный директор
+    section.about__events(data-aos="fade-in")
+      .container
+        h2 мероприятия
+        .about__events-list
+          a.about__events-list-item(href="#")
+            .about__events-list-item-title Optimization
+            .about__events-list-item-date 20.03.2018
+          a.about__events-list-item(href="#")             
+            .about__events-list-item-title  BDD
+            .about__events-list-item-date 04.03.2018
+          a.about__events-list-item(href="#")           
+            .about__events-list-item-title  Деловой Петербург
+            .about__events-list-item-date 26.02.2018  
+          a.about__events-list-item(href="#")           
+            .about__events-list-item-title  Продвижение без пафоса
+            .about__events-list-item-date 14.02.2018  
+    section.about__clients
+      .container
+        .blueline(data-aos="fade-in"  data-aos-anchor=".about__clients")
+        h2(data-aos="fade-in" data-aos-delay="700") нам доверяют
+        .about__clients-list(data-aos="fade-in" data-aos-delay="700")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_1.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_2.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_3.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_4.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_5.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_6.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_7.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="img/clients_8.svg")
+    section.about__publication(data-aos="fade-in")
+      .container
+        .greyline(data-aos="fade-in")
+        h2(data-aos="fade-in" data-aos-delay="700") Наши публикации
+        .about__publication-list(data-aos="fade-in" data-aos-delay="700")
+          a.about__publication-list-item(href="#")  
+            img(src="img/public_1.svg")
+          a.about__publication-list-item(href="#")  
+            img(src="img/public_2.svg")
+          a.about__publication-list-item(href="#")  
+            img(src="img/public_3.svg")
+          a.about__publication-list-item(href="#")  
+            img(src="img/public_4.svg")
+    +audit-form()              
           
   

@@ -77,5 +77,30 @@ preloader()
   border-radius 10px
   transition-property all !important
   transition .4s ease-out !important  
+.greycircle
+  width 1px
+  height 0px
+  background-color #D8D8D8
+  border-radius 10px
+  transition-property all !important
+  transition .4s ease-out !important
+  &:before
+    content ""
+    display block
+    position absolute
+    background #fff
+    border 1px solid #D8D8D8
+    border-radius 16px
+    transition-duration .2s
+    +a($m)
+      width 14px
+      height 14px
+      top -16px
+      left -7.5px
+    +b($m)
+      width 8px
+      height 8px
+      top -10px
+      left -4.5px 
 
   

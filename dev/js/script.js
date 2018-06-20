@@ -97,7 +97,8 @@ jQuery(document).ready(function($) {
             $(".greyline"),
             $(".blueline"),
             $(".orangecircle"),
-            $(".orangeline")
+            $(".orangeline"),
+            $(".greycircle")
         ];
         line.forEach(function(element, index) {
             checkForChanges();
@@ -177,6 +178,21 @@ jQuery(document).ready(function($) {
                else  
                 $(this).parent('.input').find('.input__placeholder').removeClass('active')
             })
+        })
+    })
+    /*Ассистенты*/
+    $(function() {
+        $('.about__people-list-item-assistents').each(function() {
+            var assists = $(this).find('.about__people-list-item-assistents-item')
+            if (assists.length > 1){
+                assists.addClass('-hidden').first().removeClass('-hidden').addClass('-active') 
+                assists.on("click", function(e) {
+                   assists.removeClass('-active').addClass('-hidden')
+                   $(this).removeClass('-hidden').addClass('-active')  
+                })  
+            }         
+
+
         })
     })
 });

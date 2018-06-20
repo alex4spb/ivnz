@@ -1,0 +1,60 @@
+extends /layout
+include /audit-form
+
+block main
+  .cases
+    section.header(data-aos="fade-in")
+      .container
+        .header__content(data-aos="fade-in" data-aos-delay="700")
+          h1 Кейсы  
+    section.cases__list  
+      .cases__list-item
+        .container
+          .cases__list-item-title
+            a.h2(href="#") натяжные потолки
+            .cases__list-item-title-date 6 апреля 2018
+          .cases__list-item-img
+            img(src="temp/cases_1.svg")
+          .cases__list-item-info
+            .cases__list-item-info-item
+              .cases__list-item-info-text 
+                | За 4 месяца подняли результаты выдачи по запросам до
+                span ТОП 20
+              .cases__list-item-info-result < 20
+            .cases__list-item-info-item 
+              .cases__list-item-info-text 
+                | Видимость сайта в поисковых системах увеличина с 0 до 89%
+              .cases__list-item-info-result + 89%
+      .cases__list-item
+        .container
+          .cases__list-item-title
+            a.h2(href="#") top3dshop.ru
+            .cases__list-item-title-date 15 марта 2018
+          .cases__list-item-img
+            img(src="temp/cases_2.svg")
+          .cases__list-item-info
+            .cases__list-item-info-item 
+              .cases__list-item-info-text За 2,5 года работ вывели результаты выдачи по запросам до #[span ТОП 2] в Google
+              .cases__list-item-info-result < 2
+            .cases__list-item-info-item
+              .cases__list-item-info-text Количество заказов на сайте увеличилось в 14,5 раз
+              .cases__list-item-info-result * 14,5
+      .cases__list-item
+        .container
+          .cases__list-item-title
+            a.h2(href="#") linguacontact.com
+            .cases__list-item-title-date 2 февраля 2018
+          .cases__list-item-img
+            img(src="temp/cases_3.svg")
+          .cases__list-item-info
+            .cases__list-item-info-item
+              .cases__list-item-info-text Средняя позиция сайта в поисковой выдаче увеличилась в 4,7 раз
+              .cases__list-item-info-result * 4,7
+            .cases__list-item-info-item
+              .cases__list-item-info-text Ежемесячный трафик с начала продвижения увеличился на 71%
+              .cases__list-item-info-result + 71%
+
+    
+    //+audit-form()              
+          
+  
