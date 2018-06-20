@@ -137,7 +137,7 @@ jQuery(document).ready(function($) {
                 .find(".working__tabs-content-item")
                 .removeClass("active")
                 .eq($(this).index())
-                .addClass("active") 
+                .addClass("active");
             new Swiper(
                 $(this)
                     .closest(".working__tabs")
@@ -161,38 +161,75 @@ jQuery(document).ready(function($) {
     );
     /*Динамика placeholder в форме*/
     $(function() {
-        $('input').each(function() {
+        $("input").each(function() {
             if ($(this).val().length > 0)
-                $(this).parent('.input').find('.input__placeholder').addClass('active')
-               else  
-                $(this).parent('.input').find('.input__placeholder').removeClass('active')
+                $(this)
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .addClass("active");
+            else
+                $(this)
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("active");
             $(this).on("click", function(e) {
-               if ($(this).val().length > 0)
-                $(this).parent('.input').find('.input__placeholder').addClass('active')
-               else  
-                $(this).parent('.input').find('.input__placeholder').removeClass('active')
-            })
+                if ($(this).val().length > 0)
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .addClass("active");
+                else
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .removeClass("active");
+            });
             $(this).focusout(function(e) {
-               if ($(this).val().length > 0)
-                $(this).parent('.input').find('.input__placeholder').addClass('active')
-               else  
-                $(this).parent('.input').find('.input__placeholder').removeClass('active')
-            })
-        })
-    })
+                if ($(this).val().length > 0)
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .addClass("active");
+                else
+                    $(this)
+                        .parent(".input")
+                        .find(".input__placeholder")
+                        .removeClass("active");
+            });
+        });
+    });
     /*Ассистенты*/
     $(function() {
-        $('.about__people-list-item-assistents').each(function() {
-            var assists = $(this).find('.about__people-list-item-assistents-item')
-            if (assists.length > 1){
-                assists.addClass('-hidden').first().removeClass('-hidden').addClass('-active') 
+        $(".about__people-list-item-assistents").each(function() {
+            var assists = $(this).find(
+                ".about__people-list-item-assistents-item"
+            );
+            if (assists.length > 1) {
+                assists
+                    .addClass("-hidden")
+                    .first()
+                    .removeClass("-hidden")
+                    .addClass("-active");
                 assists.on("click", function(e) {
-                   assists.removeClass('-active').addClass('-hidden')
-                   $(this).removeClass('-hidden').addClass('-active')  
-                })  
-            }         
-
-
-        })
+                    assists.removeClass("-active").addClass("-hidden");
+                    $(this)
+                        .removeClass("-hidden")
+                        .addClass("-active");
+                });
+            }
+        });
+    })
+    /*Комментарии Настройки disqus*/
+    var disqus_config = function () {
+      this.page.url = '<?php echo get_permalink(); ?>';
+      this.page.identifier = '<?php echo dsq_identifier_for_post($post); ?>'; 
+    }
+    $(function() {
+        // DON'T EDIT BELOW THIS LINE
+        var d = document,
+            s = d.createElement("script");
+        s.src = "https://ivnz.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
     })
 });

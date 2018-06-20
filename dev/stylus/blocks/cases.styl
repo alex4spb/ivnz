@@ -12,28 +12,266 @@
       +a($m)
         padding-top 180px
       +b($m)
-        padding-top 102px
+        padding-top 96px
       h1
         text-transform uppercase  
-        margin-bottom 40px      
-    
-
-
-
-
-
-
-
-
-
-
-
-
+        margin 0px
+    .greyline
+      position absolute
+      +a($m)
+        top 270px
+        background rgba(216, 216, 216, 0.1)
+        left 50% 
+      +b($m)
+        top 155px
+        background #3B7EFF
+        left 0
+      &.active
+        +a($m)     
+          height 100px
+        +b($m)
+          height 40px
+    .greycircle
+      position absolute
+      background #EBEBEB
+      +a($d)
+        top 207px
+        right -95px
+      +btw($m, $d)
+        top 207px
+        right 0
+      +b($m)
+        top 96px  
+        right 0
+      &:before
+        background transparent
+        border 2px solid #EBEBEB
+        +a($m)
+          width 12px
+          height 12px
+          top auto
+          bottom -16px
+          left -7px
+        +b($m)
+          width 6px
+          height 6px
+          top auto
+          bottom -10px
+          left -4px 
+      &.active
+        +a($m)     
+          height 204px
+        +b($m)
+          height 90px  
+  &__list
+    +a($m)
+      padding-top 15px    
+      padding-bottom 60px
+    +b($m)
+      margin-top -20px    
+      padding-bottom 0
+    &-item
+      min-height 248px
+      +a($m)
+        padding 60px 0
+      +b($m)
+        padding 50px 0
+      .container
+        position relative
+        box-sizing border-box
+        +a($t)
+          padding-right 411px
+        +btw($m, $t) 
+          padding-right 290px
+        +b($m)
+          padding-right 0
+          padding 0 20px
+          text-align center
+        .blueline
+          position absolute
+          +a($m)
+            top -81px 
+            left 0
+          +b($m)
+            top -70px  
+            left 20px
+          &.active
+            +a($m)    
+              height 60px
+            +b($m)
+              height 40px
+      &-title
+        +a($m)
+          text-align left
+          margin-bottom 10px
+        +b($m)
+          text-align center
+          margin-bottom 20px
+        a.h2
+          color #000
+          text-transform uppercase
+          +b($m)
+            display block        
+          &:hover
+            text-decoration none
+            color #3C7FFF
+            &:after
+              opacity 1
+          &:after
+            content 'посмотреть отчет'
+            opacity 0
+            height 0
+            color #636870
+            text-transform none
+            font-family "Proxima Nova"
+            font-weight normal
+            padding-left 30px
+            font-size 18px
+            line-height 20px    
+            transition-duration $speed 
+            transition-property all 
+            z-index 1
+            position relative
+            +btw($m, $t)
+              content 'отчет'              
+              padding-left 15px
+            +b($m)
+              display none
+        &-date
+          font-size 15px
+          line-height 30px
+          font-family "Proxima Nova"
+          color #636870
+          opacity 0.5
+      &-img
+        +a($m)
+          position absolute
+          right 22px
+          top 50%
+          transform translateY(-50%)
+        +b($m)
+          display block
+          text-align center
+          margin-bottom 40px
+          img 
+            width 212px
+      &-info
+        text-align justify
+        color #000000
+        font-size 0
+        &:after
+          content ''
+          width 100%
+          display inline-block
+          height 0
+        &-item
+          display inline-block
+          vertical-align top      
+          +a($t)            
+            width 220px
+            & + &
+              width 240px      
+          +btw($m, $t) 
+            width 50%
+          +b($m)
+            width 100%
+            & + &
+              margin-top 30px
+        &-text 
+          font-family "Proxima Nova"
+          +a($m)
+            font-size 18px
+            line-height 27px
+            text-align left
+          +b($m)
+            font-size 16px
+            line-height 24px
+            text-align center
+          span
+            display inline-block
+            background #F78200
+            border-radius 2px
+            color #fff
+            text-transform uppercase
+            font-weight bold
+            padding 0 10px
+            line-height 23px
+            +a($m)
+              font-size 15px
+            +b($m)
+              font-size 12px
+        &-result
+          color #000000
+          font-size 40px
+          line-height 50px
+          text-transform uppercase
+          +a($m)
+            margin-top 30px
+          +b($m)
+            text-align center
+            margin-top 10px
+      &:nth-child(2n)
+        background #FAFAFB 
+        +a($m)
+          .container
+            padding-right 0            
+            +a($t)
+              padding-left 411px
+            +btw($m, $t) 
+              padding-left 290px
+            +b($m)
+              padding-left 0
+          .cases__list-item-img
+            right auto 
+            left 0 
+          .cases__list-item-info
+            text-align right
+          .cases__list-item-info-item 
+            text-align left
+            float right            
+            & + .cases__list-item-info-item
+              float left
+            +a($d)              
+              width 300px
+              & + .cases__list-item-info-item
+                width 220px
+            +btw($t, $d)
+              width auto   
+              & + .cases__list-item-info-item
+                width auto  
+            +btw($m, $d)             
+              max-width 300px
+              & + .cases__list-item-info-item
+                max-width 220px    
+      &-button
+        text-decoration none
+        width 100%
+        text-align center
+        vertical-align middle
+        line-height 56px
+        height 56px
+        border 2px solid #3C7FFF
+        font-size 15px
+        font-family "Proxima Nova"
+        font-weight bold
+        border-radius 4px
+        margin-top 40px
+        color #3C7FFF
+        +a($m)
+          display none
+        +b($m)
+          display block
   .audit-form
     background-color #1F2637
     .orangecircle
       +a($m)
         top -70px 
+      +b($m)
+        top -39px 
       &.active
-        height 120px
+        +a($m)
+          height 120px
+        +b($m)
+          height 100px
+        
         

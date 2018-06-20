@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="62px" viewBox="0 0 60 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,33.3110368 L0,26.0869565 C-2.83130603e-13,15.8764913 5.76398991,6.64293892 14.8494983,2.20735786 C23.9789217,-2.23426105 34.9664117,0.173112221 41.3377926,8.02675585 L55.1839465,24.8829431 C61.4354509,32.4608143 61.6150397,43.3792762 55.5852843,51.1705686 C49.7095961,58.9192588 40.1131271,62.8742466 30.3010033,61.6053512 L23.8795987,60.6020067 C10.1429182,58.7709263 5.94574266e-13,47.1207507 0,33.3110368 Z" id="path-1"></path>
+    </defs>
+    <g id="1.-Design-👀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.-Ivnz.-About-us" transform="translate(-830.000000, -1436.000000)">
+            <g id="Group-86" transform="translate(830.000000, 1436.000000)">
+                <g id="Bitmap">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill-opacity="0.3" fill="#00123D" fill-rule="nonzero" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

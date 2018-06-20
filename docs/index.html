@@ -10,6 +10,8 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script id="dsq-count-scr" src="//ivnz.disqus.com/count.js" async>
+	</script>
 	<script src="js/vendor.js">
 	</script>
 	<link rel="stylesheet" href="css/style.min.css">
@@ -88,7 +90,7 @@
 							<h1>Индивидуальные
 								<br>SEO проекты для малого
 								<br>и среднего бизнеса</h1>
-							<a class="header__button" href="#">Заказать бесплатный аудит сайта</a>
+							<a class="header__button" href="#audit">Заказать бесплатный аудит сайта</a>
 						</div>
 						<div class="greyline" data-aos="fade-in" data-aos-delay="700"></div>
 					</div>
@@ -189,14 +191,14 @@
 						<div class="greyline" data-aos="fade-in" data-aos-anchor=".working"></div>
 						<div class="orangeline" data-aos="fade-in" data-aos-anchor=".working"></div>
 						<div class="orangecircle" data-aos="fade-in" data-aos-anchor=".working"></div>
-						<h2>Как мы работаем</h2>
+						<h2 data-aos="fade-in">Как мы работаем</h2>
 						<div class="working__tabs">
-							<div class="working__tabs-titles">
+							<div class="working__tabs-titles" data-aos="fade-in">
 								<div class="working__tabs-titles-item active">Автоматизация работы</div>
 								<div class="working__tabs-titles-item">Контроль качества</div>
 							</div>
-							<div class="working__tabs-content">
-								<div class="working__tabs-content-item">
+							<div class="working__tabs-content" data-aos="fade-in" data-aos-delay="700">
+								<div class="working__tabs-content-item active">
 									<div class="working__tabs-slider">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
@@ -206,46 +208,158 @@
 											</div>
 											<div class="swiper-slide">
 												<img src="temp/slider-img.jpg">
+												<span>222</span>
 											</div>
 											<div class="swiper-slide">
 												<img src="temp/slider-img.jpg">
+												<span>333</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="temp/slider-img.jpg">
+												<span>4444</span>
 											</div>
 										</div>
-										<div class="swiper-button-prev"></div>
-										<div class="swiper-button-next"></div>
+										<div class="swiper-buttons">
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+										</div>
 									</div>
 								</div>
-								<div class="working__tabs-content-item"></div>
+								<div class="working__tabs-content-item">
+									<div class="working__tabs-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<img src="temp/slider-img.jpg">
+												<span>Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="temp/slider-img.jpg">
+												<span>Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="temp/slider-img.jpg">
+												<span>Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы</span>
+											</div>
+											<div class="swiper-slide">
+												<img src="temp/slider-img.jpg">
+												<span>Пояснение скриншоту. Здесь может быть очень большой комментарий и текста строек на шесть, или даже больше. Здесь же можно отобразить статистику работы</span>
+											</div>
+										</div>
+										<div class="swiper-buttons">
+											<div class="swiper-button-prev"></div>
+											<div class="swiper-button-next"></div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</section>
+				<a id="audit"></a>
+				<section class="audit-form" data-aos="fade-in">
+					<div class="container">
+						<div class="blueline" data-aos="fade-in"></div>
+						<div class="orangecircle" data-aos="fade-in" data-aos-anchor=".audit-form"></div>
+						<h2 class="audit-form__title">Знакомство мы начинаем
+							<br>с бесплатного аудита сайта:</h2>
+						<div class="audit-form__subtitle">Оставьте заявку, мы изучим ваш сайт и тематику,
+							<br>после чего сможем пообщаться по существу</div>
+						<div class="audit-form__form" data-aos="fade-in" data-aos-delay="800">
+							<div class="audit-form__form-legend">Общие сведения</div>
+							<form class="form js-form-ajax" action="json/form-success.json" method="post">
+								<div class="form__container">
+									<div class="form__field -whole">
+										<div class="input">
+											<div class="input__error"></div>
+											<input type="text" name="url">
+											<div class="input__placeholder">Адрес сайта</div>
+										</div>
+										<div class="input">
+											<div class="input__error"></div>
+											<input type="text" name="name">
+											<div class="input__placeholder">Имя</div>
+										</div>
+										<div class="input">
+											<div class="input__error"></div>
+											<input type="tel" name="phone">
+											<div class="input__placeholder">Телефон</div>
+										</div>
+										<div class="input">
+											<div class="input__error"></div>
+											<input type="email" name="email">
+											<div class="input__placeholder">E-mail</div>
+										</div>
+										<div class="input">
+											<div class="input__error"></div>
+											<input type="text" name="promocode">
+											<div class="input__placeholder">Промо код</div>
+										</div>
+										<label class="control-label">
+											<div class="control-label__input">
+												<div class="control">
+													<input type="checkbox" name="manager" value="1" checked="checked">
+													<div class="control__box">
+														<img src="img/checkmark.svg">
+													</div>
+													<div class="control__value">
+														<span class="control__value-text">Я согласен с условиями передачи информации</span>
+													</div>
+												</div>
+											</div>
+										</label>
+										<button class="form__button">Далее</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
 			</div>
-			<div class="footer">
-				<div class="footer__menu">
-					<div class="container" data-aos="fade-in">
-						<div class="footer__menu-item">
-							<h2>О мероприятии </h2>
-							<p>Инфа</p>
-						</div>
-						<div class="footer__menu-item">
-							<a href="#">купить билет</a>
-						</div>
-						<div class="footer__menu-item">
-							<a href="#">Ссылка сайт 7 жизней</a>
-						</div>
-						<div class="footer__menu-item">
-							<a href="#">Контакты</a>
-						</div>
-						<div class="footer__menu-item">
-							<a href="mos.ru">mos.ru</a>
+			<div class="footer" data-aos="fade-in">
+				<div class="footer__contacts">
+					<div class="container">
+						<a class="footer__contacts-logo" href="index.html">
+							<img src="img/logo.svg">
+						</a>
+						<a class="footer__contacts-phone" href="tel:+7812244-71-48">
+							<img class="hidden-below-m" src="img/smartphone.svg">
+							<img class="hidden-above-m" src="img/smartphone_m.svg">
+							<span>+7 812 244-71-48</span>
+						</a>
+						<a class="footer__contacts-mail" href="mailto:support@ivnz.ru">
+							<img class="hidden-below-m" src="img/mail_in.svg">
+							<img class="hidden-above-m" src="img/mail_in_m.svg">
+							<span>support@ivnz.ru</span>
+						</a>
+						<div class="footer__bottom-item hidden-above-m">«Иващенко и Низамов»
+							<br>© 2013-2018</div>
+						<div class="footer__bottom-item hidden-above-m">Бесплатный
+							<a href="#">SEO-аудит</a> сайтов</div>
+						<div class="footer__contacts-social">
+							<a href="#">
+								<img src="img/fb.svg">
+								<span>Facebook</span>
+							</a>
+							<a href="#">
+								<img src="img/vk.svg">
+								<span>Vkontakte</span>
+							</a>
+							<a href="#">
+								<img src="img/insta.svg">
+								<span>Instagram</span>
+							</a>
 						</div>
 					</div>
 				</div>
 				<div class="footer__bottom">
 					<div class="container">
-						<div class="footer__about">
-							<p>© Компания Frozen Marr, 2017 </p>
+						<div class="footer__bottom-item hidden-below-m">«Иващенко и Низамов» © 2013-2018</div>
+						<div class="footer__bottom-item hidden-below-m">Бесплатный
+							<a href="#">SEO-аудит</a> сайтов</div>
+						<div class="footer__bottom-item"> Дизайн сайта
+							<a class="footer__bottom-design" href="#">
+								<!--img(src="img/design.svg")-->
+							</a>
 						</div>
 					</div>
 				</div>

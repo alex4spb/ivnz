@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="875px" height="730px" viewBox="0 0 875 730" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M369.278207,786.566732 L271.650263,762.585091 C137.336796,729.591899 34.376971,632.538242 6.47906254,512.625121 C-21.5810656,392.014734 47.6691724,272.230189 173.936375,222.968386 L443.813633,117.678649 C565.994643,70.0110298 711.492689,103.515738 794.848861,198.513639 C877.28779,292.466192 897.189015,416.831831 846.99736,524.397162 L811.901907,599.609943 C740.984078,751.59337 551.949041,831.438583 369.278207,786.566732 Z" id="path-1"></path>
+        <filter x="-0.2%" y="-0.3%" width="100.5%" height="100.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="1.-Design-👀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.-Ivnz.-Main" transform="translate(-523.000000, -4044.000000)" fill-rule="nonzero">
+            <g id="Group-65" transform="translate(-65.000000, 2907.000000)">
+                <g id="Group-64" transform="translate(65.000000, 622.000000)">
+                    <g id="Group-20">
+                        <g id="Group-16" transform="translate(0.000000, 186.000000)">
+                            <g id="Group-7" transform="translate(523.000000, 260.000000)">
+                                <g id="Path-7">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <path stroke="#F78200" stroke-width="2" d="M369.516758,785.595603 C551.741961,830.357987 740.288518,750.7191 810.995707,599.187095 L846.091159,523.974315 C896.112191,416.774645 876.278714,292.832375 794.097199,199.173187 C711.021983,104.495482 565.970907,71.0936999 444.177091,118.61026 L174.299833,223.899996 C48.480992,272.986876 -20.4904923,392.289251 7.45305061,512.398522 C35.2623029,631.930574 137.928604,728.707544 271.888815,761.613961 L369.516758,785.595603 Z" stroke-linejoin="square"></path>
+                                </g>
+                                <path d="M73.5,463.794927 L73.5,374.400301 C73.5,251.413974 143.628544,139.217819 254.11482,85.4410953 C365.243547,31.3516729 498.924676,60.6034727 577.375552,156.176272 L745.052563,360.448832 C820.964653,452.928755 823.149649,585.598111 750.324186,680.53298 C678.300086,774.423195 561.543047,822.479936 444.37798,806.459241 L362.452787,795.257109 C196.905504,772.620819 73.5,631.060468 73.5,463.794927 Z" id="Path-7" fill="#193162" transform="translate(438.500000, 434.000000) rotate(-90.000000) translate(-438.500000, -434.000000) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

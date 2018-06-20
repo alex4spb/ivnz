@@ -7,6 +7,8 @@ block main
       .container
         .header__content(data-aos="fade-in" data-aos-delay="700")
           h1 Кейсы  
+        .greyline(data-aos="fade-in")
+        .greycircle(data-aos="fade-in")
     section.cases__list  
       .cases__list-item
         .container
@@ -18,13 +20,14 @@ block main
           .cases__list-item-info
             .cases__list-item-info-item
               .cases__list-item-info-text 
-                | За 4 месяца подняли результаты выдачи по запросам до
+                | За 4 месяца подняли #[br.hidden-below-m]результаты #[br.hidden-above-m]выдачи по#[br.hidden-below-m] запросам #[br.hidden-above-m]до 
                 span ТОП 20
               .cases__list-item-info-result < 20
             .cases__list-item-info-item 
               .cases__list-item-info-text 
-                | Видимость сайта в поисковых системах увеличина с 0 до 89%
+                | Видимость сайта в#[br.hidden-below-m] поисковых#[br.hidden-above-m] системах#[br.hidden-below-m] увеличина с 0 до 89%
               .cases__list-item-info-result + 89%
+          a.cases__list-item-button(href="#") Посмотреть отчет
       .cases__list-item
         .container
           .cases__list-item-title
@@ -34,13 +37,15 @@ block main
             img(src="temp/cases_2.svg")
           .cases__list-item-info
             .cases__list-item-info-item 
-              .cases__list-item-info-text За 2,5 года работ вывели результаты выдачи по запросам до #[span ТОП 2] в Google
+              .cases__list-item-info-text За 2,5 года работ вывели #[br]результаты выдачи по запросам #[br]до #[span ТОП 2] в Google
               .cases__list-item-info-result < 2
             .cases__list-item-info-item
-              .cases__list-item-info-text Количество заказов на сайте увеличилось в 14,5 раз
+              .cases__list-item-info-text Количество заказов#[br.hidden-below-m] на сайте #[br.hidden-above-m]увеличилось#[br.hidden-below-m] в 14,5 раз
               .cases__list-item-info-result * 14,5
+          a.cases__list-item-button(href="#") Посмотреть отчет
       .cases__list-item
         .container
+          .blueline(data-aos="fade-in")
           .cases__list-item-title
             a.h2(href="#") linguacontact.com
             .cases__list-item-title-date 2 февраля 2018
@@ -48,13 +53,14 @@ block main
             img(src="temp/cases_3.svg")
           .cases__list-item-info
             .cases__list-item-info-item
-              .cases__list-item-info-text Средняя позиция сайта в поисковой выдаче увеличилась в 4,7 раз
+              .cases__list-item-info-text Средняя позиция сайта #[br.hidden-below-m]в поисковой #[br.hidden-above-m]выдаче #[br.hidden-below-m]увеличилась в 4,7 раз
               .cases__list-item-info-result * 4,7
             .cases__list-item-info-item
-              .cases__list-item-info-text Ежемесячный трафик с начала продвижения увеличился на 71%
+              .cases__list-item-info-text Ежемесячный трафик #[br.hidden-below-m]с начала #[br.hidden-above-m]продвижения #[br.hidden-below-m]увеличился на 71%
               .cases__list-item-info-result + 71%
+          a.cases__list-item-button(href="#") Посмотреть отчет
 
-    
-    //+audit-form()              
-          
+    .disqus_thread                            
+
+    +audit-form()                   
   
