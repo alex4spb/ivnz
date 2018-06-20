@@ -4,13 +4,13 @@ include /audit-form
 block main
   .cases
     section.header(data-aos="fade-in")
-      .container
+      .container               
         .header__content(data-aos="fade-in" data-aos-delay="700")
           h1 Кейсы  
         .greyline(data-aos="fade-in")
         .greycircle(data-aos="fade-in")
-    section.cases__list  
-      .cases__list-item
+    section.cases__list
+      .cases__list-item(data-aos="fade-in")
         .container
           .cases__list-item-title
             a.h2(href="#") натяжные потолки
@@ -28,7 +28,7 @@ block main
                 | Видимость сайта в#[br.hidden-below-m] поисковых#[br.hidden-above-m] системах#[br.hidden-below-m] увеличина с 0 до 89%
               .cases__list-item-info-result + 89%
           a.cases__list-item-button(href="#") Посмотреть отчет
-      .cases__list-item
+      .cases__list-item(data-aos="fade-in")
         .container
           .cases__list-item-title
             a.h2(href="#") top3dshop.ru
@@ -43,7 +43,7 @@ block main
               .cases__list-item-info-text Количество заказов#[br.hidden-below-m] на сайте #[br.hidden-above-m]увеличилось#[br.hidden-below-m] в 14,5 раз
               .cases__list-item-info-result * 14,5
           a.cases__list-item-button(href="#") Посмотреть отчет
-      .cases__list-item
+      .cases__list-item(data-aos="fade-in")
         .container
           .blueline(data-aos="fade-in")
           .cases__list-item-title
@@ -59,8 +59,6 @@ block main
               .cases__list-item-info-text Ежемесячный трафик #[br.hidden-below-m]с начала #[br.hidden-above-m]продвижения #[br.hidden-below-m]увеличился на 71%
               .cases__list-item-info-result + 71%
           a.cases__list-item-button(href="#") Посмотреть отчет
-
-    .disqus_thread                            
 
     +audit-form()                   
   

@@ -434,7 +434,7 @@ gulp.task('sprite', () => {
 
 gulp.task("build", () => {
   runSequence(
-    ["img", "vendor"],
+    ["img", "vendor", "temp"],
     ["css:min", "modals", "js"],
     ["js:bundle", "html"],
     ['sprite']

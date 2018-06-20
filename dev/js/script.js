@@ -218,18 +218,18 @@ jQuery(document).ready(function($) {
                 });
             }
         });
-    })
+    });
     /*Комментарии Настройки disqus*/
-    var disqus_config = function () {
-      this.page.url = '<?php echo get_permalink(); ?>';
-      this.page.identifier = '<?php echo dsq_identifier_for_post($post); ?>'; 
+
+    if (document.getElementById("disqus_thread")) {
+        var your_sub_domain = "ivnz"; // Имя зарегистрированного сайта на disqus
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + your_sub_domain + ".disqus.com/embed.js";
+        (
+            document.getElementsByTagName("head")[0] ||
+            document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
     }
-    $(function() {
-        // DON'T EDIT BELOW THIS LINE
-        var d = document,
-            s = d.createElement("script");
-        s.src = "https://ivnz.disqus.com/embed.js";
-        s.setAttribute("data-timestamp", +new Date());
-        (d.head || d.body).appendChild(s);
-    })
 });
