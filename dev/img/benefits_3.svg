@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="69px" viewBox="0 0 80 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 249</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-379.000000, -770.000000)">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-349" transform="translate(0.000000, 612.000000)">
+                    <g id="Group-249" transform="translate(274.000000, 67.000000)">
+                        <g id="Group-243">
+                            <g id="Group-251">
+                                <rect id="Rectangle-34" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="1" y="10" width="78" height="58" rx="6"></rect>
+                                <rect id="Rectangle-34" stroke="#000000" stroke-width="2" fill="#FFFBF7" x="1" y="7" width="78" height="53" rx="6"></rect>
+                                <polyline id="Path-24" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="10 42.9482422 32.0200246 32.9580078 42.6888274 40.2548828 68.7900391 28"></polyline>
+                                <path d="M24.9459459,25.4947496 L33.2577829,22 L33.4594595,22 L58,22 C59.6568542,22 61,20.6568542 61,19 L61,8 C61,6.34314575 59.6568542,5 58,5 L22,5 C20.3431458,5 19,6.34314575 19,8 L19,19 C19,20.6568542 20.3431458,22 22,22 L24.9459459,22 L24.9459459,25.4947496 Z" id="Combined-Shape" stroke="#222222" stroke-width="2" fill="#3C7FFF"></path>
+                                <path d="M24.9459459,21.4947496 L33.2577829,18 L33.4594595,18 L58,18 C59.6568542,18 61,16.6568542 61,15 L61,4 C61,2.34314575 59.6568542,1 58,1 L22,1 C20.3431458,1 19,2.34314575 19,4 L19,15 C19,16.6568542 20.3431458,18 22,18 L24.9459459,18 L24.9459459,21.4947496 Z" id="Combined-Shape" stroke="#000000" stroke-width="2" fill="#F78200"></path>
+                                <path d="M22,3 L58,3" id="Path-33" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M25.8222222,7 L54.2022214,7" id="Path-15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M25.8222222,12 L54.2022214,12" id="Path-15" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <rect id="Rectangle-48" fill="#000000" x="1" y="51" width="79" height="2"></rect>
+                            </g>
+                        </g>
+                        <g id="Group-242" transform="translate(10.000000, 28.000000)">
+                            <g id="Group-202">
+                                <g id="Group-245"></g>
+                            </g>
+                        </g>
+                        <g id="Group-244" transform="translate(18.000000, 0.000000)">
+                            <g id="Group-246">
+                                <g id="Group-247"></g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

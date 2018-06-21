@@ -1,0 +1,52 @@
+extends /layout
+include /audit-form
+
+block main
+  .vacancy
+    section.header(data-aos="fade-in")
+      .container               
+        .header__content(data-aos="fade-in" data-aos-delay="500")
+          h1 вакансии 
+        .greyline(data-aos="fade-in")
+        .greycircle(data-aos="fade-in")
+    section.vacancy__list
+      .container
+        .vacancy__list-title Актуальные вакансии 
+        a.vacancy__list-item(href="#") Стажер SEO-специалист
+        a.vacancy__list-item(href="#") PHP developer 
+    section.vacancy__talants
+      .container
+        .vacancy__talants-about
+          h2 Ищем таланты
+          .vacancy__talants-text
+            p Мы всегда находимся в поиске талантов. #[br]Взгляни, возможно ты именно тот, кого мы ждали!
+            p У нас есть много аргументов почему работать у нас — #[br]это хорошо ☝️  
+          .vacancy__talants-benefits
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_1.svg")
+              | Офис, полный рабочий день в Санкт-Петербурге, #[br]надо выкладываться на 200%
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_2.svg")
+              | Полностью белая заработная плата, #[br]расширенный соц.пакет (ДМС)
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_3.svg")
+              | Мы реально приносим пользу клиентам, #[br]а не изобретаем способы их обмана
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_4.svg")
+              | У нас есть чему вас научить, #[br]и мы готовы этим заниматься
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_5.svg")
+              | Мы берём адекватную оплату за свою работу #[br]и умеем ценить наших сотрудников
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_6.svg")
+              | Небольшой, но очень сильный коллектив. #[br]Нам можно доверять
+        .vacancy__talants-slider
+          .swiper-wrapper
+            .swiper-slide 
+                img(src="temp/talant_1.png")
+            .swiper-slide
+                img(src="temp/talant_2.png")
+            .swiper-slide
+                img(src="temp/talant_1.png")
+
+  

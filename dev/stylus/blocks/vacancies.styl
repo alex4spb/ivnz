@@ -1,0 +1,228 @@
+.vacancy
+  .header  
+    background-color #212B41
+    +a($m)
+      min-height 310px
+    +b($m)
+      min-height 174px
+      padding 0 20px 
+    &__content
+      max-width 772px
+      text-align left
+      +a($m)
+        padding-top 180px
+      +b($m)
+        padding-top 96px
+      h1
+        text-transform uppercase  
+        margin 0px
+    .greyline
+      position absolute
+      +a($m)
+        top 270px
+        background rgba(216, 216, 216, 0.1)
+        left 50% 
+      +b($m)
+        top 155px
+        background #3B7EFF
+        left 0
+      &.active
+        +a($m)     
+          height 100px
+        +b($m)
+          height 40px
+    .greycircle
+      position absolute
+      background #EBEBEB
+      +a($d)
+        top 201px
+        right -95px
+      +btw($m, $d)
+        top 201px
+        right 0
+      +b($m)
+        top 96px  
+        right 0
+      &:before
+        background transparent
+        border 2px solid #EBEBEB
+        +a($m)
+          width 12px
+          height 12px
+          top auto
+          bottom -16px
+          left -7px
+        +b($m)
+          width 6px
+          height 6px
+          top auto
+          bottom -10px
+          left -4px 
+      &.active
+        +a($m)     
+          height 170px
+        +b($m)
+          height 90px  
+  &__list
+    +a($m)
+      padding-top 46px
+    +b($m)
+      padding-top 30px
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    &-title
+      line-height 30px
+      color rgba(0, 0, 0, .3)
+      +a($m)
+        text-transform uppercase
+        font-size 18px
+        margin-bottom 20px
+      +b($m)
+        font-size 14px
+        margin-bottom 10px
+    &-item
+      display block
+      color #000000
+      border-bottom 1px solid #EEEEEE
+      text-transform uppercase
+      font-weight bold
+      border-top 1px solid #EEEEEE
+      +a($m)
+        height 129px
+        line-height 129px
+        font-size 40px
+      +b($m)
+        height 51px
+        line-height 51px
+        font-size 18px
+      & + &
+        border-top none
+      &:hover
+        color #3B7EFF
+        text-decoration none
+  &__talants
+    color #000000
+    margin-top 120px
+    position relative
+    h2
+      text-transform uppercase
+      margin-bottom 40px
+    &-text
+      font-size 16px
+      line-height 28px
+      font-family "Proxima Nova"
+      width 516px
+      margin-bottom 40px
+      p + p 
+        padding-top 28px
+    &-benefits
+      &-item 
+        padding-left 100px
+        position relative
+        font-weight bold
+        font-size 16px
+        line-height 22px
+        padding 27.5px 0 27.5px 100px
+        img 
+          position absolute
+          bottom 19px
+          left 0
+        &:first-child
+          img 
+            left -10px
+    &-about
+      width 516px
+      display inline-block
+    &-slider
+      display inline-block
+      width 556px
+      height 720px
+      position relative
+      margin-right -20%
+      margin-top 102px
+  $time = 500ms
+  $delay = $time/2
+  $mode = linear//cubic-bezier(.17, .67, .55, 1.43)
+  .swiper-wrapper 
+    width 600px
+    .swiper-slide
+      transition $time $mode
+      border-radius 10px
+      position relative
+      &:after
+        content ''
+        display block
+        width 100%
+        height 100%
+        border-radius 10px
+        background #1F2D4F
+        opacity 0
+        position absolute
+        top 0
+        left 0
+        transition $time $mode
+      &:before
+        content ''
+        display block
+        width 100%
+        height 100%
+        border-radius 10px
+        background #1F2D4F
+        opacity 0
+        background-image linear-gradient(61deg, #141414 1%, #4A4A4A 100%)
+        position absolute
+        top 0
+        left 0
+        transition $time $mode
+      img 
+        position relative
+        transition $time $mode
+        opacity 0
+        box-sizing border-box
+        +a($m)
+          border-radius 10px
+          width 100%
+        +b($m) 
+          border-radius 6px    
+          width calc(100% - 20px) 
+      &.swiper-slide-prev
+        z-index: 1;
+        opacity: 0;
+        &:before
+        &:after
+          opacity: 0;
+          transform: translateX(8%) scale(.89);
+        img 
+          opacity: 0;
+          transform: translateX(8%) scale(.89);
+      &.swiper-slide-next
+        z-index 1
+        opacity .3
+        &:before
+        &:after
+          +a($m)
+            transform translateX(-80%) scale(.89)
+          +b($m)
+            transform translateX(-80%) scale(.846) translateY(3%)
+        img 
+          opacity 1
+          +a($m)
+            transform translateX(-80%) scale(.89)
+          +b($m)
+            transform translateX(-80%) scale(.846) translateY(3%)
+      &.swiper-slide-active 
+        z-index 2        
+        &:before
+        &:after
+          opacity 0.5
+        img 
+          opacity 1
+          transform translateX(0%) scale(1)
+        span 
+          display block   
+        
+  
+        
+        

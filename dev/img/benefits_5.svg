@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="75px" viewBox="0 0 80 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 275</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="9.5" cy="9.5" r="9.5"></circle>
+        <circle id="path-3" cx="9.5" cy="9.5" r="9.5"></circle>
+    </defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-250.000000, -879.000000)">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-349" transform="translate(0.000000, 612.000000)">
+                    <g id="Group-275" transform="translate(145.000000, 176.000000)">
+                        <g id="Group-263">
+                            <g id="Group-261">
+                                <g id="Group-224" transform="translate(0.000000, 12.000000)" stroke="#222222" stroke-width="2">
+                                    <rect id="Rectangle-34" fill="#EEDAC7" x="1" y="4" width="78" height="58" rx="6"></rect>
+                                    <rect id="Rectangle-34" fill="#FFFBF7" x="1" y="1" width="78" height="53" rx="6"></rect>
+                                </g>
+                                <rect id="Rectangle-65" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="12" y="23" width="35" height="4" rx="2"></rect>
+                                <rect id="Rectangle-65" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="12" y="31" width="35" height="4" rx="2"></rect>
+                                <g id="Group-235" transform="translate(37.000000, 0.000000)">
+                                    <path d="M41,14 L41,65 C41,68.3137085 38.3137085,71 35,71 L6,71 C2.6862915,71 4.05812251e-16,68.3137085 0,65 L0,14 L41,14 Z" id="Combined-Shape" fill="#B09981" opacity="0.699999988" style="mix-blend-mode: multiply;"></path>
+                                    <rect id="Rectangle-62" stroke="#000000" stroke-width="2" fill="#FFFBF7" x="3" y="1" width="39" height="67" rx="6"></rect>
+                                    <g id="Group-262" transform="translate(10.000000, 41.000000)" fill="#FFFBF7" stroke="#000000" stroke-width="2">
+                                        <rect id="Rectangle-42" x="7" y="9" width="11" height="4" rx="1"></rect>
+                                        <rect id="Rectangle-42" x="1" y="1" width="23" height="4" rx="1"></rect>
+                                    </g>
+                                    <g id="Group-239" transform="translate(10.000000, 12.000000)"></g>
+                                    <g id="Group-234" transform="translate(12.000000, 39.000000)">
+                                        <g id="Group-233">
+                                            <g id="Group-232">
+                                                <g id="Group-240"></g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="Group-231" transform="translate(50.000000, 17.000000)">
+                                <g id="Group-228">
+                                    <g id="Group-161-Copy">
+                                        <g id="Group-160">
+                                            <mask id="mask-2" fill="white">
+                                                <use xlink:href="#path-1"></use>
+                                            </mask>
+                                            <use id="Mask" fill="#3C7FFF" xlink:href="#path-1"></use>
+                                            <g mask="url(#mask-2)" fill="#FFFBF7" stroke="#000000" stroke-width="2">
+                                                <g transform="translate(1.000000, 4.000000)">
+                                                    <path d="M8.4968825,8.51560134 C12.88088,8.51560134 15.7587466,12.2563634 17.5997792,16.0263672 L0.439428863,16.0263672 C2.8883996,11.01919 5.57421748,8.51560134 8.4968825,8.51560134 Z" id="Path-18"></path>
+                                                    <ellipse id="Oval-13" cx="8.5" cy="5" rx="3.5" ry="4"></ellipse>
+                                                </g>
+                                            </g>
+                                        </g>
+                                        <mask id="mask-4" fill="white">
+                                            <use xlink:href="#path-3"></use>
+                                        </mask>
+                                        <use id="Mask" stroke="#000000" stroke-width="2" xlink:href="#path-3"></use>
+                                        <path d="M12.8445629,2.92535791 C11.8674429,2.33786366 10.7231776,2 9.5,2 C8.358473,2 7.28567466,2.29426242 6.35332187,2.8110704" id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-4)"></path>
+                                    </g>
+                                </g>
+                            </g>
+                            <g id="Group-119-Copy" transform="translate(8.000000, 40.000000)">
+                                <g id="Group-122">
+                                    <g id="Group-118" transform="translate(4.000000, 7.000000)" fill="#FFBD35" stroke="#000000" stroke-width="2">
+                                        <path d="M1,8.21645594 L1.15599322,8.4588864 C2.04894347,9.84662839 5.71839993,11 10,11 C14.2816001,11 17.9510565,9.84662839 18.8440068,8.4588864 L19,8.21645594 L19,6 L16.4432197,6 L16.2816519,5.94295893 C14.5801801,5.34225893 12.3615751,5 10,5 C7.63842485,5 5.41981988,5.34225893 3.7183481,5.94295893 L3.5567803,6 L1,6 L1,8.21645594 Z" id="Combined-Shape"></path>
+                                        <ellipse id="Oval-10" cx="10" cy="4" rx="9" ry="3"></ellipse>
+                                    </g>
+                                    <path d="M6,11.3600938 L17.2538597,9 C18.3609945,8.77920141 18.914562,9.42294618 18.914562,10.9312343 C18.914562,13.1936665 16.2507754,13.1936665 12.5,13.1936665 C9.9994831,13.1936665 7.83281643,12.5824756 6,11.3600938 Z" id="Path-16" fill="#7C5923" style="mix-blend-mode: multiply;"></path>
+                                    <g id="Group-120" stroke-width="2">
+                                        <path d="M1,8.21645594 L1.15599322,8.4588864 C2.04894347,9.84662839 5.71839993,11 10,11 C14.2816001,11 17.9510565,9.84662839 18.8440068,8.4588864 L19,8.21645594 L19,6 L16.4432197,6 L16.2816519,5.94295893 C14.5801801,5.34225893 12.3615751,5 10,5 C7.63842485,5 5.41981988,5.34225893 3.7183481,5.94295893 L3.5567803,6 L1,6 L1,8.21645594 Z" id="Combined-Shape" stroke="#000000" fill="#FFBD35"></path>
+                                        <ellipse id="Oval-10" stroke="#000000" fill="#FFBD35" cx="10" cy="4" rx="9" ry="3"></ellipse>
+                                        <path d="M15,4 C15,3.44771525 12.7614237,3 10,3 C7.23857625,3 5,3.44771525 5,4" id="Oval-10-Copy" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </g>
+                                </g>
+                                <g id="Group-118" transform="translate(3.000000, 0.000000)"></g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

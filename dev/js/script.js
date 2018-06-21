@@ -232,4 +232,17 @@ jQuery(document).ready(function($) {
             document.getElementsByTagName("body")[0]
         ).appendChild(dsq);
     }
+    /*Слайдер вакансий*/
+    new Swiper($(".vacancy__talants-slider"), {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+        centeredSlides: true,
+        loopedSlides: 2,
+        // Navigation arrows
+        navigation: false,
+        //autoplay: {
+        //  delay: 6000,
+        //},
+    });
 });

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="75px" viewBox="0 0 80 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 261</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="9.5" cy="9.5" r="9.5"></circle>
+        <circle id="path-3" cx="9.5" cy="9.5" r="9.5"></circle>
+    </defs>
+    <g id="2.-Graphics" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Graphics" transform="translate(-250.000000, -764.000000)">
+            <g id="Group" transform="translate(105.000000, 91.000000)">
+                <g id="Group-349" transform="translate(0.000000, 612.000000)">
+                    <g id="Group-261" transform="translate(145.000000, 61.000000)">
+                        <g id="Group-224" transform="translate(0.000000, 12.000000)" stroke="#222222" stroke-width="2">
+                            <rect id="Rectangle-34" fill="#EEDAC7" x="1" y="4" width="78" height="58" rx="6"></rect>
+                            <rect id="Rectangle-34" fill="#FFFBF7" x="1" y="1" width="78" height="53" rx="6"></rect>
+                        </g>
+                        <g id="Group-231" transform="translate(10.000000, 31.000000)">
+                            <g id="Group-228">
+                                <g id="Group-161-Copy">
+                                    <g id="Group-160">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <use id="Mask" fill="#3C7FFF" xlink:href="#path-1"></use>
+                                        <g mask="url(#mask-2)" fill="#FFFBF7" stroke="#000000" stroke-width="2">
+                                            <g transform="translate(1.000000, 4.000000)">
+                                                <path d="M8.4968825,8.51560134 C12.88088,8.51560134 15.7587466,12.2563634 17.5997792,16.0263672 L0.439428863,16.0263672 C2.8883996,11.01919 5.57421748,8.51560134 8.4968825,8.51560134 Z" id="Path-18"></path>
+                                                <ellipse id="Oval-13" cx="8.5" cy="5" rx="3.5" ry="4"></ellipse>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <mask id="mask-4" fill="white">
+                                        <use xlink:href="#path-3"></use>
+                                    </mask>
+                                    <use id="Mask" stroke="#000000" stroke-width="2" xlink:href="#path-3"></use>
+                                    <path d="M12.8445629,2.92535791 C11.8674429,2.33786366 10.7231776,2 9.5,2 C8.358473,2 7.28567466,2.29426242 6.35332187,2.8110704" id="Oval-10-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-4)"></path>
+                                </g>
+                            </g>
+                        </g>
+                        <path d="M29,13 L29,14 C29,16.7614237 31.2385763,19 34,19 L40,19 L40,13 L29,13 Z" id="Rectangle-64" stroke="#000000" stroke-width="2" fill="#EEDAC7"></path>
+                        <rect id="Rectangle-65" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="35" y="31" width="25" height="7" rx="2"></rect>
+                        <rect id="Rectangle-65" stroke="#000000" stroke-width="2" fill="#EEDAC7" x="35" y="43" width="25" height="7" rx="2"></rect>
+                        <g id="Group-235" transform="translate(37.000000, 0.000000)">
+                            <path d="M41,14 L41,65 C41,68.3137085 38.3137085,71 35,71 L6,71 C2.6862915,71 4.05812251e-16,68.3137085 0,65 L0,14 L41,14 Z" id="Combined-Shape" fill="#B09981" opacity="0.699999988" style="mix-blend-mode: multiply;"></path>
+                            <rect id="Rectangle-62" stroke="#000000" stroke-width="2" fill="#FFFBF7" x="3" y="1" width="39" height="67" rx="6"></rect>
+                            <g id="Group-239" transform="translate(10.000000, 12.000000)" stroke-width="2">
+                                <rect id="Rectangle-58" stroke="#000000" fill="#F78200" x="1" y="1" width="23" height="15" rx="4"></rect>
+                                <path d="M5,7 L5,10 L9,10 L9,7 L5,7 Z" id="Rectangle-59" stroke="#000000" fill="#FFFBF7"></path>
+                                <path d="M5,3 L20,3" id="Path-33" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                            <g id="Group-234" transform="translate(12.000000, 39.000000)" stroke-width="2">
+                                <g id="Group-233">
+                                    <g id="Group-232">
+                                        <g id="Group-240">
+                                            <path d="M18,8 L14,8 L14,4 C14,2.34314575 12.6568542,1 11,1 C9.34314575,1 8,2.34314575 8,4 L8,8 L4,8 C2.3970457,8 1,9.18558594 1,10 C1,12.5993086 2.16441764,14 4,14 L7,14 L8,14 L8,17 C8,18.6568542 9.34314575,20 11,20 C12.6568542,20 14,18.6568542 14,17 L14,14 L18,14 C18.7497841,14 20,12.7106234 20,12 C20,9.58745629 18.9140853,8 18,8 Z" id="Combined-Shape" stroke="#000000" fill="#EEDAC7"></path>
+                                            <path d="M12,3 L12,7.65045246" id="Path-32" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M13.5800781,9.9699707 L17.8056584,9.9699707" id="Path-34" stroke="#FFFFFF" opacity="0.5" style="mix-blend-mode: overlay;" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
