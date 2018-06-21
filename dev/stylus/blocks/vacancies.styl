@@ -104,58 +104,136 @@
         text-decoration none
   &__talants
     color #000000
-    margin-top 120px
     position relative
+    font-size 0
+    +a($m)
+      margin-top 120px
+    +b($m)
+      margin-top 50px
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
     h2
       text-transform uppercase
-      margin-bottom 40px
+      +a($m)
+        margin-bottom 40px
+      +b($m)
+        margin-bottom 20px
+        text-align center
     &-text
-      font-size 16px
-      line-height 28px
       font-family "Proxima Nova"
-      width 516px
       margin-bottom 40px
+      +a($m)
+        font-size 18px
+        line-height 28px
+        max-width 516px
+      +b($m)
+        font-size 16px
+        line-height 24px
+        text-align center
       p + p 
         padding-top 28px
     &-benefits
       &-item 
-        padding-left 100px
         position relative
         font-weight bold
-        font-size 16px
-        line-height 22px
-        padding 27.5px 0 27.5px 100px
+        +a($m)
+          padding 27.5px 0 27.5px 100px
+          font-size 16px
+          line-height 22px
+        +b($m)
+          margin-bottom 40px
+          text-align center
+          font-size 14px
+          line-height 20px
+          &:last-child
+            margin 0            
         img 
-          position absolute
-          bottom 19px
-          left 0
+          +a($m)
+            position absolute
+            left 0
+            bottom 19px
+          +b($m)
+            display block
+            margin 0 auto
+            margin-bottom 10px
         &:first-child
           img 
             left -10px
     &-about
-      width 516px
       display inline-block
-    &-slider
+      vertical-align top      
+      +a($m)
+        width 51.23%
+        padding-right 20px
+        box-sizing border-box
+      +b($m)
+        width 100%
+    &-sliders
       display inline-block
-      width 556px
-      height 720px
+      vertical-align top
       position relative
-      margin-right -20%
-      margin-top 102px
+      +a($m)
+        width 48.77%
+      +b($m)
+        width 100%
+        margin-top 50px
+      .greyline
+        position absolute
+        left 50% 
+        z-index 3
+        background rgba(216, 216, 216, .5)
+        +a($m)
+          display none
+        +b($m)
+          top -25px
+          left 50%
+        &.active
+          +b($m)
+            height 50px
+      .orangecircle
+        position absolute
+        z-index 3
+        +a($m)
+          display none
+        +b($m)
+          top -19px  
+          right 20px
+        &.active
+          +b($m)
+            height 71px  
+    &-slider
+      display block
+      width 100%  
+      max-width 556px    
+      height 0
+      padding-bottom 129.5%
+      position relative
+      overflow hidden
+      +a($m)
+        margin-top 102px
+        margin-right -20%
+        padding-right 20%
+      +b($m)
+        margin 0 auto
   $time = 500ms
   $delay = $time/2
   $mode = linear//cubic-bezier(.17, .67, .55, 1.43)
   .swiper-wrapper 
-    width 600px
+    width 100%
     .swiper-slide
       transition $time $mode
       border-radius 10px
       position relative
+      width 100%
+      opacity 0
       &:after
         content ''
         display block
         width 100%
-        height 100%
+        height 0
+        padding-bottom 129.5%
         border-radius 10px
         background #1F2D4F
         opacity 0
@@ -163,11 +241,14 @@
         top 0
         left 0
         transition $time $mode
+        z-index 3
       &:before
         content ''
         display block
+        max-width 556px 
         width 100%
-        height 100%
+        height 0
+        padding-bottom 129.5%
         border-radius 10px
         background #1F2D4F
         opacity 0
@@ -176,17 +257,17 @@
         top 0
         left 0
         transition $time $mode
+        z-index 3
       img 
         position relative
         transition $time $mode
         opacity 0
         box-sizing border-box
+        width 100%
         +a($m)
           border-radius 10px
-          width 100%
         +b($m) 
-          border-radius 6px    
-          width calc(100% - 20px) 
+          border-radius 6px 
       &.swiper-slide-prev
         z-index: 1;
         opacity: 0;
@@ -199,21 +280,26 @@
           transform: translateX(8%) scale(.89);
       &.swiper-slide-next
         z-index 1
-        opacity .3
+        +a($m)
+          opacity .3
+        +b($m)
+          opacity 0
         &:before
         &:after
+          opacity .5
           +a($m)
-            transform translateX(-80%) scale(.89)
+            transform translateX(-85.5%) scale(.89)
           +b($m)
-            transform translateX(-80%) scale(.846) translateY(3%)
+            transform translateX(-85.5%) scale(.846) translateY(3%)
         img 
           opacity 1
           +a($m)
-            transform translateX(-80%) scale(.89)
+            transform translateX(-85.5%) scale(.89)
           +b($m)
-            transform translateX(-80%) scale(.846) translateY(3%)
+            transform translateX(-85.5%) scale(.846) translateY(3%)
       &.swiper-slide-active 
-        z-index 2        
+        z-index 2 
+        opacity 1       
         &:before
         &:after
           opacity 0.5
@@ -222,6 +308,41 @@
           transform translateX(0%) scale(1)
         span 
           display block   
+  &__require
+    color #000000
+    margin-top 120px
+    h2
+      text-transform uppercase
+      margin-bottom 40px
+    p
+      line-height 28px
+      font-size 18px
+      font-family "Proxima Nova"      
+    .greyline
+      position absolute
+      left 50% 
+      z-index 3
+      background rgba(216, 216, 216, .5)
+      +a($m)
+        top -79px
+        left 50%
+      +b($m)
+        display none
+      &.active
+        +a($m)
+          height 100px
+        +b($m)
+          height 50px
+    &-list
+      margin-top 40px
+      font-size 0
+      &-item
+        width calc(100%/3)
+        display inline-block
+        line-height 32px
+        font-size 18px
+        font-family "Proxima Nova"  
+        
         
   
         
