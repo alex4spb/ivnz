@@ -6,11 +6,11 @@ block main
     section.header(data-aos="fade-in")
       .container               
         .header__content(data-aos="fade-in" data-aos-delay="500")
-          h1 вакансии 
-        .greyline(data-aos="fade-in")
-        .greycircle(data-aos="fade-in")
+          h1 вакансии
     section.vacancy__list(data-aos="fade-in" data-aos-delay="500")
-      .container
+      .container 
+        .blueline(data-aos="fade-in")
+        .greycircle(data-aos="fade-in")
         .vacancy__list-title Актуальные вакансии 
         a.vacancy__list-item(href="#") Стажер SEO-специалист
         a.vacancy__list-item(href="#") PHP developer 
@@ -51,7 +51,7 @@ block main
                   img(src="temp/talant_2.png")
               .swiper-slide
                   img(src="temp/talant_1.png")
-    section.vacancy__require
+    section.vacancy__require(data-aos="fade-in")
       .container
         .greyline(data-aos="fade-in")
         h2 Что мы требуем?
@@ -60,6 +60,14 @@ block main
           .vacancy__require-list-item Привычка делать всё вовремя
           .vacancy__require-list-item Умение слушать и слышать
           .vacancy__require-list-item Умение формулировать мысль
+    section.vacancy__changes(data-aos="fade-in")
+      .container
+        .blueline(data-aos="fade-in")
+        .greyline(data-aos="fade-in")
+        .orangeline(data-aos="fade-in")
+        .vacancy__changes-title(data-aos="fade-in" data-aos-delay="500") Мы меняем рынок, #[br]добро пожаловать #[br.hidden-above-m]к нам на борт#[br] #[span 👐🏻]
+
+
 
 
   

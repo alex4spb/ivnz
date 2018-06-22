@@ -1,0 +1,81 @@
+extends /layout
+include /vacancy-form
+
+block main
+  .vacancy
+    section.header(data-aos="fade-in")
+      .container               
+        .header__content(data-aos="fade-in" data-aos-delay="500")
+          a.backurl(href="") вакансии            
+          h1 Стажер #[br.hidden-above-m]SEO-специалист
+    section.vacancy__about(data-aos="fade-in" data-aos-delay="500")    
+      .container  
+        .blueline(data-aos="fade-in")
+        .greycircle(data-aos="fade-in")
+        .vacancy__about-text(data-aos="fade-in")
+          p В связи с расширением деятельности приглашаем талантливого сотрудника на должность помощника SEO-специалиста / стажёра. #[br]Нужно быть готовым к интенсивному обучению, разнообразным задачам, в т.ч. и рутинным. 
+        .vacancy__about-list(data-aos="fade-in")
+          h2 мы ждем от вас
+          .vacancy__about-list-items
+            .vacancy__about-list-item аналитический склад ума, любовь к цифрам;
+            .vacancy__about-list-item хорошая эрудиция и понимание основных принципов работы поисковых систем;
+            .vacancy__about-list-item желание интенсивно работать полный рабочий день в молодом и грамотном коллективе;
+            .vacancy__about-list-item хорошее владение письменным русским языком, умение выражать свои мысли;
+            .vacancy__about-list-item знание что такое HTML+CSS, для чего оно надо, умение отличить  &lt;ul&gt; от &lt;ol&gt;;
+            .vacancy__about-list-item опыт взаимодействия с популярными CMS (на уровне администратора: модули, шаблоны) будет жирным плюсом.
+        .vacancy__about-list(data-aos="fade-in")
+          .greyline(data-aos="fade-in")
+          .bluecircle(data-aos="fade-in")
+          h2 обязанности
+          .vacancy__about-list-items
+            .vacancy__about-list-item составление семантического ядра и коммерческих предложений
+            .vacancy__about-list-item анализ тематики, конкурентов
+            .vacancy__about-list-item составление технических заданий для копирайтера
+            .vacancy__about-list-item приём, контроль, размещение контента
+            .vacancy__about-list-item контроль и коррекция стратегии продвижения
+    section.vacancy__talants
+      .container
+        .greyline(data-aos="fade-in")
+        .vacancy__talants-about(data-aos="fade-in")
+          h2 наши преимущества
+          .vacancy__talants-benefits
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_1.svg")
+              | Офис, полный рабочий день в Санкт-Петербурге, #[br.hidden-below-m]надо выкладываться на 200%
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_2.svg")
+              | Полностью белая заработная плата, #[br.hidden-below-m]расширенный соц.пакет (ДМС)
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_3.svg")
+              | Мы реально приносим пользу клиентам, #[br.hidden-below-m]а не изобретаем способы их обмана
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_4.svg")
+              | У нас есть чему вас научить, #[br.hidden-below-m]и мы готовы этим заниматься
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_5.svg")
+              | Мы берём адекватную оплату за свою работу #[br.hidden-below-m]и умеем ценить наших сотрудников
+            .vacancy__talants-benefits-item 
+              img(src="img/benefits_6.svg")
+              | Небольшой, но очень сильный коллектив. #[br.hidden-below-m]Нам можно доверять
+        .vacancy__talants-sliders
+          .greyline(data-aos="fade-in")
+          .orangecircle(data-aos="fade-in")
+          .vacancy__talants-slider(data-aos="fade-in" data-aos-delay="500")
+            .swiper-wrapper
+              .swiper-slide 
+                  img(src="temp/talant_1.png")
+              .swiper-slide
+                  img(src="temp/talant_2.png")
+              .swiper-slide
+                  img(src="temp/talant_1.png")   
+      .container
+        .vacancy__about-list(data-aos="fade-in")
+          .greyline(data-aos="fade-in")
+          h2 условия
+          .vacancy__about-list-items
+            .vacancy__about-list-item Работа в офисе в Санкт-Петербурге, метро Пролетарская. С ПН по ПТ с 09:00 до 18:00
+            .vacancy__about-list-item Зарплата на время стажировки: 25 000 рублей в месяц. Стажировка — 3 месяца
+            .vacancy__about-list-item После прохождения стажировки — от 35 000 рублей
+    +vacancy-form()
+
+  

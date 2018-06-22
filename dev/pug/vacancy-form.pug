@@ -1,0 +1,47 @@
+include /input
+
+mixin vacancy-form(param)
+  section.vacancy-form(data-aos="fade-in")
+    .container
+      .blueline(data-aos="fade-in")
+      .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
+      h2.audit-form__title Откликнуться на вакансию
+        span Стажер SEO-специалист
+      .audit-form__subtitle Просьба откликаться на вакансию, а не звонить в офис.
+        | К отклику напишите пару слов о себе, и почему вам интересно это направление
+        | Мы пригласим вас на собеседование, если ваше резюме нам подойдёт 👋
+      .audit-form__form(data-aos="fade-in" data-aos-delay="800")
+        .audit-form__form-legend Общие сведения
+        form.form.js-form-ajax(action="json/form-success.json", method="post")
+          .form__container
+            .form__field.-whole
+              +input({
+                name: 'name',
+                placeholder: 'Имя'
+              })
+              +input({
+                name: 'url',
+                placeholder: 'Ссылка на резюме'
+              })
+              +input({
+                type: 'tel',
+                name: 'phone',
+                placeholder: 'Телефон'
+              })
+              +input({                  
+                tag: 'textarea',
+                name: 'mail',
+                placeholder: 'Сопроводительное письмо'
+              })
+              label.control-label
+                .control-label__input
+                  .control
+                    input(type='checkbox', name='manager', value='1', checked='checked')
+                    .control__box
+                      img(src="img/checkmark.svg")
+                    .control__value
+                      span.control__value-text Я согласен с условиями передачи информации
+              button.form__button Далее
+
+
+    

@@ -204,8 +204,30 @@ img
     cursor help
   html.mobile &
     cursor pointer
-.new-site-hidden
-  display none !important
+  
+.backurl
+  font-size 14px
+  display block
+  line-height 16px
+  font-weight bold
+  padding-left 19px
+  text-transform uppercase
+  position relative
+  vertical-align middle
+  text-decoration none
+  color #3C7FFF  
+  &:before
+    content ''
+    display block
+    position absolute
+    width 6px
+    height 10px
+    background url('img/left-arrow.svg')
+    background-size 100%    
+    top 50%
+    transform translateY(-50%)
+    left 0
+    
 /*lines*/
 .greyline
   width 2px
