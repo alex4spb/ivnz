@@ -153,7 +153,7 @@ html:after {
 
 body {
   font: 14px/1.571429em "TT Rounds", Helvetica, Arial, sans-serif;
-  color: #000;
+  color: #fff;
 }
 
 button {
@@ -718,17 +718,11 @@ html.no-mobile .about__people-list-item:hover .about__people-list-item-img:after
   transition-property: all;
 }
 
-.about__people-list-item-img > .svg {
+.about__people-list-item-img .svg {
   width: 299px;
   height: 309px;
   text-align: center;
   position: relative;
-  position: relative;
-}
-
-.about__people-list-item-img > .svg image {
-  position: absolute;
-  bottom: 0;
 }
 
 .about__people-list-item:nth-child(3n-1) .about__people-list-item-img:after {
@@ -1864,10 +1858,6 @@ html.no-mobile .footer__bottom-design:hover:after {
   -webkit-transition: border-color 0.2s, 0.2s, 0.2s;
   transition: border-color 0.2s, 0.2s, 0.2s;
   background-color: #fff;
-  /*+a($m)
-    min-height 60px
-  +b($m)
-    min-height 50px*/
 }
 
 .input + .input {

@@ -285,7 +285,9 @@ jQuery(document).ready(function($) {
                 controls: ['zoomControl']
             });
 
-
+         MyBalloonShadowLayout = ymaps.templateLayoutFactory.createClass(
+            '<div class="contacts__map-fullshadow">' +
+                '</div>')
         // Создание макета балуна на основе Twitter Bootstrap.
         MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
             '<div class="popover top">' +
@@ -425,6 +427,7 @@ jQuery(document).ready(function($) {
                 iconImageOffset: [-17, -17],
                 hideIconOnBalloonOpen: false,
                 balloonShadow: true,
+                balloonShadowLayout: MyBalloonShadowLayout,
                 balloonLayout: MyBalloonLayout,
                 balloonContentLayout: MyBalloonContentLayout,
                 balloonPanelMaxMapArea: 0

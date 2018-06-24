@@ -28,10 +28,6 @@
   -webkit-transition: border-color 0.2s, 0.2s, 0.2s;
   transition: border-color 0.2s, 0.2s, 0.2s;
   background-color: #fff;
-/*+a($m)
-    min-height 60px
-  +b($m)
-    min-height 50px*/
 }
 .input + .input {
   margin-top: 15px;
