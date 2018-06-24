@@ -18,71 +18,6 @@
             transform: rotate(360deg);
   }
 }
-.greyline {
-  width: 2px;
-  height: 0px;
-  background-color: rgba(216,216,216,0.1);
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.blueline {
-  width: 2px;
-  height: 0px;
-  background-color: #3b7eff;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.orangecircle {
-  width: 2px;
-  height: 0px;
-  background-color: #fd933b;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.orangecircle:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border: 2px solid #fd933b;
-  border-radius: 16px;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-}
-@media only screen and (min-width: 768px) {
-  .orangecircle:before {
-    width: 12px;
-    height: 12px;
-    bottom: -16px;
-    left: -7px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .orangecircle:before {
-    width: 6px;
-    height: 6px;
-    bottom: -10px;
-    left: -4px;
-  }
-}
-.orangeline {
-  width: 2px;
-  height: 0px;
-  background-color: #fd933b;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
 .input {
   border: none;
   border-radius: 2px;
@@ -93,16 +28,10 @@
   -webkit-transition: border-color 0.2s, 0.2s, 0.2s;
   transition: border-color 0.2s, 0.2s, 0.2s;
   background-color: #fff;
-}
-@media only screen and (min-width: 768px) {
-  .input {
-    height: 60px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .input {
-    height: 50px;
-  }
+/*+a($m)
+    min-height 60px
+  +b($m)
+    min-height 50px*/
 }
 .input + .input {
   margin-top: 15px;
@@ -114,78 +43,78 @@
   background: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: calc(100% + 4px);
-  position: absolute;
-  z-index: 1;
+  width: 100%;
+  position: relative;
   outline: none;
-  left: -2px;
-  padding: 0 17px;
+  padding: 0 15px;
+  z-index: 1;
+  border-radius: 2px;
 }
 @media only screen and (min-width: 768px) {
   .input input,
   .input textarea {
     font-size: 18px;
+    border-top: 25px solid #fff;
+    line-height: 24px;
   }
 }
 @media only screen and (max-width: 767px) {
   .input input,
   .input textarea {
     font-size: 16px;
+    border-top: 21px solid #fff;
+    line-height: 20px;
   }
 }
 .input input::-ms-clear,
 .input textarea::-ms-clear {
   display: none;
 }
-.input input {
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  top: -2px;
-  z-index: 2;
-}
-@media only screen and (min-width: 768px) {
-  .input input {
-    height: 64px;
-    padding-top: 25px;
-    line-height: 24px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .input input {
-    height: 54px;
-    padding-top: 21px;
-    line-height: 20px;
-  }
-}
-.input input:-webkit-autofill {
+.input input:-webkit-autofill,
+.input textarea:-webkit-autofill {
   -webkit-text-fill-color: #000;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
   background: none;
 }
-.input input:focus {
-  border: 2px solid #f78200;
-  padding-left: 15px;
+.input input:focus,
+.input textarea:focus {
+  -webkit-box-shadow: 0 0 0 2px #f78200;
+          box-shadow: 0 0 0 2px #f78200;
 }
 @media only screen and (min-width: 768px) {
-  .input input:focus ~ .input__placeholder {
+  .input input:focus ~ .input__placeholder,
+  .input textarea:focus ~ .input__placeholder {
     font-size: 14px;
     line-height: 14px;
-    top: 11px;
+    top: 0;
+    padding-top: 11px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .input input:focus ~ .input__placeholder {
+  .input input:focus ~ .input__placeholder,
+  .input textarea:focus ~ .input__placeholder {
     font-size: 13px;
     line-height: 13px;
-    top: 9px;
+    top: 0;
+    padding-top: 9px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .input input {
+    height: 64px;
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .input input {
+    height: 54px;
+    padding-bottom: 13px;
   }
 }
 .input textarea {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  border-bottom: 20px solid #fff;
   resize: vertical;
   max-height: 600px;
 }
@@ -210,6 +139,7 @@
   transition: all 0.2s, 0.2s, 0.2s;
   left: 15px;
   z-index: 1;
+  background: #fff;
 }
 @media only screen and (min-width: 768px) {
   .input__placeholder {
@@ -232,14 +162,16 @@
   .input__placeholder.active {
     font-size: 14px;
     line-height: 14px;
-    top: 11px;
+    top: 0;
+    padding-top: 11px;
   }
 }
 @media only screen and (max-width: 767px) {
   .input__placeholder.active {
     font-size: 13px;
     line-height: 13px;
-    top: 9px;
+    top: 0;
+    padding-top: 9px;
   }
 }
 .input__icon {

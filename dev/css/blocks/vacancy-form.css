@@ -18,51 +18,87 @@
             transform: rotate(360deg);
   }
 }
-.audit-form {
-  background-image: url("../img/form-back_dark.svg");
-  background-position: center 315px;
+.vacancy-form {
   background-repeat: no-repeat;
-  background-size: 875px;
+  background-color: #1f2637;
   color: #fff;
 }
-.audit-form .container {
+@media only screen and (min-width: 768px) {
+  .vacancy-form {
+    margin-top: 120px;
+    background-image: url("../img/form-back_dark.svg");
+    background-position: center 362px;
+    background-size: 875px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .vacancy-form {
+    margin-top: 50px;
+    background-image: url("../img/form-back_m.svg");
+    background-position: right 358px;
+    background-size: 286px;
+  }
+}
+.vacancy-form .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .container {
-    padding-top: 106px;
+  .vacancy-form .container {
+    padding-top: 98px;
     padding-bottom: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .container {
+  .vacancy-form .container {
     padding: 40px 20px 0;
   }
 }
-.audit-form__title {
+.vacancy-form__title {
   text-transform: uppercase;
   max-width: 675px;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form__title {
+  .vacancy-form__title {
     text-align: center;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form__title {
+  .vacancy-form__title {
     text-align: left;
   }
 }
-.audit-form__subtitle {
+.vacancy-form__title span {
+  color: #536286;
+  width: 100%;
+  display: block;
+  font-weight: normal;
+}
+@media only screen and (min-width: 768px) {
+  .vacancy-form__title span {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .vacancy-form__title span {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+}
+.vacancy-form__subtitle {
   font-family: "Proxima Nova";
   color: #fff;
   text-align: center;
+  max-width: 740px;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form__subtitle {
+  .vacancy-form__subtitle {
     text-align: center;
     font-size: 18px;
     line-height: 28px;
@@ -70,14 +106,23 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form__subtitle {
+  .vacancy-form__subtitle {
     text-align: left;
     font-size: 16px;
     line-height: 20px;
     margin-top: 20px;
   }
+  .vacancy-form__subtitle p {
+    margin-top: 20px;
+  }
 }
-.audit-form__form {
+.vacancy-form__subtitle span {
+  color: #536286;
+  width: 100%;
+  display: block;
+  font-weight: normal;
+}
+.vacancy-form__form {
   display: block;
   margin: 0 auto;
   background-image: -webkit-linear-gradient(134deg, #144fc0 0%, #2ca7ff 100%);
@@ -85,14 +130,14 @@
   margin-top: 40px;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form__form {
+  .vacancy-form__form {
     max-width: 590px;
     border-radius: 10px;
     padding: 34px 0 61px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form__form {
+  .vacancy-form__form {
     width: calc(100% + 40px);
     margin-left: -20px;
     border-radius: 0;
@@ -101,23 +146,23 @@
             box-sizing: border-box;
   }
 }
-.audit-form__form-legend,
-.audit-form__form form {
+.vacancy-form__form-legend,
+.vacancy-form__form form {
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form__form-legend,
-  .audit-form__form form {
+  .vacancy-form__form-legend,
+  .vacancy-form__form form {
     max-width: 380px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form__form-legend,
-  .audit-form__form form {
+  .vacancy-form__form-legend,
+  .vacancy-form__form form {
     width: 100%;
   }
 }
-.audit-form__form-legend {
+.vacancy-form__form-legend {
   font-family: "Proxima Nova";
   font-size: 18px;
   color: #fff;
@@ -126,21 +171,21 @@
   margin-bottom: 25px;
 }
 @media only screen and (max-width: 767px) {
-  .audit-form__form-legend {
+  .vacancy-form__form-legend {
     display: none;
   }
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .control-label {
+  .vacancy-form .control-label {
     margin-top: 36px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .control-label {
+  .vacancy-form .control-label {
     margin-top: 20px;
   }
 }
-.audit-form .form__button {
+.vacancy-form .form__button {
   border: none;
   background-color: #f78200;
   border-radius: 2px;
@@ -153,7 +198,7 @@
   cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .form__button {
+  .vacancy-form .form__button {
     font-size: 18px;
     line-height: 60px;
     height: 60px;
@@ -162,7 +207,7 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .form__button {
+  .vacancy-form .form__button {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 15px;
@@ -171,57 +216,57 @@
     margin-top: 20px;
   }
 }
-.audit-form .form__button:hover {
+.vacancy-form .form__button:hover {
   background-color: #ff8e11;
   text-decoration: none;
 }
-.audit-form .blueline {
+.vacancy-form .blueline {
   position: absolute;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .blueline {
+  .vacancy-form .blueline {
     top: -37px;
     left: 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .blueline {
+  .vacancy-form .blueline {
     top: -25px;
     left: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .blueline.active {
+  .vacancy-form .blueline.active {
     height: 100px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .blueline.active {
+  .vacancy-form .blueline.active {
     height: 60px;
   }
 }
-.audit-form .orangecircle {
+.vacancy-form .orangecircle {
   position: absolute;
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .orangecircle {
+  .vacancy-form .orangecircle {
     top: -186px;
     right: 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .orangecircle {
+  .vacancy-form .orangecircle {
     top: -63px;
     right: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .audit-form .orangecircle.active {
+  .vacancy-form .orangecircle.active {
     height: 360px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .audit-form .orangecircle.active {
+  .vacancy-form .orangecircle.active {
     height: 100px;
   }
 }

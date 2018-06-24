@@ -72,14 +72,21 @@ h6,
   font-size 16px
 
 .text
+  color #000000
   &.-flow
     margin 20px 0 
   &.-indention-top
     display block
     padding-top 15px
   p
-    line-height 19px
-    margin 8px 0 
+    +a($m)
+      line-height 28px
+      font-size 18px
+      margin-top 28px      
+    +b($m)
+      line-height 24px
+      font-size 16px
+      margin-top 24px 
   h2,
   h3,
   h5,

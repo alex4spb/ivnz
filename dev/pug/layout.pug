@@ -13,6 +13,7 @@ doctype html
     meta(name="keywords", content="")
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    //link(href="https://yandex.st/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet")
     script(src="js/vendor.js")    
     if env === 'dev'
       link(rel="stylesheet", href="css/reset.css")
@@ -22,9 +23,10 @@ doctype html
         link(rel="stylesheet", href= stylesheet)
     else
       link(rel="stylesheet", href="css/style.min.css")
+    script(id="dsq-count-scr" src="//ivnz.disqus.com/count.js" async)
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     script(src="js/script.js")
     title Ivaschenko Nizamov
-    <script id="dsq-count-scr" src="//ivnz.disqus.com/count.js" async></script>
   body
     .topnav__menu.-mobile
       .topnav__menu-close

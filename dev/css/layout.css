@@ -90,7 +90,7 @@ html:after {
 }
 body {
   font: 14px/1.571429em "TT Rounds", Helvetica, Arial, sans-serif;
-  color: #fff;
+  color: #000;
 }
 button {
   font-family: "TT Rounds", Helvetica, Arial, sans-serif;
@@ -414,4 +414,57 @@ html.mobile .js-tooltip {
     top: -10px;
     left: -4.5px;
   }
+}
+.bluecircle {
+  width: 2px;
+  height: 0px;
+  background-color: #3c7fff;
+  border-radius: 10px;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+  -webkit-transition: 0.4s ease-out !important;
+  transition: 0.4s ease-out !important;
+}
+.bluecircle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 2px solid #3c7fff;
+  border-radius: 16px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+@media only screen and (min-width: 768px) {
+  .bluecircle:before {
+    width: 12px;
+    height: 12px;
+    bottom: -16px;
+    left: -7px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .bluecircle:before {
+    width: 6px;
+    height: 6px;
+    bottom: -10px;
+    left: -4px;
+  }
+}
+.metro {
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 30px;
+  font-family: "Proxima Nova";
+  position: relative;
+}
+.metro:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  width: 20px;
+  height: 16.4px;
+  background: url("../img/metro.svg");
+  background-size: 100%;
 }

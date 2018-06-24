@@ -119,6 +119,9 @@ h6,
 .h6 {
   font-size: 16px;
 }
+.text {
+  color: #000;
+}
 .text.-flow {
   margin: 20px 0;
 }
@@ -126,9 +129,19 @@ h6,
   display: block;
   padding-top: 15px;
 }
-.text p {
-  line-height: 19px;
-  margin: 8px 0;
+@media only screen and (min-width: 768px) {
+  .text p {
+    line-height: 28px;
+    font-size: 18px;
+    margin-top: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text p {
+    line-height: 24px;
+    font-size: 16px;
+    margin-top: 24px;
+  }
 }
 .text h2,
 .text h3,

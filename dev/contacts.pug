@@ -1,0 +1,64 @@
+extends /layout
+include /vacancy-form
+
+block main
+  .contacts
+    section.header(data-aos="fade-in")
+      .container               
+        .header__content(data-aos="fade-in" data-aos-delay="500")
+          .greyline(data-aos="fade-in")                   
+          h1 Контакты
+    section.contacts__content(data-aos="fade-in" data-aos-delay="500")    
+      .container  
+        .blueline(data-aos="fade-in")
+        .contacts__content-about(data-aos="fade-in" data-aos-delay="500")
+          h2 Мы работаем в офисе культурной столицы
+          .contacts__content-address
+            .metro Пролетарская
+            .text
+              p 192012, #[b г. Санкт-Петербург]#[br]
+                | пр. Обуховской Обороны 112 к.2#[br]
+                | БЦ «Вант», офис 713
+              p С понедельника по пятницу #[br.hidden-above-m]с 10:00 до 19:00 
+          .contacts__content-numbers
+            .contacts__content-numbers-item
+              img(src="img/smartphone2.svg")
+              | 8 812 244-71-48
+            .contacts__content-numbers-item
+              img(src="img/smartphone.svg")
+              | 8 499 709-87-31
+          .greycircle(data-aos="fade-in")
+          .contacts__requisites-button.hidden-below-m.toggle(data-target=".contacts__requisites-info")
+            | Показать реквизиты
+        .vacancy__talants-sliders
+          .greyline(data-aos="fade-in")
+          .orangecircle(data-aos="fade-in")
+          .vacancy__talants-slider(data-aos="fade-in" data-aos-delay="700")
+            .swiper-wrapper
+              .swiper-slide 
+                  img(src="temp/talant_1.png")
+              .swiper-slide
+                  img(src="temp/talant_2.png")
+              .swiper-slide
+                  img(src="temp/talant_1.png")   
+    section.contacts__requisites(data-aos="fade-in")
+      .container
+        .contacts__requisites-button.hidden-above-m.toggle(data-target=".contacts__requisites-info")
+          | Показать реквизиты
+        .contacts__requisites-info
+          .contacts__requisites-info-item
+            .text
+              p Полное наименование: Общество с ограниченной ответственностью «Иващенко и Низамов: поисковые технологии»
+              p Сокращенное наименование: ООО «Иващенко и Низамов»
+              p Юридический адрес: 192012, г. Санкт-Петербург, пр-кт. Обуховской Обороны, д. 112, к. 2, лит. И, пом. 713
+          .contacts__requisites-info-item
+            .text
+              p ИНН: 7811579871#[br]
+                | КПП: 781101001#[br]
+                | ОГРН: 1147847159910 от 30.04.2014 г.
+              p Генеральный директор: Низамов Октавиан Альбертович
+              p Номер 5931 в #[a(href="#") Реестре аккредитованных Минкомсвязи РФ организаций, осуществляющих деятельность в области ИТ]
+    section.contacts__map#map
+
+
+  

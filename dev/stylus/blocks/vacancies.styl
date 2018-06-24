@@ -65,7 +65,7 @@
         +a($m)     
           height 170px
         +b($m)
-          height 90px  
+          height 90px 
     .container
       +b($m)
         padding 0 20px
@@ -80,6 +80,19 @@
       +b($m)
         font-size 14px
         margin-bottom 10px
+    h2
+      text-transform uppercase
+      color #000
+      vertical-align middle
+      +b($m)
+        font-size 18px
+        line-height 32px
+      .smile
+        vertical-align middle
+        +a($m)
+          font-size 54px
+        +b($m)
+          font-size 24px
     &-item
       display block
       color #000000
@@ -100,6 +113,22 @@
       &:hover
         color #3B7EFF
         text-decoration none
+    &-empty
+      max-width 750px
+      padding-top 30px
+      margin-top 30px
+      color #000      
+      border-top 1px solid #EEEEEE
+      +a($m)
+        font-size 24px
+        line-height 40px
+      +b($m)
+        font-size 18px
+        line-height 32px
+      /*& ~ *
+        color #7F7F7F*/
+      a 
+        color #3C7FFF
   &__talants
     color #000000
     position relative
@@ -215,97 +244,97 @@
         padding-right 20%
       +b($m)
         margin 0 auto
-  $time = 500ms
-  $delay = $time/2
-  $mode = linear//cubic-bezier(.17, .67, .55, 1.43)
-  .swiper-wrapper 
-    width 100%
-    .swiper-slide
-      transition $time $mode
-      border-radius 10px
-      position relative
-      width 100%
-      opacity 0
-      &:after
-        content ''
-        display block
+      $time = 500ms
+      $delay = $time/2
+      $mode = linear//cubic-bezier(.17, .67, .55, 1.43)
+      .swiper-wrapper 
         width 100%
-        height 0
-        padding-bottom 129.5%
-        border-radius 10px
-        background #1F2D4F
-        opacity 0
-        position absolute
-        top 0
-        left 0
-        transition $time $mode
-        z-index 3
-      &:before
-        content ''
-        display block
-        max-width 556px 
-        width 100%
-        height 0
-        padding-bottom 129.5%
-        border-radius 10px
-        background #1F2D4F
-        opacity 0
-        background-image linear-gradient(61deg, #141414 1%, #4A4A4A 100%)
-        position absolute
-        top 0
-        left 0
-        transition $time $mode
-        z-index 3
-      img 
-        position relative
-        transition $time $mode
-        opacity 0
-        box-sizing border-box
-        width 100%
-        +a($m)
+        .swiper-slide
+          transition $time $mode
           border-radius 10px
-        +b($m) 
-          border-radius 6px 
-      &.swiper-slide-prev
-        z-index: 1;
-        opacity: 0;
-        &:before
-        &:after
-          opacity: 0;
-          transform: translateX(8%) scale(.89);
-        img 
-          opacity: 0;
-          transform: translateX(8%) scale(.89);
-      &.swiper-slide-next
-        z-index 1
-        +a($m)
-          opacity .3
-        +b($m)
+          position relative
+          width 100%
           opacity 0
-        &:before
-        &:after
-          opacity .5
-          +a($m)
-            transform translateX(-85.5%) scale(.89)
-          +b($m)
-            transform translateX(-85.5%) scale(.846) translateY(3%)
-        img 
-          opacity 1
-          +a($m)
-            transform translateX(-85.5%) scale(.89)
-          +b($m)
-            transform translateX(-85.5%) scale(.846) translateY(3%)
-      &.swiper-slide-active 
-        z-index 2 
-        opacity 1       
-        &:before
-        &:after
-          opacity 0.5
-        img 
-          opacity 1
-          transform translateX(0%) scale(1)
-        span 
-          display block   
+          &:after
+            content ''
+            display block
+            width 100%
+            height 0
+            padding-bottom 129.5%
+            border-radius 10px
+            background #1F2D4F
+            opacity 0
+            position absolute
+            top 0
+            left 0
+            transition $time $mode
+            z-index 3
+          &:before
+            content ''
+            display block
+            max-width 556px 
+            width 100%
+            height 0
+            padding-bottom 129.5%
+            border-radius 10px
+            background #1F2D4F
+            opacity 0
+            background-image linear-gradient(61deg, #141414 1%, #4A4A4A 100%)
+            position absolute
+            top 0
+            left 0
+            transition $time $mode
+            z-index 3
+          img 
+            position relative
+            transition $time $mode
+            opacity 0
+            box-sizing border-box
+            width 100%
+            +a($m)
+              border-radius 10px
+            +b($m) 
+              border-radius 6px 
+          &.swiper-slide-prev
+            z-index: 1;
+            opacity: 0;
+            &:before
+            &:after
+              opacity: 0;
+              transform: translateX(8%) scale(.89);
+            img 
+              opacity: 0;
+              transform: translateX(8%) scale(.89);
+          &.swiper-slide-next
+            z-index 1
+            +a($m)
+              opacity .3
+            +b($m)
+              opacity 0
+            &:before
+            &:after
+              opacity .5
+              +a($m)
+                transform translateX(-85.5%) scale(.89)
+              +b($m)
+                transform translateX(-85.5%) scale(.846) translateY(3%)
+            img 
+              opacity 1
+              +a($m)
+                transform translateX(-85.5%) scale(.89)
+              +b($m)
+                transform translateX(-85.5%) scale(.846) translateY(3%)
+          &.swiper-slide-active 
+            z-index 2 
+            opacity 1       
+            &:before
+            &:after
+              opacity 0.5
+            img 
+              opacity 1
+              transform translateX(0%) scale(1)
+            span 
+              display block   
   &__require
     color #000000
     margin-top 120px
@@ -491,6 +520,7 @@
       transform translateY(-50%)
       position absolute
       text-transform uppercase
+      color #ffffff
       +a($m)
         font-size 40px
         line-height 60px
@@ -502,6 +532,7 @@
           font-size 72px
         +b($m)
           font-size 41px
+  /*стили по открытой вакансии*/        
   .backurl
     +a($m)
       display none
@@ -575,6 +606,36 @@
         margin-top 120px
       +b($m)
         margin-top 50px
+      .greyline
+        position absolute
+        left 50% 
+        z-index 3
+        background rgba(216, 216, 216, .5)
+        +a($m)
+          top -86px
+          left 50%
+        +b($m)
+          top -44px
+          left 50%
+        &.active
+          +a($m)
+            height 60px
+          +b($m)
+            height 30px
+      .bluecircle
+        position absolute
+        z-index 3
+        +a($m)
+          top -183px  
+          right 0px
+        +b($m)
+          top -98px  
+          right 20px
+        &.active
+          +a($m)
+            height 400px
+          +b($m)
+            height 100px   
       h2
         text-transform uppercase
         text-align left

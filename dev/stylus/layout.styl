@@ -72,7 +72,7 @@ html
 
 body
   font 14px/1.571429em "TT Rounds", Helvetica, Arial, sans-serif
-  color #fff
+  color #000000
   
 button
   font-family "TT Rounds", Helvetica, Arial, sans-serif
@@ -299,5 +299,47 @@ img
       height 8px
       top -10px
       left -4.5px 
+.bluecircle
+  width 2px
+  height 0px
+  background-color #3C7FFF
+  border-radius 10px
+  transition-property all !important
+  transition .4s ease-out !important
+  &:before
+    content ""
+    display block
+    position absolute
+    border 2px solid #3C7FFF
+    border-radius 16px
+    transition-duration .2s
+    +a($m)
+      width 12px
+      height 12px
+      bottom -16px
+      left -7px
+    +b($m)
+      width 6px
+      height 6px
+      bottom -10px
+      left -4px 
+.metro
+  font-size 18px
+  line-height 28px
+  padding-left 30px
+  font-family "Proxima Nova"
+  position relative
+  &:before
+    content ''
+    display block
+    position absolute
+    top 3px
+    left 0px
+    width 20px
+    height 16.4px
+    background url('../img/metro.svg')
+    background-size 100%
+    
+  
 
   

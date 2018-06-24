@@ -1,14 +1,22 @@
-.audit-form
-  background-image url('../img/form-back_dark.svg') 
-  background-position center 315px  
+.vacancy-form
   background-repeat no-repeat
-  background-size 875px
+  background-color #1F2637  
   color #fff
+  +a($m)
+    margin-top 120px
+    background-image url('../img/form-back_dark.svg') 
+    background-position center 362px  
+    background-size 875px
+  +b($m)
+    margin-top 50px
+    background-image url('../img/form-back_m.svg') 
+    background-position right 358px  
+    background-size 286px
   .container
     box-sizing border-box
     position relative
     +a($m)
-      padding-top 106px
+      padding-top 98px
       padding-bottom 100px
     +b($m)
       padding 40px 20px 0
@@ -20,10 +28,25 @@
       text-align center
     +b($m)
       text-align left
+    span
+      color #536286
+      width 100%
+      display block
+      font-weight normal
+      +a($m)
+        font-size 24px
+        line-height 30px
+        margin-top 20px
+      +b($m)
+        font-size 18px
+        line-height 24px
+        margin-top 10px
   &__subtitle
     font-family "Proxima Nova"
     color #FFFFFF
     text-align center
+    max-width 740px
+    margin 0 auto
     +a($m)
       text-align center
       font-size 18px
@@ -34,6 +57,13 @@
       font-size 16px
       line-height 20px
       margin-top 20px
+      p
+        margin-top 20px
+    span
+      color #536286
+      width 100%
+      display block
+      font-weight normal
   &__form
     display block
     margin 0 auto

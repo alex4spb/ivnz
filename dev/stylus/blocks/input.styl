@@ -6,10 +6,10 @@
   position relative
   transition border-color $speed
   background-color #fff
-  +a($m)
-    height 60px
+  /*+a($m)
+    min-height 60px
   +b($m)
-    height 50px
+    min-height 50px*/
   & + &
     margin-top 15px
   input,
@@ -18,51 +18,49 @@
     border none
     background none
     box-sizing border-box
-    width calc(100% + 4px) 
-    position absolute
-    z-index 1
+    width 100%
+    position relative
     outline none
-    left -2px
-    padding 0 17px
+    padding 0 15px
+    z-index 1
+    border-radius 2px
     +a($m)
       font-size 18px
+      border-top 25px solid #fff
+      line-height 24px 
     +b($m)
-      font-size 16px
+      font-size 16px  
+      border-top 21px solid #fff
+      line-height 20px 
     &::-ms-clear
-      display none
-  input 
-    border-radius 4px
-    box-sizing border-box
-    top -2px
-    z-index 2
-    +a($m) 
-      height 64px  
-      padding-top 25px 
-      line-height 24px   
-    +b($m)
-      height 54px 
-      padding-top 21px
-      line-height 20px   
+      display none 
     &:-webkit-autofill
       -webkit-text-fill-color #000
       -webkit-box-shadow 0 0 0px 1000px transparent inset
       transition background-color 5000s ease-in-out 0s
       background none  
     &:focus      
-      border 2px solid #F78200  
-      padding-left 15px
+      box-shadow 0 0 0 2px #F78200
       ~ .input__placeholder
         +a($m)
           font-size 14px
           line-height 14px
-          top 11px             
+          top 0
+          padding-top 11px            
         +b($m)
           font-size 13px
-          line-height 13px
-          top 9px          
+          line-height 13px 
+          top 0
+          padding-top 9px         
+  input 
+    +a($m) 
+      height 64px
+      padding-bottom 15px
+    +b($m)
+      height 54px        
+      padding-bottom 13px
   textarea
-    padding-top 12px
-    padding-bottom 12px
+    border-bottom 20px solid #fff
     resize vertical
     max-height 600px
     &[rows="1"]
@@ -78,6 +76,7 @@
     transition all $speed
     left 15px    
     z-index 1
+    background #fff
     +a($m)
       font-size 18px
       line-height 24px
@@ -91,11 +90,13 @@
       +a($m)
         font-size 14px
         line-height 14px
-        top 11px             
+        top 0
+        padding-top 11px              
       +b($m)
         font-size 13px
-        line-height 13px
-        top 9px    
+        line-height 13px 
+        top 0
+        padding-top 9px   
   &__icon
     position absolute
     top 0
