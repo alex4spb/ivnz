@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="16px" viewBox="0 0 8 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="0.-UI-kit-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Cuts.-Desktop" transform="translate(-972.000000, -4122.000000)" fill="#000000">
+            <g id="Group-27" transform="translate(320.000000, 3890.000000)">
+                <g id="Group-87" transform="translate(388.000000, 220.000000)">
+                    <g id="Group-73" transform="translate(84.000000, 0.000000)">
+                        <g id="Group-72" transform="translate(88.000000, 12.000000)">
+                            <path d="M96.9754571,15.0832512 L96.9754571,8.10940626 L98.9708717,8.10940626 L99.7009241,5.66486916 L96.9719387,5.66486916 L96.9754571,3.62106309 C96.9754571,2.94679819 97.0395212,2.58551165 98.0079604,2.58551165 L99.4589919,2.58551165 L99.4589919,0 L97.3878281,0 C94.9000273,0 93.9669381,1.25410929 93.9669381,3.36312675 L93.9669381,5.58537797 L92,5.58537797 L92,8.10940626 L93.9669381,8.10940626 L93.9669381,15.0832512 L96.9754571,15.0832512 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -451,11 +451,21 @@ html.mobile .js-tooltip {
   }
 }
 .metro {
-  font-size: 18px;
-  line-height: 28px;
   padding-left: 30px;
   font-family: "Proxima Nova";
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .metro {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .metro {
+    font-size: 16px;
+    line-height: 25px;
+  }
 }
 .metro:before {
   content: '';

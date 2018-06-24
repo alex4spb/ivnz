@@ -1,0 +1,398 @@
+.article
+  .header  
+    background-color #212B41
+    +a($m)
+      min-height 316px
+    +b($m)
+      min-height 174px
+      padding 0 20px 
+    &__content
+      max-width 950px
+      text-align left
+      box-sizing border-box
+      +a($m)
+        padding-top 180px
+        padding-bottom 60px
+      +b($m)
+        padding-top 96px
+        padding-bottom 40px
+      h1
+        text-transform uppercase  
+        margin 0px
+      .backurl
+        +a($m)
+          display none
+        +b($m)
+          display block
+  &__content
+    color #000    
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    +a($m)
+      padding-top 60px
+    +b($m)
+      padding-top 15px
+    .blueline
+      position absolute
+      +a($m)
+        top -76px
+        left 0
+      +b($m)
+        top -50px
+        left 20px
+      &.active
+        +a($m)     
+          height 60px
+        +b($m)
+          height 40px
+    .greyline
+      position absolute
+      background rgba(216, 216, 216, .1)
+      +a($m)
+        top -99px
+        left 50%
+      +b($m)
+        display none
+      &.active
+        +a($m)     
+          height 120px
+    .greycircle
+      position absolute
+      background #EBEBEB
+      +a($m)
+        top -243px
+        right 0
+      +b($m)
+        top -81px  
+        right 20px
+      &:before
+        background transparent
+        border 2px solid #EBEBEB
+        +a($m)
+          width 12px
+          height 12px
+          top auto
+          bottom -16px
+          left -7px
+        +b($m)
+          width 6px
+          height 6px
+          top auto
+          bottom -10px
+          left -4px 
+      &.active
+        +a($m)     
+          height 204px
+        +b($m)
+          height 90px 
+    &-header
+      font-size 0
+      +b($m)
+        margin-bottom 10px
+        position relative
+        &:before
+          content ''
+          width calc(100% + 40px)
+          left -20px
+          background #FAFAFA
+          border-top 0.5px solid #D5D5D5
+          border-bottom 0.5px solid #D5D5D5
+          height 10px
+          display block
+          position absolute
+          bottom -10px
+      &-time
+        vertical-align middle
+        font-family "Proxima Nova"
+        position relative
+        color #636870
+        +a($m)
+          display inline-block
+          line-height 40px
+          padding-left 60px
+          font-size 15px
+        +b($m)
+          display block
+          border-bottom 1px solid #EDEDED
+          padding-bottom 10px
+          line-height 30px
+          padding-left 40px
+          font-size 14px
+        img 
+          top 0
+          left 0          
+          position absolute
+          +a($m)
+            width 40px
+            height 40px
+          +b($m)
+            width 30px
+            height 30px
+      &-repost
+        line-height 0
+        height 40px
+        box-sizing border-box
+        border 2px solid #000
+        border-radius 5px
+        background #FFFBF7
+        padding 0 7px
+        display inline-block
+        margin-left 168px
+        +b($m)
+          display none
+        &-count
+          display inline-block
+          background url('../img/repost-top.svg')
+          background-repeat no-repeat
+          background-position 0 center
+          background-size 22px 24px
+          line-height 36px
+          vertical-align middle
+          font-size 13px
+          font-weight bold
+          padding-left 25px
+          cursor pointer
+        &-social
+          text-align justify
+          line-height 36px
+          vertical-align middle
+          display inline-block
+          width 0
+          padding 0
+          margin 0
+          position relative
+          height 36px
+          transition-duration $speed 
+          transition-property all 
+          overflow hidden
+          &.-active
+            width 146px
+            margin-left 10px
+            padding-left 20px
+            padding-right 10px
+          &:before
+            content ''
+            width 2px
+            height 20px
+            border-radius 10px
+            background #EFDAC8
+            position absolute
+            top 8px
+            left 0
+          > a
+            display inline-block
+            height 100%
+            background-position center
+            background-repeat no-repeat
+          .twitter
+            background-image url('../img/twitter-black.svg')
+            width 14.5px
+            background-size 100%
+            &:hover
+              background-image url('../img/twitter-hover.svg')
+          .vk
+            background-image url('../img/vk-black.svg')
+            width 16.2px
+            background-size 100%
+            margin-left 30.4px
+            &:hover
+              background-image url('../img/vk-hover.svg')
+          .fb
+            background-image url('../img/fb-black.svg')
+            width 7.7px
+            background-size 100%
+            margin-left 30.7px
+            &:hover
+              background-image url('../img/fb-hover.svg')
+          .telegram
+            background-image url('../img/telegram-black.svg')
+            width 15.9px
+            background-size 100%
+            margin-left 30.3px
+            &:hover
+              background-image url('../img/telegram-hover.svg')
+      &-info
+        +a($m)
+          float right
+        +b($m)
+          float block
+        &:after
+          content ''
+          display table
+          clear both
+      &-date
+      &-autor
+        display inline-block
+        color #636870
+        font-family "Proxima Nova"
+        +a($m)
+          font-size 15px
+          line-height 40px
+        +b($m)
+          font-size 14px
+          line-height 54px
+      &-autor
+        position relative
+        +a($m)
+          margin-left 63px
+          padding-left 55px
+        +b($m)
+          float right
+        &-img
+          position absolute
+          width 40px
+          height 40px
+          border-radius 40px
+          overflow hidden
+          top 0px
+          left 0px
+          +b($m)
+            display none
+          &:after
+            content ''
+            width 100%
+            height 100%
+            display block
+            background rgba(0, 18, 61, .3)
+            position absolute
+            top 0px
+            left 0px
+            z-index 3
+          img 
+            width 100%
+    &-text
+      margin-top 38px
+      h2
+        font-family "TT Rounds"
+        +a($m)
+          margin 80px 0 40px
+          text-transform uppercase
+        +b($m)
+          margin 40px 0 20px
+      .text
+        max-width 750px
+        font-family "Proxima Nova"
+      &-picture
+        font-size 0
+        margin-top 60px
+        & + .text
+          +a($m)
+            margin-top 60px
+          +b($m)
+            margin-top 16px
+        &-img
+          display inline-block
+          vertical-align top
+          line-height 0
+          +a($m)
+            width 73%
+            border-radius 10px
+          +b($m)
+            width calc(100% + 40px)
+            margin-left -20px
+          img
+            width 100% 
+        &-notation
+          display inline-block
+          vertical-align top
+          box-sizing border-box
+          padding-left 40px
+          color #636870
+          font-family "Proxima Nova"
+          +a($m)
+            width 27%
+            line-height 24px
+            font-size 15px
+          +b($m)
+            width 100%
+            line-height 20px
+            font-size 14px
+            padding-left 15px
+            margin-top 20px
+            box-sizing border-box
+            border-left 2px solid rgba(99, 104, 122, 0.3)
+      &-thesis
+        max-width 750px
+        font-family "TT Rounds"
+        font-weight bold
+        border-left 3px solid #F78200
+        +a($m)
+          font-size 24px
+          line-height 40px
+          padding-left 40px
+          text-transform uppercase
+        +b($m)
+          font-size 18px
+          line-height 28px
+          padding 10px 0 18px 17px
+          margin-left -20px
+          width calc(100% + 20px)
+          box-sizing border-box
+      ol
+        list-style-type none
+        counter-reset num  
+        +a($d)
+          margin-left -40px
+        +b($d) 
+          margin-left -5px
+          padding-left 30px
+        li 
+          border-top 1px solid #D8D8D8
+          padding-top 15px             
+          padding-bottom 15px 
+          +a($m)
+            line-height 28px
+            font-size 18px   
+          +b($m)
+            line-height 24px
+            font-size 16px
+          &:first-child
+            border none
+          &:before
+            content counter(num)
+            counter-increment num
+            font-family "TT Rounds"
+            font-weight bold
+            position absolute
+            text-align right
+            +a($d)
+              left -40px
+              width 20px
+              font-size 16px
+              line-height 28px
+            +btw($m, $d)
+              left -12px
+              width 20px
+              font-size 16px
+              line-height 28px
+            +b($m)
+              left 12px
+              width 15px
+              font-size 13px
+              line-height 24px
+          
+        
+                  
+        
+      
+
+          
+                              
+
+
+  .audit-form
+    background-color #1F2637
+    .orangecircle
+      +a($m)
+        top -70px 
+      +b($m)
+        top -39px 
+      &.active
+        +a($m)
+          height 120px
+        +b($m)
+          height 100px
+        
+        

@@ -324,11 +324,15 @@ img
       bottom -10px
       left -4px 
 .metro
-  font-size 18px
-  line-height 28px
   padding-left 30px
   font-family "Proxima Nova"
   position relative
+  +a($m)
+    font-size 18px
+    line-height 28px
+  +b($m)
+    font-size 16px
+    line-height 25px
   &:before
     content ''
     display block

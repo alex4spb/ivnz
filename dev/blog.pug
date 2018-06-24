@@ -1,0 +1,132 @@
+extends /layout
+include /audit-form
+
+block main
+  .blog
+    section.header(data-aos="fade-in")
+      .container               
+        .header__content(data-aos="fade-in" data-aos-delay="500")
+          h1 Блог
+    section.blog__list
+      .container
+        .blueline(data-aos="fade-in")
+        .greyline(data-aos="fade-in")
+        .greycircle(data-aos="fade-in")
+        .blog__list-subtitle(data-aos="fade-in" data-aos-anchor=".blog__list-item") Последние материалы
+      a.blog__list-item(href="#" data-aos="fade-in")
+        .container
+          .blog__list-item-info
+            h2 Нужно ли разрабатывать #[br]стратегию развития #[br]для современного бизнеса?
+            .blog__list-item-info-timename
+              span 4 апреля 2018
+              span Чистяков Алексей
+            .blog__list-item-info-summary
+              .text
+                p Само слово «стратегия» в российской деловой практике обросло многочисленными мифами, наиболее горячими распространителями которых являются, по нашим наблюдениям, люди, никогда стратегию не разрабатывавшие …
+          .blog__list-item-img
+            img(src="temp/blog-1.png" alt="")
+      .blog__notes(data-aos="fade-in")
+        .container
+          .blog__notes-title заметки
+          .blog__notes-list
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Ретаргетинг
+              .blog__notes-list-item-date 27.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Траст сайта
+              .blog__notes-list-item-date 24.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Для чего нужны ссылки
+              .blog__notes-list-item-date 21.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Инструкции
+              .blog__notes-list-item-date 18.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Отзывы клиентов
+              .blog__notes-list-item-date 16.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Е-буки
+              .blog__notes-list-item-date 12.03.2018
+      a.blog__list-item(href="#" data-aos="fade-in")
+        .container
+          .bluecircle(data-aos="fade-in")
+          .blog__list-item-info
+            h2 Лид-магнит – деликатный способ втянуть клиента #[br]в воронку продаж
+            .blog__list-item-info-timename
+              span 10 марта 2018
+              span Чистяков Алексей
+            .blog__list-item-info-summary
+              .text
+                p Предлагаем вашему вниманию кейс успешного продвижения интернет-магазина 3D-оборудования средствами традиционного SEO с опорой на постоянный системный анализ кампании.
+          .blog__list-item-img
+            img(src="temp/blog-2.png" alt="")
+
+      .blog__subscribe(data-aos="fade-in")
+        .container
+          .greyline(data-aos="fade-in")
+          .blog__subscribe-form
+            .blog__subscribe-form-img
+              img(src="img/subscribe.svg" alt="")
+            .blog__subscribe-form-title Подписка #[br]на материалы
+            form.form.js-form-ajax(action="json/form-success.json", method="post")
+              .form__container
+                +input({
+                  name: 'email',
+                  placeholder: 'E-mail'
+                })
+                button.form__button Подписаться
+            .blog__subscribe-form-about
+              | Мы присылаем интересные новые материалы несколько раз в месяц и ничего более 🤙
+      a.blog__list-item(href="#" data-aos="fade-in")
+        .container
+          .orangeline(data-aos="fade-in")
+          .greycircle(data-aos="fade-in")
+          .blog__list-item-info
+            h2 Как вдохновить клиентов #[br]на отзывы: 6 белых методов
+            .blog__list-item-info-timename
+              span 6 марта 2018
+              span Чистяков Алексей
+            .blog__list-item-info-summary
+              .text
+                p Можно бесконечно нахваливать свой товар или услугу, но ЦА все равно поверит отзывам, а не рекламе. По данным прошлогоднего исследования Website Builders потребители доверяют мнениям других покупателей в 12 (!) раз больше, #[br]чем описаниям товара. Но как вдохновить людей писать отзывы?
+          .blog__list-item-img
+            img(src="temp/blog-3.png" alt="")
+      .blog__notes(data-aos="fade-in")
+        .container
+          .blog__notes-title заметки
+          .blog__notes-list
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Ретаргетинг
+              .blog__notes-list-item-date 27.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Траст сайта
+              .blog__notes-list-item-date 24.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Для чего нужны ссылки
+              .blog__notes-list-item-date 21.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Инструкции
+              .blog__notes-list-item-date 18.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Отзывы клиентов
+              .blog__notes-list-item-date 16.03.2018
+            a.blog__notes-list-item(href="#")
+              .blog__notes-list-item-title Е-буки
+              .blog__notes-list-item-date 12.03.2018
+
+    section.blog__paginator(data-aos="fade-in")
+      .container
+        .blog__paginator-content
+          a.blog__paginator-page-prev(href="#")
+          a.blog__paginator-page(href="#") 1
+          a.blog__paginator-page(href="#") 3
+          a.blog__paginator-page.-active(href="#") 4
+          a.blog__paginator-page(href="#") 5
+          a.blog__paginator-page(href="#") 6
+          a.blog__paginator-page(href="#") 7
+          span.blog__paginator-page-more ... 
+          a.blog__paginator-page(href="#") 25
+          a.blog__paginator-page-next(href="#")
+      
+    +audit-form()                   
+  
