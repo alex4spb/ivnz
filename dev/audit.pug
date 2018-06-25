@@ -14,27 +14,88 @@ block main
         .greyline.-left(data-aos="fade-in" data-aos-delay="700")
         .greyline.-center(data-aos="fade-in" data-aos-delay="700")
         .greyline.-bottom(data-aos="fade-in" data-aos-delay="700")
-        .orangecircle(data-aos="fade-in" data-aos-delay="700")
-    a#audit
+        .orangecircle(data-aos="fade-in" data-aos-delay="900")
     +audit-form()
     section.audit__engines
       .container
         .audit__engines-item
-          .audit__engines-item-text 
+          .audit__engines-item-text(data-aos="fade-in") 
             | Каждый день сотни и тысячи ваших потенциальных клиентов ищут товары и услуги в поисковых системах
-          .audit__engines-item-img
+          .audit__engines-item-img(data-aos="fade-in" data-aos-delay="700")
             img.hidden-below-m(src="img/yandex-search.png" alt="")
             img.hidden-above-m(src="img/yandex-search_m.png" alt="")
         .audit__engines-item
-          .audit__engines-item-text 
+          .audit__engines-item-text(data-aos="fade-in")  
             | Поисковое продвижение может стать #[br.hidden-below-m]выгодным рекламным каналом #[br.hidden-below-m]для вашего сайта
-          .audit__engines-item-img
+          .audit__engines-item-img(data-aos="fade-in" data-aos-delay="900")
             img.hidden-below-m(src="img/google-search.png" alt="")
             img.hidden-above-m(src="img/google-search_m.png" alt="")
+    section.audit__info(data-aos="fade-in")
+      .container        
+        .bluecircle(data-aos="fade-in" data-aos-delay="700")
+        h2 Также в аудите оценивается текущее состояние сайта 
+        .audit__info-about(data-aos="fade-in" data-aos-delay="700")
+          .audit__info-about-img
+            img(src="img/audit-info-img.png" alt="")
+          .audit__info-about-text
+            ol
+              li Оценивается уровень доверия к сайту со стороны поисковых систем
+              li Анализируется история сайта на предмет наличия типичных санкций от поисковых систем
+              li Выявляются типичные ошибки в оптимизации сайта, которые понижают его позиции
+              li На основе поискового аудита делается вывод о перспективах SEO-продвижения вашего сайта
+              li Имея эту информацию, можно обоснованно принимать решение о дальнейших шагах в этом направлении
+        .audit__info-more(data-aos="fade-in")
+          .audit__info-more-item(data-aos="fade-in" data-aos-delay="500")
+            img(src="img/audit-more-1.svg")
+            | Аудит готовится SEO-специалистом в течение 2 рабочих дней. Результаты анализа высылаются в виде приватной ссылки, которой вы сможете поделиться с коллегами.
+          .audit__info-more-item(data-aos="fade-in" data-aos-delay="700")
+            img(src="img/audit-more-2.png")
+            | После выполнения аудита менеджер проекта сможет дать пояснения об итогах аудита и ответить на любые возникшие вопросы.
+        a.audit__info-button(href="#audit" data-aos="fade-in") Заказать аудит
+    section.audit__clients
+      .container
+        h2(data-aos="fade-in") Компании, уже получившие #[br]у нас аудит своего сайта
+        .about__clients-list(data-aos="fade-in" data-aos-delay="700")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-1.png")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-2.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-3.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-4.png")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-5.png")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-6.svg")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-7.png")
+          a.about__clients-list-item(href="#")  
+            img(src="temp/clients-8.svg")
+    section.audit__about
+      .container
+        .greyline(data-aos="fade-in" data-aos-delay="700")
+        .audit__about-item(data-aos="fade-in")
+          .audit__about-item-title.toggle
+            | Почему наш аудит бесплатен
+          .audit__about-item-text
+            .text
+              p Мы – агентство поискового продвижения «Иващенко и Низамов». Наш офис расположен в Санкт-Петербурге, работаем с клиентами по всей стране, а также зарубежными компаниями, ориентированными на клиентов из стран СНГ. 
 
-    
+              p В своей работе превыше всего ставим качество процессов: всё должно работать как часы, выполняться качественно и в срок, ни про какую, даже самую маленькую, задачу забыть нельзя. 
+              a.button(href="")
+                | Наш сайт
+            .audit__about-item-text-image(style="background-image: url(temp/audit-about.png)")
+        .audit__about-item(data-aos="fade-in")
+          .audit__about-item-title.toggle
+            | Немного о нас
+          .audit__about-item-text
+            .text
+              p Мы – агентство поискового продвижения «Иващенко и Низамов». Наш офис расположен в Санкт-Петербурге, работаем с клиентами по всей стране, а также зарубежными компаниями, ориентированными на клиентов из стран СНГ. 
 
-        
-
-
+              p В своей работе превыше всего ставим качество процессов: всё должно работать как часы, выполняться качественно и в срок, ни про какую, даже самую маленькую, задачу забыть нельзя. 
+              a.button(href="")
+                | Наш сайт
+            .audit__about-item-text-image(style="background-image: url(temp/audit-about.png)")
+              .orangecircle(data-aos="fade-in")
   

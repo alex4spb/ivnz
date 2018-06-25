@@ -246,6 +246,327 @@
           width 100%  
           z-index 2 
           position relative
+  &__info
+    background-color #FFFBF7
+    color #000
+    +a($m)
+      padding 106px 0 120px
+    +b($m)
+      padding 40px 0
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    h2
+      text-transform uppercase
+    .bluecircle
+      position absolute
+      +a($m)
+        top -153px
+        left 0
+      +b($m)
+        top -59px  
+        right 20px
+      &.active
+        +a($m)     
+          height 90px
+        +b($m)
+          height 70px
+    &-about
+      width 100%
+      font-size 0
+      +a($m)
+        margin-top 86px
+      +b($m)
+        margin-top 20px
+      &-img
+        display inline-block
+        +a($d)
+          width 378px
+          float right 
+        +btw($m, $d)    
+          width 335px 
+          float right
+        +b($m)
+          position relative
+          width calc(100% + 40px)
+          margin-left -20px
+          text-align center  
+        img 
+          width 100%
+          position relative
+          +a($d)
+            right -60px
+            margin-top -83px
+          +btw($m, $d)
+            right 0
+            margin-top -83px
+          +b($m)
+            max-width 330px        
+      &-text
+        display inline-block
+        +a($m)
+          width calc(100% - 378px)
+        +b($m)
+          width 100%
+        ol
+          list-style-type none
+          counter-reset num  
+          +a($d)
+            margin-left -40px
+          +b($d) 
+            margin-left -5px
+            padding-left 30px
+          li 
+            border-top 1px solid #E8DBCE
+            padding-top 15px             
+            padding-bottom 15px 
+            font-family "Proxima Nova"
+            position relative
+            +a($m)
+              line-height 28px
+              font-size 18px   
+            +b($m)
+              line-height 24px
+              font-size 16px
+            &:first-child
+              border none
+            &:before
+              content counter(num)
+              counter-increment num
+              font-family "TT Rounds"
+              font-weight bold
+              position absolute
+              text-align right
+              +a($d)
+                left -40px
+                width 20px
+                font-size 16px
+                line-height 28px
+              +btw($m, $d)
+                left -40px
+                width 20px
+                font-size 16px
+                line-height 28px
+              +b($m)
+                left -36px
+                width 15px
+                font-size 13px
+                line-height 24px
+    &-more
+      background #FFFFFF
+      border 1px solid #E8DBCE
+      font-size 0
+      box-sizing border-box
+      +a($m)
+        width calc(100% + 120px)
+        margin-left -60px
+        padding 80px 60px
+        border-radius 10px
+        margin-top 60px
+      +b($m)
+        width 100%
+        padding 17px 20px 30px
+        border-radius 4px
+        margin-top 40px
+      &-item
+        font-family "Proxima Nova"
+        box-sizing border-box
+        position relative
+        display inline-block
+        vertical-align top
+        +a($m)
+          font-size 18px 
+          line-height 28px 
+          width 50%
+          padding-left 91px
+          &:nth-child(2n)          
+            padding-left 136px
+            img 
+              left 45px
+        +b($m)
+          font-size 16px 
+          line-height 24px 
+          width 100% 
+          & + &
+            margin-top 40px
+        img 
+          width 71px
+          height 73px
+          +a($m)
+            position absolute
+            top 50%
+            transform translateY(-50%)
+            left 0
+          +b($m)
+            margin 0 auto
+            display block
+    &-button   
+      border none  
+      background-color #F78200
+      border-radius 2px
+      color #ffffff
+      font-weight bold
+      text-align center      
+      font-family "Proxima Nova"
+      display inline-block
+      cursor pointer
+      box-sizing border-box
+      +a($m)
+        font-size 18px
+        line-height 80px
+        height 80px
+        padding 0 40px
+        margin-top 60px
+        width 370px  
+      +b($m)
+        box-sizing border-box
+        width 100%  
+        font-size 15px
+        line-height 50px
+        height 50px
+        margin-top 20px
+      &:hover
+        background-color #FF8E11
+        text-decoration none
+  &__clients
+    color #000   
+    +a($m)
+      padding 120px 0  240px
+    +b($m) 
+      padding 40px 0
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    h2 
+      text-transform uppercase
+      +a($m)
+        margin-bottom 60px
+      +b($m)
+        margin-bottom 40px
+  &__about
+    background #1F2637
+    +a($m)
+      padding 106px 0 120px
+    +b($m)
+      padding 40px 0
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    .greyline
+      position absolute
+      right 50%
+      +a($m)
+        top -196px 
+      +b($m)
+        top -70px 
+      &.active 
+        +a($m)
+          height 180px
+        +b($m) 
+          height 80px  
+    &-item
+      &-title
+        font-weight bold 
+        cursor pointer  
+        border-bottom 1px solid rgba(255, 255, 255, 0.1)
+        position relative  
+        width 100%    
+        line-height 60px  
+        +a($m)
+          font-size 24px
+          text-transform uppercase 
+        +b($m)   
+          font-size 18px
+        &:after
+          content ''
+          display inline-block
+          background url('../img/left-arrow.svg')
+          transform rotate(-90deg)
+          background-size 100%
+          transition all $speed
+          +a($m)
+            width 9px
+            height 15px
+            margin-left 15px
+          +b($m)
+            width 6px
+            height 10px
+            position absolute
+            right 0
+            top 50%
+            margin-top -5px
+        &.-active
+          &:after         
+            transform rotate(90deg)
+      &-text
+        font-size 0
+        padding-top 0
+        height 0
+        overflow hidden        
+        transition all $speed
+        .text
+          display inline-block
+          color #fff 
+          font-family "Proxima Nova"
+          vertical-align top  
+          +a($m)
+            width 36.8% 
+          +b($m) 
+            width 100%    
+          .button
+            +a($m)
+              margin-top 59px 
+            +b($m)     
+              margin-top 30px    
+        img 
+          display inline-block
+          vertical-align top   
+          +a($m)
+            width 57%  
+            margin-left 6.2% 
+          +b($m)
+            width 100%  
+            margin-left 0 
+        &-image
+          display inline-block
+          vertical-align top  
+          background-size cover
+          background-position center
+          border-radius 5px 
+          position relative
+          +a($m)
+            width 57%  
+            margin-left 6.2% 
+            height 436px
+          +b($m)
+            width 100%  
+            margin-left 0 
+            min-height 480px
+            margin-top 46px
+          .orangecircle
+            position absolute
+            +a($m)
+              top -44.5px
+              right 47px 
+            +b($m)
+              top -19.5px
+              right 17px 
+            &.active 
+              height 71.5px 
+        &.-active         
+          height auto
+          +a($m) 
+            padding-top 61px
+          +b($m)
+            padding-top 30px
+        
+             
+        
+        
+                
         
     
         

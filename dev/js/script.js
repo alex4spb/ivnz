@@ -23,6 +23,7 @@ jQuery(document).ready(function($) {
         once: true
     });
     /*Магическая линия для верхнего меню*/
+    if ($(".topnav__menu").length) {
     $(function() {
         var $el,
             leftPos,
@@ -91,6 +92,7 @@ jQuery(document).ready(function($) {
             }, 500);
         });
     });
+    };
     /*Поддержка анимации для полосок*/
     $(function() {
         var line = [
@@ -107,7 +109,7 @@ jQuery(document).ready(function($) {
                 if (element.hasClass("aos-animate"))
                     setTimeout(function() {
                         element.stop().addClass("active");
-                    }, 100);
+                    }, 500);
                 else setTimeout(checkForChanges, 100);
             }
         });
@@ -231,7 +233,7 @@ jQuery(document).ready(function($) {
     if (document.getElementById("disqus_thread")) {
 
         $(".disqus-comment-count").attr('data-disqus-url', window.location.href)
-        DISQUSWIDGETS.getCount({reset: true});
+        
 
         var disqus_config = function () {
             this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
@@ -247,6 +249,7 @@ jQuery(document).ready(function($) {
             document.getElementsByTagName("head")[0] ||
             document.getElementsByTagName("body")[0]
         ).appendChild(dsq);
+        DISQUSWIDGETS.getCount({reset: true});
     }
     /*Слайдер вакансий*/
     new Swiper($(".vacancy__talants-slider"), {
@@ -263,7 +266,12 @@ jQuery(document).ready(function($) {
     });
     /* Сворачивание инфы*/
     $(".toggle").each(function() {
-        var target = $(this).attr("data-target");
+        var target = ''
+        if ($(this).attr('data-target')) {
+            target = $(this).attr("data-target");
+        }
+        else target = $(this).next()
+
         if ($(this).hasClass("-active")) {
             $(target).addClass("-active");
         } else {
@@ -507,4 +515,17 @@ jQuery(document).ready(function($) {
         }
         removePages();
     });
+    /*Маска для телефона*/
+    if (!window.phone_mask) {
+        phone_mask = "+7 (###) ### ## ##";
+    }
+    function maskRefresh() {
+        $('input[name="phone"]').on('focusin', function() {
+            delete $.mask.definitions['9']
+            $.mask.definitions['#'] = "[0-9]"
+            $(this).mask(phone_mask);
+        })
+    }
+    maskRefresh();
+    /**/
 });

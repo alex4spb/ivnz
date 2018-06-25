@@ -1,36 +1,47 @@
 mixin footer()
-  .footer(data-aos="fade-in")
-    .footer__contacts
-      .container
-        a.footer__contacts-logo(href="index.html")           
-          img(src="img/logo.svg")
-        a.footer__contacts-phone(href="tel:+7812244-71-48")
-          img.hidden-below-m(src="img/smartphone.svg")
-          img.hidden-above-m(src="img/smartphone_m.svg")
-          span +7 812 244-71-48
-        a.footer__contacts-mail(href="mailto:support@ivnz.ru")
-          img.hidden-below-m(src="img/mail_in.svg")
-          img.hidden-above-m(src="img/mail_in_m.svg")
-          span support@ivnz.ru
-        .footer__bottom-item.hidden-above-m «Иващенко и Низамов» #[br]© 2013-2018
-        .footer__bottom-item.hidden-above-m Бесплатный #[a(href="#") SEO-аудит] сайтов
-        .footer__contacts-social
-          a(href="#")
-            img(src="img/fb.svg")
-            span Facebook
-          a(href="#")
-            img(src="img/vk.svg")
-            span Vkontakte
-          a(href="#")
-            img(src="img/insta.svg")
-            span Instagram
-    .footer__bottom
-      .container
-       .footer__bottom-item.hidden-below-m «Иващенко и Низамов» © 2013-2018
-       .footer__bottom-item.hidden-below-m Бесплатный #[a(href="#") SEO-аудит] сайтов
-       .footer__bottom-item 
-         | Дизайн сайта 
-         a.footer__bottom-design(href="#") 
-           //img(src="img/design.svg")
-
+  if ['audit'].indexOf(pagename) === -1 
+    .footer(data-aos="fade-in")
+      .footer__contacts
+        .container
+          a.footer__contacts-logo(href="index.html")           
+            img(src="img/logo.svg")
+          a.footer__contacts-phone(href="tel:+7812244-71-48")
+            img.hidden-below-m(src="img/smartphone.svg")
+            img.hidden-above-m(src="img/smartphone_m.svg")
+            span +7 812 244-71-48
+          a.footer__contacts-mail(href="mailto:support@ivnz.ru")
+            img.hidden-below-m(src="img/mail_in.svg")
+            img.hidden-above-m(src="img/mail_in_m.svg")
+            span support@ivnz.ru
+          .footer__bottom-item.hidden-above-m «Иващенко и Низамов» #[br]© 2013-2018
+          .footer__bottom-item.hidden-above-m Бесплатный #[a(href="#") SEO-аудит] сайтов
+          .footer__contacts-social
+            a(href="#")
+              img(src="img/fb.svg")
+              span Facebook
+            a(href="#")
+              img(src="img/vk.svg")
+              span Vkontakte
+            a(href="#")
+              img(src="img/insta.svg")
+              span Instagram
+      .footer__bottom
+        .container
+         .footer__bottom-item.hidden-below-m «Иващенко и Низамов» © 2013-2018
+         .footer__bottom-item.hidden-below-m Бесплатный #[a(href="#") SEO-аудит] сайтов
+         .footer__bottom-item 
+           | Дизайн сайта 
+           a.footer__bottom-design(href="#")
+  if ['audit'].indexOf(pagename) !== -1 
+    .footer(data-aos="fade-in")      
+      .footer__bottom
+        .container
+          a.footer__contacts-logo(href="index.html")           
+            img(src="img/logo.svg")
+          .footer__bottom-item «Иващенко и Низамов» #[br.hidden-above-m]© 2013-2018
+          .footer__bottom-item ИНН 7811579871
+          .footer__bottom-item 
+            a.topnav__mail(href="mailto:support@ivnz.ru")
+              img(src="img/mail.svg")
+              span.hidden-above-m support@ivnz.ru
     

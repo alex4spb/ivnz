@@ -990,6 +990,7 @@
 @media only screen and (max-width: 767px) {
   .about__clients-list-item img {
     max-width: 76.15%;
+    max-height: 49px;
   }
 }
 .about__publication {

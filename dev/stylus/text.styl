@@ -225,3 +225,27 @@ h6,
     margin-top 0 !important
   > :last-child
     margin-bottom 0 !important
+    
+.button      
+  border 2px solid #F78200
+  border-radius 2px
+  color #ffffff
+  font-weight bold
+  text-align center      
+  font-family "Proxima Nova"
+  display inline-block
+  transition all $speed
+  +a($m)
+    font-size 16px
+    line-height 56px
+    height 56px
+    padding 0 60px
+  +b($m)
+    width 100% 
+    font-size 16px
+    line-height 46px
+    height 46px
+    box-sizing border-box
+  &:hover
+    background-color #F78200
+    text-decoration none

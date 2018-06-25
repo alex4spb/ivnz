@@ -346,40 +346,50 @@
         +b($d) 
           margin-left -5px
           padding-left 30px
-        li 
-          border-top 1px solid #D8D8D8
-          padding-top 15px             
-          padding-bottom 15px 
-          +a($m)
-            line-height 28px
-            font-size 18px   
-          +b($m)
-            line-height 24px
-            font-size 16px
-          &:first-child
-            border none
+      ul
+        +a($d)
+          margin-left -40px
+        +b($d) 
+          margin-left -5px
+          padding-left 30px
+        li
           &:before
-            content counter(num)
-            counter-increment num
-            font-family "TT Rounds"
-            font-weight bold
-            position absolute
-            text-align right
-            +a($d)
-              left -40px
-              width 20px
-              font-size 16px
-              line-height 28px
-            +btw($m, $d)
-              left -12px
-              width 20px
-              font-size 16px
-              line-height 28px
-            +b($m)
-              left 12px
-              width 15px
-              font-size 13px
-              line-height 24px
+            content ''
+      li
+        border-top 1px solid #D8D8D8
+        padding-top 15px             
+        padding-bottom 15px 
+        position relative
+        +a($m)
+          line-height 28px
+          font-size 18px   
+        +b($m)
+          line-height 24px
+          font-size 16px
+        &:first-child
+          border none
+        &:before
+          content counter(num)
+          counter-increment num
+          font-family "TT Rounds"
+          font-weight bold
+          position absolute
+          text-align right
+          +a($d)
+            left -40px
+            width 20px
+            font-size 16px
+            line-height 28px
+          +btw($m, $d)
+            left -40px
+            width 20px
+            font-size 16px
+            line-height 28px
+          +b($m)
+            left -36px
+            width 15px
+            font-size 13px
+            line-height 24px
   &__footer
     background #1F2637
     position relative     

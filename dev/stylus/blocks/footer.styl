@@ -4,21 +4,7 @@
   width 100%
   //border-top 1px solid rgba(216, 216, 216, 0.1)
   +a($m)
-    padding-top 29px
-  +b($m)
-    padding-top 44px
-    &:before
-      content ''
-      display block
-      width 100%
-      height 9px
-      border 1px solid #121621
-      border-left none
-      border-right none
-      background #1A202F
-      top 0
-      left 0
-      position absolute      
+    padding-top 29px     
   a 
     color #ffffff
   &__contacts
@@ -28,6 +14,19 @@
       padding-bottom 40px
     +b($m)
       padding-bottom 20px
+      padding-top 44px
+      &:before
+        content ''
+        display block
+        width 100%
+        height 9px
+        border 1px solid #121621
+        border-left none
+        border-right none
+        background #1A202F
+        top 0
+        left 0
+        position absolute  
     .container
       text-align justify     
       line-height 0
@@ -335,6 +334,7 @@
         line-height 22px
         text-align left
         height auto
+        width 100%
       a
         color #fff
         &:hover
@@ -368,7 +368,38 @@
       &:hover
         &:after    
           background url('../img/design2.svg')
-
+    .footer__contacts-logo
+      display inline-block
+      vertical-align middle
+      margin-right 0
+    .topnav__mail
+      margin-top 5px
+      font-size 0
+      line-height 0
+      +b($m)
+        display block
+        float none
+        font-size 16px
+        line-height 30px
+        font-weight bold
+        overflow visible
+        margin-top 20px
+        height 30px
+        img 
+          vertical-align top
+          position absolute
+          width 27px
+          height 17px
+          top 50%
+          transform translateY(-50%)
+          left -47px
+          display block
+        span
+          vertical-align top
+          display inline-block
+          
+          
+      
       
        
         
