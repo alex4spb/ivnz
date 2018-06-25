@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="409px" height="463px" viewBox="0 0 409 463" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 29</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="98.9360434%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#144FC0" offset="0%"></stop>
+            <stop stop-color="#2CA7FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="1.-Design-👀" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="6.1-Ivnz.-Blog.-Article" transform="translate(-1191.000000, -8477.000000)" fill-rule="nonzero">
+            <g id="Group-37" transform="translate(0.000000, 7168.000000)">
+                <g id="Group-36" transform="translate(0.000000, 704.000000)">
+                    <g id="Group-32" transform="translate(320.000000, 170.000000)">
+                        <g id="Group-34" transform="translate(0.000000, 79.000000)">
+                            <g id="Group-29" transform="translate(824.000000, 356.000000)">
+                                <path d="M51,225 L51,175 C51.0061179,107.126792 89.9164479,44.8262637 151,15 C212.870869,-15.0743325 287.035901,1.16429099 331,54 L424,168 C465.691377,218.999188 466.899785,292.665668 426,345 C386.532258,397.51765 321.754432,424.205203 257,415 L211,409 C119.456094,396.530731 50.9951817,317.930895 51,225 Z" id="Path-7" fill="#193162"></path>
+                                <path d="M51.3063914,266.063751 L51.3063914,216.063751 C51.3125093,148.190543 90.2228393,85.8900144 151.306391,56.0637507 C213.177261,25.9894182 287.342293,42.2280417 331.306391,95.0637507 L424.306391,209.063751 C465.997769,260.062938 467.206176,333.729418 426.306391,386.063751 C386.83865,438.581401 322.060823,465.268953 257.306391,456.063751 L211.306391,450.063751 C119.762485,437.594482 51.3015731,358.994646 51.3063914,266.063751 Z" id="Path-7" fill="url(#linearGradient-1)" transform="translate(253.806391, 249.563751) rotate(75.000000) translate(-253.806391, -249.563751) "></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

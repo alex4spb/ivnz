@@ -15,10 +15,10 @@ mixin audit-form(param)
         h2#audit.audit-form__title Закажите бесплатный аудит      
       .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
       .audit-form__form(data-aos="fade-in" data-aos-delay="800")
-        .audit-form__form-legend Общие сведения
         form.form.js-form-ajax(action="json/form-success.json", method="post")
           .form__container
-            .form__field.-whole
+            .form__field.-step1
+              .audit-form__form-legend Общие сведения
               +input({
                 name: 'url',
                 placeholder: 'Адрес сайта'
@@ -50,6 +50,38 @@ mixin audit-form(param)
                     .control__value
                       span.control__value-text Я согласен с условиями передачи информации
               button.form__button Далее
+            .form__field.-step2.hidden
+              .audit-form__form-legend Тематика сайта
+              +input({
+                tag: 'textarea',
+                rows: 3,
+                name: 'theme',
+                placeholder: 'Например, продажа техники Apple'
+              })
+              .audit-form__form-legend Регионы
+              +input({
+                name: 'regions',
+                placeholder: 'Город',
+                add: true
+              })  
+              .form__regions
+                .form__regions-item Москва
+                  .close
+                .form__regions-item Санкт-Петербург
+                  .close
+                .form__regions-item Новосибирск
+                  .close
+                .form__regions-item Екатеринбург
+                  .close
+                .form__regions-item Нижний Новгород
+                  .close
+                .form__regions-item Казань
+                  .close
+                .form__regions-item Орск
+                  .close
+                .form__regions-item Стамбул
+                  .close
+              button.form__button Оставить заявку
 
 
     

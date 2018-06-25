@@ -19,11 +19,13 @@
   }
 }
 .audit-form {
-  background-image: url("../img/form-back_dark.svg");
-  background-position: center 315px;
-  background-repeat: no-repeat;
-  background-size: 875px;
+/* background-image url('../img/form-back_dark.svg') 
+  background-position center 315px  
+  background-repeat no-repeat
+  background-size 875px*/
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .audit-form .container {
   -webkit-box-sizing: border-box;
@@ -45,6 +47,8 @@
   text-transform: uppercase;
   max-width: 675px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (min-width: 768px) {
   .audit-form__title {
@@ -60,6 +64,8 @@
   font-family: "Proxima Nova";
   color: #fff;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 @media only screen and (min-width: 768px) {
   .audit-form__subtitle {
@@ -80,9 +86,9 @@
 .audit-form__form {
   display: block;
   margin: 0 auto;
-  background-image: -webkit-linear-gradient(134deg, #144fc0 0%, #2ca7ff 100%);
-  background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
   margin-top: 40px;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) {
   .audit-form__form {
@@ -100,6 +106,20 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+}
+.audit-form__form:before {
+  content: '';
+  z-index: 0;
+  display: block;
+  position: absolute;
+  width: calc(100% + 280px);
+  left: -140px;
+  height: calc(100% + 60px);
+  top: -30px;
+  background-image: url("../img/form-back_dark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .audit-form__form-legend,
 .audit-form__form form {
@@ -128,6 +148,29 @@
 @media only screen and (max-width: 767px) {
   .audit-form__form-legend {
     display: none;
+  }
+}
+.audit-form__form form {
+  background-image: -webkit-linear-gradient(134deg, #144fc0 0%, #2ca7ff 100%);
+  background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
+  position: relative;
+  z-index: 1;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form__form form {
+    max-width: 590px;
+    border-radius: 10px;
+    padding: 34px 105px 61px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form__form form {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-radius: 0;
+    padding: 30px 20px 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -224,4 +267,103 @@
   .audit-form .orangecircle.active {
     height: 100px;
   }
+}
+.audit-form .form__field.-step2 .audit-form__form-legend {
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .form__field.-step2 .audit-form__form-legend {
+    display: block;
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
+.audit-form .form__field.-step2 .input + .audit-form__form-legend {
+  margin-top: 30px;
+}
+.audit-form .form__field.-step2 input,
+.audit-form .form__field.-step2 textarea {
+  border-top: 15px solid #fff;
+}
+.audit-form .form__field.-step2 input:focus ~ .input__placeholder,
+.audit-form .form__field.-step2 textarea:focus ~ .input__placeholder {
+  opacity: 0;
+}
+.audit-form .form__regions {
+  width: 100%;
+  font-size: 0;
+  text-align: justify;
+  line-height: 0;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .form__regions {
+    padding-bottom: 30pxm 1px solid rgba(216,216,216,0.1);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .form__regions {
+    margin-top: 20px;
+  }
+}
+.audit-form .form__regions:after {
+  content: '';
+  display: inline-block;
+  width: 50%;
+  height: 0;
+}
+.audit-form .form__regions + .form__button {
+  margin-top: 30px;
+}
+.audit-form .form__regions-item {
+  font-family: "Proxima Nova";
+  position: relative;
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .form__regions-item {
+    display: inline-block;
+    line-height: 14px;
+    margin-top: 20px;
+    padding-right: 25px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .form__regions-item {
+    display: block;
+    line-height: 50px;
+    border-top: 1px solid rgba(216,216,216,0.1);
+  }
+  .audit-form .form__regions-item:first-child {
+    border: none;
+  }
+}
+.audit-form .form__regions-item .close {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url("../img/close.svg");
+  opacity: 0.5;
+  background-size: cover;
+  z-index: 4;
+  cursor: pointer;
+  color: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form .form__regions-item .close {
+    right: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form .form__regions-item .close {
+    right: 0;
+  }
+}
+.audit-form .form__regions-item .close:hover {
+  opacity: 1;
 }

@@ -201,8 +201,9 @@
 }
 .audit .audit-form {
   color: #000;
+}
+.audit .audit-form__form:before {
   background-image: url("../img/audit-form-back.svg");
-  background-position: center 287px;
 }
 @media only screen and (min-width: 768px) {
   .audit .audit-form .container {

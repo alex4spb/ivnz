@@ -10,7 +10,8 @@ mixin input(settings)
       value: undefined,
       className: undefined,
       mask: undefined,
-      model: undefined
+      model: undefined,
+      add: false
     }, settings);
   .input(class= settings.className)
     .input__error
@@ -35,3 +36,5 @@ mixin input(settings)
         v-model= settings.model
       )= settings.value
     .input__placeholder= settings.placeholder
+    if settings.add 
+      .input__add +

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="41px" viewBox="0 0 42 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 74</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="66.67%" y1="16.67%" x2="41.67%" y2="75%" id="linearGradient-1">
+            <stop stop-color="#37AEE2" offset="0%"></stop>
+            <stop stop-color="#1E96C8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="0.-UI-kit-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Cuts.-Desktop" transform="translate(-1417.000000, -4370.000000)">
+            <g id="Group-27" transform="translate(320.000000, 3890.000000)">
+                <g id="Group-85" transform="translate(0.000000, 401.000000)">
+                    <g id="Group-21">
+                        <g id="Group-31">
+                            <g id="Group-86" transform="translate(390.000000, 60.000000)">
+                                <g id="Group-81" transform="translate(528.000000, 20.000000)">
+                                    <g id="Group-74" transform="translate(180.000000, 0.000000)">
+                                        <path d="M23,39 C15.0409132,41.6847189 5.95414355,37.9239442 3,29 L1,25 C-1.12810098,18.0187913 -0.0150243968,10.2193506 4,5 C7.42004869,-0.297747534 13.7503247,-1.26315435 20,1 L32,7 C37.6684921,10.5701287 40.9428892,17.3821644 40,25 C39.4295147,26.0525847 38.8263755,27.8385941 38,30 C35.8628004,33.6377486 32.2288441,36.7771055 28,38 L23,39 Z" id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                                        <path d="M23.9723351,16.4346033 C24.2691005,16.3850143 23.9073875,16.2605478 23.4916163,16.4346033 L15.3193963,21.6857888 L11.4736457,20.7310278 C10.7800292,20.2729247 10.7744371,19.7545373 11.9543646,19.2988863 L25.8952104,14.0477008 C26.4274404,13.8507099 27.0468894,14.2822931 26.8566481,15.0024618 L24.453054,25.9822133 C24.2417113,26.9343309 23.7575187,27.1199866 23.0108975,26.9369742 L19.6458657,24.0726913 L17.7229904,25.5048328 C17.7228097,25.8762033 17.5725374,26.1580393 17.2422716,25.9822133 L17.2422716,22.6405498 L23.9723351,16.4346033 Z" id="Combined-Shape" fill="#F7F7F7"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

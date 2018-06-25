@@ -1,9 +1,11 @@
 .audit-form
-  background-image url('../img/form-back_dark.svg') 
+  /* background-image url('../img/form-back_dark.svg') 
   background-position center 315px  
   background-repeat no-repeat
-  background-size 875px
+  background-size 875px*/
   color #fff
+  position relative
+  z-index 1
   .container
     box-sizing border-box
     position relative
@@ -16,6 +18,8 @@
     text-transform uppercase
     max-width 675px    
     margin 0 auto
+    position relative
+    z-index 2
     +a($m)
       text-align center
     +b($m)
@@ -24,6 +28,8 @@
     font-family "Proxima Nova"
     color #FFFFFF
     text-align center
+    position relative
+    z-index 2
     +a($m)
       text-align center
       font-size 18px
@@ -37,8 +43,10 @@
   &__form
     display block
     margin 0 auto
-    background-image linear-gradient(-44deg, #144FC0 0%, #2CA7FF 100%)
+    //background-image linear-gradient(-44deg, #144FC0 0%, #2CA7FF 100%)
     margin-top 40px
+    position relative
+    z-index 1
     +a($m)
       max-width 590px
       border-radius 10px
@@ -49,6 +57,19 @@
       border-radius 0
       padding 30px 20px 40px
       box-sizing border-box
+    &:before
+      content ''
+      z-index 0
+      display block
+      position absolute
+      width calc(100% + 280px)
+      left -140px
+      height calc(100% + 60px)
+      top -30px
+      background-image url('../img/form-back_dark.svg') 
+      background-position center  
+      background-repeat no-repeat
+      background-size 100% 100%
     &-legend
     form
       margin 0 auto
@@ -65,6 +86,20 @@
       margin-bottom 25px
       +b($m)
         display none
+    form 
+      background-image linear-gradient(-44deg, #144FC0 0%, #2CA7FF 100%)      
+      position relative
+      z-index 1
+      +a($m)
+        max-width 590px
+        border-radius 10px
+        padding 34px 105px 61px
+      +b($m)
+        width calc(100% + 40px)
+        margin-left -20px
+        border-radius 0
+        padding 30px 20px 40px
+        box-sizing border-box
   .control-label
     +a($m)
       margin-top 36px
@@ -122,4 +157,73 @@
         height 360px
       +b($m)
         height 100px
+  .form__field.-step2
+    .audit-form__form-legend
+      margin-bottom 15px
+      +b($m)
+        display block
+        line-height 20px
+        font-size 16px
+    .input + .audit-form__form-legend
+      margin-top 30px
+    input
+    textarea
+      border-top 15px solid #fff
+      &:focus
+        ~ .input__placeholder
+          opacity 0
+  .form__regions
+    width 100%
+    font-size 0
+    text-align justify
+    line-height 0
+    color #fff
+    +a($m)
+      border-botto
+      padding-bottom 30pxm 1px solid rgba(216, 216, 216, .1)
+    +b($m)
+      margin-top 20px
+    &:after
+      content ''
+      display inline-block
+      width 50%
+      height 0 
+    & + .form__button
+      margin-top 30px     
+    &-item
+      font-family "Proxima Nova"
+      position relative
+      font-size 16px
+      +a($m)
+        display inline-block
+        line-height 14px
+        margin-top 20px
+        padding-right 25px
+      +b($m)
+        display block
+        line-height 50px
+        border-top 1px solid rgba(216, 216, 216, .1)
+        &:first-child
+          border none
+      .close
+        content ''
+        position absolute
+        width 10px
+        height 10px
+        top 50%
+        transform translateY(-50%)
+        background url('../img/close.svg')
+        opacity 0.5
+        background-size cover
+        z-index 4
+        cursor pointer
+        color #fff
+        +a($m)
+          right 10px
+        +b($m)
+          right 0
+        &:hover
+          opacity 1
+
+
     
