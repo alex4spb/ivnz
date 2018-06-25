@@ -17,15 +17,23 @@
         padding-top 96px
         padding-bottom 40px
       h1
-        text-transform uppercase  
-        margin 0px
+        +a($m)
+          text-transform uppercase  
+          margin 0px
+         +b($m)
+           margin 12px 0 0
+           line-height 28px
       .backurl
         +a($m)
           display none
         +b($m)
           display block
   &__content
-    color #000    
+    color #000 
+    +a($m)
+      margin-bottom 120px
+    +b($m)  
+      margin-bottom 40px 
     .container
       +b($m)
         padding 0 20px
@@ -372,27 +380,505 @@
               width 15px
               font-size 13px
               line-height 24px
-          
-        
-                  
-        
-      
-
-          
-                              
-
-
+  &__footer
+    background #1F2637
+    position relative     
+    +a($m)
+      padding 60px 0 40px
+    +b($m)
+      padding 20px 0 30px        
+      &:after
+        content ''
+        display block
+        position absolute
+        width 100%
+        bottom 0
+        height 1px
+        background #333C51
+    .container
+      +a($m)            
+        &:after
+          content ''
+          display block
+          position absolute
+          width 100%
+          bottom -40px
+          height 1px
+          background #333C51
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    .blueline
+      position absolute
+      +a($m)
+        top -90px
+        left 0
+      +b($m)
+        top -40px
+        left 20px
+      &.active
+        +a($m)     
+          height 60px
+        +b($m)
+          height 40px
+    .greyline
+      position absolute
+      background #d8d8d8
+      +a($m)
+        top -90px
+        left 50%
+      +b($m)
+        display none
+      &.active
+        +a($m)     
+          height 60px
+    .orangecircle
+      position absolute
+      +a($m)
+        top -107px
+        right 0
+      +b($m)
+        display none
+      &.active
+        +a($m)     
+          height 80px 
+    &-repost
+      line-height 0
+      box-sizing border-box
+      border-radius 10px
+      background #F6F9FF
+      padding 0 7px
+      color #000
+      line-height 40px
+      font-weight bold
+      +a($m)
+        display inline-block
+        padding 20px 0 20px 30px
+        font-size 15px
+        font-family "Proxima Nova"
+      +b($m)
+        display block
+        padding 22px 30px 40px
+        text-align center
+        font-size 18px
+        font-family "TT Rounds" 
+      &-count
+        display inline-block
+        background url('../img/repost-bottom.svg')
+        background-repeat no-repeat
+        background-position 0 center
+        background-size 24px 24px
+        line-height 40px
+        vertical-align middle
+        font-weight bold
+        padding-left 35px
+        margin-left 10px
+        cursor pointer
+        +a($m)
+          font-size 13px
+        +b($m)
+          font-size 18px
+      &-social
+        line-height 40px
+        vertical-align middle
+        display inline-block
+        position relative
+        height 40px
+        transition-duration $speed 
+        transition-property all 
+        overflow hidden
+        +a($m)
+          display inline-block
+          margin-left 20px
+          padding-left 10px
+          padding-right 20px
+          text-align justify
+        +b($m)
+          display block
+          text-align center
+          margin-top 12px
+        &:before
+          content ''
+          width 2px
+          height 30px
+          border-radius 10px
+          background #E0E5EF
+          position absolute
+          top 5px
+          left 0
+          +a($m)
+            display block
+          +b($m)
+            display none
+        > a
+          display inline-block
+          height 100%
+          background-position center
+          background-repeat no-repeat
+          width 40px
+          height 40px
+          padding 0 10px
+          +b($m)
+            &:first-child
+              padding-left 0
+              background-position left
+            &:last-child
+              padding-right 0
+              background-position right
+        .twitter
+          +a($m)
+            background-image url('../img/twitter-black.svg')
+            background-size 14.5px          
+          +b($m)
+            background-image url('../img/twitter-hover-bot.svg')
+            background-size 40px
+          &:hover
+            background-image url('../img/twitter-hover-bot.svg')
+            background-size 40px
+        .vk
+          +a($m)
+            background-image url('../img/vk-black.svg')
+            background-size 16.2px
+          +b($m)
+            background-image url('../img/vk-hover-bot.svg')
+            background-size 40px
+          &:hover
+            background-image url('../img/vk-hover-bot.svg')
+            background-size 40px
+        .fb 
+          +a($m)
+            background-image url('../img/fb-black.svg')
+            background-size 7.7px
+          +b($m)
+            background-image url('../img/fb-hover-bot.svg')
+            background-size 40px
+          &:hover
+            background-image url('../img/fb-hover-bot.svg')
+            background-size 40px
+        .telegram
+          +a($m)
+            background-image url('../img/telegram-black.svg')
+            background-size 15.9px
+          +b($m)
+            background-image url('../img/telegram-hover-bot.svg')
+            background-size 40px
+          &:hover
+            background-image url('../img/telegram-hover-bot.svg')
+            background-size 40px
+    &-info
+      +a($t)
+        float right
+        &:after
+          content ''
+          display table
+          clear both
+      +b($t)
+        display block
+        padding 0 0 20px 0
+        position relative
+        margin-bottom 20px
+        &:after
+          content ''
+          display block
+          position absolute
+          width calc(100% + 40px)
+          left -20px
+          bottom 0
+          height 1px
+          background #333C51
+    &-date
+    &-autor
+      display inline-block
+      color #FFFFFF
+      font-family "Proxima Nova"
+      +a($t)
+        font-size 15px
+        line-height 40px
+        padding 20px 0
+      +b($t)
+        font-size 14px
+        line-height 30px
+        padding 0 
+    &-autor
+      position relative
+      +a($t)
+        margin-left 53px
+        padding-left 55px
+      +b($t)
+        margin-left 53px
+        padding-left 40px
+        float right        
+        span
+          vertical-align top
+          display inline-block
+        span:last-child
+          white-space nowrap 
+          overflow hidden
+          text-overflow clip
+          width 1.3em
+          color transparent
+          vertical-align baseline
+          padding-left 0.5em
+          position relative
+          &:after
+            content '.'
+            color #fff
+            display inline-block
+            position absolute
+            width 2px
+            left 1.4em
+          &:first-letter
+            color #fff
+      &-img
+        position absolute
+        border-radius 40px
+        overflow hidden
+        left 0px
+        +a($t)
+          width 40px
+          height 40px
+          top 20px
+        +b($t)
+          width 30px
+          height 30px
+          top 0
+        &:after
+          content ''
+          width 100%
+          height 100%
+          display block
+          background rgba(0, 18, 61, .3)
+          position absolute
+          top 0px
+          left 0px
+          z-index 3
+        img 
+          width 100%
+  &__readmore
+    background #1F2637
+    position relative
+    +a($m)
+      padding 60px 0
+    +b($m)
+      padding 40px 0
+      &:after
+        content ''
+        display block
+        position absolute
+        width calc(100% + 40px)
+        left -20px
+        bottom 0
+        height 1px
+        background #333C51
+    .container
+      +b($m)
+        padding 0 20px
+        box-sizing border-box
+    &-title
+      color #fff
+      text-transform uppercase
+    &-list
+      margin-top 42px
+      &-item
+        display block
+        font-size 0
+        width 100%
+        position relative
+        border-color transparent  
+        border-top 1px solid #333C51        
+        line-height 0
+        position relative
+        transition-duration $speed 
+        transition-property border-color, background
+        box-sizing border-box    
+        +a($m)
+          height 60px
+          &:first-child
+            border-color transparent 
+          &:hover
+            border 2px solid #3C7FFF
+            border-radius 4px
+            background #222A3D
+            .article__readmore-list-item-date
+              color #fff
+              left -2px            
+              top 1px
+            .article__readmore-list-item-title
+              padding-left 132px
+            > *            
+              line-height 56px
+              /*&:after
+                opacity 1
+                height auto*/         
+        +b($m)
+          padding 10px 0 
+          border-color #333C51
+          &:last-child
+            border-top 1px solid #333C51  
+          &:hover
+            text-decoration none
+        > *
+          vertical-align baseline
+          +a($m)
+            line-height 58px
+            display inline-block
+          +b($m)
+            display block
+            line-height 24px
+        &-date
+          font-family "Proxima Nova"
+          color #51596B
+          transition-duration $speed 
+          transition-property color   
+          +a($m)
+            position absolute
+            left 0px
+            top 1px
+            font-size 15px
+            width 134px
+            text-align center
+          +b($m)
+            position relative
+            font-size 14px
+            text-align left
+            margin-top 9px
+        &-title 
+          color #fff        
+          +a($m)
+            white-space nowrap
+            font-size 18px
+            padding-left 134px
+          +b($m)
+            font-size 18px
+  &__comments    
+    background #1D2333
+    position relative
+    +a($m)
+      padding 120px 0
+    +b($m)
+      padding 40px 0
+      &:after
+        content ''
+        display block
+        position absolute
+        width calc(100% + 40px)
+        left -20px
+        bottom 0
+        height 1px
+        background #333C51
+    .orangeline
+      position absolute
+      +a($m)
+        top -170px
+        right 50%
+      +b($m)
+        display none
+      &.active
+        +a($m)     
+          height 100px
+    h2
+      text-transform uppercase
+      +b($m)
+        display none
+    .container
+      transition-duration $speed 
+      transition-property all
+      +b($m)
+        padding 0 20px
+        box-sizing border-box       
+      &:before
+        content ''
+        position absolute
+        background url('../img/comments-top.svg')
+        width 417px
+        height 405px
+        background-size 100%
+        top 130px
+        left -70px
+        z-index 0        
+        transition-duration $speed 
+        transition-property all 
+        +b($m)
+          display none
+      &:after
+        content ''
+        position absolute
+        background url('../img/comments-bottom.svg')
+        width 409px
+        height 463px
+        background-size 100%
+        bottom -15px
+        right -65px
+        z-index 0
+        transition-duration $speed 
+        transition-property all
+        +b($m)
+          display none         
+    &-wrap
+      width 100%
+      background #FFFFFF
+      border-radius 20px
+      box-sizing border-box
+      position relative
+      z-index 1
+      transition-duration $speed 
+      transition-property all
+      +a($m)
+        padding 60px 89px
+        margin-top 29px
+      +b($m)
+        height 0
+        overflow hidden
+        &.-active
+          padding 30px 20px
+          height auto
+          margin-top 20px
+    &-button
+      border none  
+      background-color #F78200
+      border-radius 2px
+      color #ffffff
+      font-weight bold
+      text-align center      
+      font-family "Proxima Nova"
+      width 100%
+      cursor pointer
+      font-size 18px
+      transition-duration $speed 
+      transition-property all
+      +a($m)
+        display none
+      +b($m)
+        display inline-block
+        box-sizing border-box 
+        line-height 50px
+        height 50px
+      &:before
+        content 'Скрыть комментарии'          
+        font-size 0
+        transition-duration $speed 
+        transition-property all
+      &.-active
+        font-size 0
+        overflow hidden
+        &:before
+          font-size 18px
+      &:hover
+        background-color #FF8E11
+        text-decoration none
+      .disqus-comment-count
+        display inline
   .audit-form
     background-color #1F2637
     .orangecircle
       +a($m)
         top -70px 
       +b($m)
-        top -39px 
+        top -18px 
       &.active
         +a($m)
           height 120px
         +b($m)
-          height 100px
+          height 60px
         
         

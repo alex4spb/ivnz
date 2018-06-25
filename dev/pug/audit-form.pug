@@ -3,9 +3,16 @@ include /input
 mixin audit-form(param)
   section.audit-form(data-aos="fade-in")
     .container
-      .blueline(data-aos="fade-in")
-      .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
-      h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
+      if ['audit'].indexOf(pagename) === -1 
+        .blueline(data-aos="fade-in")
+        .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
+        h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
+      if ['audit'].indexOf(pagename) !== -1 
+        .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
+        .greyline(data-aos="fade-in" data-aos-anchor=".audit-form")
+        .orangecircle.-long(data-aos="fade-in" data-aos-anchor=".audit-form__form")
+        .greyline.-bottom(data-aos="fade-in" data-aos-anchor=".audit-form")
+        h2.audit-form__title Закажите бесплатный аудит      
       .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
       .audit-form__form(data-aos="fade-in" data-aos-delay="800")
         .audit-form__form-legend Общие сведения

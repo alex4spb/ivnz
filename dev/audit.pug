@@ -1,0 +1,40 @@
+extends /layout
+include /audit-form
+
+block main
+  .audit
+    section.header(data-aos="fade-in")
+      .container
+        .header__content(data-aos="fade-in" data-aos-delay="700")
+          h1 Главная задача #[br.hidden-above-m]SEO-аудита — #[br]оценить перспективы продвижения сайта #[br.hidden-above-m]в поисковых системах
+          a.header__button-arrow(href="#audit")
+          .header__image
+            img(src="img/audit-header-img.png" alt="") 
+        .greyline(data-aos="fade-in" data-aos-delay="700")
+        .greyline.-left(data-aos="fade-in" data-aos-delay="700")
+        .greyline.-center(data-aos="fade-in" data-aos-delay="700")
+        .greyline.-bottom(data-aos="fade-in" data-aos-delay="700")
+        .orangecircle(data-aos="fade-in" data-aos-delay="700")
+    a#audit
+    +audit-form()
+    section.audit__engines
+      .container
+        .audit__engines-item
+          .audit__engines-item-text 
+            | Каждый день сотни и тысячи ваших потенциальных клиентов ищут товары и услуги в поисковых системах
+          .audit__engines-item-img
+            img.hidden-below-m(src="img/yandex-search.png" alt="")
+            img.hidden-above-m(src="img/yandex-search_m.png" alt="")
+        .audit__engines-item
+          .audit__engines-item-text 
+            | Поисковое продвижение может стать #[br.hidden-below-m]выгодным рекламным каналом #[br.hidden-below-m]для вашего сайта
+          .audit__engines-item-img
+            img.hidden-below-m(src="img/google-search.png" alt="")
+            img.hidden-above-m(src="img/google-search_m.png" alt="")
+
+    
+
+        
+
+
+  

@@ -6,7 +6,7 @@ block main
     section.header(data-aos="fade-in")
       .container               
         .header__content(data-aos="fade-in" data-aos-delay="500")
-          a.backurl(href="") вакансии 
+          a.backurl(href="") блог 
           h1 Нужно ли разрабатывать #[br]стратегию развития #[br]для современного бизнеса?
     section.article__content
       .container
@@ -94,13 +94,55 @@ block main
               | Стратегическое планирование для бизнеса актуально всегда. Меняются только инструменты
           .text
             p Что действительно изменилось по сравнению с XX веком – это частота и скорость обновления стратегии. Раньше ее можно было разрабатывать раз в пять лет и жить по ней спокойно. Сейчас тонкие настройки приходится делать как минимум ежегодно, иногда, в крайних случаях, чаще. Но из этого отнюдь не следует, что необходимость в стратегическом планировании отпала.
-
-
-
-
-
-
-
-
+    section.article__footer
+      .container
+        .blueline(data-aos="fade-in")
+        .greyline(data-aos="fade-in")
+        .orangecircle(data-aos="fade-in")
+        .article__footer-info
+          .article__footer-date 6 Апреля 2018
+          .article__footer-autor
+            .article__footer-autor-img
+              img(src="temp/people_5.png")
+            span Чистяков 
+            span Алексей
+        .article__footer-repost
+          | Поделиться
+          .article__footer-repost-count 44
+          .article__footer-repost-social
+            a.twitter(href="#") 
+            a.vk(href="#") 
+            a.fb(href="#") 
+            a.telegram(href="#")
+    section.article__readmore
+      .container
+        .article__readmore-title 
+          h2 Читайте так же
+        .article__readmore-list
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title Telegram-каналы для маркетолога: 70+ источников новостей
+            .article__readmore-list-item-date 27.03.2018
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title Приложения, обложки, боты. Зачем бизнесу API «ВКонтакте»?
+            .article__readmore-list-item-date 24.03.2018
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title 10 примеров провокационной рекламы в сети
+            .article__readmore-list-item-date 21.03.2018
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title Анализ рынка перед запуском бизнеса: минимизируем ошибки на старте
+            .article__readmore-list-item-date 18.03.2018
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title #[b Как работают алгоритмы Яндекс.Дзена: интервью с медиа-директором сервиса Даниилом Трабуном]
+            .article__readmore-list-item-date 16.03.2018
+          a.article__readmore-list-item(href="#")
+            .article__readmore-list-item-title Полное руководство по внутренней перелинковке сайта
+            .article__readmore-list-item-date 12.03.2018
+    section.article__comments
+      .container
+        .orangeline(data-aos="fade-in")
+        .article__comments-button.toggle(data-target=".article__comments-wrap") Загрузить #[.disqus-comment-count 10 комментариев]
+        h2.disqus-comment-count 3 комментария
+        .article__comments-wrap
+          #disqus_thread
     +audit-form()                   
   

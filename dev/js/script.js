@@ -229,6 +229,15 @@ jQuery(document).ready(function($) {
     /*Комментарии Настройки disqus*/
 
     if (document.getElementById("disqus_thread")) {
+
+        $(".disqus-comment-count").attr('data-disqus-url', window.location.href)
+        DISQUSWIDGETS.getCount({reset: true});
+
+        var disqus_config = function () {
+            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = 'identifier_1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable '<? php echo $my_identifier; ?>'
+        }
+
         var your_sub_domain = "ivnz"; // Имя зарегистрированного сайта на disqus
         var dsq = document.createElement("script");
         dsq.type = "text/javascript";
