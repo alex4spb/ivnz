@@ -236,23 +236,28 @@
   color: #d0011b;
 }
 .input__error {
-  color: #d0011b;
+  color: #fff;
   position: absolute;
   top: 100%;
-  right: 0;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: right;
+  left: 0;
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: "Proxima Nova";
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
+  font-weight: bold;
+}
+.input.-error {
+  margin-bottom: 50px;
 }
 .input.-error input,
-.input.-success input,
-.input.-error textarea,
-.input.-success textarea {
-  padding-right: 40px;
+.input.-error textarea {
+  -webkit-box-shadow: 0 0 0 2px #f74900;
+          box-shadow: 0 0 0 2px #f74900;
 }
 .input.-error .ico.-input__error {
   display: block;

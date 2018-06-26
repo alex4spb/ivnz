@@ -1,0 +1,64 @@
+.form__success
+  color #fff
+  position relative
+  z-index 1
+  padding-bottom 40px
+  display none
+  h2
+    text-transform uppercase
+    +a($m)
+      text-align center
+    +b($m)
+      text-align left
+  &-text
+    max-width 565px
+    margin 0 auto
+    font-family "Proxima Nova"
+    border-top 2px solid rgba(216, 216, 216, .1)
+    position relative
+    +a($m)
+      font-size 18px
+      line-height 28px
+      text-align center
+      padding-top 40px
+      margin-top 40px
+    +b($m)
+      font-size 16px
+      line-height 24px
+      text-align left      
+      padding-top 28px     
+      margin-top 28px
+      width calc(100% + 40px)
+      margin-left -20px
+      padding-right 20px
+      padding-left 20px
+      box-sizing border-box
+    &:before
+      content ''
+      position absolute
+      background #1F2637
+      border 2px solid #3B7EFF
+      box-sizing border-box
+      width 16px
+      height 16px
+      border-radius 16px
+      left 50%
+      transform translateX(-50%)
+      top -9px      
+    p + p
+      +a($m)
+        margin-top 28px
+      +b($m)
+        margin-top 24px
+  &-img
+    width 100%
+    width 187px
+    height 187px
+    margin 0 auto
+    margin-top 40px
+    img 
+      display block
+      width 100%
+      height 100%
+      
+  

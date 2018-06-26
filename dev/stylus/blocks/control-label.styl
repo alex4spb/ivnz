@@ -5,6 +5,7 @@
   border-collapse collapse
   border-spacing 0
   width 100%  
+  position relative
   &__input,
   &__value
     //display table-cell
@@ -34,3 +35,7 @@
         margin-right 4px
       +b($m)
         margin-right 6px
+  &.-error
+    .input__error
+      display block
+      padding-top 5px

@@ -24,75 +24,78 @@ jQuery(document).ready(function($) {
     });
     /*Магическая линия для верхнего меню*/
     if ($(".topnav__menu").length) {
-    $(function() {
-        var $el,
-            leftPos,
-            newWidth,
-            $mainNav = $(".topnav__menu#magic");
+        $(function() {
+            var $el,
+                leftPos,
+                newWidth,
+                $mainNav = $(".topnav__menu#magic");
 
-        $mainNav.append("<div id='magic-line'></div>");
-        var $magicLine = $("#magic-line");
+            $mainNav.append("<div id='magic-line'></div>");
+            var $magicLine = $("#magic-line");
 
-        $magicLine
-            .width($(".topnav__menu#magic .topnav__menu-item.active").width())
-            .css(
-                "left",
-                $(".topnav__menu#magic .topnav__menu-item.active").position()
-                    .left
-            )
-            .data("origLeft", $magicLine.position().left)
-            .data("origWidth", $magicLine.width());
-        $(".topnav__menu#magic .topnav__menu-item a").focusin(function() {
-            $el = $(this);
-            leftPos = $el.parent().position().left;
-            newWidth = $el.parent().width();
-            $magicLine.stop().animate({
-                left: leftPos,
-                width: newWidth
+            $magicLine
+                .width(
+                    $(".topnav__menu#magic .topnav__menu-item.active").width()
+                )
+                .css(
+                    "left",
+                    $(
+                        ".topnav__menu#magic .topnav__menu-item.active"
+                    ).position().left
+                )
+                .data("origLeft", $magicLine.position().left)
+                .data("origWidth", $magicLine.width());
+            $(".topnav__menu#magic .topnav__menu-item a").focusin(function() {
+                $el = $(this);
+                leftPos = $el.parent().position().left;
+                newWidth = $el.parent().width();
+                $magicLine.stop().animate({
+                    left: leftPos,
+                    width: newWidth
+                });
+            });
+            $(".topnav__menu#magic .topnav__menu-item a").focusout(function() {
+                $magicLine.stop().animate({
+                    left: $magicLine.data("origLeft"),
+                    width: $magicLine.data("origWidth")
+                });
             });
         });
-        $(".topnav__menu#magic .topnav__menu-item a").focusout(function() {
-            $magicLine.stop().animate({
-                left: $magicLine.data("origLeft"),
-                width: $magicLine.data("origWidth")
+        /*Анимация для мобильного меню*/
+        $(function() {
+            var pull = $("#pull"),
+                menu = $(".topnav__menu.-mobile"),
+                menuHeight = menu.height(),
+                close = $(".topnav__menu-close img");
+
+            $(pull).on("click", function(e) {
+                e.preventDefault();
+                menu.animate(
+                    {
+                        left: "0px"
+                    },
+                    600,
+                    "easeOutCubic"
+                );
+                setTimeout(function() {
+                    menu.addClass("active");
+                }, 500);
+            });
+            $(close).on("click", function(e) {
+                e.preventDefault();
+                menu.animate(
+                    {
+                        left: "-100%"
+                    },
+                    600,
+                    "easeOutCubic"
+                );
+                setTimeout(function() {
+                    menu.removeClass("active");
+                }, 500);
             });
         });
-    });
-    /*Анимация для мобильного меню*/
-    $(function() {
-        var pull = $("#pull"),
-            menu = $(".topnav__menu.-mobile"),
-            menuHeight = menu.height(),
-            close = $(".topnav__menu-close img");
-
-        $(pull).on("click", function(e) {
-            e.preventDefault();
-            menu.animate(
-                {
-                    left: "0px"
-                },
-                600,
-                "easeOutCubic"
-            );
-            setTimeout(function() {
-                menu.addClass("active");
-            }, 500);
-        });
-        $(close).on("click", function(e) {
-            e.preventDefault();
-            menu.animate(
-                {
-                    left: "-100%"
-                },
-                600,
-                "easeOutCubic"
-            );
-            setTimeout(function() {
-                menu.removeClass("active");
-            }, 500);
-        });
-    });
-    };
+    }
     /*Поддержка анимации для полосок*/
     $(function() {
         var line = [
@@ -179,6 +182,7 @@ jQuery(document).ready(function($) {
                 if ($(this).val().length > 0)
                     $(this)
                         .parent(".input")
+                        .removeClass(" -error")
                         .find(".input__placeholder")
                         .addClass("active");
                 else
@@ -191,19 +195,41 @@ jQuery(document).ready(function($) {
                 $(this)
                     .parent(".input")
                     .find("input, textarea")
-                    .focus();
+                    .focus()
+                    .parent(".input")
+                    .removeClass(" -error");
             });
             $(this).focusout(function(e) {
-                if ($(this).val().length > 0)
+                if (
+                    $(this).val().length > 0 &&
+                    $(this).val() !== "+7 (___) ___ __ __"
+                ) {
                     $(this)
                         .parent(".input")
                         .find(".input__placeholder")
-                        .addClass("active");
-                else
+                        .addClass("active")
+                        .parent(".input")
+                        .removeClass(" -error");
+                    if (
+                        $(this)
+                            .parents(".form__field")
+                            .hasClass("-step2")
+                    ) {
+                        $(this)
+                            .parent(".input")
+                            .find(".input__placeholder")
+                            .css("opacity", "0");
+                    }
+                } else
                     $(this)
                         .parent(".input")
                         .find(".input__placeholder")
-                        .removeClass("active");
+                        .removeClass("active")
+            });
+            $(this).focusin(function(e) {
+                $(this)
+                    .parent(".input")
+                    .removeClass(" -error");
             });
         });
     });
@@ -231,14 +257,15 @@ jQuery(document).ready(function($) {
     /*Комментарии Настройки disqus*/
 
     if (document.getElementById("disqus_thread")) {
+        $(".disqus-comment-count").attr(
+            "data-disqus-url",
+            window.location.href
+        );
 
-        $(".disqus-comment-count").attr('data-disqus-url', window.location.href)
-        
-
-        var disqus_config = function () {
-            this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = 'identifier_1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable '<? php echo $my_identifier; ?>'
-        }
+        var disqus_config = function() {
+            this.page.url = window.location.href; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = "identifier_1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable '<? php echo $my_identifier; ?>'
+        };
 
         var your_sub_domain = "ivnz"; // Имя зарегистрированного сайта на disqus
         var dsq = document.createElement("script");
@@ -249,7 +276,7 @@ jQuery(document).ready(function($) {
             document.getElementsByTagName("head")[0] ||
             document.getElementsByTagName("body")[0]
         ).appendChild(dsq);
-        DISQUSWIDGETS.getCount({reset: true});
+        DISQUSWIDGETS.getCount({ reset: true });
     }
     /*Слайдер вакансий*/
     new Swiper($(".vacancy__talants-slider"), {
@@ -266,11 +293,10 @@ jQuery(document).ready(function($) {
     });
     /* Сворачивание инфы*/
     $(".toggle").each(function() {
-        var target = ''
-        if ($(this).attr('data-target')) {
+        var target = "";
+        if ($(this).attr("data-target")) {
             target = $(this).attr("data-target");
-        }
-        else target = $(this).next()
+        } else target = $(this).next();
 
         if ($(this).hasClass("-active")) {
             $(target).addClass("-active");
@@ -520,12 +546,349 @@ jQuery(document).ready(function($) {
         phone_mask = "+7 (###) ### ## ##";
     }
     function maskRefresh() {
-        $('input[name="phone"]').on('focusin', function() {
-            delete $.mask.definitions['9']
-            $.mask.definitions['#'] = "[0-9]"
+        $('input[name="phone"]').on("focusin", function() {
+            delete $.mask.definitions["9"];
+            $.mask.definitions["#"] = "[0-9]";
             $(this).mask(phone_mask);
-        })
+        });
     }
     maskRefresh();
-    /**/
+    /*Формы*/
+    $(function() {
+        $(".vacancy-form__form form").on("submit", function(e) {
+            e.preventDefault();
+            var src = $(this).attr("action");
+            var serialize = $(this).serialize();
+            var data_field = $(this).serializeArray();
+            var form = $(this);
+            var type = $(this).data("type");
+            var fields = {
+                name: "",
+                resume: "",
+                phone: "",
+                comments: ""
+            };
+
+            var require = ["name", "phone", "resume"];
+            var errors = [];
+            var message = "Поле является обязательным для заполнения";
+
+            for (var field in fields) {
+                var val = $(form)
+                    .find("[name='" + field + "']")
+                    .val();
+                fields[field] = $.trim(val);
+                if (fields[field] == "" && require.indexOf(field) != -1) {
+                    errors.push(message);
+                    $(form)
+                        .find("[name='" + field + "']")
+                        .parent(".input")
+                        .addClass("-error")
+                        .find(".input__error")
+                        .html(message);
+                }
+            }
+            if (
+                !$(form)
+                    .find("[name='conditions']")
+                    .is(":checked")
+            ) {
+                errors.push(message);
+                $(form)
+                    .find("[name='conditions']")
+                    .parents(".control-label")
+                    .addClass("-error")
+                    .find(".input__error")
+                    .html("Подтвердите условия");
+            } else
+                $(form)
+                    .find("[name='conditions']")
+                    .parents(".control-label")
+                    .removeClass("-error");
+
+            if (!errors.length) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    dataType: "json",
+                    cache: false,
+                    url: src,
+                    data: data_field
+                }).done(function(data) {
+                    $(form)
+                        .parents(".vacancy-form__wrap")
+                        .fadeOut("slow", function() {
+                            $(form)
+                                .parents(".vacancy-form")
+                                .find(".form__success")
+                                .fadeIn();
+                        });
+                });
+            }
+        });
+
+        /*подписка*/
+        $(".blog__subscribe-form form").on("submit", function(e) {
+            e.preventDefault();
+            var src = $(this).attr("action");
+            var serialize = $(this).serialize();
+            var data_field = $(this).serializeArray();
+            var form = $(this);
+            var type = $(this).data("type");
+            var fields = {
+                email: ""
+            };
+
+            var require = ["name", "phone", "resume"];
+            var errors = [];
+            var message = "Поле является обязательным для заполнения";
+            var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+            for (var field in fields) {
+                var val = $(form)
+                    .find("[name='" + field + "']")
+                    .val();
+                fields[field] = $.trim(val);
+                if (fields[field] == "" && require.indexOf(field) != -1) {
+                    errors.push(message);
+                    $(form)
+                        .find("[name='" + field + "']")
+                        .parent(".input")
+                        .addClass("-error")
+                        .find(".input__error")
+                        .html(message);
+                } else {
+                    if (field == "email") {
+                        if (!expr.test(fields[field])) {
+                            errors.push(message);
+                            $(form)
+                                .find("[name='" + field + "']")
+                                .parent(".input")
+                                .addClass("-error")
+                                .find(".input__error")
+                                .html("введите корректный e-mail");
+                        }
+                    }
+                }
+            }
+            if (!errors.length) {
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    dataType: "json",
+                    cache: false,
+                    url: src,
+                    data: data_field
+                }).done(function(data) {
+                    $(form)
+                        .parents(".blog__subscribe-form")
+                        .fadeOut("slow", function() {
+                            $(form)
+                                .parents(".blog__subscribe")
+                                .find(".blog__subscribe-success")
+                                .fadeIn();
+                        });
+                });
+            }
+        });
+    });
+    /*Добавление регионов в форме*/
+    $(".input__add").on("click", function() {
+        var button = $(this);
+        var input = $(this)
+            .parents(".input")
+            .find('input[name="regions"]');
+        var regions_container = $(this)
+            .parents(".form__field")
+            .find(".form__regions");
+        var regions = $(this)
+            .parents(".form__field")
+            .find(".form__regions-item");
+        var input_value = input.val().trim();
+        console.log(input_value);
+
+        if (input_value.length != 0) {
+            var repeat = 0;
+            regions.each(function() {
+                if (
+                    $(this)
+                        .text()
+                        .trim()
+                        .toLowerCase() == input_value.toLowerCase()
+                ) {
+                    repeat++;
+                }
+            });
+            if (repeat == 0) {
+                regions_container.append(
+                    '<div class="form__regions-item">' +
+                        input_value +
+                        '<div class="close"></div>' +
+                        "</div>"
+                );
+                removeBtn();
+                input.val('').parent(".input")
+                            .find(".input__placeholder")
+                            .removeClass('active')
+                            .css("opacity", "1");
+            }
+        } else {
+            if (regions.length == 0) {
+                regions_container.append(
+                    '<div class="form__regions-item">' +
+                        "Москва" +
+                        '<div class="close"></div>' +
+                        "</div>"
+                );
+                removeBtn();
+                input.val('').parent(".input")
+                            .find(".input__placeholder")
+                            .removeClass('active')
+                            .css("opacity", "1");
+            }
+        }
+    });
+    /*Удаление региона*/
+    function removeBtn() {
+        $(".close").bind("click", function() {
+            $(this)
+                .parents(".form__regions-item")
+                .remove();
+        });
+    }
+    removeBtn();
+
+    /*Форма аудита многоэтапная*/
+    $(".audit-form__form form").on("submit", function(e) {
+        e.preventDefault();
+    });
+    $(".audit-form__form form .form__button").on("click", function(e) {
+        e.preventDefault();
+        var button = $(this);
+        var step1 = $(this)
+            .parents(".form__field")
+            .hasClass("-step1");
+        var step2 = $(this)
+            .parents(".form__field")
+            .hasClass("-step2");
+        var form = $(this).parents("form");
+        var src = form.attr("action");
+        //var serialize = $(this).serialize();
+        //var data_field = $(this).serializeArray();
+        var type = form.data("type");
+        var data = {
+            domain: $("[name=domain]").val(),
+            name: $("[name=name]").val(),
+            phone: $("[name=phone]").val(),
+            email: $("[name=email]").val(),
+            promocode: $("[name=promocode]").val(),
+            conditions: $("[name=conditions]:checked").length,
+            theme: $("[name=theme]").val(),
+            regions: [],
+        };
+        
+        var require = ["domain", "name", "phone", "email"];
+        var errors = [];
+        var message = "Поле является обязательным для заполнения";
+        var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+        for (var field in data) {
+            var val = $(form)
+                .find("[name='" + field + "']")
+                .val();
+            if (require.indexOf(field) != -1){
+                data[field] = $.trim(val);
+                if (data[field] == "") {
+                    errors.push(message);
+                    $(form)
+                        .find("[name='" + field + "']")
+                        .parent(".input")
+                        .addClass("-error")
+                        .find(".input__error")
+                        .html(message);
+                } else {
+                    if (field == "email") {
+                        if (!expr.test(data[field])) {
+                            errors.push(message);
+                            $(form)
+                                .find("[name='" + field + "']")
+                                .parent(".input")
+                                .addClass("-error")
+                                .find(".input__error")
+                                .html("введите корректный e-mail");
+                        }
+                    }
+                }
+            }
+        }
+        if (
+            !$(form)
+                .find("[name='conditions']")
+                .is(":checked")
+        ) {
+            errors.push(message);
+            $(form)
+                .find("[name='conditions']")
+                .parents(".control-label")
+                .addClass("-error")
+                .find(".input__error")
+                .html("Подтвердите условия");
+        } else
+            $(form)
+                .find("[name='conditions']")
+                .parents(".control-label")
+                .removeClass("-error");
+
+        $('.form__regions-item').each(function(){
+            var value = $(this).text().trim()
+            data.regions.push(value);
+        })
+
+        if (data.regions.length == 0){
+           errors.push(message); 
+           $(form)
+                .find("[name='regions']")
+                .parents(".input")
+                .addClass("-error")                
+                .find(".input__error")
+                .html("Введите хотя бы один регион");
+        }
+
+        console.log("step1:", step1, "; step2:", step2, errors, data);
+
+        if (step1 && !errors.length) {
+            button
+                .parents(".form__container")
+                .find(".-step1")
+                .fadeOut("slow", function() {
+                    button
+                        .parents(".form__container")
+                        .find(".-step2")
+                        .fadeIn();
+                });
+        }
+        else{
+            if (step2 && !errors.length){
+                $.ajax({
+                    type: "post",
+                    async: false,
+                    dataType: "json",
+                    cache: false,
+                    url: src,
+                    data: data
+                }).done(function(data) {
+                    $(form)
+                        .parents(".audit-form__wrap")
+                        .fadeOut("slow", function() {
+                            $(form)
+                                .parents(".audit-form")
+                                .find(".form__success")
+                                .fadeIn();
+                        });
+                });
+            }
+        }
+
+    });
 });

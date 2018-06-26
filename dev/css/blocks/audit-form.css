@@ -155,6 +155,8 @@
   background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
   position: relative;
   z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {
   .audit-form__form form {
@@ -267,6 +269,9 @@
   .audit-form .orangecircle.active {
     height: 100px;
   }
+}
+.audit-form .form__field.-step2 {
+  display: none;
 }
 .audit-form .form__field.-step2 .audit-form__form-legend {
   margin-bottom: 15px;

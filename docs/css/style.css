@@ -1759,6 +1759,8 @@ html.no-mobile .article__comments-button:hover {
   background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
   position: relative;
   z-index: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .audit-form .form__button {
@@ -1785,6 +1787,10 @@ html.no-mobile .audit-form .form__button:hover {
 
 .audit-form .orangecircle {
   position: absolute;
+}
+
+.audit-form .form__field.-step2 {
+  display: none;
 }
 
 .audit-form .form__field.-step2 .audit-form__form-legend {
@@ -2204,6 +2210,18 @@ html.no-mobile .audit__info-button:hover {
   height: auto;
 }
 
+.audit .form__success {
+  color: #000;
+}
+
+.audit .form__success-text {
+  border-color: #9cbcff;
+}
+
+.audit .form__success-text:before {
+  background-color: #fff;
+}
+
 .blog .header {
   background-color: #212b41;
 }
@@ -2464,31 +2482,39 @@ html.no-mobile .blog .blog__paginator-page:hover:before {
   height: 100px;
 }
 
-.blog .blog__subscribe-form {
+.blog .blog__subscribe-form,
+.blog .blog__subscribe-success {
   font-size: 0;
 }
 
-.blog .blog__subscribe-form-img {
+.blog .blog__subscribe-form-img,
+.blog .blog__subscribe-success-img {
   width: 124px;
 }
 
 .blog .blog__subscribe-form-img,
+.blog .blog__subscribe-success-img,
 .blog .blog__subscribe-form-title,
-.blog .blog__subscribe-form form.form {
+.blog .blog__subscribe-success-title,
+.blog .blog__subscribe-form form.form,
+.blog .blog__subscribe-success form.form {
   line-height: 0;
 }
 
-.blog .blog__subscribe-form-title {
+.blog .blog__subscribe-form-title,
+.blog .blog__subscribe-success-title {
   width: 206px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.blog .blog__subscribe-form form.form .input {
+.blog .blog__subscribe-form form.form .input,
+.blog .blog__subscribe-success form.form .input {
   border: 1px solid #dce0e6;
 }
 
-.blog .blog__subscribe-form form.form .form__button {
+.blog .blog__subscribe-form form.form .form__button,
+.blog .blog__subscribe-success form.form .form__button {
   background-color: #f78200;
   border-radius: 2px;
   color: #fff;
@@ -2500,16 +2526,42 @@ html.no-mobile .blog .blog__paginator-page:hover:before {
   vertical-align: bottom;
 }
 
-html.no-mobile .blog .blog__subscribe-form form.form .form__button:hover {
+html.no-mobile .blog .blog__subscribe-form form.form .form__button:hover,
+html.no-mobile .blog .blog__subscribe-success form.form .form__button:hover {
   background-color: #ff8e11;
   text-decoration: none;
 }
 
-.blog .blog__subscribe-form-about {
+.blog .blog__subscribe-form form.form .input__error,
+.blog .blog__subscribe-success form.form .input__error {
+  color: #000;
+  padding-top: 5px;
+}
+
+.blog .blog__subscribe-form form.form .input.-error,
+.blog .blog__subscribe-success form.form .input.-error {
+  margin-bottom: 0;
+}
+
+.blog .blog__subscribe-form-about,
+.blog .blog__subscribe-success-about {
   color: #aab2bf;
   padding-top: 18px;
   border-top: 1px solid rgba(220,225,241,0.5);
   text-align: center;
+}
+
+.blog .blog__subscribe-success {
+  display: none;
+}
+
+.blog .blog__subscribe-success .blog__subscribe-form-title {
+  padding-bottom: 25px;
+}
+
+.blog .blog__subscribe-success .blog__subscribe-form-success {
+  font-family: "Proxima Nova";
+  color: #aab2bf;
 }
 
 .blog .audit-form {
@@ -2855,6 +2907,7 @@ html.no-mobile .cases__list-item-title a.h2:hover:after {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  position: relative;
 }
 
 .control-label__input,
@@ -2886,6 +2939,11 @@ html.no-mobile .cases__list-item-title a.h2:hover:after {
   line-height: 22px;
   color: #b7b6c7;
   letter-spacing: 2px;
+}
+
+.control-label.-error .input__error {
+  display: block;
+  padding-top: 5px;
 }
 
 .control {
@@ -3008,6 +3066,7 @@ label:hover .control__box {
   white-space: nowrap;
   vertical-align: middle;
   position: relative;
+  color: #fff;
 }
 
 .control__value-text {
@@ -3017,6 +3076,10 @@ label:hover .control__box {
   vertical-align: middle;
   font-family: "Proxima Nova";
   padding: 2px 0 0 2px;
+}
+
+.control__value-text a {
+  color: #a5c4ff;
 }
 
 .footer {
@@ -3250,6 +3313,57 @@ html.no-mobile .footer__bottom-design:hover:after {
   line-height: 0;
 }
 
+.form__success {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px;
+  display: none;
+}
+
+.form__success h2 {
+  text-transform: uppercase;
+}
+
+.form__success-text {
+  max-width: 565px;
+  margin: 0 auto;
+  font-family: "Proxima Nova";
+  border-top: 2px solid rgba(216,216,216,0.1);
+  position: relative;
+}
+
+.form__success-text:before {
+  content: '';
+  position: absolute;
+  background: #1f2637;
+  border: 2px solid #3b7eff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: -9px;
+}
+
+.form__success-img {
+  width: 100%;
+  width: 187px;
+  height: 187px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.form__success-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .header {
   display: block;
   color: #fff;
@@ -3411,24 +3525,30 @@ html.no-mobile .footer__bottom-design:hover:after {
 }
 
 .input__error {
-  color: #d0011b;
+  color: #fff;
   position: absolute;
   top: 100%;
-  right: 0;
-  font-size: 12px;
-  line-height: 18px;
-  text-align: right;
+  left: 0;
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: "Proxima Nova";
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.input.-error {
+  margin-bottom: 50px;
 }
 
 .input.-error input,
-.input.-success input,
-.input.-error textarea,
-.input.-success textarea {
-  padding-right: 40px;
+.input.-error textarea {
+  -webkit-box-shadow: 0 0 0 2px #f74900;
+  box-shadow: 0 0 0 2px #f74900;
 }
 
 .input.-error .ico.-input__error {
@@ -4725,9 +4845,17 @@ html.no-mobile .vacancy__list-item:hover {
 .vacancy-form__form {
   display: block;
   margin: 0 auto;
-  background-image: -webkit-linear-gradient(134deg, #144fc0 0%, #2ca7ff 100%);
-  background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
   margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.vacancy-form__form:before {
+  content: '';
+  z-index: 0;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
 }
 
 .vacancy-form__form-legend,
@@ -4742,6 +4870,15 @@ html.no-mobile .vacancy__list-item:hover {
   line-height: 32px;
   font-weight: bold;
   margin-bottom: 25px;
+}
+
+.vacancy-form__form form {
+  background-image: -webkit-linear-gradient(134deg, #144fc0 0%, #2ca7ff 100%);
+  background-image: linear-gradient(-44deg, #144fc0 0%, #2ca7ff 100%);
+  position: relative;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .vacancy-form .form__button {
@@ -8023,48 +8160,68 @@ button.swiper-pagination-bullet {
     left: 0;
   }
 
+  .blog .blog__subscribe-form,
+  .blog .blog__subscribe-success {
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 50px 32px 70px;
+  }
+
   .blog .blog__subscribe-form-img,
+  .blog .blog__subscribe-success-img,
   .blog .blog__subscribe-form-title,
-  .blog .blog__subscribe-form form.form {
+  .blog .blog__subscribe-success-title,
+  .blog .blog__subscribe-form form.form,
+  .blog .blog__subscribe-success form.form {
     display: inline-block;
     vertical-align: bottom;
   }
 
-  .blog .blog__subscribe-form-title {
+  .blog .blog__subscribe-form-title,
+  .blog .blog__subscribe-success-title {
     margin-left: 20px;
     font-size: 24px;
     line-height: 30px;
     padding-bottom: 8px;
   }
 
-  .blog .blog__subscribe-form form.form {
-    margin-left: 30px;
-    width: calc(100% - 380px);
-    padding-bottom: 8px;
-  }
-
-  .blog .blog__subscribe-form form.form .input {
+  .blog .blog__subscribe-form form.form .input,
+  .blog .blog__subscribe-success form.form .input {
     display: inline-block;
     vertical-align: bottom;
-    width: calc(100% - 180px);
+    width: calc(100% - 220px);
   }
 
-  .blog .blog__subscribe-form form.form .input input {
+  .blog .blog__subscribe-form form.form .input input,
+  .blog .blog__subscribe-success form.form .input input {
     height: 58px;
   }
 
-  .blog .blog__subscribe-form form.form .form__button {
+  .blog .blog__subscribe-form form.form .form__button,
+  .blog .blog__subscribe-success form.form .form__button {
     font-size: 16px;
     line-height: 60px;
     height: 60px;
     width: 160px;
     margin-left: 20px;
+    margin-right: 40px;
   }
 
-  .blog .blog__subscribe-form-about {
+  .blog .blog__subscribe-form-about,
+  .blog .blog__subscribe-success-about {
     line-height: 28px;
     font-size: 18px;
     margin-top: 32px;
+  }
+
+  .blog .blog__subscribe-success .blog__subscribe-form-success {
+    line-height: 28px;
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 30px;
+    width: calc(100% - 380px);
+    padding-bottom: 25px;
+    vertical-align: bottom;
   }
 
   .blog .audit-form .orangecircle {
@@ -8339,6 +8496,22 @@ button.swiper-pagination-bullet {
   .footer__bottom-design:after {
     height: 24px;
     width: 36px;
+  }
+
+  .form__success h2 {
+    text-align: center;
+  }
+
+  .form__success-text {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+
+  .form__success-text p + p {
+    margin-top: 28px;
   }
 
   .input input,
@@ -8947,9 +9120,6 @@ button.swiper-pagination-bullet {
 
   .vacancy-form {
     margin-top: 120px;
-    background-image: url("../img/form-back_dark.svg");
-    background-position: center 362px;
-    background-size: 875px;
   }
 
   .vacancy-form .container {
@@ -8977,12 +9147,28 @@ button.swiper-pagination-bullet {
   .vacancy-form__form {
     max-width: 590px;
     border-radius: 10px;
-    padding: 34px 0 61px;
+    padding: 50px 0 61px;
+  }
+
+  .vacancy-form__form:before {
+    background-image: url("../img/form-back_dark.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    left: -140px;
+    top: -30px;
+    width: calc(100% + 280px);
+    height: calc(100% + 60px);
   }
 
   .vacancy-form__form-legend,
   .vacancy-form__form form {
     max-width: 380px;
+  }
+
+  .vacancy-form__form form {
+    max-width: 590px;
+    border-radius: 10px;
+    padding: 50px 105px 61px;
   }
 
   .vacancy-form .control-label {
@@ -9095,6 +9281,13 @@ button.swiper-pagination-bullet {
     width: 40px;
     height: 40px;
     top: 20px;
+  }
+
+  .blog .blog__subscribe-form form.form,
+  .blog .blog__subscribe-success form.form {
+    margin-left: 30px;
+    width: calc(100% - 380px);
+    padding-bottom: 8px;
   }
 
   .cases__list-item .container {
@@ -10827,37 +11020,45 @@ button.swiper-pagination-bullet {
     left: 20px;
   }
 
-  .blog .blog__subscribe-form {
+  .blog .blog__subscribe-form,
+  .blog .blog__subscribe-success {
     background: #fff;
     border-radius: 10px;
     padding: 0 20px 50px;
   }
 
   .blog .blog__subscribe-form-img,
+  .blog .blog__subscribe-success-img,
   .blog .blog__subscribe-form-title,
-  .blog .blog__subscribe-form form.form {
+  .blog .blog__subscribe-success-title,
+  .blog .blog__subscribe-form form.form,
+  .blog .blog__subscribe-success form.form {
     display: block;
     text-align: center;
     margin: 0 auto;
   }
 
-  .blog .blog__subscribe-form-title {
+  .blog .blog__subscribe-form-title,
+  .blog .blog__subscribe-success-title {
     font-size: 22px;
     line-height: 32px;
     margin-top: 40px;
     margin-bottom: 20px;
   }
 
-  .blog .blog__subscribe-form form.form .input {
+  .blog .blog__subscribe-form form.form .input,
+  .blog .blog__subscribe-success form.form .input {
     display: block;
     width: 100%;
   }
 
-  .blog .blog__subscribe-form form.form .input input {
+  .blog .blog__subscribe-form form.form .input input,
+  .blog .blog__subscribe-success form.form .input input {
     height: 48px;
   }
 
-  .blog .blog__subscribe-form form.form .form__button {
+  .blog .blog__subscribe-form form.form .form__button,
+  .blog .blog__subscribe-success form.form .form__button {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 15px;
@@ -10867,10 +11068,18 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 
-  .blog .blog__subscribe-form-about {
+  .blog .blog__subscribe-form-about,
+  .blog .blog__subscribe-success-about {
     line-height: 24px;
     font-size: 16px;
     margin-top: 30px;
+  }
+
+  .blog .blog__subscribe-success .blog__subscribe-form-success {
+    line-height: 24px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
   }
 
   .blog .audit-form .orangecircle {
@@ -11364,6 +11573,28 @@ button.swiper-pagination-bullet {
   .footer__bottom .topnav__mail span {
     vertical-align: top;
     display: inline-block;
+  }
+
+  .form__success h2 {
+    text-align: left;
+  }
+
+  .form__success-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    padding-top: 28px;
+    margin-top: 28px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .form__success-text p + p {
+    margin-top: 24px;
   }
 
   .input input,
@@ -12120,9 +12351,6 @@ button.swiper-pagination-bullet {
 
   .vacancy-form {
     margin-top: 50px;
-    background-image: url("../img/form-back_m.svg");
-    background-position: right 358px;
-    background-size: 286px;
   }
 
   .vacancy-form .container {
@@ -12159,6 +12387,16 @@ button.swiper-pagination-bullet {
     box-sizing: border-box;
   }
 
+  .vacancy-form__form:before {
+    background-image: url("../img/form-back_m.svg");
+    background-position: right top;
+    background-size: 358px;
+    right: 0;
+    top: -20px;
+    width: 100%;
+    height: 100%;
+  }
+
   .vacancy-form__form-legend,
   .vacancy-form__form form {
     width: 100%;
@@ -12166,6 +12404,15 @@ button.swiper-pagination-bullet {
 
   .vacancy-form__form-legend {
     display: none;
+  }
+
+  .vacancy-form__form form {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    border-radius: 0;
+    padding: 30px 20px 40px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   .vacancy-form .control-label {
@@ -12299,6 +12546,14 @@ button.swiper-pagination-bullet {
   .blog__list-item h2 {
     font-size: 30px;
     line-height: 36px;
+  }
+
+  .blog .blog__subscribe-form form.form,
+  .blog .blog__subscribe-success form.form {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    padding-top: 20px;
   }
 
   .cases__list-item .container {

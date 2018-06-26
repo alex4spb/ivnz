@@ -5,83 +5,91 @@ mixin audit-form(param)
     .container
       if ['audit'].indexOf(pagename) === -1 
         .blueline(data-aos="fade-in")
-        .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")
-        h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
+        .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")        
       if ['audit'].indexOf(pagename) !== -1 
         .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form" data-aos-delay="1000")
         .greyline(data-aos="fade-in" data-aos-anchor=".audit-form" data-aos-delay="1000")
         .orangecircle.-long(data-aos="fade-in" data-aos-anchor=".audit-form__form" data-aos-delay="1000")
         .greyline.-bottom(data-aos="fade-in" data-aos-anchor=".audit-form" data-aos-delay="1000")
-        h2#audit.audit-form__title Закажите бесплатный аудит      
-      .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
-      .audit-form__form(data-aos="fade-in" data-aos-delay="800")
-        form.form.js-form-ajax(action="json/form-success.json", method="post")
-          .form__container
-            .form__field.-step1
-              .audit-form__form-legend Общие сведения
-              +input({
-                name: 'url',
-                placeholder: 'Адрес сайта'
-              })
-              +input({
-                name: 'name',
-                placeholder: 'Имя'
-              })
-              +input({
-                type: 'tel',
-                name: 'phone',
-                placeholder: 'Телефон'
-              })
-              +input({                  
-                type: 'email',
-                name: 'email',
-                placeholder: 'E-mail'
-              })
-              +input({
-                name: 'promocode',
-                placeholder: 'Промо код'
-              })
-              label.control-label
-                .control-label__input
-                  .control
-                    input(type='checkbox', name='manager', value='1', checked='checked')
-                    .control__box
-                      img(src="img/checkmark.svg")
-                    .control__value
-                      span.control__value-text Я согласен с условиями передачи информации
-              button.form__button Далее
-            .form__field.-step2.hidden
-              .audit-form__form-legend Тематика сайта
-              +input({
-                tag: 'textarea',
-                rows: 3,
-                name: 'theme',
-                placeholder: 'Например, продажа техники Apple'
-              })
-              .audit-form__form-legend Регионы
-              +input({
-                name: 'regions',
-                placeholder: 'Город',
-                add: true
-              })  
-              .form__regions
-                .form__regions-item Москва
-                  .close
-                .form__regions-item Санкт-Петербург
-                  .close
-                .form__regions-item Новосибирск
-                  .close
-                .form__regions-item Екатеринбург
-                  .close
-                .form__regions-item Нижний Новгород
-                  .close
-                .form__regions-item Казань
-                  .close
-                .form__regions-item Орск
-                  .close
-                .form__regions-item Стамбул
-                  .close
-              button.form__button Оставить заявку
-
-
-    
+      .audit-form__wrap
+        if ['audit'].indexOf(pagename) === -1 
+          h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
+        if ['audit'].indexOf(pagename) !== -1 
+          h2#audit.audit-form__title Закажите бесплатный аудит      
+        .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу
+        .audit-form__form
+          form.form.js-form-ajax(action="json/form-success.json" method="post" data-aos="fade-in" data-aos-delay="600")
+            .form__container
+              .form__field.-step1
+                .audit-form__form-legend Общие сведения
+                +input({
+                  name: 'domain',
+                  placeholder: 'Адрес сайта'
+                })
+                +input({
+                  name: 'name',
+                  placeholder: 'Имя'
+                })
+                +input({
+                  type: 'tel',
+                  name: 'phone',
+                  placeholder: 'Телефон'
+                })
+                +input({                  
+                  type: 'email',
+                  name: 'email',
+                  placeholder: 'E-mail'
+                })
+                +input({
+                  name: 'promocode',
+                  placeholder: 'Промо код'
+                })
+                label.control-label
+                  .input__error
+                  .control-label__input
+                    .control
+                      input(type='checkbox', name='conditions', value='1', checked='checked')
+                      .control__box
+                        img(src="img/checkmark.svg")
+                      .control__value
+                        span.control__value-text Я согласен с #[a(href="#") условиями передачи информации]
+                button.form__button Далее
+              .form__field.-step2
+                .audit-form__form-legend Тематика сайта
+                +input({
+                  tag: 'textarea',
+                  rows: 3,
+                  name: 'theme',
+                  placeholder: 'Например, продажа техники Apple'
+                })
+                .audit-form__form-legend Регионы
+                +input({
+                  name: 'regions',
+                  placeholder: 'Город',
+                  add: true
+                })  
+                .form__regions
+                  .form__regions-item Москва
+                    .close
+                  .form__regions-item Санкт-Петербург
+                    .close
+                  .form__regions-item Новосибирск
+                    .close
+                  .form__regions-item Екатеринбург
+                    .close
+                  .form__regions-item Нижний Новгород
+                    .close
+                  .form__regions-item Казань
+                    .close
+                  .form__regions-item Орск
+                    .close
+                  .form__regions-item Стамбул
+                    .close
+                button.form__button Оставить заявку
+      .form__success
+        h2 Ваша заявка принята!
+        .form__success-text
+          p В течение 1 рабочего дня с 10:00 до 18:00 по московскому времени #[br]с вами свяжется наш менеджер для подтверждения заявки #[br]и уточнения необходимых данных.
+          p #[b Аудит готовится в течение 2-ух рабочих дней]     
+        .form__success-img
+          img(src="img/form-success.svg")

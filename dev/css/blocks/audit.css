@@ -958,3 +958,12 @@
     padding-top: 30px;
   }
 }
+.audit .form__success {
+  color: #000;
+}
+.audit .form__success-text {
+  border-color: #9cbcff;
+}
+.audit .form__success-text:before {
+  background-color: #fff;
+}

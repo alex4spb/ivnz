@@ -32,7 +32,7 @@
 				<a href="cases.html">Кейсы</a>
 			</div>
 			<div class="topnav__menu-item">
-				<a href="jobs.html">Вакансии</a>
+				<a href="vacancies.html">Вакансии</a>
 			</div>
 			<div class="topnav__menu-item">
 				<a href="contacts.html">Контакты</a>
@@ -186,56 +186,69 @@
 					<div class="container">
 						<div class="blueline" data-aos="fade-in"></div>
 						<div class="orangecircle" data-aos="fade-in" data-aos-anchor=".vacancy-form"></div>
-						<h2 class="vacancy-form__title">Откликнуться на вакансию
-							<span>Стажер SEO-специалист</span>
-						</h2>
-						<div class="vacancy-form__subtitle">
-							<span>Просьба откликаться на вакансию, а не звонить в офис.</span>
-							<p>К отклику напишите пару слов о себе, и почему вам интересно это направление</p>
-							<p>Мы пригласим вас на собеседование, если ваше резюме нам подойдёт 👋</p>
-						</div>
-						<div class="vacancy-form__form" data-aos="fade-in" data-aos-delay="800">
-							<div class="vacancy-form__form-legend"> </div>
-							<form class="form js-form-ajax" action="json/form-success.json" method="post">
-								<div class="form__container">
-									<div class="form__field -whole">
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="name">
-											<div class="input__placeholder">ФИО</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="url">
-											<div class="input__placeholder">Ссылка на резюме</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="tel" name="phone">
-											<div class="input__placeholder">Телефон</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<textarea name="mail" rows="6"></textarea>
-											<div class="input__placeholder">Сопроводительное письмо</div>
-										</div>
-										<label class="control-label">
-											<div class="control-label__input">
-												<div class="control">
-													<input type="checkbox" name="manager" value="1" checked="checked">
-													<div class="control__box">
-														<img src="img/checkmark.svg">
-													</div>
-													<div class="control__value">
-														<span class="control__value-text">Я согласен с условиями передачи информации</span>
+						<div class="vacancy-form__wrap">
+							<h2 class="vacancy-form__title">Откликнуться на вакансию
+								<span>Стажер SEO-специалист</span>
+							</h2>
+							<div class="vacancy-form__subtitle">
+								<span>Просьба откликаться на вакансию, а не звонить в офис.</span>
+								<p>К отклику напишите пару слов о себе, и почему вам интересно это направление</p>
+								<p>Мы пригласим вас на собеседование, если ваше резюме нам подойдёт 👋</p>
+							</div>
+							<div class="vacancy-form__form">
+								<div class="vacancy-form__form-legend"> </div>
+								<form class="form js-form-ajax" action="json/form-success.json" method="post" data-aos="fade-in" data-aos-delay="600">
+									<div class="form__container">
+										<div class="form__field -whole">
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="name">
+												<div class="input__placeholder">ФИО</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="resume">
+												<div class="input__placeholder">Ссылка на резюме</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="tel" name="phone">
+												<div class="input__placeholder">Телефон</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<textarea name="comments" rows="6"></textarea>
+												<div class="input__placeholder">Сопроводительное письмо</div>
+											</div>
+											<label class="control-label">
+												<div class="input__error"></div>
+												<div class="control-label__input">
+													<div class="control">
+														<input type="checkbox" name="conditions" value="1" checked="checked">
+														<div class="control__box">
+															<img src="img/checkmark.svg">
+														</div>
+														<div class="control__value">
+															<span class="control__value-text">Я согласен с условиями передачи информации</span>
+														</div>
 													</div>
 												</div>
-											</div>
-										</label>
-										<button class="form__button">Откликнуться</button>
+											</label>
+											<button class="form__button">Откликнуться</button>
+										</div>
 									</div>
-								</div>
-							</form>
+								</form>
+							</div>
+						</div>
+						<div class="form__success">
+							<h2>спасибо за отклик!</h2>
+							<div class="form__success-text">
+								<p>В течение 1 рабочего дня с 10:00 до 18:00 по московскому времени
+									<br>с вами свяжется наш HR с обратной связью. </p>
+							</div>
+							<div class="form__success-img">
+								<img src="img/form-success.svg">
+							</div>
 						</div>
 					</div>
 				</section>

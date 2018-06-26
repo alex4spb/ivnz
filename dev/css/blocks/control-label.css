@@ -18,77 +18,13 @@
             transform: rotate(360deg);
   }
 }
-.greyline {
-  width: 2px;
-  height: 0px;
-  background-color: rgba(216,216,216,0.1);
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.blueline {
-  width: 2px;
-  height: 0px;
-  background-color: #3b7eff;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.orangecircle {
-  width: 2px;
-  height: 0px;
-  background-color: #fd933b;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
-.orangecircle:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border: 2px solid #fd933b;
-  border-radius: 16px;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-}
-@media only screen and (min-width: 768px) {
-  .orangecircle:before {
-    width: 12px;
-    height: 12px;
-    bottom: -16px;
-    left: -7px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .orangecircle:before {
-    width: 6px;
-    height: 6px;
-    bottom: -10px;
-    left: -4px;
-  }
-}
-.orangeline {
-  width: 2px;
-  height: 0px;
-  background-color: #fd933b;
-  border-radius: 10px;
-  -webkit-transition-property: all !important;
-  transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
-}
 .control-label {
   display: block;
   cursor: pointer;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+  position: relative;
 }
 .control-label__input,
 .control-label__value {
@@ -125,4 +61,8 @@
   .control-label__value-rouble {
     margin-right: 6px;
   }
+}
+.control-label.-error .input__error {
+  display: block;
+  padding-top: 5px;
 }

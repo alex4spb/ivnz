@@ -32,7 +32,7 @@
 				<a href="cases.html">Кейсы</a>
 			</div>
 			<div class="topnav__menu-item">
-				<a href="jobs.html">Вакансии</a>
+				<a href="vacancies.html">Вакансии</a>
 			</div>
 			<div class="topnav__menu-item">
 				<a href="contacts.html">Контакты</a>
@@ -98,7 +98,7 @@
 						<div class="greycircle" data-aos="fade-in"></div>
 						<div class="blog__list-subtitle" data-aos="fade-in" data-aos-anchor=".blog__list-item">Последние материалы</div>
 					</div>
-					<a class="blog__list-item" href="#" data-aos="fade-in" data-aos-delay="700">
+					<a class="blog__list-item" href="article.html" data-aos="fade-in" data-aos-delay="700">
 						<div class="container">
 							<div class="blog__list-item-info">
 								<h2>Нужно ли разрабатывать
@@ -150,7 +150,7 @@
 							</div>
 						</div>
 					</div>
-					<a class="blog__list-item" href="#" data-aos="fade-in">
+					<a class="blog__list-item" href="article.html" data-aos="fade-in">
 						<div class="container">
 							<div class="bluecircle" data-aos="fade-in"></div>
 							<div class="blog__list-item-info">
@@ -192,9 +192,16 @@
 								</form>
 								<div class="blog__subscribe-form-about">Мы присылаем интересные новые материалы несколько раз в месяц и ничего более 🤙</div>
 							</div>
+							<div class="blog__subscribe-success">
+								<div class="blog__subscribe-form-img">
+									<img src="img/subscribe-success.svg" alt="">
+								</div>
+								<div class="blog__subscribe-form-title">вы в списке! </div>
+								<div class="blog__subscribe-form-success">Отписаться от рассылки вы можете, кликнув по ссылке в конце материала</div>
+							</div>
 						</div>
 					</div>
-					<a class="blog__list-item" href="#" data-aos="fade-in">
+					<a class="blog__list-item" href="article.html" data-aos="fade-in">
 						<div class="container">
 							<div class="orangeline" data-aos="fade-in"></div>
 							<div class="greycircle" data-aos="fade-in"></div>
@@ -268,100 +275,119 @@
 				<section class="audit-form" data-aos="fade-in">
 					<div class="container">
 						<div class="blueline" data-aos="fade-in"></div>
-						<div class="orangecircle" data-aos="fade-in" data-aos-anchor=".audit-form"></div>
-						<h2 class="audit-form__title">Знакомство мы начинаем
-							<br>с бесплатного аудита сайта:</h2>
-						<div class="audit-form__subtitle">Оставьте заявку, мы изучим ваш сайт и тематику,
-							<br>после чего сможем пообщаться по существу</div>
-						<div class="audit-form__form" data-aos="fade-in" data-aos-delay="800">
-							<form class="form js-form-ajax" action="json/form-success.json" method="post">
-								<div class="form__container">
-									<div class="form__field -step1">
-										<div class="audit-form__form-legend">Общие сведения</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="url">
-											<div class="input__placeholder">Адрес сайта</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="name">
-											<div class="input__placeholder">Имя</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="tel" name="phone">
-											<div class="input__placeholder">Телефон</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="email" name="email">
-											<div class="input__placeholder">E-mail</div>
-										</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="promocode">
-											<div class="input__placeholder">Промо код</div>
-										</div>
-										<label class="control-label">
-											<div class="control-label__input">
-												<div class="control">
-													<input type="checkbox" name="manager" value="1" checked="checked">
-													<div class="control__box">
-														<img src="img/checkmark.svg">
-													</div>
-													<div class="control__value">
-														<span class="control__value-text">Я согласен с условиями передачи информации</span>
+						<div class="orangecircle" data-aos="fade-in" data-aos-anchor=".audit-form"> </div>
+						<div class="audit-form__wrap">
+							<h2 class="audit-form__title">Знакомство мы начинаем
+								<br>с бесплатного аудита сайта:</h2>
+							<div class="audit-form__subtitle">Оставьте заявку, мы изучим ваш сайт и тематику,
+								<br>после чего сможем пообщаться по существу</div>
+							<div class="audit-form__form">
+								<form class="form js-form-ajax" action="json/form-success.json" method="post" data-aos="fade-in" data-aos-delay="600">
+									<div class="form__container">
+										<div class="form__field -step1">
+											<div class="audit-form__form-legend">Общие сведения</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="domain">
+												<div class="input__placeholder">Адрес сайта</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="name">
+												<div class="input__placeholder">Имя</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="tel" name="phone">
+												<div class="input__placeholder">Телефон</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="email" name="email">
+												<div class="input__placeholder">E-mail</div>
+											</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="promocode">
+												<div class="input__placeholder">Промо код</div>
+											</div>
+											<label class="control-label">
+												<div class="input__error"></div>
+												<div class="control-label__input">
+													<div class="control">
+														<input type="checkbox" name="conditions" value="1" checked="checked">
+														<div class="control__box">
+															<img src="img/checkmark.svg">
+														</div>
+														<div class="control__value">
+															<span class="control__value-text">Я согласен с
+																<a href="#">условиями передачи информации</a>
+															</span>
+														</div>
 													</div>
 												</div>
+											</label>
+											<button class="form__button">Далее</button>
+										</div>
+										<div class="form__field -step2">
+											<div class="audit-form__form-legend">Тематика сайта</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<textarea name="theme" rows="3"></textarea>
+												<div class="input__placeholder">Например, продажа техники Apple</div>
 											</div>
-										</label>
-										<button class="form__button">Далее</button>
+											<div class="audit-form__form-legend">Регионы</div>
+											<div class="input">
+												<div class="input__error"></div>
+												<input type="text" name="regions">
+												<div class="input__placeholder">Город</div>
+												<div class="input__add">+</div>
+											</div>
+											<div class="form__regions">
+												<div class="form__regions-item">Москва
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Санкт-Петербург
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Новосибирск
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Екатеринбург
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Нижний Новгород
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Казань
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Орск
+													<div class="close"></div>
+												</div>
+												<div class="form__regions-item">Стамбул
+													<div class="close"></div>
+												</div>
+											</div>
+											<button class="form__button">Оставить заявку</button>
+										</div>
 									</div>
-									<div class="form__field -step2 hidden">
-										<div class="audit-form__form-legend">Тематика сайта</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<textarea name="theme" rows="3"></textarea>
-											<div class="input__placeholder">Например, продажа техники Apple</div>
-										</div>
-										<div class="audit-form__form-legend">Регионы</div>
-										<div class="input">
-											<div class="input__error"></div>
-											<input type="text" name="regions">
-											<div class="input__placeholder">Город</div>
-											<div class="input__add">+</div>
-										</div>
-										<div class="form__regions">
-											<div class="form__regions-item">Москва
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Санкт-Петербург
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Новосибирск
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Екатеринбург
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Нижний Новгород
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Казань
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Орск
-												<div class="close"></div>
-											</div>
-											<div class="form__regions-item">Стамбул
-												<div class="close"></div>
-											</div>
-										</div>
-										<button class="form__button">Оставить заявку</button>
-									</div>
-								</div>
-							</form>
+								</form>
+							</div>
+						</div>
+						<div class="form__success">
+							<h2>Ваша заявка принята!</h2>
+							<div class="form__success-text">
+								<p>В течение 1 рабочего дня с 10:00 до 18:00 по московскому времени
+									<br>с вами свяжется наш менеджер для подтверждения заявки
+									<br>и уточнения необходимых данных.</p>
+								<p>
+									<b>Аудит готовится в течение 2-ух рабочих дней</b>
+								</p>
+							</div>
+							<div class="form__success-img">
+								<img src="img/form-success.svg">
+							</div>
 						</div>
 					</div>
 				</section>

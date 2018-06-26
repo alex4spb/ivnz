@@ -47,7 +47,7 @@
           font-size 13px
           line-height 13px 
           top 0
-          padding-top 9px         
+          padding-top 9px     
   input 
     +a($m) 
       height 60px
@@ -146,22 +146,25 @@
       &.-input__error
         color #D0011B
   &__error
-    color #D0011B
+    color #fff
     position absolute
     top 100% 
-    right 0
-    font-size 12px
-    line-height 18px
-    text-align right
+    left 0
+    padding-top 15px
+    font-size 14px
+    line-height 15px
+    font-family "Proxima Nova"
+    text-align left
     white-space nowrap
     overflow hidden
     max-width 100%
-    text-overflow ellipsis    
-  &.-error,
-  &.-success
+    text-overflow ellipsis   
+    font-weight bold 
+  &.-error
+    margin-bottom 50px
     input,
-    textarea
-      padding-right 40px
+    textarea     
+      box-shadow 0 0 0 2px #F74900
   &.-error
     .ico.-input__error
       display block

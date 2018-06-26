@@ -438,7 +438,12 @@
       &.active    
         height 100px
     &-form
+    &-success
       font-size 0
+      +a($m)
+        background #fff
+        border-radius 10px
+        padding 0 50px 32px 70px
       +b($m)
         background #fff
         border-radius 10px
@@ -471,16 +476,21 @@
           margin-top 40px
           margin-bottom 20px
       form.form
-        +a($m)
+        +a($t)
           margin-left 30px
           width calc(100% - 380px)
           padding-bottom 8px
+        +btw($m, $t)
+          display block
+          margin-left 0
+          width 100%
+          padding-top 20px
         .input
           border 1px solid #DCE0E6
           +a($m)
             display inline-block
             vertical-align bottom
-            width calc(100% - 180px)
+            width calc(100% - 220px)
           +b($m)
             display block
             width 100%
@@ -505,6 +515,7 @@
             height 60px
             width 160px
             margin-left 20px
+            margin-right 40px
           +b($m)
             box-sizing border-box  
             font-size 15px
@@ -515,6 +526,12 @@
           &:hover
             background-color #FF8E11
             text-decoration none  
+        .input
+          &__error
+            color #000
+            padding-top 5px
+          &.-error
+            margin-bottom 0
       &-about
         color #AAB2BF
         padding-top 18px
@@ -528,6 +545,26 @@
           line-height 24px
           font-size 16px
           margin-top 30px
+    &-success
+      display none
+      .blog__subscribe-form-title
+        padding-bottom 25px
+      .blog__subscribe-form-success
+        font-family "Proxima Nova"
+        color #AAB2BF
+        +a($m)
+          line-height 28px
+          font-size 18px
+          display inline-block
+          margin-left 30px
+          width calc(100% - 380px)
+          padding-bottom 25px
+          vertical-align bottom
+        +b($m)
+          line-height 24px
+          font-size 16px
+          display block
+          text-align center
   .audit-form
     background-color #1F2637
     .orangecircle

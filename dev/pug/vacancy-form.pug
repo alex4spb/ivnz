@@ -5,45 +5,52 @@ mixin vacancy-form(param)
     .container
       .blueline(data-aos="fade-in")
       .orangecircle(data-aos="fade-in" data-aos-anchor=".vacancy-form")
-      h2.vacancy-form__title Откликнуться на вакансию
-        span Стажер SEO-специалист
-      .vacancy-form__subtitle 
-        span Просьба откликаться на вакансию, а не звонить в офис.
-        p К отклику напишите пару слов о себе, и почему вам интересно это направление
-        p Мы пригласим вас на собеседование, если ваше резюме нам подойдёт 👋
-      .vacancy-form__form(data-aos="fade-in" data-aos-delay="800")
-        .vacancy-form__form-legend 
-        form.form.js-form-ajax(action="json/form-success.json", method="post")
-          .form__container
-            .form__field.-whole
-              +input({
-                name: 'name',
-                placeholder: 'ФИО'
-              })
-              +input({
-                name: 'url',
-                placeholder: 'Ссылка на резюме'
-              })
-              +input({
-                type: 'tel',
-                name: 'phone',
-                placeholder: 'Телефон'
-              })
-              +input({                  
-                tag: 'textarea',
-                name: 'mail',
-                placeholder: 'Сопроводительное письмо',
-                rows: 6,
-              })
-              label.control-label
-                .control-label__input
-                  .control
-                    input(type='checkbox', name='manager', value='1', checked='checked')
-                    .control__box
-                      img(src="img/checkmark.svg")
-                    .control__value
-                      span.control__value-text Я согласен с условиями передачи информации
-              button.form__button Откликнуться
-
+      .vacancy-form__wrap
+        h2.vacancy-form__title Откликнуться на вакансию
+          span Стажер SEO-специалист
+        .vacancy-form__subtitle 
+          span Просьба откликаться на вакансию, а не звонить в офис.
+          p К отклику напишите пару слов о себе, и почему вам интересно это направление
+          p Мы пригласим вас на собеседование, если ваше резюме нам подойдёт 👋
+        .vacancy-form__form
+          .vacancy-form__form-legend 
+          form.form.js-form-ajax(action="json/form-success.json", method="post" data-aos="fade-in" data-aos-delay="600")
+            .form__container
+              .form__field.-whole
+                +input({
+                  name: 'name',
+                  placeholder: 'ФИО'
+                })
+                +input({
+                  name: 'resume',
+                  placeholder: 'Ссылка на резюме'
+                })
+                +input({
+                  type: 'tel',
+                  name: 'phone',
+                  placeholder: 'Телефон'
+                })
+                +input({                  
+                  tag: 'textarea',
+                  name: 'comments',
+                  placeholder: 'Сопроводительное письмо',
+                  rows: 6,
+                })
+                label.control-label
+                  .input__error
+                  .control-label__input
+                    .control
+                      input(type='checkbox', name='conditions', value='1', checked='checked')
+                      .control__box
+                        img(src="img/checkmark.svg")
+                      .control__value
+                        span.control__value-text Я согласен с условиями передачи информации
+                button.form__button Откликнуться
+      .form__success
+        h2 спасибо за отклик!
+        .form__success-text
+          p В течение 1 рабочего дня с 10:00 до 18:00 по московскому времени #[br]с вами свяжется наш HR с обратной связью.    
+        .form__success-img
+          img(src="img/form-success.svg")
 
     
