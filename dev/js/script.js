@@ -327,7 +327,7 @@ jQuery(document).ready(function($) {
             });
 
             // Создание макета балуна на основе Twitter Bootstrap.
-            (MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+            MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 '<div class="contacts__map-baloon">' +
                     '<a class="close" href="#"><img src="img/close_baloon.svg" alt="close"></a>' +
                     '<div class="contacts__map-baloon-content">' +
@@ -456,13 +456,13 @@ jQuery(document).ready(function($) {
                         return element && element[0];
                     }
                 }
-            )),
+            ),
                 // Создание вложенного макета содержимого балуна.
-                (MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
                     "$[properties.balloonHeader]" +
                         "<p>$[properties.balloonContent]</p>"
-                )),
-                (myPlacemark = new ymaps.Placemark(
+                ),
+                myPlacemark = new ymaps.Placemark(
                     [59.866933, 30.471834],
                     {
                         hintContent: "Иващенко и Низамов",
@@ -489,7 +489,7 @@ jQuery(document).ready(function($) {
                         balloonPanelMaxMapArea: 0,
                         balloonShadowOffset: [0, 0]
                     }
-                ));
+                );
             myMap.geoObjects.add(myPlacemark);
             myPlacemark.balloon.open();
             myMap.behaviors.disable("scrollZoom");

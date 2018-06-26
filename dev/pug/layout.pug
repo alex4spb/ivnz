@@ -13,6 +13,7 @@ doctype html
     meta(name="keywords", content="")
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     script(src="js/vendor.js")   
     if env === 'dev'
       link(rel="stylesheet", href="css/reset.css")
@@ -22,8 +23,7 @@ doctype html
         link(rel="stylesheet", href= stylesheet)
     else
       link(rel="stylesheet", href="css/style.min.css")
-    script(id="dsq-count-scr" src="//ivnz.disqus.com/count.js" async)
-    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(id="dsq-count-scr" src="https://ivnz.disqus.com/count.js" async)
     script(src="js/script.js")
     title Ivaschenko Nizamov
   body
@@ -34,7 +34,7 @@ doctype html
           span IVASCHENKO NIZAMOV
         .topnav__menu-itembox
           .topnav__menu-item
-            a(href="#") О нас
+            a(href="about.html") О нас
           .topnav__menu-item.active
             a(href="cases.html") Кейсы
           .topnav__menu-item
@@ -62,11 +62,11 @@ doctype html
           if ['audit'].indexOf(pagename) === -1 
             .topnav__menu#magic
               .topnav__menu-item
-                a(href="#") О нас
+                a(href="about.html") О нас
               .topnav__menu-item.active
                 a(href="cases.html") Кейсы
               .topnav__menu-item
-                a(href="jobs.html") Вакансии
+                a(href="vacancies.html") Вакансии
               .topnav__menu-item
                 a(href="contacts.html") Контакты
               .topnav__menu-item
