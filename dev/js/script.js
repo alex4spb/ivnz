@@ -542,14 +542,14 @@ jQuery(document).ready(function($) {
         removePages();
     });
     /*Маска для телефона*/
-    if (!window.phone_mask) {
-        phone_mask = "+7 (###) ### ## ##";
-    }
+    /*if (!window.phone_mask) {
+        var phone_mask = "+7 (###) ### ## ##";
+    }*/
     function maskRefresh() {
         $('input[name="phone"]').on("focusin", function() {
             delete $.mask.definitions["9"];
             $.mask.definitions["#"] = "[0-9]";
-            $(this).mask(phone_mask);
+            $(this).mask("+7 (###) ### ## ##");
         });
     }
     maskRefresh();
