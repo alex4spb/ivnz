@@ -286,10 +286,10 @@ jQuery(document).ready(function($) {
         centeredSlides: true,
         loopedSlides: 2,
         // Navigation arrows
-        navigation: false
-        //autoplay: {
-        //  delay: 6000,
-        //},
+        navigation: false,
+        autoplay: {
+          delay: 6000,
+        },
     });
     /* Сворачивание инфы*/
     $(".toggle").each(function() {
@@ -326,9 +326,6 @@ jQuery(document).ready(function($) {
                 controls: ["zoomControl"]
             });
 
-            MyBalloonShadowLayout = ymaps.templateLayoutFactory.createClass(
-                '<div class="contacts__map-fullshadow">' + "</div>"
-            );
             // Создание макета балуна на основе Twitter Bootstrap.
             (MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 '<div class="contacts__map-baloon">' +
@@ -487,7 +484,6 @@ jQuery(document).ready(function($) {
                         iconImageOffset: [-17, -17],
                         hideIconOnBalloonOpen: false,
                         balloonShadow: true,
-                        balloonShadowLayout: MyBalloonShadowLayout,
                         balloonLayout: MyBalloonLayout,
                         balloonContentLayout: MyBalloonContentLayout,
                         balloonPanelMaxMapArea: 0,
@@ -705,7 +701,7 @@ jQuery(document).ready(function($) {
             .parents(".form__field")
             .find(".form__regions-item");
         var input_value = input.val().trim();
-        console.log(input_value);
+        //console.log(input_value);
 
         if (input_value.length != 0) {
             var repeat = 0;
@@ -855,7 +851,7 @@ jQuery(document).ready(function($) {
                 .html("Введите хотя бы один регион");
         }
 
-        console.log("step1:", step1, "; step2:", step2, errors, data);
+        //console.log("step1:", step1, "; step2:", step2, errors, data);
 
         if (step1 && !errors.length) {
             button
