@@ -546,7 +546,7 @@ html.no-mobile .button:hover {
   background-image: url("../img/header-about.png");
   background-size: cover;
   background-position: top;
-  background-color: #fff;
+  background-color: #212b41;
 }
 
 .about .header__content {
@@ -1774,7 +1774,7 @@ html.no-mobile .audit-form .form__regions-item .close:hover {
   background-image: url("../img/audit-header.png");
   background-size: cover;
   background-position: top;
-  background-color: #fff;
+  background-color: #212b41;
 }
 
 .audit .header__content {
@@ -3499,7 +3499,7 @@ html.no-mobile .footer__bottom-design:hover:after {
   background-image: url("../img/main-page-header.png");
   background-size: cover;
   background-position: top;
-  background-color: #fff;
+  background-color: #212b41;
 }
 
 .main-page .header__content {
