@@ -891,9 +891,9 @@
   text-align: center;
   font-weight: bold;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+      -ms-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
   position: absolute;
   text-transform: uppercase;
   color: #fff;

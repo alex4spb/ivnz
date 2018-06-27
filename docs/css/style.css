@@ -184,11 +184,11 @@ svg:not(.-no-restyle) [stroke] {
 }
 
 a {
-  color: #0169bf;
+  color: #3c7fff;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
   transition-duration: 0.2s, 0.2s, 0.2s;
-  -webkit-transition-property: color;
-  transition-property: color;
+  -webkit-transition-property: all;
+  transition-property: all;
 }
 
 a svg {
@@ -523,93 +523,6 @@ h6,
 .text hr {
   margin-top: 25px;
   margin-bottom: 25px;
-}
-
-.text__specs dl {
-  line-height: 19px;
-  margin-bottom: 15px;
-}
-
-.text__specs dl dt,
-.text__specs dl dd {
-  font-size: 14px;
-}
-
-.text__collapsed-content:not(.-above-m):not(.-below-m) {
-  -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
-  transition: max-height 0.2s, 0.2s, 0.2s;
-  max-height: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.text__collapsed-handler {
-  display: inline-block;
-  vertical-align: top;
-  background-color: #f3f3f4;
-  border-radius: 3px;
-  padding: 0 19px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  padding-bottom: 2px;
-  -webkit-transition: color 0.2s, 0.2s, 0.2s;
-  transition: color 0.2s, 0.2s, 0.2s;
-}
-
-.text__collapsed-handler-value {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.text__collapsed-handler-value:before {
-  content: attr(data-closed);
-}
-
-html.no-mobile .text__collapsed-handler:hover {
-  color: #f44519;
-}
-
-.text__collapsed-handler.-small {
-  font-size: 11px;
-  line-height: 38px;
-  height: 40px;
-}
-
-.text__collapsed-handler.-small .text__collapsed-handler-dots {
-  display: inline-block;
-  vertical-align: middle;
-  padding-right: 8px;
-  line-height: 40px;
-}
-
-.text__collapsed-handler.-small .text__collapsed-handler-dots i {
-  display: inline-block;
-  vertical-align: middle;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: currentcolor;
-  margin: 0 1px;
-}
-
-.text__collapsed-handler.-big {
-  font-size: 14px;
-  line-height: 42px;
-  height: 43px;
-}
-
-.text__collapsed.-active .text__collapsed-handler-value:before {
-  content: attr(data-opened);
-}
-
-.text > :first-child {
-  margin-top: 0 !important;
-}
-
-.text > :last-child {
-  margin-bottom: 0 !important;
 }
 
 .button {
@@ -4723,9 +4636,9 @@ html.no-mobile .vacancy__list-item:hover {
   text-align: center;
   font-weight: bold;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+  -ms-transform: translateY(-50%) !important;
+  transform: translateY(-50%) !important;
   position: absolute;
   text-transform: uppercase;
   color: #fff;
@@ -7096,59 +7009,6 @@ button.swiper-pagination-bullet {
     margin-top: 28px;
   }
 
-  .text__specs dl {
-    padding: 0;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    font-size: 0;
-    position: relative;
-  }
-
-  .text__specs dl:after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(151,151,151,0.14);
-    z-index: 1;
-  }
-
-  .text__specs dl dt,
-  .text__specs dl dd {
-    display: inline-block;
-    vertical-align: bottom;
-    margin: 0;
-    padding: 0;
-  }
-
-  .text__specs dl dt span,
-  .text__specs dl dd span {
-    background-color: #fff;
-    position: relative;
-    z-index: 2;
-  }
-
-  .text__specs dl dt {
-    font-weight: bold;
-  }
-
-  .text__specs dl dd span {
-    display: block;
-    padding-left: 1px;
-  }
-
-  .text__collapsed-content.-above-m {
-    -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
-    transition: max-height 0.2s, 0.2s, 0.2s;
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-  }
-
   .button {
     font-size: 16px;
     line-height: 56px;
@@ -9398,22 +9258,6 @@ button.swiper-pagination-bullet {
     font-size: 20px;
   }
 
-  .text__specs {
-    margin: 21px 0 56px;
-  }
-
-  .text__specs dl dt {
-    width: 282px;
-  }
-
-  .text__specs dl dd {
-    width: calc(100% - 282px);
-  }
-
-  .text__collapsed-handler {
-    margin-top: 39px;
-  }
-
   .article__content-text ol {
     margin-left: -40px;
   }
@@ -9513,18 +9357,6 @@ button.swiper-pagination-bullet {
 
   .text h4 {
     line-height: 22px;
-  }
-
-  .text__specs {
-    margin: 17px 0 57px;
-  }
-
-  .text__collapsed-handler.-small {
-    margin-top: 15px;
-  }
-
-  .text__collapsed-handler.-big {
-    margin-top: 18px;
   }
 
   .article__content-text ol {
@@ -9739,18 +9571,6 @@ button.swiper-pagination-bullet {
     line-height: 24px;
     font-size: 16px;
     margin-top: 24px;
-  }
-
-  .text__collapsed-content.-below-m {
-    -webkit-transition: max-height 0.2s, 0.2s, 0.2s;
-    transition: max-height 0.2s, 0.2s, 0.2s;
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .text__collapsed-handler.-big {
-    width: 100%;
   }
 
   .button {
@@ -11546,6 +11366,10 @@ button.swiper-pagination-bullet {
     background-size: 32px 22px;
   }
 
+  html.no-mobile .footer__bottom-design:hover:after {
+    background-size: 32px 22px;
+  }
+
   .footer__bottom .topnav__mail {
     display: block;
     float: none;
@@ -12610,15 +12434,14 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1070px) {
+  .about__people-list-item {
+    width: 50%;
+    padding-left: 50px;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1198px) {
-  .text__specs dl dt {
-    width: 69.1026%;
-  }
-
-  .text__specs dl dd {
-    width: 30.8974%;
-  }
-
   .article__content-text li:before {
     left: -40px;
     width: 20px;
@@ -12656,13 +12479,6 @@ button.swiper-pagination-bullet {
   .contacts__map .orangecircle {
     top: -64px;
     right: 0px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1070px) {
-  .about__people-list-item {
-    width: 50%;
-    padding-left: 50px;
   }
 }
 
