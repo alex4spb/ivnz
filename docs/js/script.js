@@ -1,4 +1,30 @@
 document.documentElement.classList.add(isMobile.any ? "mobile" : "no-mobile");
+/*ранняя прогрузка hover изображений*/
+var hoverArray = [
+    'img/mask_1.svg',
+    'img/vk-black.svg',
+    'img/vk-hover.svg',
+    'img/vk-hover-bot.svg',
+    'img/fb-black.svg',
+    'img/fb-hover.svg',
+    'img/fb-hover-bot.svg',
+    'img/twitter-black.svg',
+    'img/twitter-hover.svg',
+    'img/twitter-hover-bot.svg',
+    'img/telegram-black.svg',
+    'img/telegram-hover.svg',
+    'img/telegram-hover-bot.svg',
+    'img/mask_sm_1.svg'
+]
+function preCacheHover(){
+    $.each(hoverArray, function(){
+        var img = new Image();
+        img.src = this;
+    });
+}; 
+$(window).on('load', function(){
+  preCacheHover();
+});
 jQuery(document).ready(function($) {
     /*Плавная прокрутка*/
     $('a[href^="#"]').on("click", function(e) {
@@ -21,7 +47,7 @@ jQuery(document).ready(function($) {
     AOS.init({
         duration: 1200,
         once: true
-    });
+    });        
     /*Магическая линия для верхнего меню*/
     if ($(".topnav__menu").length) {
         $(function() {
@@ -277,7 +303,6 @@ jQuery(document).ready(function($) {
             document.getElementsByTagName("head")[0] ||
             document.getElementsByTagName("body")[0]
         ).appendChild(dsq);
-
     }
     /*Слайдер вакансий*/
     new Swiper($(".vacancy__talants-slider"), {
@@ -886,6 +911,5 @@ jQuery(document).ready(function($) {
                 });
             }
         }
-
     });
 });
