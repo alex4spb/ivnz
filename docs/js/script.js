@@ -265,6 +265,7 @@ jQuery(document).ready(function($) {
         var disqus_config = function() {
             this.page.url = window.location.href; // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = "identifier_1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable '<? php echo $my_identifier; ?>'
+            this.callbacks.onNewComment = [function() { DISQUSWIDGETS.getCount({reset: true}); }];
         };
 
         var your_sub_domain = "ivnz"; // Имя зарегистрированного сайта на disqus
@@ -276,7 +277,7 @@ jQuery(document).ready(function($) {
             document.getElementsByTagName("head")[0] ||
             document.getElementsByTagName("body")[0]
         ).appendChild(dsq);
-        DISQUSWIDGETS.getCount({ reset: true });
+
     }
     /*Слайдер вакансий*/
     new Swiper($(".vacancy__talants-slider"), {
