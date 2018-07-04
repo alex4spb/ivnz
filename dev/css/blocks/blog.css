@@ -327,7 +327,6 @@
 }
 .blog__list-item-info {
   display: inline-block;
-  padding-right: 45px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: top;
@@ -335,6 +334,7 @@
 @media only screen and (min-width: 768px) {
   .blog__list-item-info {
     width: calc(100% - 372px);
+    padding-right: 45px;
   }
 }
 @media only screen and (max-width: 767px) {
