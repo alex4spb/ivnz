@@ -110,7 +110,6 @@
 .audit-form__form:before {
   content: '';
   z-index: 0;
-  display: block;
   position: absolute;
   width: calc(100% + 280px);
   left: -140px;
@@ -120,6 +119,16 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+@media only screen and (min-width: 768px) {
+  .audit-form__form:before {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit-form__form:before {
+    display: none;
+  }
 }
 .audit-form__form-legend,
 .audit-form__form form {

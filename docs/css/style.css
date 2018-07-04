@@ -306,7 +306,7 @@ html.mobile .js-tooltip {
   position: absolute;
   width: 6px;
   height: 10px;
-  background: url("img/left-arrow.svg");
+  background: url("../img/left-arrow.svg");
   background-size: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -324,8 +324,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .blueline {
@@ -335,8 +335,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .orangecircle {
@@ -346,8 +346,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .orangecircle:before {
@@ -367,8 +367,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .greycircle {
@@ -378,8 +378,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .greycircle:before {
@@ -400,8 +400,8 @@ html.mobile .js-tooltip {
   border-radius: 10px;
   -webkit-transition-property: all !important;
   transition-property: all !important;
-  -webkit-transition: 0.4s ease-out !important;
-  transition: 0.4s ease-out !important;
+  -webkit-transition: 0.6s ease-out !important;
+  transition: 0.6s ease-out !important;
 }
 
 .bluecircle:before {
@@ -516,8 +516,8 @@ h6,
 }
 
 .text > div {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .text hr {
@@ -579,6 +579,7 @@ html.no-mobile .button:hover {
 
 .about__people .svg-masks {
   height: 0;
+  overflow: hidden;
 }
 
 .about__people .blueline {
@@ -701,6 +702,10 @@ html.no-mobile .about__people-list-item:hover .about__people-list-item-img:after
   transition-property: all;
 }
 
+html.no-mobile .about__people-list-item-assistents-item:hover {
+  cursor: pointer;
+}
+
 html.no-mobile .about__people-list-item-assistents-item:hover .about__people-list-item-assistents-img:after {
   background: url("../img/mask_sm_1.svg");
 }
@@ -711,6 +716,10 @@ html.no-mobile .about__people-list-item-assistents-item:hover .about__people-lis
   left: 0;
   position: absolute;
   z-index: 1;
+}
+
+html.no-mobile .about__people-list-item-assistents-item.-hidden:hover {
+  z-index: 3;
 }
 
 .about__people-list-item-assistents-item.-hidden .about__people-list-item-assistents-name,
@@ -917,7 +926,7 @@ html.no-mobile .about__events-list-item:hover .about__events-list-item-title:aft
   text-transform: none;
   font-family: "Proxima Nova";
   font-weight: normal;
-  text-decoration: underline;
+  text-decoration: none;
   padding-left: 30px;
   font-size: 18px;
   line-height: 20px;
@@ -988,6 +997,14 @@ html.no-mobile .about__clients-list-item:hover {
   font-size: 0;
 }
 
+html.no-mobile html.no-mobile .about__publication-list:hover .about__publication-list-item:hover img {
+  opacity: 1;
+}
+
+html.no-mobile .about__publication-list:hover .about__publication-list-item img {
+  opacity: 0.5;
+}
+
 .about__publication-list-item {
   display: inline-block;
   position: relative;
@@ -1014,6 +1031,10 @@ html.no-mobile .about__publication-list-item:hover {
   -ms-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   left: 50%;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-duration: 0.2s, 0.2s, 0.2s;
+  -webkit-transition-property: all;
+  transition-property: all;
 }
 
 .about .audit-form {
@@ -1142,6 +1163,7 @@ html.no-mobile .about__publication-list-item:hover {
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .article__content-header-repost-social .twitter {
@@ -1641,7 +1663,6 @@ html.no-mobile .article__comments-button:hover {
 .audit-form__form:before {
   content: '';
   z-index: 0;
-  display: block;
   position: absolute;
   width: calc(100% + 280px);
   left: -140px;
@@ -2181,7 +2202,11 @@ html.no-mobile .audit__info-button:hover {
   display: block;
 }
 
-html.no-mobile .blog__list-item:hover h2 {
+.blog__list-item a:hover {
+  text-decoration: none;
+}
+
+.blog__list-item a:hover h2 {
   color: #3c7fff;
 }
 
@@ -2437,6 +2462,7 @@ html.no-mobile .blog .blog__paginator-page:hover:before {
   display: inline-block;
   cursor: pointer;
   vertical-align: bottom;
+  border: none;
 }
 
 html.no-mobile .blog .blog__subscribe-form form.form .form__button:hover,
@@ -2762,8 +2788,15 @@ html.no-mobile .cases__list-item-title a.h2:hover:after {
   border-radius: 4px;
   margin-top: -10px;
   font-family: "Proxima Nova";
-  -webkit-transition: all 0.2s, 0.2s, 0.2s;
-  transition: all 0.2s, 0.2s, 0.2s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+  transition-duration: 0.2s, 0.2s, 0.2s;
+  opacity: 0;
+}
+
+.contacts__map-baloon.active {
+  opacity: 1;
 }
 
 .contacts__map-baloon .close {
@@ -2796,13 +2829,6 @@ html.no-mobile .cases__list-item-title a.h2:hover:after {
 }
 
 .contacts__map .ymaps-2-1-65-shadows-pane {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.2s, 0.2s, 0.2s;
-  transition: all 0.2s, 0.2s, 0.2s;
-}
-
-.contacts__map .ymaps-2-1-65-balloon-shadow {
   width: 100% !important;
   height: 100% !important;
   left: 0 !important;
@@ -3063,7 +3089,6 @@ html.no-mobile .footer__contacts-logo:hover {
 
 html.no-mobile .footer__contacts-phone:hover {
   text-decoration: none;
-  opacity: 0.7;
 }
 
 .footer__contacts-phone img {
@@ -3311,6 +3336,9 @@ html.no-mobile .footer__bottom-design:hover:after {
   padding: 0 15px;
   z-index: 1;
   border-radius: 2px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .input input::-ms-clear,
@@ -3736,19 +3764,16 @@ html.no-mobile .main-page .header__button:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgba(99,104,112,0.7);
+  background-color: #f0f0f0;
   z-index: 1;
   border-radius: 10px;
 }
 
 .main-page .working__tabs-titles-item {
   position: relative;
-  font-size: 24px;
   font-weight: bold;
-  line-height: 38px;
   opacity: 0.7;
   color: #636870;
-  height: 38px;
   cursor: pointer;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
   transition-duration: 0.2s, 0.2s, 0.2s;
@@ -3913,6 +3938,10 @@ html.no-mobile .main-page .working__tabs-titles-item:hover {
   box-sizing: border-box;
   top: 33.5%;
   right: -90px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 html.no-mobile .main-page .swiper-button-prev:hover,
@@ -3964,8 +3993,6 @@ html.no-mobile .topnav a:hover {
 
 .topnav__logo {
   will-change: width;
-  width: 158px;
-  height: 48px;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
@@ -4113,7 +4140,7 @@ html.no-mobile .topnav__logo:hover {
   /*height прописать до и после появления topnav__menu*/
 }
 
-.topnav__menu-close img {
+.topnav__menu-close > img {
   position: absolute;
   top: 5px;
   left: 22px;
@@ -4477,16 +4504,16 @@ html.no-mobile .vacancy__list-item:hover {
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-prev:before,
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-prev:after {
   opacity: 0;
-  -webkit-transform: translateX(8%) scale(0.89);
-  -ms-transform: translateX(8%) scale(0.89);
-  transform: translateX(8%) scale(0.89);
+  -webkit-transform: translateX(14.5%) scale(0.89);
+  -ms-transform: translateX(14.5%) scale(0.89);
+  transform: translateX(14.5%) scale(0.89);
 }
 
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-prev img {
   opacity: 0;
-  -webkit-transform: translateX(8%) scale(0.89);
-  -ms-transform: translateX(8%) scale(0.89);
-  transform: translateX(8%) scale(0.89);
+  -webkit-transform: translateX(14.5%) scale(0.89);
+  -ms-transform: translateX(14.5%) scale(0.89);
+  transform: translateX(14.5%) scale(0.89);
 }
 
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next {
@@ -4514,9 +4541,6 @@ html.no-mobile .vacancy__list-item:hover {
 
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active img {
   opacity: 1;
-  -webkit-transform: translateX(0%) scale(1);
-  -ms-transform: translateX(0%) scale(1);
-  transform: translateX(0%) scale(1);
 }
 
 .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active span {
@@ -7328,6 +7352,7 @@ button.swiper-pagination-bullet {
   .article__content-text-picture-img {
     width: 73%;
     border-radius: 10px;
+    overflow: hidden;
   }
 
   .article__content-text-picture-notation {
@@ -7537,6 +7562,10 @@ button.swiper-pagination-bullet {
     max-width: 590px;
     border-radius: 10px;
     padding: 34px 0 61px;
+  }
+
+  .audit-form__form:before {
+    display: block;
   }
 
   .audit-form__form-legend,
@@ -8590,7 +8619,7 @@ button.swiper-pagination-bullet {
   }
 
   .main-page .working__tabs {
-    margin-top: 60px;
+    margin-top: 50px;
   }
 
   .main-page .working__tabs-titles {
@@ -8599,6 +8628,9 @@ button.swiper-pagination-bullet {
 
   .main-page .working__tabs-titles-item {
     display: inline-block;
+    font-size: 24px;
+    line-height: 38px;
+    height: 38px;
   }
 
   .main-page .working__tabs-titles-item + .working__tabs-titles-item {
@@ -8633,7 +8665,7 @@ button.swiper-pagination-bullet {
 
   .topnav__logo {
     float: left;
-    top: 10px;
+    top: 11px;
     position: absolute;
   }
 
@@ -8788,25 +8820,34 @@ button.swiper-pagination-bullet {
     padding-right: 20%;
   }
 
-  .vacancy__talants-slider .swiper-wrapper .swiper-slide img {
-    border-radius: 10px;
-  }
-
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next {
-    opacity: 0.3;
+    opacity: 0.3 !important;
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:before,
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:after {
-    -webkit-transform: translateX(-85.5%) scale(0.89);
-    -ms-transform: translateX(-85.5%) scale(0.89);
-    transform: translateX(-85.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89);
+    -ms-transform: translateX(14.5%) scale(0.89);
+    transform: translateX(14.5%) scale(0.89);
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next img {
-    -webkit-transform: translateX(-85.5%) scale(0.89);
-    -ms-transform: translateX(-85.5%) scale(0.89);
-    transform: translateX(-85.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89);
+    -ms-transform: translateX(14.5%) scale(0.89);
+    transform: translateX(14.5%) scale(0.89);
+  }
+
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active:before,
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active:after {
+    -webkit-transform: translateX(0) scale(1);
+    -ms-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active img {
+    -webkit-transform: translateX(0) scale(1);
+    -ms-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
   }
 
   .vacancy__require {
@@ -9327,7 +9368,9 @@ button.swiper-pagination-bullet {
   }
 
   .topnav__logo {
-    left: -53px;
+    left: -48px;
+    width: 158px;
+    height: 36px;
   }
 
   .topnav__mail {
@@ -10274,6 +10317,10 @@ button.swiper-pagination-bullet {
     padding: 30px 20px 40px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+  }
+
+  .audit-form__form:before {
+    display: none;
   }
 
   .audit-form__form-legend,
@@ -11654,6 +11701,9 @@ button.swiper-pagination-bullet {
   .main-page .working__tabs-titles-item {
     display: block;
     padding-left: 30px;
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
   }
 
   .main-page .working__tabs-titles-item:before {
@@ -11717,6 +11767,13 @@ button.swiper-pagination-bullet {
     position: relative;
     margin: 0 auto;
     padding-top: 20px;
+    width: 129px;
+    height: 31px;
+  }
+
+  .topnav__logo img {
+    width: 100%;
+    height: 100%;
   }
 
   .topnav__logo.-audit {
@@ -11966,25 +12023,34 @@ button.swiper-pagination-bullet {
     margin: 0 auto;
   }
 
-  .vacancy__talants-slider .swiper-wrapper .swiper-slide img {
-    border-radius: 6px;
-  }
-
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next {
     opacity: 0;
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:before,
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:after {
-    -webkit-transform: translateX(-85.5%) scale(0.846) translateY(3%);
-    -ms-transform: translateX(-85.5%) scale(0.846) translateY(3%);
-    transform: translateX(-85.5%) scale(0.846) translateY(3%);
+    -webkit-transform: translateX(14.5%) scale(0.846) translateY(3%);
+    -ms-transform: translateX(14.5%) scale(0.846) translateY(3%);
+    transform: translateX(14.5%) scale(0.846) translateY(3%);
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next img {
-    -webkit-transform: translateX(-85.5%) scale(0.846) translateY(3%);
-    -ms-transform: translateX(-85.5%) scale(0.846) translateY(3%);
-    transform: translateX(-85.5%) scale(0.846) translateY(3%);
+    -webkit-transform: translateX(14.5%) scale(0.846) translateY(3%);
+    -ms-transform: translateX(14.5%) scale(0.846) translateY(3%);
+    transform: translateX(14.5%) scale(0.846) translateY(3%);
+  }
+
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active:before,
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active:after {
+    -webkit-transform: translateX(0) scale(1) translateY(0);
+    -ms-transform: translateX(0) scale(1) translateY(0);
+    transform: translateX(0) scale(1) translateY(0);
+  }
+
+  .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active img {
+    -webkit-transform: translateX(0) scale(1) translateY(0);
+    -ms-transform: translateX(0) scale(1) translateY(0);
+    transform: translateX(0) scale(1) translateY(0);
   }
 
   .vacancy__require {
@@ -12517,7 +12583,9 @@ button.swiper-pagination-bullet {
 @media only screen and (min-width: 768px) and (max-width: 900px) {
   .topnav__logo {
     width: 48px;
+    height: 36px;
     overflow: hidden;
+    top: 10px;
   }
 
   .topnav__logo.-audit {

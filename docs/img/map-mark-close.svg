@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="12" cy="12" r="12"></circle>
+        <filter x="-33.3%" y="-25.0%" width="166.7%" height="166.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="12" cy="12" r="4"></circle>
+        <filter x="-87.5%" y="-62.5%" width="275.0%" height="275.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="0.-UI-kit-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="0.-Cuts.-Desktop" transform="translate(-1460.000000, -3640.000000)">
+            <g id="Group-32-Copy" transform="translate(1270.000000, 3262.000000)">
+                <g id="Group-38" transform="translate(40.000000, 189.000000)">
+                    <g id="Group-33">
+                        <g id="Maps-pin-hover">
+                            <g id="Pin" transform="translate(155.000000, 192.000000)">
+                                <g id="Oval-5" stroke-linecap="round" stroke-linejoin="round">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                    <use stroke="#FFFFFF" stroke-width="2" fill="#3C7FFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                </g>
+                                <g id="Oval-5">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <use fill="#FAFAFB" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

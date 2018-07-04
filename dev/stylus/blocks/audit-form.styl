@@ -60,7 +60,6 @@
     &:before
       content ''
       z-index 0
-      display block
       position absolute
       width calc(100% + 280px)
       left -140px
@@ -70,6 +69,10 @@
       background-position center  
       background-repeat no-repeat
       background-size 100% 100%
+      +a($m)
+        display block      
+      +b($m)
+        display none
     &-legend
     form
       margin 0 auto

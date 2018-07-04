@@ -56,6 +56,7 @@
   &__people
     .svg-masks
       height 0
+      overflow hidden
     .container
       +b($m)
         padding 0 20px
@@ -196,6 +197,7 @@
             transition-duration $speed 
             transition-property all 
             &:hover
+              cursor pointer
               .about__people-list-item-assistents-img
                 &:after
                   background url(../img/mask_sm_1.svg)
@@ -204,7 +206,9 @@
               padding-left 38px
               left 0
               position absolute
-              z-index 1
+              z-index 1              
+              &:hover
+                z-index 3  
               .about__people-list-item-assistents-name
               .about__people-list-item-assistents-job  
                 opacity 0
@@ -524,7 +528,7 @@
             text-transform none
             font-family "Proxima Nova"
             font-weight normal
-            text-decoration underline
+            text-decoration none
             padding-left 30px
             font-size 18px
             line-height 20px    
@@ -640,6 +644,13 @@
     &-list
       line-height 0
       font-size 0
+      &:hover
+        .about__publication-list-item
+          &:hover         
+            img
+              opacity 1
+          img
+            opacity .5     
       &-item
         display inline-block
         position relative
@@ -651,7 +662,7 @@
         transition-property all  
         box-sizing border-box    
         &:hover  
-          border 1px solid #F78200 
+          border 1px solid #F78200  
         &:nth-child(2)
           img  
             +b($m) 
@@ -681,7 +692,9 @@
           position relative
           top 50%
           transform translateY(-50%) translateX(-50%) 
-          left 50%   
+          left 50%             
+          transition-duration $speed 
+          transition-property all 
           +b($m) 
             max-width 57%
   .audit-form

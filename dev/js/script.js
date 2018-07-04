@@ -100,12 +100,12 @@ jQuery(document).ready(function($) {
                     {
                         left: "0px"
                     },
-                    600,
-                    "easeOutCubic"
+                    200,
+                    "linear"
                 );
                 setTimeout(function() {
                     menu.addClass("active");
-                }, 500);
+                }, 200);
             });
             $(close).on("click", function(e) {
                 e.preventDefault();
@@ -113,12 +113,12 @@ jQuery(document).ready(function($) {
                     {
                         left: "-100%"
                     },
-                    600,
-                    "easeOutCubic"
+                    200,
+                    "linear"
                 );
                 setTimeout(function() {
                     menu.removeClass("active");
-                }, 500);
+                }, 200);
             });
         });
     }
@@ -310,7 +310,8 @@ jQuery(document).ready(function($) {
         direction: "horizontal",
         loop: true,
         centeredSlides: true,
-        loopedSlides: 2,
+        loopedSlides: 3,
+        effect: "fade",
         // Navigation arrows
         navigation: false,
         autoplay: {
@@ -349,7 +350,7 @@ jQuery(document).ready(function($) {
             myMap = new ymaps.Map("map", {
                 center: [59.866933, 30.471834],
                 zoom: 14,
-                controls: ["zoomControl"]
+                controls: []
             });
 
             // Создание макета балуна на основе Twitter Bootstrap.
@@ -368,7 +369,7 @@ jQuery(document).ready(function($) {
                      * @name build
                      */
                     build: function() {
-                        this.constructor.superclass.build.call(this);
+                        this.constructor.superclass.build.call(this);                        
 
                         this._$element = $(
                             ".contacts__map-baloon",
@@ -376,6 +377,8 @@ jQuery(document).ready(function($) {
                         );
 
                         this.applyElementOffset();
+
+                        this._$element.addClass('active')
 
                         this._$element
                             .find(".close")
@@ -436,8 +439,11 @@ jQuery(document).ready(function($) {
                      */
                     onCloseClick: function(e) {
                         e.preventDefault();
+                        var it = this
+                        it._$element.removeClass('active')
+                        setTimeout(function() {it.events.fire("userclose")}, 100)
 
-                        this.events.fire("userclose");
+                        //this.events.fire("userclose");
                     },
 
                     /**
@@ -502,7 +508,7 @@ jQuery(document).ready(function($) {
                         // Необходимо указать данный тип макета.
                         iconLayout: "default#image",
                         // Своё изображение иконки метки.
-                        iconImageHref: "img/map-mark.svg",
+                        iconImageHref: "img/map-mark-close.svg",
                         // Размеры метки.
                         iconImageSize: [34, 34],
                         // Смещение левого верхнего угла иконки относительно
@@ -519,7 +525,18 @@ jQuery(document).ready(function($) {
             myMap.geoObjects.add(myPlacemark);
             myPlacemark.balloon.open();
             myMap.behaviors.disable("scrollZoom");
-        }
+
+            myPlacemark.events
+                .add('balloonopen', function (e) {
+                    // Ссылку на объект, вызвавший событие,
+                    // можно получить из поля 'target'.
+
+                    e.get('target').options.set('iconImageHref', 'img/map-mark.svg');
+                })
+                .add('balloonclose', function (e) {
+                    e.get('target').options.set('iconImageHref', 'img/map-mark-close.svg');
+                });
+            }
     });
     /*Пагинатор в мобильной версии, удаление лишних страниц*/
     $(".blog__paginator-page").each(function() {

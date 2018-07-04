@@ -291,48 +291,51 @@
             opacity 0
             box-sizing border-box
             width 100%
-            +a($m)
-              border-radius 10px
-            +b($m) 
-              border-radius 6px 
           &.swiper-slide-prev
             z-index: 1;
             opacity: 0;
             &:before
             &:after
               opacity: 0;
-              transform: translateX(8%) scale(.89);
+              transform: translateX(14.5%) scale(.89);
             img 
               opacity: 0;
-              transform: translateX(8%) scale(.89);
+              transform: translateX(14.5%) scale(.89);         
           &.swiper-slide-next
             z-index 1
             +a($m)
-              opacity .3
+              opacity .3 !important
             +b($m)
               opacity 0
             &:before
             &:after
-              opacity .5
+              opacity .5 
               +a($m)
-                transform translateX(-85.5%) scale(.89)
+                transform translateX(14.5%) scale(.89)
               +b($m)
-                transform translateX(-85.5%) scale(.846) translateY(3%)
+                transform translateX(14.5%) scale(.846) translateY(3%)
             img 
               opacity 1
               +a($m)
-                transform translateX(-85.5%) scale(.89)
+                transform translateX(14.5%) scale(.89)
               +b($m)
-                transform translateX(-85.5%) scale(.846) translateY(3%)
+                transform translateX(14.5%) scale(.846) translateY(3%)
           &.swiper-slide-active 
             z-index 2 
             opacity 1       
             &:before
             &:after
               opacity 0.5
+              +a($m)
+                transform translateX(0) scale(1)
+              +b($m)
+                transform translateX(0) scale(1) translateY(0)
             img 
               opacity 1
-              transform translateX(0%) scale(1)
+              +a($m)
+                transform translateX(0) scale(1)
+              +b($m) 
+                transform translateX(0) scale(1) translateY(0)
             span 
               display block   
   &__require

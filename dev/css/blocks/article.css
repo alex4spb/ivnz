@@ -324,6 +324,7 @@
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 .article__content-header-repost-social .twitter {
   background-image: url("../img/twitter-black.svg");
@@ -481,6 +482,7 @@
   .article__content-text-picture-img {
     width: 73%;
     border-radius: 10px;
+    overflow: hidden;
   }
 }
 @media only screen and (max-width: 767px) {

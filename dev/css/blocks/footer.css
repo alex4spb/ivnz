@@ -187,7 +187,6 @@
 }
 .footer__contacts-phone:hover {
   text-decoration: none;
-  opacity: 0.7;
 }
 .footer__contacts-phone img {
   position: absolute;

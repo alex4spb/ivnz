@@ -201,7 +201,10 @@
     line-height: 36px;
   }
 }
-.blog__list-item:hover h2 {
+.blog__list-item a:hover {
+  text-decoration: none;
+}
+.blog__list-item a:hover h2 {
   color: #3c7fff;
 }
 .blog__list-item .bluecircle {
@@ -885,6 +888,7 @@
   display: inline-block;
   cursor: pointer;
   vertical-align: bottom;
+  border: none;
 }
 @media only screen and (min-width: 768px) {
   .blog .blog__subscribe-form form.form .form__button,

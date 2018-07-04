@@ -111,6 +111,7 @@
 }
 .about__people .svg-masks {
   height: 0;
+  overflow: hidden;
 }
 @media only screen and (max-width: 767px) {
   .about__people .container {
@@ -332,6 +333,9 @@
   -webkit-transition-property: all;
   transition-property: all;
 }
+.about__people-list-item-assistents-item:hover {
+  cursor: pointer;
+}
 .about__people-list-item-assistents-item:hover .about__people-list-item-assistents-img:after {
   background: url("../img/mask_sm_1.svg");
 }
@@ -341,6 +345,9 @@
   left: 0;
   position: absolute;
   z-index: 1;
+}
+.about__people-list-item-assistents-item.-hidden:hover {
+  z-index: 3;
 }
 .about__people-list-item-assistents-item.-hidden .about__people-list-item-assistents-name,
 .about__people-list-item-assistents-item.-hidden .about__people-list-item-assistents-job {
@@ -855,7 +862,7 @@
   text-transform: none;
   font-family: "Proxima Nova";
   font-weight: normal;
-  text-decoration: underline;
+  text-decoration: none;
   padding-left: 30px;
   font-size: 18px;
   line-height: 20px;
@@ -1059,6 +1066,12 @@
   line-height: 0;
   font-size: 0;
 }
+.about__publication-list:hover .about__publication-list-item:hover img {
+  opacity: 1;
+}
+.about__publication-list:hover .about__publication-list-item img {
+  opacity: 0.5;
+}
 .about__publication-list-item {
   display: inline-block;
   position: relative;
@@ -1121,6 +1134,10 @@
       -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
   left: 50%;
+  -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s, 0.2s;
+  -webkit-transition-property: all;
+  transition-property: all;
 }
 @media only screen and (max-width: 767px) {
   .about__publication-list-item img {
