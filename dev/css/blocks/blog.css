@@ -343,8 +343,17 @@
   }
 }
 .blog__list-item-info h2 {
-  text-transform: uppercase;
   color: #000;
+}
+@media only screen and (min-width: 768px) {
+  .blog__list-item-info h2 {
+    text-transform: uppercase;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .blog__list-item-info h2 {
+    text-transform: none;
+  }
 }
 .blog__list-item-info-timename {
   color: #636870;

@@ -2238,7 +2238,6 @@ html.no-mobile .audit__info-button:hover {
 }
 
 .blog__list-item-info h2 {
-  text-transform: uppercase;
   color: #000;
 }
 
@@ -7954,6 +7953,10 @@ button.swiper-pagination-bullet {
     width: calc(100% - 372px);
   }
 
+  .blog__list-item-info h2 {
+    text-transform: uppercase;
+  }
+
   .blog__list-item-info-timename {
     font-size: 15px;
     line-height: 28px;
@@ -10767,6 +10770,10 @@ button.swiper-pagination-bullet {
 
   .blog__list-item-info {
     width: 100%;
+  }
+
+  .blog__list-item-info h2 {
+    text-transform: none;
   }
 
   .blog__list-item-info-timename {
