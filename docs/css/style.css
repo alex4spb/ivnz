@@ -3335,8 +3335,6 @@ html.no-mobile .footer__bottom-design:hover:after {
   z-index: 1;
   border-radius: 2px;
   -webkit-appearance: none;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
 }
 
 .input input::-ms-clear,
