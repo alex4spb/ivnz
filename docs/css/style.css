@@ -2203,7 +2203,7 @@ html.no-mobile .audit__info-button:hover {
 }
 
 .blog__list-item a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .blog__list-item a:hover h2 {
