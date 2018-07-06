@@ -2202,12 +2202,9 @@ html.no-mobile .audit__info-button:hover {
   display: block;
 }
 
-.blog__list-item a:hover {
-  text-decoration: none;
-}
-
 .blog__list-item a:hover h2 {
   color: #3c7fff;
+  text-decoration: none;
 }
 
 .blog__list-item a:hover img {

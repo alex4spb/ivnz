@@ -201,11 +201,9 @@
     line-height: 36px;
   }
 }
-.blog__list-item a:hover {
-  text-decoration: none;
-}
 .blog__list-item a:hover h2 {
   color: #3c7fff;
+  text-decoration: none;
 }
 .blog__list-item a:hover img {
   -webkit-transform: scale(1.2);
