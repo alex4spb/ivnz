@@ -212,12 +212,17 @@
               .about__people-list-item-assistents-name
               .about__people-list-item-assistents-job  
                 opacity 0
+                display none
             &.-active
               left 38px
               position absolute
               z-index 2
           &-img
             z-index 2
+            text-align center
+            position absolute
+            top 0
+            left 0        
             &:after
               content ''
               position absolute
@@ -228,12 +233,7 @@
               height 62px 
             > .svg
               width 60px
-              height 62px
-              text-align center
-              position relative
-              position absolute
-              top 0
-              left 0              
+              height 62px      
               image
                 position absolute
                 bottom 0
@@ -645,12 +645,13 @@
       line-height 0
       font-size 0
       &:hover
-        .about__publication-list-item
-          &:hover         
-            img
-              opacity 1
+        text-decoration none
+        .about__publication-list-item:hover
+          text-decoration none         
           img
-            opacity .5     
+            opacity 1
+        img
+          opacity .5     
       &-item
         display inline-block
         position relative

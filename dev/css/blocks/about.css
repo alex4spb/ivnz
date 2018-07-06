@@ -352,6 +352,7 @@
 .about__people-list-item-assistents-item.-hidden .about__people-list-item-assistents-name,
 .about__people-list-item-assistents-item.-hidden .about__people-list-item-assistents-job {
   opacity: 0;
+  display: none;
 }
 .about__people-list-item-assistents-item.-active {
   left: 38px;
@@ -360,6 +361,10 @@
 }
 .about__people-list-item-assistents-img {
   z-index: 2;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .about__people-list-item-assistents-img:after {
   content: '';
@@ -373,11 +378,6 @@
 .about__people-list-item-assistents-img > .svg {
   width: 60px;
   height: 62px;
-  text-align: center;
-  position: relative;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .about__people-list-item-assistents-img > .svg image {
   position: absolute;
@@ -1066,10 +1066,16 @@
   line-height: 0;
   font-size: 0;
 }
+.about__publication-list:hover {
+  text-decoration: none;
+}
+.about__publication-list:hover .about__publication-list-item:hover {
+  text-decoration: none;
+}
 .about__publication-list:hover .about__publication-list-item:hover img {
   opacity: 1;
 }
-.about__publication-list:hover .about__publication-list-item img {
+.about__publication-list:hover img {
   opacity: 0.5;
 }
 .about__publication-list-item {
