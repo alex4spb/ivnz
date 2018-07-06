@@ -2386,6 +2386,7 @@ html.no-mobile .blog__notes-list-item:hover .blog__notes-list-item-title {
   width: 40px;
   height: 40px;
   background: url("../img/paginator-hover.svg");
+  background-repeat: no-repeat;
   background-size: 100%;
   opacity: 0;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
@@ -2396,6 +2397,7 @@ html.no-mobile .blog__notes-list-item:hover .blog__notes-list-item-title {
 
 .blog .blog__paginator-page.-active:before {
   background-image: url("../img/paginator-active.svg");
+  background-repeat: no-repeat;
   opacity: 1;
 }
 
