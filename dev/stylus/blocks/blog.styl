@@ -104,7 +104,9 @@
       a:hover
         text-decoration none
         h2
-          color #3C7FFF    
+          color #3C7FFF   
+        img 
+          transform scale(1.20)
       .bluecircle
         position absolute
         z-index 3
@@ -176,11 +178,13 @@
         display inline-block  
         box-sizing border-box
         vertical-align top
+        width 100%
         +a($m)
-          width calc(100% - 372px)   
-          padding-right 45px
+          padding-right 417px
+          //width calc(100% - 372px)   
+          //padding-right 45px
         +b($m)
-          width 100%
+          padding-bottom 280px
         h2
           color #000
           +a($m)
@@ -215,17 +219,23 @@
       &-img
         display inline-block  
         vertical-align top
+        position absolute
         +a($m)
           width 372px
+          top 0
+          right 0
         +b($m)
           width 100%
           text-align center
+          bottom 0
         &:after
           content ''
           width 100%
           display block
           height 0
         img 
+          transform scale(1)
+          transition scale, $speed
           +a($m)
             max-width 305px
             margin-right 67px

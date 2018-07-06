@@ -45,9 +45,9 @@ gulp.task("js", () => {
       .pipe(
         $.babel({
           presets: ["es2015"],
-          minified: true,
-          comments: false,
-          compact: true
+          //minified: true,
+          //comments: false,
+          //compact: true
           // plugins: [
           //   'transform-es2015-for-of'
           // ]
