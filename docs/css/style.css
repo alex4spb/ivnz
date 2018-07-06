@@ -2202,6 +2202,10 @@ html.no-mobile .audit__info-button:hover {
   display: block;
 }
 
+.blog__list-item a:hover {
+  text-decoration: none;
+}
+
 .blog__list-item a:hover h2 {
   color: #3c7fff;
   text-decoration: none;
@@ -2238,6 +2242,14 @@ html.no-mobile .audit__info-button:hover {
   box-sizing: border-box;
   vertical-align: top;
   width: 100%;
+}
+
+.blog__list-item-info a:hover {
+  text-decoration: none;
+}
+
+.blog__list-item-info a:hover h2 {
+  text-decoration: none;
 }
 
 .blog__list-item-info h2 {

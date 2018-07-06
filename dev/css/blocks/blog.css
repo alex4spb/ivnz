@@ -201,6 +201,9 @@
     line-height: 36px;
   }
 }
+.blog__list-item a:hover {
+  text-decoration: none;
+}
 .blog__list-item a:hover h2 {
   color: #3c7fff;
   text-decoration: none;
@@ -344,6 +347,12 @@
   .blog__list-item-info {
     padding-bottom: 280px;
   }
+}
+.blog__list-item-info a:hover {
+  text-decoration: none;
+}
+.blog__list-item-info a:hover h2 {
+  text-decoration: none;
 }
 .blog__list-item-info h2 {
   color: #000;
