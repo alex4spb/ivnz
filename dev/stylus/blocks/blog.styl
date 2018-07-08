@@ -107,7 +107,7 @@
           color #3C7FFF  
           text-decoration none 
         img 
-          transform scale(1.20)
+          opacity 0.7
       .bluecircle
         position absolute
         z-index 3
@@ -180,6 +180,7 @@
         box-sizing border-box
         vertical-align top
         width 100%
+        position relative
         +a($m)
           padding-right 417px
           //width calc(100% - 372px)   
@@ -239,8 +240,8 @@
           display block
           height 0
         img 
-          transform scale(1)
-          transition scale, $speed
+          opacity 1
+          transition opacity, $speed
           +a($m)
             max-width 305px
             margin-right 67px

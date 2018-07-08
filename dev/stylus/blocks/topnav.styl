@@ -152,7 +152,7 @@
     &-itembox
       display block
       width 130px
-      margin 64px auto 0      
+      margin 64px auto 20px     
     &-close
       width 100%
       position relative
@@ -209,7 +209,7 @@
       width 100%
       position relative
       text-align center
-      margin-top 91px    
+      min-height calc(100% - 436px)
       &:after
         content ""
         width 2px
@@ -227,8 +227,10 @@
       &-box
         width 130px 
         white-space nowrap
-        margin 0 auto
-        position relative
+        bottom 30px
+        position absolute
+        left 50%
+        transform translateX(-50%)
       img
         display inline-block
         width 30px

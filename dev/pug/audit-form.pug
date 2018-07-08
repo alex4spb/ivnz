@@ -2,7 +2,7 @@ include /input
 
 mixin audit-form(param)
   section.audit-form(data-aos="fade-in")
-    .container
+    .container  
       if ['audit'].indexOf(pagename) === -1 
         .blueline(data-aos="fade-in")
         .orangecircle(data-aos="fade-in" data-aos-anchor=".audit-form")        
@@ -13,7 +13,7 @@ mixin audit-form(param)
         .greyline.-bottom(data-aos="fade-in" data-aos-anchor=".audit-form" data-aos-delay="1000")
       .audit-form__wrap
         if ['audit'].indexOf(pagename) === -1 
-          h2.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
+          h2#audit.audit-form__title Знакомство мы начинаем #[br]с бесплатного аудита сайта:
         if ['audit'].indexOf(pagename) !== -1 
           h2#audit.audit-form__title Закажите бесплатный аудит      
         .audit-form__subtitle Оставьте заявку, мы изучим ваш сайт и тематику, #[br]после чего сможем пообщаться по существу

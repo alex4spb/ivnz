@@ -240,7 +240,7 @@
 .topnav__menu-itembox {
   display: block;
   width: 130px;
-  margin: 64px auto 0;
+  margin: 64px auto 20px;
 }
 .topnav__menu-close {
   width: 100%;
@@ -307,7 +307,7 @@
   width: 100%;
   position: relative;
   text-align: center;
-  margin-top: 91px;
+  min-height: calc(100% - 436px);
 }
 .topnav__menu-telephone:after {
   content: "";
@@ -329,8 +329,12 @@
 .topnav__menu-telephone-box {
   width: 130px;
   white-space: nowrap;
-  margin: 0 auto;
-  position: relative;
+  bottom: 30px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .topnav__menu-telephone img {
   display: inline-block;

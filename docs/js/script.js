@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
         if (target.length != 0) {
             $("html:not(:animated), body:not(:animated)").animate(
                 {
-                    scrollTop: target.offset().top
+                    scrollTop: (target.offset().top - 40)
                 },
                 500,
                 function() {

@@ -209,9 +209,7 @@
   text-decoration: none;
 }
 .blog__list-item a:hover img {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2);
+  opacity: 0.7;
 }
 .blog__list-item .bluecircle {
   position: absolute;
@@ -337,6 +335,7 @@
           box-sizing: border-box;
   vertical-align: top;
   width: 100%;
+  position: relative;
 }
 @media only screen and (min-width: 768px) {
   .blog__list-item-info {
@@ -436,11 +435,9 @@
   height: 0;
 }
 .blog__list-item-img img {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: scale, 0.2s, 0.2s, 0.2s;
-  transition: scale, 0.2s, 0.2s, 0.2s;
+  opacity: 1;
+  -webkit-transition: opacity, 0.2s, 0.2s, 0.2s;
+  transition: opacity, 0.2s, 0.2s, 0.2s;
 }
 @media only screen and (min-width: 768px) {
   .blog__list-item-img img {

@@ -36,7 +36,7 @@
       background #EBEBEB
       +a($d)
         top 207px
-        right -95px
+        right 0
       +btw($m, $d)
         top 207px
         right 0
@@ -80,7 +80,7 @@
         position relative
         box-sizing border-box
         +a($t)
-          padding-right 411px
+          padding-right 500px
         +btw($m, $t) 
           padding-right 290px
         +b($m)
@@ -146,7 +146,12 @@
       &-img
         +a($m)
           position absolute
-          right 22px
+          right 85px
+          top 50%
+          transform translateY(-50%)
+        +btw($m, $d)
+          position absolute
+          right 0px
           top 50%
           transform translateY(-50%)
         +b($m)
@@ -170,7 +175,7 @@
           +a($t)            
             width 220px
             & + &
-              width 240px      
+              width 230px      
           +btw($m, $t) 
             width 50%
           +b($m)
@@ -232,7 +237,7 @@
             & + .cases__list-item-info-item
               float left
             +a($d)              
-              width 300px
+              width 330px
               & + .cases__list-item-info-item
                 width 220px
             +btw($t, $d)

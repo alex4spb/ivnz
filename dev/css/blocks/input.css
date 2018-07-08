@@ -46,8 +46,6 @@
   z-index: 1;
   border-radius: 2px;
   -webkit-appearance: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 @media only screen and (min-width: 768px) {
   .input input,
@@ -88,7 +86,7 @@
     font-size: 14px;
     line-height: 14px;
     top: 0;
-    padding-top: 11px;
+    padding-top: 10px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -97,7 +95,7 @@
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 9px;
+    padding-top: 6px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -162,7 +160,7 @@
     font-size: 14px;
     line-height: 14px;
     top: 0;
-    padding-top: 11px;
+    padding-top: 10px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -170,7 +168,7 @@
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 9px;
+    padding-top: 6px;
   }
 }
 .input__icon {

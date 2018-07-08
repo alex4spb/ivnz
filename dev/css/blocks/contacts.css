@@ -54,6 +54,23 @@
   text-transform: uppercase;
   margin: 0px;
 }
+.contacts .header .greyline {
+  position: absolute;
+  right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .contacts .header .greyline {
+    top: 110px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contacts .header .greyline {
+    top: 102px;
+  }
+}
+.contacts .header .greyline.active {
+  height: 120px;
+}
 .contacts__content {
   color: #000;
   position: relative;
