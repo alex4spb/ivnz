@@ -358,7 +358,16 @@
 }
 .contacts__map {
   width: 100%;
-  min-height: 800px;
+}
+@media only screen and (min-width: 768px) {
+  .contacts__map {
+    height: 800px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contacts__map {
+    height: 480px;
+  }
 }
 .contacts__map .orangecircle {
   position: absolute;

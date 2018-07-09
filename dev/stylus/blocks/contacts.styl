@@ -198,7 +198,10 @@
             margin-top 24px
   &__map
     width 100%
-    min-height 800px
+    +a($m)
+      height 800px
+    +b($m)
+      height 480px
     .orangecircle
       position absolute
       z-index 3

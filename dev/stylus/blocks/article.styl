@@ -150,6 +150,12 @@
         margin-left 168px
         +b($m)
           display none
+        &:hover
+          .article__content-header-repost-social
+            width 146px
+            margin-left 10px
+            padding-left 20px
+            padding-right 10px
         &-count
           display inline-block
           background url('../img/repost-top.svg')
@@ -162,6 +168,11 @@
           font-weight bold
           padding-left 25px
           cursor pointer
+          &:hover + .article__content-header-repost-social
+            width 146px
+            margin-left 10px
+            padding-left 20px
+            padding-right 10px
         &-social
           text-align justify
           line-height 36px
@@ -175,6 +186,7 @@
           transition-duration $speed 
           transition-property all 
           overflow hidden
+          &:hover
           &.-active
             width 146px
             margin-left 10px

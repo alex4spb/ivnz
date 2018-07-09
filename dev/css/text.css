@@ -143,6 +143,9 @@ h6,
     margin-top: 24px;
   }
 }
+.text p:first-child {
+  margin-top: 0;
+}
 .text h2,
 .text h3,
 .text h5,

@@ -95,19 +95,20 @@
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 6px;
+    padding-top: 8px;
   }
+}
+.input input {
+  padding-bottom: 8px;
 }
 @media only screen and (min-width: 768px) {
   .input input {
     height: 60px;
-    padding-bottom: 15px;
   }
 }
 @media only screen and (max-width: 767px) {
   .input input {
     height: 50px;
-    padding-bottom: 13px;
   }
 }
 .input textarea {
@@ -168,7 +169,7 @@
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 6px;
+    padding-top: 8px;
   }
 }
 .input__icon {

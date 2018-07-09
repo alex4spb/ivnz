@@ -398,7 +398,7 @@
           opacity 0.7
           color #636870
           cursor pointer          
-          transition-duration 0.2s, 0.2s, 0.2s 
+          transition-duration $speed 
           transition-property all
           vertical-align top
           +a($m)
@@ -461,17 +461,30 @@
         +b($m)
           padding 0 
         &-item
-          display none
+          //display none
           opacity 0
           height 0
-          transition opacity 2s 
+          transition opacity $speed
+          position relative
           &.active
             opacity 1 
             display block
             height auto 
+            .working__tabs-slider
+              opacity 1
+              height auto
+              .swiper-slide 
+                height auto
       &-slider
         width 100%
         position relative
+        opacity 0
+        height 0
+        transition opacity 0.8s
+        background #fff
+        .swiper-slide
+          height 0
+          overflow hidden
   $time = 500ms
   $delay = $time/2
   $mode = cubic-bezier(.17, .67, .55, 1.43)

@@ -554,9 +554,9 @@
 @media only screen and (min-width: 768px) {
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:before,
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:after {
-    -webkit-transform: translateX(14.5%) scale(0.89);
-        -ms-transform: translateX(14.5%) scale(0.89);
-            transform: translateX(14.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+        -ms-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+            transform: translateX(14.5%) scale(0.89) translateY(-9px);
   }
 }
 @media only screen and (max-width: 767px) {
@@ -575,9 +575,9 @@
 }
 @media only screen and (min-width: 768px) {
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next img {
-    -webkit-transform: translateX(14.5%) scale(0.89);
-        -ms-transform: translateX(14.5%) scale(0.89);
-            transform: translateX(14.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+        -ms-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+            transform: translateX(14.5%) scale(0.89) translateY(-9px);
   }
 }
 @media only screen and (max-width: 767px) {

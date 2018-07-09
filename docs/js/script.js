@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
                 },
                 500,
                 function() {
-                    window.location.hash = hash;
+                    //window.location.hash = hash;
                 }
             );
         }
@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
         once: true
     });        
     /*Магическая линия для верхнего меню*/
-    if ($(".topnav__menu").length) {
+    if ($(".topnav__menu:not(.-mobile)").length) {
         $(function() {
             var $el,
                 leftPos,
@@ -144,19 +144,24 @@ jQuery(document).ready(function($) {
         });
     });
     /*Слайдер на главной*/
-    var slider = $(".working__tabs-content-item.active .working__tabs-slider");
-    new Swiper(slider, {
-        // Optional parameters
-        direction: "horizontal",
-        loop: true,
-        centeredSlides: true,
-        loopedSlides: 2,
-        // Navigation arrows
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-    });
+    var slider = $(".working__tabs-content-item .working__tabs-slider");
+    slider.each(function(){
+        new Swiper(this, {
+            // Optional parameters
+            direction: "horizontal",
+            loop: true,
+            centeredSlides: true,
+            loopedSlides: 2,
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+    })
+   
+    var swiper
+
     $(".working__tabs-titles").on(
         "click",
         ".working__tabs-titles-item:not(.active)",
@@ -170,25 +175,26 @@ jQuery(document).ready(function($) {
                 .removeClass("active")
                 .eq($(this).index())
                 .addClass("active");
-            new Swiper(
-                $(this)
-                    .closest(".working__tabs")
-                    .find(".working__tabs-content-item")
-                    .eq($(this).index())
-                    .find(".working__tabs-slider"),
-                {
-                    // Optional parameters
-                    direction: "horizontal",
-                    loop: true,
-                    centeredSlides: true,
-                    loopedSlides: 2,
-                    // Navigation arrows
-                    navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev"
+            /*if (swiper == undefined)
+                swiper = new Swiper(
+                    $(this)
+                        .closest(".working__tabs")
+                        .find(".working__tabs-content-item")
+                        .eq($(this).index())
+                        .find(".working__tabs-slider"),
+                    {
+                        // Optional parameters
+                        direction: "horizontal",
+                        loop: true,
+                        centeredSlides: true,
+                        loopedSlides: 2,
+                        // Navigation arrows
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev"
+                        }
                     }
-                }
-            );
+                );*/
         }
     );
     /*Динамика placeholder в форме*/

@@ -492,6 +492,10 @@ h6,
   padding-top: 15px;
 }
 
+.text p:first-child {
+  margin-top: 0;
+}
+
 .text h2,
 .text h3,
 .text h5,
@@ -1117,6 +1121,13 @@ html.no-mobile .about__publication-list-item:hover {
   margin-left: 168px;
 }
 
+html.no-mobile .article__content-header-repost:hover .article__content-header-repost-social {
+  width: 146px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
 .article__content-header-repost-count {
   display: inline-block;
   background: url("../img/repost-top.svg");
@@ -1129,6 +1140,13 @@ html.no-mobile .about__publication-list-item:hover {
   font-weight: bold;
   padding-left: 25px;
   cursor: pointer;
+}
+
+html.no-mobile .article__content-header-repost-count:hover + .article__content-header-repost-social {
+  width: 146px;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
 }
 
 .article__content-header-repost-social {
@@ -1148,6 +1166,7 @@ html.no-mobile .about__publication-list-item:hover {
   overflow: hidden;
 }
 
+html.no-mobile .article__content-header-repost-social:hover,
 .article__content-header-repost-social.-active {
   width: 146px;
   margin-left: 10px;
@@ -2814,7 +2833,6 @@ html.no-mobile .cases__list-item-title a.h2:hover:after {
 
 .contacts__map {
   width: 100%;
-  min-height: 800px;
 }
 
 .contacts__map .orangecircle {
@@ -3399,6 +3417,10 @@ html.no-mobile .footer__bottom-design:hover:after {
   box-shadow: 0 0 0 2px #f78200;
 }
 
+.input input {
+  padding-bottom: 8px;
+}
+
 .input textarea {
   border-bottom: 20px solid #fff;
   resize: vertical;
@@ -3857,11 +3879,11 @@ html.no-mobile .main-page .working__tabs-titles-item:hover {
 }
 
 .main-page .working__tabs-content-item {
-  display: none;
   opacity: 0;
   height: 0;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 0.2s, 0.2s, 0.2s;
+  transition: opacity 0.2s, 0.2s, 0.2s;
+  position: relative;
 }
 
 .main-page .working__tabs-content-item.active {
@@ -3870,9 +3892,28 @@ html.no-mobile .main-page .working__tabs-titles-item:hover {
   height: auto;
 }
 
+.main-page .working__tabs-content-item.active .working__tabs-slider {
+  opacity: 1;
+  height: auto;
+}
+
+.main-page .working__tabs-content-item.active .working__tabs-slider .swiper-slide {
+  height: auto;
+}
+
 .main-page .working__tabs-slider {
   width: 100%;
   position: relative;
+  opacity: 0;
+  height: 0;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+  background: #fff;
+}
+
+.main-page .working__tabs-slider .swiper-slide {
+  height: 0;
+  overflow: hidden;
 }
 
 .main-page .swiper-wrapper .swiper-slide {
@@ -6320,7 +6361,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .swiper-container-vertical>.swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -6331,7 +6371,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   height: 100%;
   z-index: 1;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition-property: -webkit-transform;
@@ -6350,7 +6389,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .swiper-container-multirow>.swiper-wrapper {
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -6362,7 +6400,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .swiper-slide {
-  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
@@ -6386,7 +6423,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .swiper-container-autoheight .swiper-wrapper {
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
   -webkit-transition-property: height,-webkit-transform;
@@ -6799,15 +6835,12 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
@@ -8364,6 +8397,10 @@ button.swiper-pagination-bullet {
     padding-right: 45px;
   }
 
+  .contacts__map {
+    height: 800px;
+  }
+
   .contacts__map .orangecircle:before {
     bottom: auto;
     top: -16px;
@@ -8501,7 +8538,6 @@ button.swiper-pagination-bullet {
 
   .input input {
     height: 60px;
-    padding-bottom: 15px;
   }
 
   .input textarea[rows="1"] {
@@ -8920,15 +8956,15 @@ button.swiper-pagination-bullet {
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:before,
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next:after {
-    -webkit-transform: translateX(14.5%) scale(0.89);
-    -ms-transform: translateX(14.5%) scale(0.89);
-    transform: translateX(14.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+    -ms-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+    transform: translateX(14.5%) scale(0.89) translateY(-9px);
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-next img {
-    -webkit-transform: translateX(14.5%) scale(0.89);
-    -ms-transform: translateX(14.5%) scale(0.89);
-    transform: translateX(14.5%) scale(0.89);
+    -webkit-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+    -ms-transform: translateX(14.5%) scale(0.89) translateY(-9px);
+    transform: translateX(14.5%) scale(0.89) translateY(-9px);
   }
 
   .vacancy__talants-slider .swiper-wrapper .swiper-slide.swiper-slide-active:before {
@@ -11320,6 +11356,10 @@ button.swiper-pagination-bullet {
     margin-top: 24px;
   }
 
+  .contacts__map {
+    height: 480px;
+  }
+
   .contacts__map .orangecircle {
     top: -19px;
     right: 20px;
@@ -11641,12 +11681,11 @@ button.swiper-pagination-bullet {
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 6px;
+    padding-top: 8px;
   }
 
   .input input {
     height: 50px;
-    padding-bottom: 13px;
   }
 
   .input textarea[rows="1"] {
@@ -11663,7 +11702,7 @@ button.swiper-pagination-bullet {
     font-size: 13px;
     line-height: 13px;
     top: 0;
-    padding-top: 6px;
+    padding-top: 8px;
   }
 
   .input__add {
