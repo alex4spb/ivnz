@@ -275,10 +275,16 @@
   }
 }
 .article__content-header-repost:hover .article__content-header-repost-social {
-  width: 146px;
+  width: 176px;
   margin-left: 10px;
   padding-left: 20px;
   padding-right: 10px;
+}
+.article__content-header-repost:hover .article__content-header-repost-social:before {
+  opacity: 1;
+}
+.article__content-header-repost:hover .article__content-header-repost-social > a {
+  opacity: 1;
 }
 .article__content-header-repost-count {
   display: inline-block;
@@ -306,7 +312,6 @@
   opacity: 1;
 }
 .article__content-header-repost-social {
-  text-align: justify;
   line-height: 36px;
   vertical-align: middle;
   display: inline-block;
