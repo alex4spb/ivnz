@@ -117,6 +117,8 @@
     &__form
       &:before
         background-image url('../img/audit-form-back.svg')
+        +b($m)
+          display none
     .container
       +a($m)
         padding-top 150px
@@ -174,7 +176,10 @@
       color #000
       margin-top 20px
   &__engines
-    margin-top 80px
+    +a($m)
+      margin-top 80px
+    +b($m)
+      margin-top 0
     .container
       font-size 0
       +b($m)
@@ -369,9 +374,9 @@
         margin-top 60px
       +b($m)
         width 100%
-        padding 17px 20px 30px
+        padding 29px 30px 30px
         border-radius 4px
-        margin-top 40px
+        margin-top 24px
       &-item
         font-family "Proxima Nova"
         box-sizing border-box
@@ -392,7 +397,7 @@
           line-height 24px 
           width 100% 
           & + &
-            margin-top 40px
+            margin-top 46px
         img 
           width 71px
           height 73px
@@ -403,7 +408,8 @@
             left 0
           +b($m)
             margin 0 auto
-            display block
+            display block            
+            margin-bottom 20px
     &-button   
       border none  
       background-color #F78200
@@ -435,7 +441,7 @@
   &__clients
     color #000   
     +a($m)
-      padding 120px 0  240px
+      padding 120px 0  153px
     +b($m) 
       padding 40px 0
     .container

@@ -62,19 +62,20 @@
     display block
     margin 0 auto
     //background-image linear-gradient(-44deg, #144FC0 0%, #2CA7FF 100%)
-    margin-top 40px
     position relative
     z-index 1
     +a($m)
       max-width 590px
       border-radius 10px
       padding 50px 0 61px
+      margin-top 40px
     +b($m)
       width calc(100% + 40px)
       margin-left -20px
       border-radius 0
       padding 30px 20px 40px
       box-sizing border-box
+      margin-top 10px
     &:before
       content ''
       z-index 0
@@ -92,9 +93,9 @@
       +b($m)
         background-image url('../img/form-back_m.svg') 
         background-position right top 
-        background-size 358px        
+        background-size 244px      
         right 0
-        top -20px 
+        top 9px 
         width 100%
         height 100%
     &-legend

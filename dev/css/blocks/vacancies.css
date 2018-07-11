@@ -47,7 +47,7 @@
 }
 @media only screen and (max-width: 767px) {
   .vacancy .header__content {
-    padding-top: 96px;
+    padding-top: 103px;
   }
 }
 .vacancy .header__content h1 {
@@ -260,20 +260,6 @@
             box-sizing: border-box;
   }
 }
-.vacancy__talants h2 {
-  text-transform: uppercase;
-}
-@media only screen and (min-width: 768px) {
-  .vacancy__talants h2 {
-    margin-bottom: 40px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .vacancy__talants h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-}
 .vacancy__talants-text {
   font-family: "Proxima Nova";
   margin-bottom: 40px;
@@ -349,6 +335,20 @@
 @media only screen and (max-width: 767px) {
   .vacancy__talants-about {
     width: 100%;
+  }
+}
+.vacancy__talants-about h2 {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .vacancy__talants-about h2 {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .vacancy__talants-about h2 {
+    margin-bottom: 20px;
+    text-align: center;
   }
 }
 .vacancy__talants-sliders {
@@ -1131,17 +1131,16 @@
 .vacancy__about-list .bluecircle {
   position: absolute;
   z-index: 3;
+  right: 0px;
 }
 @media only screen and (min-width: 768px) {
   .vacancy__about-list .bluecircle {
     top: -183px;
-    right: 0px;
   }
 }
 @media only screen and (max-width: 767px) {
   .vacancy__about-list .bluecircle {
     top: -98px;
-    right: 20px;
   }
 }
 @media only screen and (min-width: 768px) {

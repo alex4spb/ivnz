@@ -294,10 +294,16 @@
   cursor: pointer;
 }
 .article__content-header-repost-count:hover + .article__content-header-repost-social {
-  width: 146px;
+  width: 176px;
   margin-left: 10px;
   padding-left: 20px;
   padding-right: 10px;
+}
+.article__content-header-repost-count:hover + .article__content-header-repost-social:before {
+  opacity: 1;
+}
+.article__content-header-repost-count:hover + .article__content-header-repost-social > a {
+  opacity: 1;
 }
 .article__content-header-repost-social {
   text-align: justify;
@@ -311,16 +317,26 @@
   height: 36px;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
           transition-duration: 0.2s, 0.2s, 0.2s;
-  -webkit-transition-property: all;
-  transition-property: all;
+  -webkit-transition-property: width;
+  transition-property: width;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .article__content-header-repost-social:hover,
 .article__content-header-repost-social.-active {
-  width: 146px;
+  width: 176px;
   margin-left: 10px;
   padding-left: 20px;
   padding-right: 10px;
+}
+.article__content-header-repost-social:hover:before,
+.article__content-header-repost-social.-active:before {
+  opacity: 1;
+}
+.article__content-header-repost-social:hover > a,
+.article__content-header-repost-social.-active > a {
+  opacity: 1;
 }
 .article__content-header-repost-social:before {
   content: '';
@@ -331,6 +347,11 @@
   position: absolute;
   top: 8px;
   left: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.01s;
+          transition-duration: 0.01s;
+  opacity: 0;
 }
 .article__content-header-repost-social > a {
   display: inline-block;
@@ -338,6 +359,11 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.01s;
+          transition-duration: 0.01s;
+  opacity: 0;
 }
 .article__content-header-repost-social .twitter {
   background-image: url("../img/twitter-black.svg");

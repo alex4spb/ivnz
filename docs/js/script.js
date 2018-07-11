@@ -912,6 +912,10 @@ jQuery(document).ready(function($) {
                         .find(".-step2")
                         .fadeIn();
                 });
+            $('.-step1').fadeOut("slow", function() {
+                $('.-step2')                        
+                    .fadeIn();
+            });
         }
         else{
             if (step2 && !errors.length){

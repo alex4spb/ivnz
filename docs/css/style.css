@@ -292,7 +292,8 @@ html.mobile .js-tooltip {
   display: block;
   line-height: 16px;
   font-weight: bold;
-  padding-left: 19px;
+  padding-left: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   position: relative;
   vertical-align: middle;
@@ -1143,10 +1144,18 @@ html.no-mobile .article__content-header-repost:hover .article__content-header-re
 }
 
 html.no-mobile .article__content-header-repost-count:hover + .article__content-header-repost-social {
-  width: 146px;
+  width: 176px;
   margin-left: 10px;
   padding-left: 20px;
   padding-right: 10px;
+}
+
+html.no-mobile .article__content-header-repost-count:hover + .article__content-header-repost-social:before {
+  opacity: 1;
+}
+
+html.no-mobile .article__content-header-repost-count:hover + .article__content-header-repost-social > a {
+  opacity: 1;
 }
 
 .article__content-header-repost-social {
@@ -1161,17 +1170,29 @@ html.no-mobile .article__content-header-repost-count:hover + .article__content-h
   height: 36px;
   -webkit-transition-duration: 0.2s, 0.2s, 0.2s;
   transition-duration: 0.2s, 0.2s, 0.2s;
-  -webkit-transition-property: all;
-  transition-property: all;
+  -webkit-transition-property: width;
+  transition-property: width;
   overflow: hidden;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html.no-mobile .article__content-header-repost-social:hover,
 .article__content-header-repost-social.-active {
-  width: 146px;
+  width: 176px;
   margin-left: 10px;
   padding-left: 20px;
   padding-right: 10px;
+}
+
+html.no-mobile .article__content-header-repost-social:hover:before,
+.article__content-header-repost-social.-active:before {
+  opacity: 1;
+}
+
+html.no-mobile .article__content-header-repost-social:hover > a,
+.article__content-header-repost-social.-active > a {
+  opacity: 1;
 }
 
 .article__content-header-repost-social:before {
@@ -1183,6 +1204,11 @@ html.no-mobile .article__content-header-repost-social:hover,
   position: absolute;
   top: 8px;
   left: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.01s;
+  transition-duration: 0.01s;
+  opacity: 0;
 }
 
 .article__content-header-repost-social > a {
@@ -1191,6 +1217,11 @@ html.no-mobile .article__content-header-repost-social:hover,
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.01s;
+  transition-duration: 0.01s;
+  opacity: 0;
 }
 
 .article__content-header-repost-social .twitter {
@@ -1671,6 +1702,10 @@ html.no-mobile .article__comments-button:hover {
   z-index: 2;
 }
 
+.audit-form__title.-step2 {
+  display: none;
+}
+
 .audit-form__subtitle {
   font-family: "Proxima Nova";
   color: #fff;
@@ -1679,10 +1714,13 @@ html.no-mobile .article__comments-button:hover {
   z-index: 2;
 }
 
+.audit-form__subtitle.-step2 {
+  display: none;
+}
+
 .audit-form__form {
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
   position: relative;
   z-index: 1;
 }
@@ -1690,15 +1728,9 @@ html.no-mobile .article__comments-button:hover {
 .audit-form__form:before {
   content: '';
   z-index: 0;
+  display: block;
   position: absolute;
-  width: calc(100% + 280px);
-  left: -140px;
-  height: calc(100% + 60px);
-  top: -30px;
-  background-image: url("../img/form-back_dark.svg");
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
 .audit-form__form-legend,
@@ -1933,10 +1965,6 @@ html.no-mobile .audit .header__button-arrow:hover {
 .audit .audit-form__subtitle {
   color: #000;
   margin-top: 20px;
-}
-
-.audit__engines {
-  margin-top: 80px;
 }
 
 .audit__engines .container {
@@ -4464,10 +4492,6 @@ html.no-mobile .vacancy__list-item:hover {
   font-size: 0;
 }
 
-.vacancy__talants h2 {
-  text-transform: uppercase;
-}
-
 .vacancy__talants-text {
   font-family: "Proxima Nova";
   margin-bottom: 40px;
@@ -4489,6 +4513,10 @@ html.no-mobile .vacancy__list-item:hover {
 .vacancy__talants-about {
   display: inline-block;
   vertical-align: top;
+}
+
+.vacancy__talants-about h2 {
+  text-transform: uppercase;
 }
 
 .vacancy__talants-sliders {
@@ -4791,6 +4819,7 @@ html.no-mobile .vacancy__list-item:hover {
 .vacancy__about-list .bluecircle {
   position: absolute;
   z-index: 3;
+  right: 0px;
 }
 
 .vacancy__about-list h2 {
@@ -4870,7 +4899,6 @@ html.no-mobile .vacancy__list-item:hover {
 .vacancy-form__form {
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
   position: relative;
   z-index: 1;
 }
@@ -7674,10 +7702,17 @@ button.swiper-pagination-bullet {
     max-width: 590px;
     border-radius: 10px;
     padding: 34px 0 61px;
+    margin-top: 40px;
   }
 
   .audit-form__form:before {
-    display: block;
+    background-image: url("../img/form-back_dark.svg");
+    background-size: 100% 100%;
+    background-position: center;
+    left: -140px;
+    top: -30px;
+    width: calc(100% + 280px);
+    height: calc(100% + 60px);
   }
 
   .audit-form__form-legend,
@@ -7811,6 +7846,10 @@ button.swiper-pagination-bullet {
     height: 720px;
   }
 
+  .audit__engines {
+    margin-top: 80px;
+  }
+
   .audit__engines-item {
     width: 50%;
   }
@@ -7910,7 +7949,7 @@ button.swiper-pagination-bullet {
   }
 
   .audit__clients {
-    padding: 120px 0 240px;
+    padding: 120px 0 153px;
   }
 
   .audit__clients h2 {
@@ -8898,10 +8937,6 @@ button.swiper-pagination-bullet {
     margin-top: 120px;
   }
 
-  .vacancy__talants h2 {
-    margin-bottom: 40px;
-  }
-
   .vacancy__talants-text {
     font-size: 18px;
     line-height: 28px;
@@ -8925,6 +8960,10 @@ button.swiper-pagination-bullet {
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+  }
+
+  .vacancy__talants-about h2 {
+    margin-bottom: 40px;
   }
 
   .vacancy__talants-sliders {
@@ -9133,7 +9172,6 @@ button.swiper-pagination-bullet {
 
   .vacancy__about-list .bluecircle {
     top: -183px;
-    right: 0px;
   }
 
   .vacancy__about-list .bluecircle.active {
@@ -9186,6 +9224,7 @@ button.swiper-pagination-bullet {
     max-width: 590px;
     border-radius: 10px;
     padding: 50px 0 61px;
+    margin-top: 40px;
   }
 
   .vacancy-form__form:before {
@@ -9728,11 +9767,6 @@ button.swiper-pagination-bullet {
     font-size: 22px;
     line-height: 32px;
     margin: 19px 0 18px;
-  }
-
-  h1 br,
-  .h1 br {
-    display: none;
   }
 
   h2,
@@ -10513,10 +10547,17 @@ button.swiper-pagination-bullet {
     padding: 30px 20px 40px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin-top: 10px;
   }
 
   .audit-form__form:before {
-    display: none;
+    background-image: url("../img/form-back_m.svg");
+    background-position: right top;
+    background-size: 244px;
+    right: 0;
+    top: 9px;
+    width: 100%;
+    height: 100%;
   }
 
   .audit-form__form-legend,
@@ -10651,6 +10692,10 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 
+  .audit .audit-form__form:before {
+    display: none;
+  }
+
   .audit .audit-form .greyline {
     top: -30px;
     left: 20px;
@@ -10675,6 +10720,10 @@ button.swiper-pagination-bullet {
 
   .audit .audit-form .orangecircle.-long {
     display: none;
+  }
+
+  .audit__engines {
+    margin-top: 0;
   }
 
   .audit__engines .container {
@@ -10758,9 +10807,9 @@ button.swiper-pagination-bullet {
 
   .audit__info-more {
     width: 100%;
-    padding: 17px 20px 30px;
+    padding: 29px 30px 30px;
     border-radius: 4px;
-    margin-top: 40px;
+    margin-top: 24px;
   }
 
   .audit__info-more-item {
@@ -10770,12 +10819,13 @@ button.swiper-pagination-bullet {
   }
 
   .audit__info-more-item + .audit__info-more-item {
-    margin-top: 40px;
+    margin-top: 46px;
   }
 
   .audit__info-more-item img {
     margin: 0 auto;
     display: block;
+    margin-bottom: 20px;
   }
 
   .audit__info-button {
@@ -12099,7 +12149,7 @@ button.swiper-pagination-bullet {
   }
 
   .vacancy .header__content {
-    padding-top: 96px;
+    padding-top: 103px;
   }
 
   .vacancy__list {
@@ -12173,11 +12223,6 @@ button.swiper-pagination-bullet {
     box-sizing: border-box;
   }
 
-  .vacancy__talants h2 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
   .vacancy__talants-text {
     font-size: 16px;
     line-height: 24px;
@@ -12203,6 +12248,11 @@ button.swiper-pagination-bullet {
 
   .vacancy__talants-about {
     width: 100%;
+  }
+
+  .vacancy__talants-about h2 {
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .vacancy__talants-sliders {
@@ -12437,7 +12487,6 @@ button.swiper-pagination-bullet {
 
   .vacancy__about-list .bluecircle {
     top: -98px;
-    right: 20px;
   }
 
   .vacancy__about-list .bluecircle.active {
@@ -12496,14 +12545,15 @@ button.swiper-pagination-bullet {
     padding: 30px 20px 40px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin-top: 10px;
   }
 
   .vacancy-form__form:before {
     background-image: url("../img/form-back_m.svg");
     background-position: right top;
-    background-size: 358px;
+    background-size: 244px;
     right: 0;
-    top: -20px;
+    top: 9px;
     width: 100%;
     height: 100%;
   }

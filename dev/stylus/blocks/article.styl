@@ -169,10 +169,14 @@
           padding-left 25px
           cursor pointer
           &:hover + .article__content-header-repost-social
-            width 146px
+            width 176px
             margin-left 10px
             padding-left 20px
             padding-right 10px
+            &:before 
+              opacity 1
+            > a 
+              opacity 1
         &-social
           text-align justify
           line-height 36px
@@ -184,14 +188,19 @@
           position relative
           height 36px
           transition-duration $speed 
-          transition-property all 
+          transition-property width
           overflow hidden
+          box-sizing border-box
           &:hover
           &.-active
-            width 146px
+            width 176px
             margin-left 10px
             padding-left 20px
             padding-right 10px
+            &:before 
+              opacity 1
+            > a 
+              opacity 1
           &:before
             content ''
             width 2px
@@ -201,12 +210,18 @@
             position absolute
             top 8px
             left 0
+            transition-property opacity
+            transition-duration 0.01s
+            opacity 0            
           > a
             display inline-block
             height 100%
             background-position center
             background-repeat no-repeat
             position relative
+            transition-property opacity
+            transition-duration 0.01s
+            opacity 0
           .twitter
             background-image url('../img/twitter-black.svg')
             width 14.5px

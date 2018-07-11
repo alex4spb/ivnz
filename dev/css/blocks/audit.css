@@ -205,6 +205,11 @@
 .audit .audit-form__form:before {
   background-image: url("../img/audit-form-back.svg");
 }
+@media only screen and (max-width: 767px) {
+  .audit .audit-form__form:before {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) {
   .audit .audit-form .container {
     padding-top: 150px;
@@ -307,8 +312,15 @@
   color: #000;
   margin-top: 20px;
 }
-.audit__engines {
-  margin-top: 80px;
+@media only screen and (min-width: 768px) {
+  .audit__engines {
+    margin-top: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .audit__engines {
+    margin-top: 0;
+  }
 }
 .audit__engines .container {
   font-size: 0;
@@ -630,9 +642,9 @@
 @media only screen and (max-width: 767px) {
   .audit__info-more {
     width: 100%;
-    padding: 17px 20px 30px;
+    padding: 29px 30px 30px;
     border-radius: 4px;
-    margin-top: 40px;
+    margin-top: 24px;
   }
 }
 .audit__info-more-item {
@@ -664,7 +676,7 @@
     width: 100%;
   }
   .audit__info-more-item + .audit__info-more-item {
-    margin-top: 40px;
+    margin-top: 46px;
   }
 }
 .audit__info-more-item img {
@@ -685,6 +697,7 @@
   .audit__info-more-item img {
     margin: 0 auto;
     display: block;
+    margin-bottom: 20px;
   }
 }
 .audit__info-button {
@@ -730,7 +743,7 @@
 }
 @media only screen and (min-width: 768px) {
   .audit__clients {
-    padding: 120px 0 240px;
+    padding: 120px 0 153px;
   }
 }
 @media only screen and (max-width: 767px) {

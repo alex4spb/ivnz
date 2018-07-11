@@ -55,10 +55,6 @@ h6 {
     line-height: 32px;
     margin: 19px 0 18px;
   }
-  h1 br,
-  .h1 br {
-    display: none;
-  }
 }
 h1 span,
 .h1 span {

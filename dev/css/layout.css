@@ -292,7 +292,8 @@ html.mobile .js-tooltip {
   display: block;
   line-height: 16px;
   font-weight: bold;
-  padding-left: 19px;
+  padding-left: 15px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   position: relative;
   vertical-align: middle;

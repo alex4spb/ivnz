@@ -15,7 +15,7 @@
       +a($m)
         padding-top 180px
       +b($m)
-        padding-top 96px
+        padding-top 103px
       h1
         text-transform uppercase  
         margin 0px
@@ -141,13 +141,6 @@
       +b($m)
         padding 0 20px
         box-sizing border-box
-    h2
-      text-transform uppercase
-      +a($m)
-        margin-bottom 40px
-      +b($m)
-        margin-bottom 20px
-        text-align center
     &-text
       font-family "Proxima Nova"
       margin-bottom 40px
@@ -197,6 +190,13 @@
         box-sizing border-box
       +b($m)
         width 100%
+      h2
+        text-transform uppercase
+        +a($m)
+          margin-bottom 40px
+        +b($m)
+          margin-bottom 20px
+          text-align center
     &-sliders
       display inline-block
       vertical-align top
@@ -645,12 +645,11 @@
       .bluecircle
         position absolute
         z-index 3
+        right 0px
         +a($m)
           top -183px  
-          right 0px
         +b($m)
-          top -98px  
-          right 20px
+          top -98px 
         &.active
           +a($m)
             height 400px

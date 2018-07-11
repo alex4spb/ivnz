@@ -41,18 +41,18 @@ gulp.task("js", () => {
   return (
     gulp
       .src(["./dev/js/*.js", "./dev/js/!(vendor)/*.js"])
-      .pipe($.plumber())
-      .pipe(
-        $.babel({
-          presets: ["es2015"],
+      //.pipe($.plumber())
+      //.pipe(
+        //$.babel({
+          //presets: ["es2015"],
           //minified: true,
           //comments: false,
           //compact: true
           // plugins: [
           //   'transform-es2015-for-of'
           // ]
-        })
-      )
+       // })
+      //)
       // .pipe($.uglify())
       .pipe(gulp.dest("./docs/js"))
   );
