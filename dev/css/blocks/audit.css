@@ -202,6 +202,11 @@
 .audit .audit-form {
   color: #000;
 }
+@media only screen and (max-width: 767px) {
+  .audit .audit-form__form {
+    margin-top: -11px;
+  }
+}
 .audit .audit-form__form:before {
   background-image: url("../img/audit-form-back.svg");
 }
@@ -314,12 +319,13 @@
 }
 @media only screen and (min-width: 768px) {
   .audit__engines {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
 @media only screen and (max-width: 767px) {
   .audit__engines {
     margin-top: 0;
+    padding-bottom: 23px;
   }
 }
 .audit__engines .container {

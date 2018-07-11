@@ -6396,7 +6396,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 .swiper-container-vertical>.swiper-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
@@ -6407,7 +6406,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   height: 100%;
   z-index: 1;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition-property: -webkit-transform;
@@ -6426,7 +6424,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .swiper-container-multirow>.swiper-wrapper {
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -6438,7 +6435,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 .swiper-slide {
-  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
@@ -6462,7 +6458,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 
 .swiper-container-autoheight .swiper-wrapper {
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
   -webkit-transition-property: height,-webkit-transform;
@@ -6875,15 +6870,12 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
@@ -7854,7 +7846,7 @@ button.swiper-pagination-bullet {
   }
 
   .audit__engines {
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   .audit__engines-item {
@@ -10699,6 +10691,10 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 
+  .audit .audit-form__form {
+    margin-top: -11px;
+  }
+
   .audit .audit-form__form:before {
     display: none;
   }
@@ -10731,6 +10727,7 @@ button.swiper-pagination-bullet {
 
   .audit__engines {
     margin-top: 0;
+    padding-bottom: 23px;
   }
 
   .audit__engines .container {
