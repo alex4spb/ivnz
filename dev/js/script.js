@@ -1,29 +1,29 @@
 document.documentElement.classList.add(isMobile.any ? "mobile" : "no-mobile");
 /*ранняя прогрузка hover изображений*/
 var hoverArray = [
-    'img/mask_1.svg',
-    'img/vk-black.svg',
-    'img/vk-hover.svg',
-    'img/vk-hover-bot.svg',
-    'img/fb-black.svg',
-    'img/fb-hover.svg',
-    'img/fb-hover-bot.svg',
-    'img/twitter-black.svg',
-    'img/twitter-hover.svg',
-    'img/twitter-hover-bot.svg',
-    'img/telegram-black.svg',
-    'img/telegram-hover.svg',
-    'img/telegram-hover-bot.svg',
-    'img/mask_sm_1.svg'
-]
-function preCacheHover(){
-    $.each(hoverArray, function(){
+    "img/mask_1.svg",
+    "img/vk-black.svg",
+    "img/vk-hover.svg",
+    "img/vk-hover-bot.svg",
+    "img/fb-black.svg",
+    "img/fb-hover.svg",
+    "img/fb-hover-bot.svg",
+    "img/twitter-black.svg",
+    "img/twitter-hover.svg",
+    "img/twitter-hover-bot.svg",
+    "img/telegram-black.svg",
+    "img/telegram-hover.svg",
+    "img/telegram-hover-bot.svg",
+    "img/mask_sm_1.svg"
+];
+function preCacheHover() {
+    $.each(hoverArray, function() {
         var img = new Image();
         img.src = this;
     });
-}; 
-$(window).on('load', function(){
-  preCacheHover();
+}
+$(window).on("load", function() {
+    preCacheHover();
 });
 jQuery(document).ready(function($) {
     /*Плавная прокрутка*/
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
         if (target.length != 0) {
             $("html:not(:animated), body:not(:animated)").animate(
                 {
-                    scrollTop: (target.offset().top - 40)
+                    scrollTop: target.offset().top - 40
                 },
                 500,
                 function() {
@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
     AOS.init({
         duration: 1200,
         once: true
-    });        
+    });
     /*Магическая линия для верхнего меню*/
     if ($(".topnav__menu:not(.-mobile)").length) {
         $(function() {
@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
     });
     /*Слайдер на главной*/
     var slider = $(".working__tabs-content-item .working__tabs-slider");
-    slider.each(function(){
+    slider.each(function() {
         new Swiper(this, {
             // Optional parameters
             direction: "horizontal",
@@ -158,9 +158,9 @@ jQuery(document).ready(function($) {
                 prevEl: ".swiper-button-prev"
             }
         });
-    })
-   
-    var swiper
+    });
+
+    var swiper;
 
     $(".working__tabs-titles").on(
         "click",
@@ -256,7 +256,7 @@ jQuery(document).ready(function($) {
                     $(this)
                         .parent(".input")
                         .find(".input__placeholder")
-                        .removeClass("active")
+                        .removeClass("active");
             });
             $(this).focusin(function(e) {
                 $(this)
@@ -297,7 +297,11 @@ jQuery(document).ready(function($) {
         var disqus_config = function() {
             this.page.url = window.location.href; // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = "identifier_1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable '<? php echo $my_identifier; ?>'
-            this.callbacks.onNewComment = [function() { DISQUSWIDGETS.getCount({reset: true}); }];
+            this.callbacks.onNewComment = [
+                function() {
+                    DISQUSWIDGETS.getCount({ reset: true });
+                }
+            ];
         };
 
         var your_sub_domain = "ivnz"; // Имя зарегистрированного сайта на disqus
@@ -311,7 +315,7 @@ jQuery(document).ready(function($) {
         ).appendChild(dsq);
     }
     /*Слайдер вакансий*/
-    new Swiper($(".vacancy__talants-slider"), {
+    /*new Swiper($(".vacancy__talants-slider"), {
         // Optional parameters
         direction: "horizontal",
         loop: true,
@@ -323,7 +327,136 @@ jQuery(document).ready(function($) {
         autoplay: {
           delay: 6000,
         },
+    });*/
+    $(function() {
+        var slide = $(".vacancy__talants-slider .swiper-slide");
+        var slideTotal = slide.length - 1;
+        var slideCurrent = -1;
+
+        function slideInitial() {
+            slide.addClass("proactivede");
+            slideRight();
+
+            $('.swiper-slide-next').css('opacity', '0')
+            setTimeout(function() {
+                $('.swiper-slide-next').animate(
+                    {
+                        opacity: '1'
+                    },
+                    500)
+            }, 1500)
+        }
+
+        function slideRight() {
+            if (slideCurrent < slideTotal) {
+                slideCurrent++;
+            } else {
+                slideCurrent = 0;
+            }
+
+            if (slideCurrent > 0) {
+                var preactiveSlide = slide.eq(slideCurrent - 1);
+            } else {
+                var preactiveSlide = slide.eq(slideTotal);
+            }
+            var activeSlide = slide.eq(slideCurrent);
+            if (slideCurrent < slideTotal) {
+                var proactiveSlide = slide.eq(slideCurrent + 1);
+            } else {
+                var proactiveSlide = slide.eq(0);
+            }
+
+
+            slide.each(function() {
+                var thisSlide = $(this);
+                if (thisSlide.hasClass("preactivede")) {
+                    thisSlide
+                        .removeClass(
+                            "preactivede swiper-slide-prev swiper-slide-active swiper-slide-next"
+                        )
+                        .addClass("proactivede");
+                }
+                if (thisSlide.hasClass("swiper-slide-prev")) {
+                    thisSlide
+                        .removeClass(
+                            "swiper-slide-prev swiper-slide-active swiper-slide-next proactivede"
+                        )
+                        .addClass("preactivede");
+                }
+            });
+            preactiveSlide
+                .removeClass(
+                    "preactivede swiper-slide-active swiper-slide-next proactivede"
+                )
+                .addClass("swiper-slide-prev");
+            activeSlide
+                .removeClass(
+                    "preactivede swiper-slide-prev swiper-slide-next proactivede"
+                )
+                .addClass("swiper-slide-active");
+            proactiveSlide
+                .removeClass(
+                    "preactivede swiper-slide-prev swiper-slide-active proactivede"
+                )
+                .addClass("swiper-slide-next");
+
+            setTimeout(slideRight, 6000);
+        }
+
+        function slideLeft() {
+            if (slideCurrent > 0) {
+                slideCurrent--;
+            } else {
+                slideCurrent = slideTotal;
+            }
+
+            if (slideCurrent < slideTotal) {
+                var proactiveSlide = slide.eq(slideCurrent + 1);
+            } else {
+                var proactiveSlide = slide.eq(0);
+            }
+            var activeSlide = slide.eq(slideCurrent);
+            if (slideCurrent > 0) {
+                var preactiveSlide = slide.eq(slideCurrent - 1);
+            } else {
+                var preactiveSlide = slide.eq(slideTotal);
+            }
+            slide.each(function() {
+                var thisSlide = $(this);
+                if (thisSlide.hasClass("proactivede")) {
+                    thisSlide
+                        .removeClass(
+                            "swiper-slide-prev swiper-slide-active swiper-slide-next proactivede"
+                        )
+                        .addClass("preactivede");
+                }
+                if (thisSlide.hasClass("swiper-slide-next")) {
+                    thisSlide
+                        .removeClass(
+                            "preactivede swiper-slide-prev swiper-slide-active swiper-slide-next"
+                        )
+                        .addClass("proactivede");
+                }
+            });
+            preactiveSlide
+                .removeClass(
+                    "preactivede swiper-slide-active swiper-slide-next proactivede"
+                )
+                .addClass("swiper-slide-prev");
+            activeSlide
+                .removeClass(
+                    "preactivede swiper-slide-prev swiper-slide-next proactivede"
+                )
+                .addClass("swiper-slide-active");
+            proactiveSlide
+                .removeClass(
+                    "preactivede swiper-slide-prev swiper-slide-active proactivede"
+                )
+                .addClass("swiper-slide-next");
+        }
+        slideInitial();
     });
+
     /* Сворачивание инфы*/
     $(".toggle").each(function() {
         var target = "";
@@ -360,7 +493,7 @@ jQuery(document).ready(function($) {
             });
 
             // Создание макета балуна на основе Twitter Bootstrap.
-            MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+            (MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
                 '<div class="contacts__map-baloon">' +
                     '<a class="close" href="#"><img src="img/close_baloon.svg" alt="close"></a>' +
                     '<div class="contacts__map-baloon-content">' +
@@ -375,7 +508,7 @@ jQuery(document).ready(function($) {
                      * @name build
                      */
                     build: function() {
-                        this.constructor.superclass.build.call(this);                        
+                        this.constructor.superclass.build.call(this);
 
                         this._$element = $(
                             ".contacts__map-baloon",
@@ -384,7 +517,7 @@ jQuery(document).ready(function($) {
 
                         this.applyElementOffset();
 
-                        this._$element.addClass('active')
+                        this._$element.addClass("active");
 
                         this._$element
                             .find(".close")
@@ -445,9 +578,11 @@ jQuery(document).ready(function($) {
                      */
                     onCloseClick: function(e) {
                         e.preventDefault();
-                        var it = this
-                        it._$element.removeClass('active')
-                        setTimeout(function() {it.events.fire("userclose")}, 100)
+                        var it = this;
+                        it._$element.removeClass("active");
+                        setTimeout(function() {
+                            it.events.fire("userclose");
+                        }, 100);
 
                         //this.events.fire("userclose");
                     },
@@ -494,13 +629,13 @@ jQuery(document).ready(function($) {
                         return element && element[0];
                     }
                 }
-            ),
+            )),
                 // Создание вложенного макета содержимого балуна.
-                MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+                (MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
                     "$[properties.balloonHeader]" +
                         "<p>$[properties.balloonContent]</p>"
-                ),
-                myPlacemark = new ymaps.Placemark(
+                )),
+                (myPlacemark = new ymaps.Placemark(
                     [59.866933, 30.471834],
                     {
                         hintContent: "Иващенко и Низамов",
@@ -527,22 +662,26 @@ jQuery(document).ready(function($) {
                         balloonPanelMaxMapArea: 0,
                         balloonShadowOffset: [0, 0]
                     }
-                );
+                ));
             myMap.geoObjects.add(myPlacemark);
             myPlacemark.balloon.open();
             myMap.behaviors.disable("scrollZoom");
 
             myPlacemark.events
-                .add('balloonopen', function (e) {
+                .add("balloonopen", function(e) {
                     // Ссылку на объект, вызвавший событие,
                     // можно получить из поля 'target'.
 
-                    e.get('target').options.set('iconImageHref', 'img/map-mark.svg');
+                    e
+                        .get("target")
+                        .options.set("iconImageHref", "img/map-mark.svg");
                 })
-                .add('balloonclose', function (e) {
-                    e.get('target').options.set('iconImageHref', 'img/map-mark-close.svg');
+                .add("balloonclose", function(e) {
+                    e
+                        .get("target")
+                        .options.set("iconImageHref", "img/map-mark-close.svg");
                 });
-            }
+        }
     });
     /*Пагинатор в мобильной версии, удаление лишних страниц*/
     $(".blog__paginator-page").each(function() {
@@ -772,10 +911,12 @@ jQuery(document).ready(function($) {
                         "</div>"
                 );
                 removeBtn();
-                input.val('').parent(".input")
-                            .find(".input__placeholder")
-                            .removeClass('active')
-                            .css("opacity", "1");
+                input
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("active")
+                    .css("opacity", "1");
             }
         } else {
             if (regions.length == 0) {
@@ -786,10 +927,12 @@ jQuery(document).ready(function($) {
                         "</div>"
                 );
                 removeBtn();
-                input.val('').parent(".input")
-                            .find(".input__placeholder")
-                            .removeClass('active')
-                            .css("opacity", "1");
+                input
+                    .val("")
+                    .parent(".input")
+                    .find(".input__placeholder")
+                    .removeClass("active")
+                    .css("opacity", "1");
             }
         }
     });
@@ -829,20 +972,19 @@ jQuery(document).ready(function($) {
             promocode: $("[name=promocode]").val(),
             conditions: $("[name=conditions]:checked").length,
             theme: $("[name=theme]").val(),
-            regions: [],
+            regions: []
         };
-        
+
         var require = ["domain", "name", "phone", "email"];
         var errors = [];
         var message = "Поле является обязательным для заполнения";
         var expr = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-
         for (var field in data) {
             var val = $(form)
                 .find("[name='" + field + "']")
                 .val();
-            if (require.indexOf(field) != -1){
+            if (require.indexOf(field) != -1) {
                 data[field] = $.trim(val);
                 if (data[field] == "") {
                     errors.push(message);
@@ -885,17 +1027,19 @@ jQuery(document).ready(function($) {
                 .parents(".control-label")
                 .removeClass("-error");
 
-        $('.form__regions-item').each(function(){
-            var value = $(this).text().trim()
+        $(".form__regions-item").each(function() {
+            var value = $(this)
+                .text()
+                .trim();
             data.regions.push(value);
-        })
+        });
 
-        if (data.regions.length == 0){
-           errors.push(message); 
-           $(form)
+        if (data.regions.length == 0) {
+            errors.push(message);
+            $(form)
                 .find("[name='regions']")
                 .parents(".input")
-                .addClass("-error")                
+                .addClass("-error")
                 .find(".input__error")
                 .html("Введите хотя бы один регион");
         }
@@ -912,13 +1056,11 @@ jQuery(document).ready(function($) {
                         .find(".-step2")
                         .fadeIn();
                 });
-            $('.-step1').fadeOut("slow", function() {
-                $('.-step2')                        
-                    .fadeIn();
+            $(".-step1").fadeOut("slow", function() {
+                $(".-step2").fadeIn();
             });
-        }
-        else{
-            if (step2 && !errors.length){
+        } else {
+            if (step2 && !errors.length) {
                 $.ajax({
                     type: "post",
                     async: false,
