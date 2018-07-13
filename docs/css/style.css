@@ -3452,10 +3452,6 @@ html.no-mobile .footer__bottom-design:hover:after {
   box-shadow: 0 0 0 2px #f78200;
 }
 
-.input input {
-  padding-bottom: 8px;
-}
-
 .input textarea {
   border-bottom: 20px solid #fff;
   resize: vertical;
@@ -8621,11 +8617,12 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     line-height: 14px;
     top: 0;
-    padding-top: 10px;
+    padding-top: 11px;
   }
 
   .input input {
     height: 60px;
+    padding-bottom: 9px;
   }
 
   .input textarea[rows="1"] {
@@ -8642,7 +8639,7 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     line-height: 14px;
     top: 0;
-    padding-top: 10px;
+    padding-top: 11px;
   }
 
   .input__add {
@@ -11790,6 +11787,7 @@ button.swiper-pagination-bullet {
 
   .input input {
     height: 50px;
+    padding-bottom: 8px;
   }
 
   .input textarea[rows="1"] {
